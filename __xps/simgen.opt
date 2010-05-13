@@ -1,0 +1,1 @@
+ -p virtex5 -lang vhdl$(PROJECT_SEARCHPATHOPT) $(GLOBAL_SEARCHPATHOPT)   $(PPC440_0_BOOTLOOP)  -msg __xps/ise/xmsgprops.lst -s mti

@@ -1,0 +1,105 @@
+Release 12.1 - xst M.53d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "plbv46_2_wb_0_wrapper_xst.prj"
+Verilog Include Directory          : {"/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/" "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+
+---- Target Parameters
+Target Device                      : xc5vfx70tff1136-1
+Output File Name                   : "../implementation/plbv46_2_wb_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : plbv46_2_wb_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation/plbv46_2_wb_0_wrapper}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/proc_common_pkg.vhd" in Library proc_common_v3_00_a.
+Package <proc_common_pkg> compiled.
+Package body <proc_common_pkg> compiled.
+Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy.vhd" in Library proc_common_v3_00_a.
+Entity <or_muxcy> compiled.
+Entity <or_muxcy> (Architecture <implementation>) compiled.
+Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family_support.vhd" in Library proc_common_v3_00_a.
+Package <family_support> compiled.
+Package body <family_support> compiled.
+Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd" in Library proc_common_v3_00_a.
+Entity <counter_f> compiled.
+Entity <counter_f> (Architecture <imp>) compiled.
+Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd" in Library proc_common_v3_00_a.
+Entity <pselect_f> compiled.
+Entity <pselect_f> (Architecture <imp>) compiled.
+Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate128.vhd" in Library proc_common_v3_00_a.
+Entity <or_gate128> compiled.
+Entity <or_gate128> (Architecture <imp>) compiled.
+Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_pkg.vhd" in Library proc_common_v3_00_a.
+Package <ipif_pkg> compiled.
+Package body <ipif_pkg> compiled.
+Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_address_decoder.vhd" in Library plbv46_slave_single_v1_01_a.
+Entity <plb_address_decoder> compiled.
+Entity <plb_address_decoder> (Architecture <IMP>) compiled.
+Compiling vhdl file "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_v1_10_a/hdl/vhdl/wb_encoder.vhd" in Library plbv46_2_wb_v1_10_a.
+Entity <wb_encoder> compiled.
+Entity <wb_encoder> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd" in Library plbv46_slave_single_v1_01_a.
+Entity <plb_slave_attachment> compiled.
+Entity <plb_slave_attachment> (Architecture <implementation>) compiled.
+Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plbv46_slave_single.vhd" in Library plbv46_slave_single_v1_01_a.
+Entity <plbv46_slave_single> compiled.
+Entity <plbv46_slave_single> (Architecture <implementation>) compiled.
+Compiling vhdl file "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_v1_10_a/hdl/vhdl/user_logic.vhd" in Library plbv46_2_wb_v1_10_a.
+Entity <user_logic> compiled.
+ERROR:HDLParsers:1411 - "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_v1_10_a/hdl/vhdl/user_logic.vhd" Line 148. Parameter WB_RST_O of mode out can not be associated with a formal port of mode in.
+ERROR:HDLParsers:1411 - "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_v1_10_a/hdl/vhdl/user_logic.vhd" Line 149. Parameter WB_CLK_O of mode out can not be associated with a formal port of mode in.
+ERROR:HDLParsers:1411 - "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_v1_10_a/hdl/vhdl/user_logic.vhd" Line 150. Parameter WB_STB_O of mode out can not be associated with a formal port of mode in.
+ERROR:HDLParsers:1411 - "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_v1_10_a/hdl/vhdl/user_logic.vhd" Line 151. Parameter WB_CYC_O of mode out can not be associated with a formal port of mode in.
+ERROR:HDLParsers:1411 - "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_v1_10_a/hdl/vhdl/user_logic.vhd" Line 152. Parameter WB_WE_O of mode out can not be associated with a formal port of mode in.
+ERROR:HDLParsers:1411 - "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_v1_10_a/hdl/vhdl/user_logic.vhd" Line 153. Parameter WB_ADR_O of mode out can not be associated with a formal port of mode in.
+ERROR:HDLParsers:1411 - "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_v1_10_a/hdl/vhdl/user_logic.vhd" Line 155. Parameter WB_ACK_I of mode in can not be associated with a formal port of mode out.
+--> 
+
+
+Total memory usage is 463640 kilobytes
+
+Number of errors   :    7 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

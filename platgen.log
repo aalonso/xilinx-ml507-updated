@@ -1,0 +1,451 @@
+Release 12.1 - platgen Xilinx EDK 12.1 Build EDK_MS1.53d
+ (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Command Line: platgen -p xc5vfx70tff1136-1 -lang vhdl -msg
+__xps/ise/xmsgprops.lst system.mhs 
+
+Parse /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs ...
+
+Read MPD definitions ...
+
+Overriding IP level properties ...
+orig_family is virtex5
+INFO:EDK:1560 - IPNAME:ppc440mc_ddr2 INSTANCE:DDR2_SDRAM -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/ppc440mc_ddr2_v3_0
+   0_b/data/ppc440mc_ddr2_v2_1_0.mpd line 103 - tcl is overriding PARAMETER
+   C_IODELAY_GRP value to DDR2_SDRAM
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor ppc440_0
+  (0b0000000000-0b0011111111) ppc440_0	
+  (0000000000-0x0fffffff) ppc440_0	plb_v46_0
+  (0000000000-0x0fffffff) DDR2_SDRAM	ppc440_0_PPC440MC
+  (0x81000000-0x8100ffff) Ethernet_MAC	plb_v46_0
+  (0x81400000-0x8140ffff) Push_Buttons_5Bit	plb_v46_0
+  (0x81420000-0x8142ffff) LEDs_Positions	plb_v46_0
+  (0x81440000-0x8144ffff) LEDs_8Bit	plb_v46_0
+  (0x81460000-0x8146ffff) DIP_Switches_8Bit	plb_v46_0
+  (0x81600000-0x8160ffff) IIC_EEPROM	plb_v46_0
+  (0x81800000-0x8180ffff) xps_intc_0	plb_v46_0
+  (0x83600000-0x8360ffff) SysACE_CompactFlash	plb_v46_0
+  (0x83a00000-0x83a0ffff) xps_timebase_wdt_0	plb_v46_0
+  (0x83c00000-0x83c0ffff) xps_timer_0	plb_v46_0
+  (0x84000000-0x8400ffff) RS232_Uart_1	plb_v46_0
+  (0x86a00000-0x86a0ffff) xps_ps2_0	plb_v46_0
+  (0x86e00000-0x86e0ffff) xps_tft_0	plb_v46_0
+  (0x86f00000-0x86f0ffff) plbv46_2_wb_0	plb_v46_0
+  (0x8c000000-0x8dffffff) FLASH	plb_v46_0
+  (0xffff0000-0xffffffff) xps_bram_if_cntlr_1	plb_v46_0
+INFO:EDK:1560 - IPNAME:ppc440_virtex5 INSTANCE:ppc440_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/ppc440_virtex5_v1_
+   01_a/data/ppc440_virtex5_v2_1_0.mpd line 173 - tool is overriding PARAMETER
+   C_SPLB0_P2P value to 0
+
+Computing clock values...
+INFO:EDK:1560 - IPNAME:ppc440_virtex5 INSTANCE:ppc440_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/ppc440_virtex5_v1_
+   01_a/data/ppc440_virtex5_v2_1_0.mpd line 168 - tool is overriding PARAMETER
+   C_SPLB0_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plb_v46_v1_04_a/da
+   ta/plb_v46_v2_1_0.mpd line 68 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plb_v46_v1_04_a/da
+   ta/plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 17
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plb_v46_v1_04_a/da
+   ta/plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_MID_WIDTH value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plb_v46_v1_04_a/da
+   ta/plb_v46_v2_1_0.mpd line 72 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_bram_if_cntlr INSTANCE:xps_bram_if_cntlr_1 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_bram_if_cntlr_
+   v1_00_b/data/xps_bram_if_cntlr_v2_1_0.mpd line 73 - tool is overriding
+   PARAMETER C_SPLB_DWIDTH value to 128
+INFO:EDK:1560 - IPNAME:xps_bram_if_cntlr INSTANCE:xps_bram_if_cntlr_1 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_bram_if_cntlr_
+   v1_00_b/data/xps_bram_if_cntlr_v2_1_0.mpd line 78 - tool is overriding
+   PARAMETER C_SPLB_SMALLEST_MASTER value to 64
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_1_bram -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/bram_block_v1_00_a
+   /data/bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x10000
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_1_bram -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/bram_block_v1_00_a
+   /data/bram_block_v2_1_0.mpd line 68 - tool is overriding PARAMETER
+   C_PORT_DWIDTH value to 64
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_1_bram -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/bram_block_v1_00_a
+   /data/bram_block_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_NUM_WE
+   value to 8
+INFO:EDK:1560 - IPNAME:xps_uartlite INSTANCE:RS232_Uart_1 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_uartlite_v1_01
+   _a/data/xps_uartlite_v2_1_0.mpd line 71 - tool is overriding PARAMETER
+   C_SPLB_DWIDTH value to 128
+INFO:EDK:1560 - IPNAME:xps_uartlite INSTANCE:RS232_Uart_1 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_uartlite_v1_01
+   _a/data/xps_uartlite_v2_1_0.mpd line 74 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:LEDs_8Bit -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_gpio_v2_00_a/d
+   ata/xps_gpio_v2_1_0.mpd line 69 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:LEDs_8Bit -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_gpio_v2_00_a/d
+   ata/xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:LEDs_Positions -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_gpio_v2_00_a/d
+   ata/xps_gpio_v2_1_0.mpd line 69 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:LEDs_Positions -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_gpio_v2_00_a/d
+   ata/xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Push_Buttons_5Bit -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_gpio_v2_00_a/d
+   ata/xps_gpio_v2_1_0.mpd line 69 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Push_Buttons_5Bit -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_gpio_v2_00_a/d
+   ata/xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:DIP_Switches_8Bit -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_gpio_v2_00_a/d
+   ata/xps_gpio_v2_1_0.mpd line 69 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:DIP_Switches_8Bit -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_gpio_v2_00_a/d
+   ata/xps_gpio_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_iic INSTANCE:IIC_EEPROM -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_iic_v2_03_a/da
+   ta/xps_iic_v2_1_0.mpd line 75 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_iic INSTANCE:IIC_EEPROM -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_iic_v2_03_a/da
+   ta/xps_iic_v2_1_0.mpd line 77 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_ethernetlite INSTANCE:Ethernet_MAC -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_ethernetlite_v
+   4_00_a/data/xps_ethernetlite_v2_1_0.mpd line 74 - tool is overriding
+   PARAMETER C_SPLB_DWIDTH value to 128
+INFO:EDK:1560 - IPNAME:xps_ethernetlite INSTANCE:Ethernet_MAC -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_ethernetlite_v
+   4_00_a/data/xps_ethernetlite_v2_1_0.mpd line 77 - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_ethernetlite INSTANCE:Ethernet_MAC -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_ethernetlite_v
+   4_00_a/data/xps_ethernetlite_v2_1_0.mpd line 79 - tool is overriding
+   PARAMETER C_SPLB_SMALLEST_MASTER value to 64
+INFO:EDK:1560 - IPNAME:xps_sysace INSTANCE:SysACE_CompactFlash -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_sysace_v1_01_a
+   /data/xps_sysace_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_SPLB_DWIDTH value to 128
+INFO:EDK:1560 - IPNAME:xps_sysace INSTANCE:SysACE_CompactFlash -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_sysace_v1_01_a
+   /data/xps_sysace_v2_1_0.mpd line 72 - tool is overriding PARAMETER
+   C_SPLB_MID_WIDTH value to 1
+INFO:EDK:1560 - IPNAME:xps_sysace INSTANCE:SysACE_CompactFlash -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_sysace_v1_01_a
+   /data/xps_sysace_v2_1_0.mpd line 73 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_mch_emc INSTANCE:FLASH -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_
+   a/data/xps_mch_emc_v2_1_0.mpd line 78 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_mch_emc INSTANCE:FLASH -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_
+   a/data/xps_mch_emc_v2_1_0.mpd line 80 - tool is overriding PARAMETER
+   C_SPLB_DWIDTH value to 128
+INFO:EDK:1560 - IPNAME:xps_mch_emc INSTANCE:FLASH -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_
+   a/data/xps_mch_emc_v2_1_0.mpd line 82 - tool is overriding PARAMETER
+   C_SPLB_SMALLEST_MASTER value to 64
+INFO:EDK:1560 - IPNAME:xps_timebase_wdt INSTANCE:xps_timebase_wdt_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_timebase_wdt_v
+   1_01_a/data/xps_timebase_wdt_v2_1_0.mpd line 71 - tool is overriding
+   PARAMETER C_SPLB_DWIDTH value to 128
+INFO:EDK:1560 - IPNAME:xps_timebase_wdt INSTANCE:xps_timebase_wdt_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_timebase_wdt_v
+   1_01_a/data/xps_timebase_wdt_v2_1_0.mpd line 74 - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_timer INSTANCE:xps_timer_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_timer_v1_02_a/
+   data/xps_timer_v2_1_0.mpd line 75 - tool is overriding PARAMETER
+   C_SPLB_DWIDTH value to 128
+INFO:EDK:1560 - IPNAME:xps_timer INSTANCE:xps_timer_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_timer_v1_02_a/
+   data/xps_timer_v2_1_0.mpd line 77 - tool is overriding PARAMETER
+   C_SPLB_MID_WIDTH value to 1
+INFO:EDK:1560 - IPNAME:xps_timer INSTANCE:xps_timer_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_timer_v1_02_a/
+   data/xps_timer_v2_1_0.mpd line 78 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_intc INSTANCE:xps_intc_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_intc_v2_01_a/d
+   ata/xps_intc_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_intc INSTANCE:xps_intc_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_intc_v2_01_a/d
+   ata/xps_intc_v2_1_0.mpd line 73 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_tft INSTANCE:xps_tft_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_tft_v2_01_a/da
+   ta/xps_tft_v2_1_0.mpd line 76 - tool is overriding PARAMETER C_MPLB_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_tft INSTANCE:xps_tft_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_tft_v2_01_a/da
+   ta/xps_tft_v2_1_0.mpd line 80 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_tft INSTANCE:xps_tft_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_tft_v2_01_a/da
+   ta/xps_tft_v2_1_0.mpd line 83 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:xps_ps2 INSTANCE:xps_ps2_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_ps2_v1_01_b/da
+   ta/xps_ps2_v2_1_0.mpd line 68 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_ps2 INSTANCE:xps_ps2_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_ps2_v1_01_b/da
+   ta/xps_ps2_v2_1_0.mpd line 71 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plbv46_2_wb INSTANCE:plbv46_2_wb_0 -
+   /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_v1_10_
+   a/data/plbv46_2_wb_v2_1_0.mpd line 26 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2
+INFO:EDK:1560 - IPNAME:plbv46_2_wb INSTANCE:plbv46_2_wb_0 -
+   /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_v1_10_
+   a/data/plbv46_2_wb_v2_1_0.mpd line 27 - tool is overriding PARAMETER
+   C_SPLB_MID_WIDTH value to 1
+INFO:EDK:1560 - IPNAME:plbv46_2_wb INSTANCE:plbv46_2_wb_0 -
+   /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_v1_10_
+   a/data/plbv46_2_wb_v2_1_0.mpd line 31 - tool is overriding PARAMETER
+   C_SPLB_SMALLEST_MASTER value to 64
+
+Checking platform address map ...
+
+Checking platform configuration ...
+INFO:EDK:1563 - IPNAME:xps_ethernetlite INSTANCE:Ethernet_MAC -
+   /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 217 -
+   This design requires design constraints to guarantee performance.
+   Please refer to the data sheet for details.  
+   The PLB clock frequency must be greater than or equal to 50 MHz for 100 Mbs
+   Ethernet operation and greater than or equal to 5.0 MHz for 10 Mbs Ethernet
+   operation.
+IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 110 - 2
+master(s) : 17 slave(s)
+
+Checking port drivers...
+WARNING:EDK:2099 - PORT:Peripheral_Reset CONNECTOR:sys_periph_reset -
+   /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 415 -
+   floating connection!
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:1560 - IPNAME:ppc440_virtex5 INSTANCE:ppc440_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/ppc440_virtex5_v1_
+   01_a/data/ppc440_virtex5_v2_1_0.mpd line 122 - tcl is overriding PARAMETER
+   C_PPC440MC_ADDR_BASE value to 0x00000000
+INFO:EDK:1560 - IPNAME:ppc440_virtex5 INSTANCE:ppc440_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/ppc440_virtex5_v1_
+   01_a/data/ppc440_virtex5_v2_1_0.mpd line 123 - tcl is overriding PARAMETER
+   C_PPC440MC_ADDR_HIGH value to 0x0fffffff
+INFO:EDK:1560 - IPNAME:jtagppc_cntlr INSTANCE:jtagppc_cntlr_inst -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_0
+   1_c/data/jtagppc_cntlr_v2_1_0.mpd line 68 - tcl is overriding PARAMETER
+   C_NUM_PPC_USED value to 1
+INFO:EDK:1560 - IPNAME:xps_intc INSTANCE:xps_intc_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_intc_v2_01_a/d
+   ata/xps_intc_v2_1_0.mpd line 77 - tcl is overriding PARAMETER
+   C_NUM_INTR_INPUTS value to 12
+INFO:EDK:1560 - IPNAME:xps_intc INSTANCE:xps_intc_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_intc_v2_01_a/d
+   ata/xps_intc_v2_1_0.mpd line 78 - tcl is overriding PARAMETER C_KIND_OF_INTR
+   value to 0b11111111111111111111100010101010
+INFO:EDK:1560 - IPNAME:xps_intc INSTANCE:xps_intc_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_intc_v2_01_a/d
+   ata/xps_intc_v2_1_0.mpd line 79 - tcl is overriding PARAMETER C_KIND_OF_EDGE
+   value to 0b11111111111111111111111111111111
+INFO:EDK:1560 - IPNAME:xps_intc INSTANCE:xps_intc_0 -
+   /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_intc_v2_01_a/d
+   ata/xps_intc_v2_1_0.mpd line 80 - tcl is overriding PARAMETER C_KIND_OF_LVL
+   value to 0b11111111111111111111111111111110
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Port present in Ethernet_MAC
+I'm now in proc syslevel_check_micontrol
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+INFO: The Ethernet_MAC core has constraints automatically generated by XPS in
+implementation/ethernet_mac_wrapper/ethernet_mac_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+INFO: The DDR2_SDRAM core has constraints automatically generated by XPS in
+implementation/ddr2_sdram_wrapper/ddr2_sdram_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+INFO: The xps_tft_0 core has constraints automatically generated by XPS in
+implementation/xps_tft_0_wrapper/xps_tft_0_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+
+Modify defaults ...
+
+Creating stub ...
+
+Processing licensed instances ...
+Completion time: 0.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+
+Managing cache ...
+
+Elaborating instances ...
+IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_1_bram -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 130 -
+elaborating IP
+IPNAME:clock_generator INSTANCE:clock_generator_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 360 -
+elaborating IP
+ClkGen elaborate status: PASSED
+----------------------------------------
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 3.00 seconds
+
+Constructing platform-level connectivity ...
+Completion time: 4.00 seconds
+
+Writing (top-level) BMM ...
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+
+INFO:EDK:2502 - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
+INSTANCE:ppc440_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 84 - Running
+XST synthesis
+INSTANCE:plb_v46_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 110 -
+Running XST synthesis
+INSTANCE:xps_bram_if_cntlr_1 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 118 -
+Running XST synthesis
+INSTANCE:xps_bram_if_cntlr_1_bram -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 130 -
+Running XST synthesis
+INSTANCE:rs232_uart_1 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 136 -
+Running XST synthesis
+INSTANCE:leds_8bit -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 151 -
+Running XST synthesis
+INSTANCE:leds_positions -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 164 -
+Running XST synthesis
+INSTANCE:push_buttons_5bit -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 177 -
+Running XST synthesis
+INSTANCE:dip_switches_8bit -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 190 -
+Running XST synthesis
+INSTANCE:iic_eeprom -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 204 -
+Running XST synthesis
+INSTANCE:ethernet_mac -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 217 -
+Running XST synthesis
+INSTANCE:ddr2_sdram -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 238 -
+Running XST synthesis
+INSTANCE:sysace_compactflash -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 294 -
+Running XST synthesis
+INSTANCE:flash - /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs
+line 311 - Running XST synthesis
+INSTANCE:xps_timebase_wdt_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 338 -
+Running XST synthesis
+INSTANCE:xps_timer_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 349 -
+Running XST synthesis
+INSTANCE:clock_generator_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 360 -
+Running XST synthesis
+INSTANCE:jtagppc_cntlr_inst -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 400 -
+Running XST synthesis
+INSTANCE:proc_sys_reset_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 406 -
+Running XST synthesis
+INSTANCE:xps_intc_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 418 -
+Running XST synthesis
+INSTANCE:xps_tft_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 428 -
+Running XST synthesis
+INSTANCE:xps_ps2_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 451 -
+Running XST synthesis
+INSTANCE:plbv46_2_wb_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 466 -
+Running XST synthesis
+ERROR:EDK:546 - Aborting XST flow execution!
+INFO:EDK:2246 - Refer to
+   /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/synthesis/plbv46_2_wb_0_w
+   rapper_xst.srp for details
+
+Running NGCBUILD ...
+IPNAME:ppc440_0_wrapper INSTANCE:ppc440_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 84 - Running
+NGCBUILD
+IPNAME:rs232_uart_1_wrapper INSTANCE:rs232_uart_1 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 136 -
+Running NGCBUILD
+IPNAME:ethernet_mac_wrapper INSTANCE:ethernet_mac -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 217 -
+Running NGCBUILD
+IPNAME:ddr2_sdram_wrapper INSTANCE:ddr2_sdram -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 238 -
+Running NGCBUILD
+IPNAME:clock_generator_0_wrapper INSTANCE:clock_generator_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 360 -
+Running NGCBUILD
+IPNAME:xps_intc_0_wrapper INSTANCE:xps_intc_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 418 -
+Running NGCBUILD
+IPNAME:xps_tft_0_wrapper INSTANCE:xps_tft_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 428 -
+Running NGCBUILD
+
+Rebuilding cache ...
+ERROR:EDK:440 - platgen failed with errors!
