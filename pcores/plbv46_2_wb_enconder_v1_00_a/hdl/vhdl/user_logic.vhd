@@ -106,20 +106,6 @@ entity user_logic is
   (
     -- ADD USER PORTS BELOW THIS LINE ------------------
     -- external ports
-    wb_encoder_o                   : out std_logic_vector(0 to C_WB_DBUS_SIZE-1);
-    -- wishbone ports
-    wb_clk_out                       : out std_logic;
-    wb_rst_out                       : out std_logic;
-    wb_cyc_out                       : out std_logic;
-    wb_stb_out                       : out std_logic;
-    wb_we_out                        : out std_logic;
-    wb_ack_in                       : in  std_logic;
-    wb_err_in                       : in  std_logic;
-    wb_rty_in                       : in  std_logic;
-    wb_sel_out                       : out std_logic_vector(0 to (C_WB_DBUS_SIZE/8)-1);
-    wb_addr_out                      : out std_logic_vector(0 to C_WB_DBUS_SIZE-1);
-    wb_data_out                      : out std_logic_vector(0 to C_WB_DBUS_SIZE-1);
-    wb_data_in                      : in  std_logic_vector(0 to C_WB_DBUS_SIZE-1);
     -- ADD USER PORTS ABOVE THIS LINE ------------------
 
     -- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -152,6 +138,20 @@ end entity user_logic;
 architecture IMP of user_logic is
 
   --USER signal declarations added here, as needed for user logic
+    signal wb_encoder_o : out std_logic_vector(0 to C_WB_DBUS_SIZE-1);
+    -- wishbone ports
+    signal wb_clk_out   : out std_logic;
+    signal wb_rst_out   : out std_logic;
+    signal wb_cyc_out   : out std_logic;
+    signal wb_stb_out   : out std_logic;
+    signal wb_we_out    : out std_logic;
+    signal wb_ack_in    : in  std_logic;
+    signal wb_err_in    : in  std_logic;
+    signal wb_rty_in    : in  std_logic;
+    signal wb_sel_out   : out std_logic_vector(0 to (C_WB_DBUS_SIZE/8)-1);
+    signal wb_addr_out  : out std_logic_vector(0 to C_WB_DBUS_SIZE-1);
+    signal wb_data_out  : out std_logic_vector(0 to C_WB_DBUS_SIZE-1);
+    signal wb_data_in   : in  std_logic_vector(0 to C_WB_DBUS_SIZE-1);
   -- State Machine Declarations
   type state_type is (ST_IDLE, ST_ACCESS, ST_RETRY_STROBE, ST_RETRY, ST_ERROR, ST_DONE);
   signal curr_st        : state_type;
@@ -189,6 +189,25 @@ architecture IMP of user_logic is
   signal intr_counter                   : std_logic_vector(0 to C_NUM_INTR-1);
 
 begin
+    ----------------------------------------
+    -- instantiate wb_encoder
+    ----------------------------------------
+    WB_ENCODER_I : entity plbv46_2_wb_enconder_v1_00_a.wb_encoder
+    generic map
+    (
+     C_WB_DBUS_SIZE     => C_WB_DBUS_SIZE 
+    )
+    port map
+    (
+        wb_clk_out      => wb_clk_in,
+        wb_rst_out      => wb_rst_in,
+        wb_cyc_out      => wb_cyc_in,
+        wb_stb_out      => wb_stb_in,
+        wb_we_out       => wb_we_in,
+        wb_addr_out     => wb_addr_in,
+        wb_data_in      => wb_data_out,
+        wb_data_out     => wb_data_in,
+    )
 
   --USER logic implementation added here
   --
