@@ -36,7 +36,6 @@ Address Map for Processor ppc440_0
   (0x84000000-0x8400ffff) RS232_Uart_1	plb_v46_0
   (0x86a00000-0x86a0ffff) xps_ps2_0	plb_v46_0
   (0x86e00000-0x86e0ffff) xps_tft_0	plb_v46_0
-  (0x86f00000-0x86f0ffff) plbv46_2_wb_0	plb_v46_0
   (0x8c000000-0x8dffffff) FLASH	plb_v46_0
   (0xffff0000-0xffffffff) xps_bram_if_cntlr_1	plb_v46_0
 INFO:EDK:1560 - IPNAME:ppc440_virtex5 INSTANCE:ppc440_0 -
@@ -56,7 +55,7 @@ INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:plb_v46_0 -
 INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:plb_v46_0 -
    /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plb_v46_v1_04_a/da
    ta/plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
-   C_PLBV46_NUM_SLAVES value to 17
+   C_PLBV46_NUM_SLAVES value to 16
 INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:plb_v46_0 -
    /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plb_v46_v1_04_a/da
    ta/plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
@@ -217,18 +216,6 @@ INFO:EDK:1560 - IPNAME:xps_ps2 INSTANCE:xps_ps2_0 -
    /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_ps2_v1_01_b/da
    ta/xps_ps2_v2_1_0.mpd line 71 - tool is overriding PARAMETER
    C_SPLB_NUM_MASTERS value to 2
-INFO:EDK:1560 - IPNAME:plbv46_2_wb INSTANCE:plbv46_2_wb_0 -
-   /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_v1_10_
-   a/data/plbv46_2_wb_v2_1_0.mpd line 26 - tool is overriding PARAMETER
-   C_SPLB_NUM_MASTERS value to 2
-INFO:EDK:1560 - IPNAME:plbv46_2_wb INSTANCE:plbv46_2_wb_0 -
-   /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_v1_10_
-   a/data/plbv46_2_wb_v2_1_0.mpd line 27 - tool is overriding PARAMETER
-   C_SPLB_MID_WIDTH value to 1
-INFO:EDK:1560 - IPNAME:plbv46_2_wb INSTANCE:plbv46_2_wb_0 -
-   /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_v1_10_
-   a/data/plbv46_2_wb_v2_1_0.mpd line 31 - tool is overriding PARAMETER
-   C_SPLB_SMALLEST_MASTER value to 64
 
 Checking platform address map ...
 
@@ -242,7 +229,7 @@ INFO:EDK:1563 - IPNAME:xps_ethernetlite INSTANCE:Ethernet_MAC -
    operation.
 IPNAME:plb_v46 INSTANCE:plb_v46_0 -
 /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 110 - 2
-master(s) : 17 slave(s)
+master(s) : 16 slave(s)
 
 Checking port drivers...
 WARNING:EDK:2099 - PORT:Peripheral_Reset CONNECTOR:sys_periph_reset -
@@ -321,6 +308,66 @@ Creating hardware output directories ...
 Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
+IPNAME:ppc440_virtex5 INSTANCE:ppc440_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 84 - Copying
+cache implementation netlist
+IPNAME:xps_bram_if_cntlr INSTANCE:xps_bram_if_cntlr_1 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 118 -
+Copying cache implementation netlist
+IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_1_bram -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 130 -
+Copying cache implementation netlist
+IPNAME:xps_uartlite INSTANCE:rs232_uart_1 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 136 -
+Copying cache implementation netlist
+IPNAME:xps_gpio INSTANCE:leds_8bit -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 151 -
+Copying cache implementation netlist
+IPNAME:xps_gpio INSTANCE:leds_positions -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 164 -
+Copying cache implementation netlist
+IPNAME:xps_gpio INSTANCE:push_buttons_5bit -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 177 -
+Copying cache implementation netlist
+IPNAME:xps_gpio INSTANCE:dip_switches_8bit -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 190 -
+Copying cache implementation netlist
+IPNAME:xps_iic INSTANCE:iic_eeprom -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 204 -
+Copying cache implementation netlist
+IPNAME:xps_ethernetlite INSTANCE:ethernet_mac -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 217 -
+Copying cache implementation netlist
+IPNAME:ppc440mc_ddr2 INSTANCE:ddr2_sdram -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 238 -
+Copying cache implementation netlist
+IPNAME:xps_sysace INSTANCE:sysace_compactflash -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 294 -
+Copying cache implementation netlist
+IPNAME:xps_mch_emc INSTANCE:flash -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 311 -
+Copying cache implementation netlist
+IPNAME:xps_timebase_wdt INSTANCE:xps_timebase_wdt_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 338 -
+Copying cache implementation netlist
+IPNAME:xps_timer INSTANCE:xps_timer_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 349 -
+Copying cache implementation netlist
+IPNAME:jtagppc_cntlr INSTANCE:jtagppc_cntlr_inst -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 400 -
+Copying cache implementation netlist
+IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 406 -
+Copying cache implementation netlist
+IPNAME:xps_intc INSTANCE:xps_intc_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 418 -
+Copying cache implementation netlist
+IPNAME:xps_tft INSTANCE:xps_tft_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 428 -
+Copying cache implementation netlist
+IPNAME:xps_ps2 INSTANCE:xps_ps2_0 -
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 451 -
+Copying cache implementation netlist
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_1_bram -
@@ -335,10 +382,10 @@ ClkGen elaborate status: PASSED
 Writing HDL for elaborated instances ...
 
 Inserting wrapper level ...
-Completion time: 3.00 seconds
+Completion time: 5.00 seconds
 
 Constructing platform-level connectivity ...
-Completion time: 4.00 seconds
+Completion time: 2.00 seconds
 
 Writing (top-level) BMM ...
 
@@ -351,101 +398,18 @@ Running XST synthesis ...
 INFO:EDK:2502 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:ppc440_0 -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 84 - Running
-XST synthesis
 INSTANCE:plb_v46_0 -
 /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 110 -
-Running XST synthesis
-INSTANCE:xps_bram_if_cntlr_1 -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 118 -
-Running XST synthesis
-INSTANCE:xps_bram_if_cntlr_1_bram -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 130 -
-Running XST synthesis
-INSTANCE:rs232_uart_1 -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 136 -
-Running XST synthesis
-INSTANCE:leds_8bit -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 151 -
-Running XST synthesis
-INSTANCE:leds_positions -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 164 -
-Running XST synthesis
-INSTANCE:push_buttons_5bit -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 177 -
-Running XST synthesis
-INSTANCE:dip_switches_8bit -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 190 -
-Running XST synthesis
-INSTANCE:iic_eeprom -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 204 -
-Running XST synthesis
-INSTANCE:ethernet_mac -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 217 -
-Running XST synthesis
-INSTANCE:ddr2_sdram -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 238 -
-Running XST synthesis
-INSTANCE:sysace_compactflash -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 294 -
-Running XST synthesis
-INSTANCE:flash - /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs
-line 311 - Running XST synthesis
-INSTANCE:xps_timebase_wdt_0 -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 338 -
-Running XST synthesis
-INSTANCE:xps_timer_0 -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 349 -
 Running XST synthesis
 INSTANCE:clock_generator_0 -
 /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 360 -
 Running XST synthesis
-INSTANCE:jtagppc_cntlr_inst -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 400 -
-Running XST synthesis
-INSTANCE:proc_sys_reset_0 -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 406 -
-Running XST synthesis
-INSTANCE:xps_intc_0 -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 418 -
-Running XST synthesis
-INSTANCE:xps_tft_0 -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 428 -
-Running XST synthesis
-INSTANCE:xps_ps2_0 -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 451 -
-Running XST synthesis
-INSTANCE:plbv46_2_wb_0 -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 466 -
-Running XST synthesis
-ERROR:EDK:546 - Aborting XST flow execution!
-INFO:EDK:2246 - Refer to
-   /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/synthesis/plbv46_2_wb_0_w
-   rapper_xst.srp for details
 
 Running NGCBUILD ...
-IPNAME:ppc440_0_wrapper INSTANCE:ppc440_0 -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 84 - Running
-NGCBUILD
-IPNAME:rs232_uart_1_wrapper INSTANCE:rs232_uart_1 -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 136 -
-Running NGCBUILD
-IPNAME:ethernet_mac_wrapper INSTANCE:ethernet_mac -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 217 -
-Running NGCBUILD
-IPNAME:ddr2_sdram_wrapper INSTANCE:ddr2_sdram -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 238 -
-Running NGCBUILD
 IPNAME:clock_generator_0_wrapper INSTANCE:clock_generator_0 -
 /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 360 -
 Running NGCBUILD
-IPNAME:xps_intc_0_wrapper INSTANCE:xps_intc_0 -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 418 -
-Running NGCBUILD
-IPNAME:xps_tft_0_wrapper INSTANCE:xps_tft_0 -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 428 -
-Running NGCBUILD
 
 Rebuilding cache ...
-ERROR:EDK:440 - platgen failed with errors!
+
+Total run time: 318.00 seconds

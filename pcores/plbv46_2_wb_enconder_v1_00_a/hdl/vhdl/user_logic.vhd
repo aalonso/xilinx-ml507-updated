@@ -60,7 +60,8 @@ use proc_common_v3_00_a.proc_common_pkg.all;
 -- DO NOT EDIT ABOVE THIS LINE --------------------
 
 --USER libraries added here
-
+library plbv46_2_wb_enconder_v1_00_a;
+use plbv46_2_wb_enconder_v1_00_a.user_logic;
 ------------------------------------------------------------------------------
 -- Entity section
 ------------------------------------------------------------------------------
@@ -88,7 +89,10 @@ entity user_logic is
   generic
   (
     -- ADD USER GENERICS BELOW THIS LINE ---------------
-    --USER generics added here
+    C_WB_DBUS_SIZE                 : integer              := 32;
+    C_WB_ACCESS_TIMEOUT            : integer              := 16;
+    C_WB_RETRY_TIMEOUT             : integer              := 256;
+    C_WB_ACCESS_RETRIES            : integer              := 4;
     -- ADD USER GENERICS ABOVE THIS LINE ---------------
 
     -- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -101,7 +105,21 @@ entity user_logic is
   port
   (
     -- ADD USER PORTS BELOW THIS LINE ------------------
-    --USER ports added here
+    -- external ports
+    wb_encoder_o                   : out std_logic_vector(0 to C_WB_DBUS_SIZE-1);
+    -- wishbone ports
+    wb_clk_out                       : out std_logic;
+    wb_rst_out                       : out std_logic;
+    wb_cyc_out                       : out std_logic;
+    wb_stb_out                       : out std_logic;
+    wb_we_out                        : out std_logic;
+    wb_ack_in                       : in  std_logic;
+    wb_err_in                       : in  std_logic;
+    wb_rty_in                       : in  std_logic;
+    wb_sel_out                       : out std_logic_vector(0 to (C_WB_DBUS_SIZE/8)-1);
+    wb_addr_out                      : out std_logic_vector(0 to C_WB_DBUS_SIZE-1);
+    wb_data_out                      : out std_logic_vector(0 to C_WB_DBUS_SIZE-1);
+    wb_data_in                      : in  std_logic_vector(0 to C_WB_DBUS_SIZE-1);
     -- ADD USER PORTS ABOVE THIS LINE ------------------
 
     -- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -134,6 +152,25 @@ end entity user_logic;
 architecture IMP of user_logic is
 
   --USER signal declarations added here, as needed for user logic
+  -- State Machine Declarations
+  type state_type is (ST_IDLE, ST_ACCESS, ST_RETRY_STROBE, ST_RETRY, ST_ERROR, ST_DONE);
+  signal curr_st        : state_type;
+  signal next_st        : state_type;
+  -- Bus Ack Decode
+  signal wb_rdack       : std_logic;
+  signal wb_wrack       : std_logic;
+  -- Timer used to track bus error condition and retry timouts.
+  signal timer_en       : std_logic;
+  signal timer_cnt      : std_logic_vector(0 to 7);
+  -- Counter used to track number of retry attempts
+  signal retry_iter     : std_logic_vector(0 to 1);
+  signal retry_iter_rst : std_logic;
+  signal retry_iter_en  : std_logic;
+  -- Status Signals
+  signal retry_expire   : std_logic;  -- Maximum Retries exceeded
+  signal access_to      : std_logic;  -- Bus Error Detected
+  signal retry_to       : std_logic;  -- Retry cycle completed
+
 
   ------------------------------------------
   -- Signals for user logic slave model s/w accessible register example
@@ -154,7 +191,131 @@ architecture IMP of user_logic is
 begin
 
   --USER logic implementation added here
+  --
+  -- We are not buffering these signals to the WB Bus.
+  -- Nor are we running the clock at a slower rate than the PLB Bus.
+  wb_clk_out <= Bus2IP_Clk;
+  wb_rst_out <= Bus2IP_Reset;
+  -- These can probably be treated as multi-cycle paths
+  -- Possibly will add in a Pipeline stage (user selectable?)
+  wb_addr_out <= Bus2IP_Addr;
+  wb_data_out <= Bus2IP_Data;
+  wb_sel_out  <= Bus2IP_BE;
+  wb_we_out   <= not Bus2IP_RNW;
 
+  -- Number of retry attempts
+  process(Bus2IP_Clk) begin
+    if (rising_edge(Bus2IP_Clk)) then
+      if (retry_iter_rst = '1') then 
+        retry_iter <= (others=>'0');
+      elsif (retry_iter_en = '1') then
+        retry_iter <= retry_iter + 1;
+      end if;
+
+      retry_expire <= '0';
+      if (retry_iter = conv_std_logic_vector(C_WB_ACCESS_RETRIES-1,2)) then
+        retry_expire <= '1';
+      end if;
+    end if;
+  end process;
+ 
+  -- Retry Wait Counter 
+  process(Bus2IP_Clk) begin
+    if (rising_edge(Bus2IP_Clk)) then
+      if (timer_en = '0') then
+        timer_cnt <= (others => '0');
+      else
+        timer_cnt <= timer_cnt + 1;
+      end if;
+
+      retry_to <= '0';
+      if (timer_cnt = conv_std_logic_vector(C_WB_RETRY_TIMEOUT-1, 8)) then
+        retry_to <= '1';
+      end if;
+
+      if (timer_cnt = conv_std_logic_vector(C_WB_ACCESS_TIMEOUT-1, 8)) then
+        access_to <= '1';
+      end if;
+    end if;
+  end process;
+  
+  -- WB Bridge State Machine (Next State Logic)
+  IP2Bus_RdAck <= wb_rdack;
+  IP2Bus_WrAck <= wb_wrack;
+
+  process(curr_st, Bus2IP_CS ,wb_rty_in ,wb_ack_in, retry_to, access_to) begin
+  	next_st <= curr_st;
+  	timer_en <= '0';
+    retry_iter_rst <= '0';
+  	retry_iter_en <= '0';
+    wb_stb_out <= '0';
+    wb_cyc_out <= '0';
+ 	wb_rdack <= '0';
+    wb_wrack <= '0';
+ 	IP2Bus_Error <= '0';
+
+    case (curr_st) is
+  	    when ST_IDLE =>
+      	    retry_iter_rst <= '1';
+  		    if (Bus2IP_CS(0) = '1') then
+  	 	        next_st <= ST_ACCESS;
+      	    end if;
+        -- Access State
+  		-- Completes when we receive either a RETRY, ACK or we timeout of the transaction.
+      	-- Transaction timeout is setup by the user.
+        when ST_ACCESS =>
+  		    wb_stb_out <= '1';
+  		   	wb_cyc_out <= '1';
+      	    timer_en <= '1';
+            if (wb_rty_in = '1') then
+                next_st <= ST_RETRY_STROBE;
+            elsif (wb_ack_in = '1') then
+               	next_st <= ST_DONE;
+            elsif (access_to = '1') then
+                next_st <= ST_ERROR;
+            end if;
+      	-- Retry Strobe
+  	    -- Simply used to reset timer and increment our retries.
+      	-- We will also check to see if we have reached out limit of retries.
+      	when ST_RETRY_STROBE =>
+  	        retry_iter_en <= '1';
+      	    if (retry_expire = '1') then
+  	  		    next_st <= ST_ERROR;
+      	  	else
+  	      	    next_st <= ST_RETRY;
+  	        end if;
+        -- Retry
+  	    -- Sit here and wait until we issues a WB Retry
+  	    when ST_RETRY =>
+      	    timer_en <= '1';
+      	    if (retry_to = '1') then
+  	            next_st <= ST_ACCESS;
+  	        end if;
+        -- Issue PLB Error
+        when ST_ERROR =>
+            IP2Bus_Error <= '1';
+      	    wb_wrack <= not Bus2IP_RNW;
+          	wb_rdack <= Bus2IP_RNW;
+            next_st <= ST_IDLE;
+  	  
+        when ST_DONE =>
+  	  	    wb_rdack <= Bus2IP_RNW;
+      	  	wb_wrack <= not Bus2IP_RNW;
+  	      	next_st <= ST_IDLE;
+  	    end case;
+    end process;
+
+    -- WB Bridge State Machine (Current State Logic)
+    process(Bus2IP_Clk) begin
+  	    if (rising_edge(Bus2IP_Clk)) then
+  		    if (Bus2IP_Reset = '1') then
+  			    curr_st <= ST_IDLE;
+  		    else
+  			    curr_st <= next_st;
+  		    end if;
+  	    end if;
+    end process;
+   
   ------------------------------------------
   -- Example code to read/write user logic slave model s/w accessible registers
   -- 

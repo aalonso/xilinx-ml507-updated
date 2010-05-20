@@ -166,7 +166,9 @@ entity plbv46_2_wb_enconder is
   port
   (
     -- ADD USER PORTS BELOW THIS LINE ------------------
-    --USER ports added here
+    -- external ports
+    wb_encoder_o                   : out std_logic_vector(0 to 31);
+    
     -- ADD USER PORTS ABOVE THIS LINE ------------------
 
     -- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -487,7 +489,7 @@ begin
     port map
     (
       -- MAP USER PORTS BELOW THIS LINE ------------------
-      --USER ports mapped here
+      wb_encoder_o                   => user_wb_encoder_o,
       -- MAP USER PORTS ABOVE THIS LINE ------------------
 
       Bus2IP_Clk                     => ipif_Bus2IP_Clk,
