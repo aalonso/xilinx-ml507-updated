@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder_v1_01_a/devl/synthesis/plbv46_2_wb_enconder_xst.prj"
+-top plbv46_2_wb_enconder
+-p virtex5
+-ofn "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder_v1_01_a/devl/synthesis/plbv46_2_wb_enconder_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib plbv46_2_wb_enconder_v1_01_a
