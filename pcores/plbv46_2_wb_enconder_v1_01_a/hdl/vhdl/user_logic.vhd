@@ -199,7 +199,7 @@ begin
     ----------------------------------------
     -- instantiate wb_encoder
     ----------------------------------------
-    WB_ENCODER_I : entity plbv46_2_wb_enconder_v1_00_a.wb_encoder
+    WB_ENCODER_I : entity plbv46_2_wb_enconder_v1_01_a.wb_encoder
     generic map
     (
      C_WB_DBUS_SIZE     => C_WB_DBUS_SIZE 
