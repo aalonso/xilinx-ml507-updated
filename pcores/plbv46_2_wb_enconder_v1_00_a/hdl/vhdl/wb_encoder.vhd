@@ -48,8 +48,8 @@ entity wb_encoder is
         wb_cyc_in   : in  std_logic;
         wb_we_in    : in  std_logic;
         wb_addr_in  : in  std_logic_vector (0 to C_WB_DBUS_SIZE-1);
-        wb_data_in   : in  std_logic_vector (0 to C_WB_DBUS_SIZE-1);
-        wb_data_out   : out std_logic_vector (0 to C_WB_DBUS_SIZE-1);
+        wb_data_in  : in  std_logic_vector (0 to C_WB_DBUS_SIZE-1);
+        wb_data_out : out std_logic_vector (0 to C_WB_DBUS_SIZE-1);
         wb_irq_out  : out std_logic;
         wb_ack_out  : out std_logic);
 end wb_encoder;
@@ -86,9 +86,9 @@ begin
                 r_ack <= '1';
                 if (wb_addr_in = X"0000_0000") then
                     wb_data_out <= wb_dreg;
-                elsif (wb_addr_in = X"0000_0001") then
+                elsif (wb_addr_in = X"4000_0000") then
                     wb_data_out <= wb_creg;
-                elsif (wb_addr_in = X"0000_0010") then
+                elsif (wb_addr_in = X"8000_0000") then
                     wb_data_out <= std_logic_vector(to_unsigned(C_WB_ID,C_WB_DBUS_SIZE));
                 end if;
             -- writing registers
@@ -107,7 +107,7 @@ begin
         elsif (rising_edge(wb_clk_in)) then
             if (wb_we_in = '1' and wb_stb_in = '1'
                 and wb_cyc_in = '1') then
-                if (wb_addr_in = X"0000_0001") then
+                if (wb_addr_in = X"4000_0000") then
                     wb_creg <= wb_creg & wb_data_in;
                     w_ack <= '1';
                 else
