@@ -19,8 +19,8 @@
 ----------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.std_logic_arith.all;
-use ieee.std_logic_unsigned.all;
+-- use ieee.std_logic_arith.all;
+-- use ieee.std_logic_unsigned.all;
 
 ---- Uncomment the following library declaration if instantiating
 ---- any Xilinx primitives in this code.
@@ -88,8 +88,8 @@ begin
                     wb_data_out <= wb_dreg;
                 elsif (wb_addr_in = X"4000_0000") then
                     wb_data_out <= wb_creg;
-                elsif (wb_addr_in = X"8000_0000") then
-                    wb_data_out <= std_logic_vector(to_unsigned(C_WB_ID,C_WB_DBUS_SIZE));
+                -- elsif (wb_addr_in = X"8000_0000") then
+                --    wb_data_out <= std_logic_vector(to_unsigned(C_WB_ID,C_WB_DBUS_SIZE));
                 end if;
             -- writing registers
             else
