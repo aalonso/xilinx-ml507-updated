@@ -61,7 +61,8 @@ use proc_common_v3_00_a.proc_common_pkg.all;
 
 --USER libraries added here
 library plbv46_2_wb_enconder_v1_00_a;
-use plbv46_2_wb_enconder_v1_00_a.user_logic;
+use plbv46_2_wb_enconder_v1_00_a.wb_encoder;
+
 ------------------------------------------------------------------------------
 -- Entity section
 ------------------------------------------------------------------------------
@@ -205,7 +206,7 @@ begin
         wb_stb_in      => wb_stb_in,
         wb_we_in       => wb_we_in,
         wb_addr_in     => wb_addr_in,
-        wb_data_in     => wb_encoder_o,
+        wb_data_in     => wb_encoder_in,
         wb_data_out    => wb_data_out,
 		wb_irq_out	   => wb_irq_out,
 		wb_ack_out     => wb_ack_out
