@@ -1,19 +1,11 @@
-
-----------------------------------------------------------------------------
---                            Design Analysis                             --
-----------------------------------------------------------------------------
-Analyze pcore plbv46_2_wb_enconder ...
-
-
-----------------------------------------------------------------------------
---                            File Generation                             --
-----------------------------------------------------------------------------
-Creating HDL source directory ...
-Generating top peripheral VHDL template ...
-Generating stub user logic VHDL template ...
-HDL templates successfully generated ...
-Creating data directory ...
-Generating XPS inteface files ...
+Parsing PAO project file successfully ...
+Analyzing HDL source files ...
+Analyzing HDL source files successfully ...
+HDL language for the peripheral (top level) design unit plbv46_2_wb_enconder is
+vhdl ...
+INFO:EDK:3391 - Create temporary xst project file:
+   /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_encond
+   er.prj
 Compiling vhdl file
 "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
 hdl/vhdl/proc_common_pkg.vhd" in Library proc_common_v3_00_a.
@@ -56,6 +48,11 @@ plbv46_slave_single_v1_01_a.
 Entity <plb_address_decoder> compiled.
 Entity <plb_address_decoder> (Architecture <IMP>) compiled.
 Compiling vhdl file
+"/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder
+_v1_01_a/hdl/vhdl/wb_encoder.vhd" in Library plbv46_2_wb_enconder_v1_01_a.
+Entity <wb_encoder> compiled.
+Entity <wb_encoder> (Architecture <behavioral>) compiled.
+Compiling vhdl file
 "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_
 v1_01_a/hdl/vhdl/plb_slave_attachment.vhd" in Library
 plbv46_slave_single_v1_01_a.
@@ -74,13 +71,12 @@ Entity <plbv46_slave_single> compiled.
 Entity <plbv46_slave_single> (Architecture <implementation>) compiled.
 Compiling vhdl file
 "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder
-_v1_01_a/data/../hdl/vhdl/user_logic.vhd" in Library
-plbv46_2_wb_enconder_v1_01_a.
+_v1_01_a/hdl/vhdl/user_logic.vhd" in Library plbv46_2_wb_enconder_v1_01_a.
 Entity <user_logic> compiled.
 Entity <user_logic> (Architecture <IMP>) compiled.
 Compiling vhdl file
 "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder
-_v1_01_a/data/../hdl/vhdl/plbv46_2_wb_enconder.vhd" in Library
+_v1_01_a/hdl/vhdl/plbv46_2_wb_enconder.vhd" in Library
 plbv46_2_wb_enconder_v1_01_a.
 Entity <plbv46_2_wb_enconder> compiled.
 Entity <plbv46_2_wb_enconder> (Architecture <IMP>) compiled.
@@ -91,104 +87,131 @@ Entity name = plbv46_2_wb_enconder
 INFO:EDK:1607 - IPTYPE set to value : PERIPHERAL
 INFO:EDK:1511 - IMP_NETLIST set to value : TRUE
 INFO:EDK:1486 - HDL set to value : VHDL
-XPS interface files successfully generated ...
-Creating development directory ...
-Generating command option file ...
-Generating readme file ...
-Development misc files successfully generated ...
-Creating projnav directory ...
-Generating ProjNav support files ...
-ProjNav support files successfully generated ...
-Creating synthesis directory ...
-Generating XST synthesis support files ...
-XST synthesis support files successfully generated ...
-No BFM simulation files will be generated at this time ...
-Creating software driver data directory ...
-Generating software driver XPS interface (mdd/tcl) files ...
-Software driver data definition file (.mdd) successfully generated ...
-Software driver data generation file (.tcl) successfully generated ...
-Creating software driver src directory ...
-Generating software driver template files ...
-Software driver compile file (Makefile) successfully generated ...
-output user slave register(s) offset to software driver header ...
-output interrupt control register(s) offset to software driver header ...
-Software driver header file (.h) successfully generated ...
-Software driver source file (.c) successfully generated ...
-Software driver SelfTest file (.c) successfully generated ...
-Software driver template files successfully generated ...
+WARNING:EDK:2065 - PARAMETER:_NUM_SLAVES - SLAVE PLBV46 parameter is not defined
+   in the HDL source
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+INFO:EDK:1631 - Infer bus clock [SPLB_Clk] for bus interface SPLB ...
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Rst!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_abort!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_ABus!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_UABus!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_BE!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_busLock!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_lockErr!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_masterID!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_PAValid!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_rdPendPri!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_wrPendPri!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_rdPendReq!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_wrPendReq!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_rdBurst!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_rdPrim!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_reqPri!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_RNW!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_SAValid!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_MSize!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_size!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_TAttribute!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_type!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_wrBurst!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_wrDBus!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_wrPrim!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_addrAck!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_MBusy!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_MRdErr!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_MWrErr!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_MIRQ!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_rdBTerm!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_rdComp!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_rdDAck!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_rdDBus!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_rdWdAddr!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_rearbitrate!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_SSize!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_wait!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_wrBTerm!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_wrComp!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_wrDAck!
+Copying file wb_encoder.vhd to
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder_
+v1_01_a/hdl/vhdl/ ...
+Copying file user_logic.vhd to
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder_
+v1_01_a/hdl/vhdl/ ...
+Copying file plbv46_2_wb_enconder.vhd to
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder_
+v1_01_a/hdl/vhdl/ ...
 
-----------------------------------------------------------------------------
---                              Final Report                              --
-----------------------------------------------------------------------------
 Thank you for using Create and Import Peripheral Wizard! Please find your
-peripheral hardware templates under
+imported peripheral under
 /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder_
-v1_01_a and peripheral software templates under
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/drivers/plbv46_2_wb_enconder
-_v1_01_a respectively.
+v1_01_a.
 
-Peripheral Summary:
+Summary:
 
-  top name       : plbv46_2_wb_enconder
-  version        : 1.01.a
-  type           : PLB (v4.6) slave
-  features       : slave attachment
-                   interrupt control
-                   user s/w registers
+  Logical library     : plbv46_2_wb_enconder_v1_01_a
+  Version             : 1.01.a
+  Bus interface(s)    : SPLB 
 
-Address Block Summary:
+The following sub-directories will be created:
 
-  user logic slv : C_BASEADDR + 0x00000000
-                 : C_BASEADDR + 0x000000FF
-  interrupt      : C_BASEADDR + 0x00000100
-                 : C_BASEADDR + 0x000001FF
-
-File Summary
-
-  - HDL source -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder_
-v1_01_a/hdl
-  top entity     : vhdl/plbv46_2_wb_enconder.vhd
-  user logic     : vhdl/user_logic.vhd
-
-  - XPS interface -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder_
-v1_01_a/data
-  mpd            : plbv46_2_wb_enconder_v2_1_0.mpd
-  pao            : plbv46_2_wb_enconder_v2_1_0.pao
-
-  - ISE project -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder_
-v1_01_a/devl/projnav
-  ise project    : plbv46_2_wb_enconder.xise
-  tcl script     : plbv46_2_wb_enconder.tcl
+  - plbv46_2_wb_enconder_v1_01_a/data
+  - plbv46_2_wb_enconder_v1_01_a/hdl
+  - plbv46_2_wb_enconder_v1_01_a/hdl/vhdl
 
 
-  - XST synthesis -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder_
-v1_01_a/devl/synthesis
-  xst script     : plbv46_2_wb_enconder_xst.scr
-  xst project    : plbv46_2_wb_enconder_xst.prj
+The following HDL source files will be copied into the
+plbv46_2_wb_enconder_v1_01_a/hdl/vhdl directory:
 
-  - Misc file -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder_
-v1_01_a/devl
-  help           : README.txt
-  option         : ipwiz.opt
-  log            : ipwiz.log
+  - wb_encoder.vhd
+  - user_logic.vhd
+  - plbv46_2_wb_enconder.vhd
 
-  - Driver source -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/drivers/plbv46_2_wb_enconder
-_v1_01_a/src
-  makefile       : Makefile
-  header         : plbv46_2_wb_enconder.h
-  source         : plbv46_2_wb_enconder.c
-  selftest       : plbv46_2_wb_enconder_selftest.c
+The following files will be created under the plbv46_2_wb_enconder_v1_01_a/data
+directory:
 
-  - Driver interface -
-/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/drivers/plbv46_2_wb_enconder
-_v1_01_a/data
-  mdd            : plbv46_2_wb_enconder_v2_1_0.mdd
-  tcl            : plbv46_2_wb_enconder_v2_1_0.tcl
+  - plbv46_2_wb_enconder_v2_1_0.mpd
+  - plbv46_2_wb_enconder_v2_1_0.pao
 
 

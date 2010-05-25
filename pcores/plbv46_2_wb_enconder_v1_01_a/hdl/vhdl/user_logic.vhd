@@ -216,7 +216,7 @@ begin
         wb_data_out    => wb_data_out,
 		wb_irq_out	   => wb_irq_out,
 		wb_ack_out     => wb_ack_out
-    )
+    );
 
   --USER logic implementation added here
   --

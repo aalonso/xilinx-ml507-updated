@@ -1,7 +1,7 @@
 ##############################################################################
 ## Filename:          /home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder_v1_01_a/data/plbv46_2_wb_enconder_v2_1_0.pao
 ## Description:       Peripheral Analysis Order
-## Date:              Tue May 25 10:26:22 2010 (by Create and Import Peripheral Wizard)
+## Date:              Tue May 25 11:19:15 2010 (by Create and Import Peripheral Wizard)
 ##############################################################################
 
 lib proc_common_v3_00_a proc_common_pkg vhdl
@@ -15,5 +15,6 @@ lib plbv46_slave_single_v1_01_a plb_address_decoder vhdl
 lib plbv46_slave_single_v1_01_a plb_slave_attachment vhdl
 lib plbv46_slave_single_v1_01_a plbv46_slave_single vhdl
 lib interrupt_control_v2_01_a interrupt_control vhdl
+lib plbv46_2_wb_enconder_v1_01_a wb_encoder vhdl
 lib plbv46_2_wb_enconder_v1_01_a user_logic vhdl
 lib plbv46_2_wb_enconder_v1_01_a plbv46_2_wb_enconder vhdl
