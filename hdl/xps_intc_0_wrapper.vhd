@@ -54,7 +54,7 @@ entity xps_intc_0_wrapper is
     Sl_rdWdAddr : out std_logic_vector(0 to 3);
     Sl_rdBTerm : out std_logic;
     Sl_MIRQ : out std_logic_vector(0 to 1);
-    Intr : in std_logic_vector(11 downto 0);
+    Intr : in std_logic_vector(12 downto 0);
     Irq : out std_logic
   );
 
@@ -150,8 +150,8 @@ begin
       C_SPLB_MID_WIDTH => 1,
       C_SPLB_NATIVE_DWIDTH => 32,
       C_SPLB_SUPPORT_BURSTS => 0,
-      C_NUM_INTR_INPUTS => 12,
-      C_KIND_OF_INTR => B"11111111111111111111100010101010",
+      C_NUM_INTR_INPUTS => 13,
+      C_KIND_OF_INTR => B"11111111111111111111000010101010",
       C_KIND_OF_EDGE => B"11111111111111111111111111111111",
       C_KIND_OF_LVL => B"11111111111111111111111111111110",
       C_HAS_IPR => 1,

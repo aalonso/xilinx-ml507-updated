@@ -2105,6 +2105,8 @@ XSTHandler: XST: HDL Analysis
 XSTHandler: XST: HDL Synthesis
 XSTHandler: XST: Advanced HDL Synthesis
 XSTHandler: XST: Low Level Synthesis
+XSTHandler: XST: Partition Report
+XSTHandler: XST: Final Report
 
 Successfully generated unit: <ethernet_mac_wrapper_fifo_generator_v4_3>.
 
@@ -2524,18 +2526,18 @@ Timing constraint: Default period analysis for Clock 'SPLB_Clk'
   Total number of paths / destination ports: 19270 / 1571
 -------------------------------------------------------------------------
 Delay:               4.886ns (Levels of Logic = 7)
-  Source:            Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/Mac_addr_ram_addr_wr_0 (FF)
+  Source:            Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/Mac_addr_ram_addr_wr_3 (FF)
   Destination:       Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/Mac_addr_ram_addr_rd_1 (FF)
   Source Clock:      SPLB_Clk rising
   Destination Clock: SPLB_Clk rising
 
-  Data Path: Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/Mac_addr_ram_addr_wr_0 to Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/Mac_addr_ram_addr_rd_1
+  Data Path: Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/Mac_addr_ram_addr_wr_3 to Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/Mac_addr_ram_addr_rd_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              1   0.471   0.710  Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/Mac_addr_ram_addr_wr_0 (Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/Mac_addr_ram_addr_wr_0)
-     LUT3:I0->O            8   0.094   0.374  Ethernet_MAC/XEMAC_I/EMAC_I/mac_addr_ram_addr<0>1 (Ethernet_MAC/XEMAC_I/EMAC_I/mac_addr_ram_addr<0>)
-     RAM16X1S:A3->O        2   0.094   0.715  Ethernet_MAC/XEMAC_I/EMAC_I/NODEMACADDRRAMI/ram16x4i/ram16x1_2 (Ethernet_MAC/XEMAC_I/EMAC_I/mac_addr_ram_data<1>)
+     FDRS:C->Q             1   0.471   0.710  Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/Mac_addr_ram_addr_wr_3 (Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/Mac_addr_ram_addr_wr_3)
+     LUT3:I0->O            8   0.094   0.374  Ethernet_MAC/XEMAC_I/EMAC_I/mac_addr_ram_addr<3>1 (Ethernet_MAC/XEMAC_I/EMAC_I/mac_addr_ram_addr<3>)
+     RAM16X1S:A0->O        2   0.094   0.715  Ethernet_MAC/XEMAC_I/EMAC_I/NODEMACADDRRAMI/ram16x4i/ram16x1_2 (Ethernet_MAC/XEMAC_I/EMAC_I/mac_addr_ram_data<1>)
      LUT6:I3->O            1   0.094   0.480  Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/startReadDataNib_D1_SW1 (N178)
      LUT6:I5->O            2   0.094   0.485  Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/startReadDataNib_D1 (Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/N6)
      LUT6:I5->O            5   0.094   0.502  Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/rdDestAddrNib_D_t_q_FSM_FFd4-In41 (Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/rdDestAddrNib_D_t_q_FSM_N13)
@@ -2714,13 +2716,13 @@ Delay:               1.180ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 103.00 secs
-Total CPU time to Xst completion: 58.96 secs
+Total REAL time to Xst completion: 93.00 secs
+Total CPU time to Xst completion: 56.47 secs
  
 --> 
 
 
-Total memory usage is 666772 kilobytes
+Total memory usage is 667448 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  432 (   0 filtered)

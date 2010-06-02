@@ -1083,13 +1083,13 @@ Offset:              0.471ns (Levels of Logic = 0)
 =========================================================================
 
 
-Total REAL time to Xst completion: 307.00 secs
-Total CPU time to Xst completion: 17.92 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.57 secs
  
 --> 
 
 
-Total memory usage is 617388 kilobytes
+Total memory usage is 617864 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  173 (   0 filtered)
