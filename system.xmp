@@ -91,6 +91,23 @@ SwProj: TestApp_Peripheral_ppc440_0_tft
 Processor: ppc440_0
 Executable: TestApp_Peripheral_ppc440_0_tft/executable.elf
 Source: TestApp_Peripheral_ppc440_0_tft/src/xps-tft-colorbar.c
+DefaultInit: EXECUTABLE
+InitBram: 0
+Active: 1
+CompilerOptLevel: 2
+GlobPtrOpt: 0
+DebugSym: 1
+ProfileFlag: 0
+ProgStart: 
+StackSize: 
+HeapSize: 
+LinkerScript: 
+ProgCCFlags: 
+CompileInXps: 1
+NonXpsApp: 0
+SwProj: TestApp_Peripheral_wb_encoder
+Processor: ppc440_0
+Executable: TestApp_Peripheral_wb_encoder/executable.elf
 DefaultInit: executable
 InitBram: 0
 Active: 1

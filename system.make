@@ -196,6 +196,15 @@ TestApp_Peripheral_ppc440_0_tft_programclean:
 	rm -f $(TESTAPP_PERIPHERAL_PPC440_0_TFT_OUTPUT) 
 
 #################################################################
+# SOFTWARE APPLICATION TESTAPP_PERIPHERAL_WB_ENCODER
+#################################################################
+
+TestApp_Peripheral_wb_encoder_program: $(TESTAPP_PERIPHERAL_WB_ENCODER_OUTPUT) 
+
+$(TESTAPP_PERIPHERAL_WB_ENCODER_OUTPUT) : 
+	@echo "Sw App TestApp_Peripheral_wb_encoder: Neither C-sources specified, nor marked for BRAM initialization. Not compiling elf file"
+
+#################################################################
 # BOOTLOOP ELF FILES
 #################################################################
 
@@ -248,11 +257,11 @@ $(DOWNLOAD_BIT): $(SYSTEM_BIT) $(BRAMINIT_ELF_FILES) __xps/bitinit.opt
 	-bt $(SYSTEM_BIT) -o $(DOWNLOAD_BIT)
 	@rm -f $(SYSTEM)_bd.bmm
 
-$(SYSTEM_ACE): $(DOWNLOAD_BIT) $(TESTAPP_MEMORY_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_TFT_OUTPUT) 
+$(SYSTEM_ACE): $(DOWNLOAD_BIT) $(TESTAPP_MEMORY_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_TFT_OUTPUT) $(TESTAPP_PERIPHERAL_WB_ENCODER_OUTPUT) 
 	@echo "*********************************************"
 	@echo "Creating system ace file"
 	@echo "*********************************************"
-	xmd -tcl genace.tcl -jprog -hw $(DOWNLOAD_BIT) -elf $(TESTAPP_MEMORY_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_TFT_OUTPUT)  -target ppc_hw  -ace $(SYSTEM_ACE)
+	xmd -tcl genace.tcl -jprog -hw $(DOWNLOAD_BIT) -elf $(TESTAPP_MEMORY_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_TFT_OUTPUT) $(TESTAPP_PERIPHERAL_WB_ENCODER_OUTPUT)  -target ppc_hw  -ace $(SYSTEM_ACE)
 
 #################################################################
 # EXPORT_TO_SDK FLOW
