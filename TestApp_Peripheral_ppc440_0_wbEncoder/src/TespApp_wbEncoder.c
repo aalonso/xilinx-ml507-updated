@@ -23,11 +23,12 @@
 #include "xparameters.h"
 #include "xstatus.h"
 #include "stdio.h"
+#include "wbEencoder.h"
 
 /*
  * Constant definitions
  */
-#define WB_ENCODER_DEVICE_ID 
+#define WB_ENCODER_DEVICE_ID XPAR_PLBV46_2_WB_ENCONDER_0_DEVICE_ID
 
 /*
  * Function prototypes
