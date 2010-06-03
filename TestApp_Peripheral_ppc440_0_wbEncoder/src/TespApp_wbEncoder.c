@@ -30,21 +30,24 @@
  */
 #define WB_ENCODER_DEVICE_ID XPAR_PLBV46_2_WB_ENCONDER_0_DEVICE_ID
 
+/* Global wbEncoder instance */
+static wbEncoder wbEncoderInst;
+/* Interrupt controller instance */
+static XIntc interruptCtlr;
+
 /*
  * Function prototypes
  */
 
-int wbEncoderExample (u16 deviceId, u32 *dataRead);
-void wbEncoderHandler (void *callbackHandler);
-
+int wbEncoderExample(wbEncoder *instPtr, u16 deviceId);
+void wbEncoderHandler(void *callbackHandler);
 
 int
 main (int argc, char **argv)
 {
 	int status;
-	u32 inputData;
 	
-	status = wbEncoderExample (WB_ENCODER_DEVICE_ID, &inputData);
+	status = wbEncoderExample (&wbEncoderInst, WB_ENCODER_DEVICE_ID);
 
 	if (status != XST_SUCCESS) {
 		return XST_FAILURE;
@@ -53,9 +56,20 @@ main (int argc, char **argv)
 	return XST_SUCCESS;
 }
 
-int wbEncoderExample (u16 deviceId, u32 *dataRead)
+int wbEncoderExample (wbEncoder *instPrt, u16 deviceId)
 {
 	int status;
 
-	status = 
+	status = wbEncoder_Initialize(instPtr, deviceId);
+    if (status != XST_SUCCESS) {
+        return XST_FAILURE;
+    }
+
+    wbEncoder_InterruptGlobalEnable(wbEncoderInst);
+
+    for(;;) {
+                
+    }
+
+    return XST_SUCCESS;
 }
