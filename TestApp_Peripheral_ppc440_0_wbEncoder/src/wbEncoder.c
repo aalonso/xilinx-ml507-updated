@@ -85,19 +85,3 @@ int wbEncoder_Initialize (wbEncoder *instPrt, u16 deviceId)
 	return wbEncoder_CfgInitialize (instPtr, configPtr,
 									configPtr->baseAddress);
 }
-
-/*
- * wbEncoder Interrupt controller functions
- */
-
-void wbEncoder_InterruptGlobalEnable(wbEncoder *instPrt);
-void wbEncoder_InterruptGlobalDisable(wbEncoder *instPrt);
-void wbEncoder_InterruptEnable(wbEncoder *instPrt, u32 mask);
-void wbEncoder_InterruptDisable(wbEncoder *instPrt, u32 mask);
-void wbEncoder_InterruptClear(wbEncoder *instPrt, u32 mask);
-u32 wbEncoder_InterruptGetEnabled(wbEncoder *instPrt);
-u32 wbEncoder_InterruptGetStatus(wbEncoder *instPrt, u32 mask);
-
-
-
-
