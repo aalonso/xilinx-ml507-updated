@@ -63,6 +63,8 @@ typedef struct {
 	u16 deviceId;
 	u32 baseAddress;
 	u32 isReady;		/* device initialized */
+	u32 readData;
+	u32 readDelta;
 	int interruptPresent;
 } wbEncoder;
 
@@ -101,18 +103,5 @@ wbEncoder_Config *wbEncoder_LookupConfig (u16 deviceId);
  * wbEncoder initialize function
  */
 int wbEncoder_Initialize(wbEncoder *instPrt, u16 deviceId);
-
-/*
- * wbEncoder Interrupt controller functions
- */
-
-void wbEncoder_InterruptGlobalEnable(wbEncoder *instPrt);
-void wbEncoder_InterruptGlobalDisable(wbEncoder *instPrt);
-void wbEncoder_InterruptEnable(wbEncoder *instPrt, u32 mask);
-void wbEncoder_InterruptDisable(wbEncoder *instPrt, u32 mask);
-void wbEncoder_InterruptClear(wbEncoder *instPrt, u32 mask);
-u32 wbEncoder_InterruptGetEnabled(wbEncoder *instPrt);
-u32 wbEncoder_InterruptGetStatus(wbEncoder *instPrt, u32 mask);
-
 
 #endif		/* WB_ENCODER_H */

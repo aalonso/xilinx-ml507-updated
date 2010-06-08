@@ -33,7 +33,6 @@
 /* Global wbEncoder instance */
 static wbEncoder wbEncoderInst;
 /* Interrupt controller instance */
-static XIntc interruptCtlr;
 
 /*
  * Function prototypes
@@ -58,18 +57,89 @@ main (int argc, char **argv)
 
 int wbEncoderExample (wbEncoder *instPrt, u16 deviceId)
 {
-	int status;
+	int status, direction;
 
 	status = wbEncoder_Initialize(instPtr, deviceId);
     if (status != XST_SUCCESS) {
         return XST_FAILURE;
     }
 
-    wbEncoder_InterruptGlobalEnable(wbEncoderInst);
+    wbEncoder_InterruptGlobalEnable(instPtr);
 
     for(;;) {
-                
+		direction = wbEncoder_Direction(instPtr);
     }
-
+	
     return XST_SUCCESS;
+}
+
+int wbEncoder_Direction(wbEncoder *instPtr)
+{
+	int direction;
+	switch(instPtr->readData) {
+		case 0:
+			switch(instPtr->readDelta) {
+				case 1:
+					direction = ANTICLOCKWISE;
+					break;
+				case 2:
+					direction = CLOCKWISE;
+					break;
+				case 4:
+					direction = KEYPRESSED;
+					break;
+			}
+			break;
+		case 1:
+			switch(instPtr->readDelta) {
+				case 0:
+					direction = CLOCKWISE;
+					break;
+				case 3:
+					direction = ANTICLOCKWISE;
+					break;
+			}
+			break;
+		case 2:
+			switch(instPtr->readDelta) {
+				case 0:
+					direction = ANTICLOCKWISE;
+					break;
+				case 1:
+					direction = CLOCKWISE;
+					break;
+			}
+			break;
+		case 3:
+			switch(instPtr->readDelta) {
+				case 1:
+					direction = CLOCKWISE;
+					break;
+				case 2:
+					direction = ANTICLOCKWISE;
+					break;
+			}
+			break;
+		case 4:
+			direction = KEYPRESSED;
+			break;
+	}
+
+	return direction;
+}
+
+
+void wbEncoderHandler(void *callbackHandler)
+{
+	u32 data;
+
+	wbEncoder_InterruptClear(&wbEncoderInst, 0x00000001);
+
+	/* save prvious value */
+	instPtr->readDelta = instPtr->readData;
+	/* read data register */
+	wbEncoder_ReadReg(instPtr->baseAddress, 
+						WB_ENCODER_DATA_OFFSET, data);
+	
+	instPtr->readData = data & 0x07;
 }

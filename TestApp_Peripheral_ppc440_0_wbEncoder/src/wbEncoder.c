@@ -43,6 +43,8 @@ int wbEncoder_CfgInitialize (wbEncoder *instPrt, wbEncoder_Config *config,
 	instPrt->baseAddress = effectiveAddr;
 	instPrt->interruptPresent = config->interruptPresent;
 	instPrt->isReady = XIL_COMPONENT_IS_READY;
+	instPtr->readData = 0;
+	instPrt->readDelta = 0;
 	
 	return XST_SUCCESS;	
 }
@@ -79,6 +81,8 @@ int wbEncoder_Initialize (wbEncoder *instPrt, u16 deviceId)
 	configPtr = wbEncoder_LookupConfig (deviceId);
 	if (configPtr == (wbEncoder_Config *) NULL) {
 		instPtr->isReady = 0;
+		instPtr->readData = 0;
+		instPrt->readDelta = 0;
 		return XST_DEVICE_NOT_FOUND;
 	}
 
