@@ -58,8 +58,6 @@
 #include "xtmrctr.h"
 #include "tmrctr_header.h"
 #include "tmrctr_intr_header.h"
-#include "wbEncoder.h"
-#include "wbEncoder_intc.h"
 
 #define GPIO_CHANNEL1 1
 
@@ -76,7 +74,6 @@ int main (void) {
    static XEmacLite Ethernet_MAC_EmacLite;
    static XWdtTb xps_timebase_wdt_0_Wdttb;
    static XTmrCtr xps_timer_0_Timer;
-   static wbEncoder wbEncoderInst;
 
    print("-- Entering main() --\r\n");
 
@@ -335,24 +332,7 @@ int main (void) {
       }
 
    }
-
-   {
-		int status;
-      
-		print("\r\n Running Interrupt Test  for wbEncoder wheel...\r\n");
-
-		status = wbEncoderExample(wbEncoderInst, WB_ENCODER_DEVICE_ID,
-									&intc, XPAR_XPS_INTC_0_DEVICE_ID, 
-									XPAR_PLBV46_2_WB_ENCONDER_0_IP2INTC_IRPT_MASK);
-		if (status == 0) {
-			print("Timer Interrupt Test PASSED\r\n");
-		} 
-		else {
-			print("Timer Interrupt Test FAILED\r\n");
-		}
-
-   }
-
+   
    print("-- Exiting main() --\r\n");
    Xil_DCacheDisable();
    Xil_ICacheDisable();

@@ -21,6 +21,8 @@
  * Include files
  */
 #include "wbEncoder.h"
+#include "xparameters.h"
+#include "plbv46_2_wb_enconder.h"
 
 /*
  * Constant definitions
@@ -34,17 +36,16 @@
  * wbEncoder_CfgInitialize 
  */
 
-int wbEncoder_CfgInitialize (wbEncoder *instPrt, wbEncoder_Config *config,
+int wbEncoder_CfgInitialize (wbEncoder *instPtr, wbEncoder_Config *config,
 							 u32 effectiveAddr)
 {
-	Xil_AssertNonvoid (instPrt != NULL);
+	Xil_AssertNonvoid (instPtr != NULL);
 	Xil_AssertNonvoid (config != NULL);
 
-	instPrt->baseAddress = effectiveAddr;
-	instPrt->interruptPresent = config->interruptPresent;
-	instPrt->isReady = XIL_COMPONENT_IS_READY;
+	instPtr->baseAddress = effectiveAddr;
+	instPtr->isReady = XIL_COMPONENT_IS_READY;
 	instPtr->readData = 0;
-	instPrt->readDelta = 0;
+	instPtr->readDelta = 0;
 	
 	return XST_SUCCESS;	
 }
@@ -53,12 +54,12 @@ int wbEncoder_CfgInitialize (wbEncoder *instPrt, wbEncoder_Config *config,
  * Look the device configuration in ConfigTable
  */
 
-wbEncoder_Config *wbEncoder_LookupConfig (u16 deviceID)
+wbEncoder_Config *wbEncoder_LookupConfig (u16 deviceId)
 {
-	wbEncoder_Config *configPrt = NULL;
+	wbEncoder_Config *configPtr = NULL;
 	int index;
 
-	for (index=0; index < XPAR_PLBV46_2_WB_ENCODER_NUM_INSTANCES; index++) {
+	for (index=0; index < XPAR_PLBV46_2_WB_ENCONDER_NUM_INSTANCES; index++) {
 		if (wbEncoder_ConfigTable[index].deviceId == deviceId) {
 			configPtr = &wbEncoder_ConfigTable[index];
 			break;
@@ -72,9 +73,9 @@ wbEncoder_Config *wbEncoder_LookupConfig (u16 deviceID)
 /*
  * wbEncoder initialize function
  */
-int wbEncoder_Initialize (wbEncoder *instPrt, u16 deviceId)
+int wbEncoder_Initialize (wbEncoder *instPtr, u16 deviceId)
 {
-	wbEncoder_Config *configPrt;
+	wbEncoder_Config *configPtr;
 	/* valid instPtr */
 	Xil_AssertNonvoid (instPtr != NULL);
 
@@ -82,7 +83,7 @@ int wbEncoder_Initialize (wbEncoder *instPrt, u16 deviceId)
 	if (configPtr == (wbEncoder_Config *) NULL) {
 		instPtr->isReady = 0;
 		instPtr->readData = 0;
-		instPrt->readDelta = 0;
+		instPtr->readDelta = 0;
 		return XST_DEVICE_NOT_FOUND;
 	}
 

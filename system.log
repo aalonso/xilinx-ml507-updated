@@ -1052,3 +1052,1156 @@ Done writing filter settings to:
 Done writing Tab View settings to:
 	/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/__xps/system.gui
 
+Xilinx Platform Studio (XPS)
+Xilinx EDK 12.1 Build EDK_MS1.53d
+
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Generating Block Diagram to Buffer 
+
+/opt/Xilinx/12.1/ISE_DS/EDK/data/xml/xslscripts/ConvertEdwardVersion.xsl
+
+Generated Block Diagram SVG
+
+At Local date and time: Tue Jun  8 16:20:56 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+*********************************************
+Creating software libraries...
+*********************************************
+libgen -mhs system.mhs -p xc5vfx70tff1136-1   -msg __xps/ise/xmsgprops.lst system.mss
+W
+libgen
+Xilinx EDK 12.1 Build EDK_MS1.53d
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+Command Line: libgen -mhs system.mhs -p xc5vfx70tff1136-1 -msg
+__xps/ise/xmsgprops.lst system.mss 
+ARNING:EDK - INFO:Security:67 - XILINXD_LICENSE_FILE is set to
+   '/opt/Xilinx/11.4/EDK/data/core_licenses' in /home/aalonso/.flexlmrc.
+   INFO:Security:66 - Your license for 'SDK' is for evaluation use only.
+   WARNING:Security:42 - Your license support version '2010.06' for SDK expires
+   in 21 days after which you will not qualify for Xilinx software updates or
+   new releases.
+
+
+
+Release 12.1 - psf2Edward EDK_MS1.53d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+Checking platform configuration ...
+IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.mhs line 111 - 2
+master(s) : 17 slave(s)
+Checking port drivers...
+WARNING:EDK:2099 - PORT:Peripheral_Reset CONNECTOR:sys_periph_reset -
+   /home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.mhs line 416 -
+   floating connection!
+Performing Clock DRCs...
+Performing Reset DRCs...
+Overriding system level properties...
+Running system level update procedures...
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+Running system level DRCs...
+Performing System level DRCs on properties...
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Port present in Ethernet_MAC
+I'm now in proc syslevel_check_micontrol
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/synthesis/plbv46_2_wb_enconder
+_0_wrapper_xst.srp not found
+WARNING:EDK:1027 - Device utilization and timing not added for
+   plbv46_2_wb_enconder_0
+Conversion to XML complete.
+-- Generating libraries for processor: ppc440_0 --
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'gmake -s include "COMPILER=powerpc-eabi-gcc"
+"ARCHIVER=powerpc-eabi-ar" "COMPILER_FLAGS=-mcpu=440  -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+Running libs - 'gmake -s libs "COMPILER=powerpc-eabi-gcc"
+"ARCHIVER=powerpc-eabi-ar" "COMPILER_FLAGS=-mcpu=440  -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+Compiling common
+powerpc-eabi-ar: creating ../../../lib/libxil.a
+
+Compiling lldma
+Compiling standalone
+Compiling gpio
+Compiling emaclite
+Compiling iic
+Compiling uartlite
+Compiling sysace
+Compiling plbv46_2_wb_enconder
+Compiling intc
+Compiling ps2
+Compiling tft
+Compiling wdttb
+Compiling tmrctr
+Compiling cpu_ppc440
+Running execs_generate.
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:28:25: error: intc_header.h: No such file or directory
+
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderExample’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:75: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:75: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:75: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:81: warning: passing argument 2 of ‘wbEncoder_IntSetup’ makes pointer from integer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:81: warning: passing argument 3 of ‘wbEncoder_IntSetup’ makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:161: error: ‘PLBV46_2_WB_ENCONDER_SLV_REG0_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:161: error: too many arguments to function ‘Xil_In32’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoder_IntSetup’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:181: error: ‘XST_SUCESS’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:186: error: ‘instPrt’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:192: error: too few arguments to function ‘wbEncoder_InterruptEnable’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:200: error: ‘XIL_EXCEPTION_ID_INT’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:201: error: ‘Xil_ExceptionHandler’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:201: error: expected ‘)’ before ‘XIntc_InterruptHandler’
+In file included from TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:23:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:78: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_DEVICE_ID’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:79: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_BASEADDR’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: ‘PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: wrong type argument to unary plus
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: ‘PLBV46_2_WB_ENCONDER_INTR_DIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: wrong type argument to unary plus
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: ‘INTR_TERR_MASK’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: ‘INTR_DPTO_MASK’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: invalid operands to binary |
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: ‘INTR_IPIR_MASK’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: invalid operands to binary |
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: ‘PLBV46_2_WB_ENCONDER_INTR_DGIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: wrong type argument to unary plus
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: ‘INTR_GIE_MASK’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: ‘PLBV46_2_WB_ENCONDER_INTR_DGIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: wrong type argument to unary plus
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:75:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: warning: assignment makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:76: error: ‘PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:89:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:88: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:88: warning: assignment makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:90: error: ‘PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:103:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptClear’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:102: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:102: warning: assignment makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:104: error: ‘PLBV46_2_WB_ENCONDER_INTR_IPISR_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:116:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGetEnabled’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:115: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:115: warning: return makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:125:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGetStatus’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:124: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:124: warning: return makes integer from pointer without a cast
+In file included from TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:23:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:78: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_DEVICE_ID’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:79: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_BASEADDR’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_CfgInitialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: ‘wbEncoder_Config’ has no member named ‘readData’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_LookupConfig’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:60: error: ‘XPAR_PLBV46_2_WB_ENCODER_NUM_INSTANCES’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:60: warning: comparison between pointer and integer
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: error: ‘deviceId’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: warning: comparison between pointer and integer
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:62: error: ‘configPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_Initialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:78: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:80: error: ‘configPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:82: error: ‘wbEncoder_Config’ has no member named ‘isReady’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:83: error: ‘wbEncoder_Config’ has no member named ‘readData’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:89: warning: passing argument 1 of ‘wbEncoder_CfgInitialize’ from incompatible pointer type
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 16:24:44 2010
+ make -f system.make swclean started...
+
+rm -rf ppc440_0/
+rm -f libgen.log
+rm -f __xps/ise/_xmsgs/libgen.xmsgs
+rm -f TestApp_Memory_ppc440_0/executable.elf 
+rm -f TestApp_Peripheral_ppc440_0/executable.elf 
+rm -f TestApp_Peripheral_ppc440_0_tft/executable.elf 
+rm -f TestApp_Peripheral_wb_encoder/executable.elf 
+
+
+Done!
+
+Saved MSS File.
+
+At Local date and time: Tue Jun  8 16:25:25 2010
+ make -f system.make libs started...
+
+*********************************************
+Creating software libraries...
+*********************************************
+libgen -mhs system.mhs -p xc5vfx70tff1136-1   -msg __xps/ise/xmsgprops.lst system.mss
+WARNING:EDK - INFO:Security:67 - XILINXD_LICENSE_FILE is set to
+libgen
+Xilinx EDK 12.1 Build EDK_MS1.53d
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+Command Line: libgen -mhs system.mhs -p xc5vfx70tff1136-1 -msg
+__xps/ise/xmsgprops.lst system.mss 
+
+   '/opt/Xilinx/11.4/EDK/data/core_licenses' in /home/aalonso/.flexlmrc.
+   INFO:Security:66 - Your license for 'SDK' is for evaluation use only.
+   WARNING:Security:42 - Your license support version '2010.06' for SDK expires
+   in 21 days after which you will not qualify for Xilinx software updates or
+   new releases.
+
+
+
+Release 12.1 - psf2Edward EDK_MS1.53d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+Checking platform configuration ...
+IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.mhs line 111 - 2
+master(s) : 17 slave(s)
+Checking port drivers...
+WARNING:EDK:2099 - PORT:Peripheral_Reset CONNECTOR:sys_periph_reset -
+   /home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.mhs line 416 -
+   floating connection!
+Performing Clock DRCs...
+Performing Reset DRCs...
+Overriding system level properties...
+Running system level update procedures...
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+Running system level DRCs...
+Performing System level DRCs on properties...
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Port present in Ethernet_MAC
+I'm now in proc syslevel_check_micontrol
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/synthesis/plbv46_2_wb_enconder
+_0_wrapper_xst.srp not found
+WARNING:EDK:1027 - Device utilization and timing not added for
+   plbv46_2_wb_enconder_0
+Conversion to XML complete.
+-- Generating libraries for processor: ppc440_0 --
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'gmake -s include "COMPILER=powerpc-eabi-gcc"
+"ARCHIVER=powerpc-eabi-ar" "COMPILER_FLAGS=-mcpu=440  -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+Running libs - 'gmake -s libs "COMPILER=powerpc-eabi-gcc"
+"ARCHIVER=powerpc-eabi-ar" "COMPILER_FLAGS=-mcpu=440  -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+Compiling common
+powerpc-eabi-ar: 
+creating ../../../lib/libxil.a
+
+Compiling lldma
+Compiling standalone
+Compiling gpio
+Compiling emaclite
+Compiling iic
+Compiling uartlite
+Compiling sysace
+Compiling plbv46_2_wb_enconder
+Compiling intc
+Compiling ps2
+Compiling tft
+Compiling wdttb
+Compiling tmrctr
+Compiling cpu_ppc440
+Running execs_generate.
+
+
+Done!
+
+At Local date and time: Tue Jun  8 16:29:53 2010
+ make -f system.make TestApp_Memory_ppc440_0_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Memory_ppc440_0/src/TestApp_Memory.c  -o TestApp_Memory_ppc440_0/executable.elf \
+	    -mcpu=440  -Wl,-T -Wl,TestApp_Memory_ppc440_0/src/TestApp_Memory_LinkScr.ld  -g    -I./ppc440_0/include/  -L./ppc440_0/lib/  \
+	  
+powerpc-eabi-size TestApp_Memory_ppc440_0/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5758	    316	   6192	  12266	   2fea	TestApp_Memory_ppc440_0/executable.elf
+
+
+Done!
+
+At Local date and time: Tue Jun  8 16:29:59 2010
+ make -f system.make TestApp_Peripheral_ppc440_0_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0/src/TestApp_Peripheral.c TestApp_Peripheral_ppc440_0/src/xintc_tapp_example.c TestApp_Peripheral_ppc440_0/src/xgpio_tapp_example.c TestApp_Peripheral_ppc440_0/src/xgpio_intr_tapp_example.c TestApp_Peripheral_ppc440_0/src/xiic_selftest_example.c TestApp_Peripheral_ppc440_0/src/xemaclite_polled_example.c TestApp_Peripheral_ppc440_0/src/xemaclite_intr_example.c TestApp_Peripheral_ppc440_0/src/xemaclite_example_util.c TestApp_Peripheral_ppc440_0/src/xsysace_selftest_example.c TestApp_Peripheral_ppc440_0/src/xwdttb_selftest_example.c TestApp_Peripheral_ppc440_0/src/xwdttb_intr_example.c TestApp_Peripheral_ppc440_0/src/xtmrctr_selftest_example.c TestApp_Peripheral_ppc440_0/src/xtmrctr_intr_example.c  -o TestApp_Peripheral_ppc440_0/executable.elf \
+	    -mcpu=440  -Wl,-T -Wl,TestApp_Peripheral_ppc440_0/src/TestApp_Peripheral_LinkScr.ld  -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0/src/  -L./ppc440_0/lib/  \
+	  
+powerpc-eabi-size TestApp_Peripheral_ppc440_0/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41270	    580	  20208	  62058	   f26a	TestApp_Peripheral_ppc440_0/executable.elf
+
+
+Done!
+
+At Local date and time: Tue Jun  8 16:30:08 2010
+ make -f system.make TestApp_Peripheral_ppc440_0_tft_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_tft/src/xps-tft-colorbar.c  -o TestApp_Peripheral_ppc440_0_tft/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -L./ppc440_0/lib/  \
+	  
+powerpc-eabi-size TestApp_Peripheral_ppc440_0_tft/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12434	   1492	   8276	  22202	   56ba	TestApp_Peripheral_ppc440_0_tft/executable.elf
+
+
+Done!
+
+At Local date and time: Tue Jun  8 16:30:19 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:28:25: error: intc_header.h: No such file or directory
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderExample’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:75: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:75: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:75: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:81: warning: passing argument 2 of ‘wbEncoder_IntSetup’ makes pointer from integer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:81: warning: passing argument 3 of ‘wbEncoder_IntSetup’ makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:161: error: ‘PLBV46_2_WB_ENCONDER_SLV_REG0_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:161: error: too many arguments to function ‘Xil_In32’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoder_IntSetup’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:181: error: ‘XST_SUCESS’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:186: error: ‘instPrt’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:192: error: too few arguments to function ‘wbEncoder_InterruptEnable’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:200: error: ‘XIL_EXCEPTION_ID_INT’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:201: error: ‘Xil_ExceptionHandler’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:201: error: expected ‘)’ before ‘XIntc_InterruptHandler’
+
+In file included from TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:23:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:78: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_DEVICE_ID’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:79: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_BASEADDR’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: ‘PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: wrong type argument to unary plus
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: ‘PLBV46_2_WB_ENCONDER_INTR_DIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: wrong type argument to unary plus
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: ‘INTR_TERR_MASK’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: ‘INTR_DPTO_MASK’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: invalid operands to binary |
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: ‘INTR_IPIR_MASK’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: invalid operands to binary |
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: ‘PLBV46_2_WB_ENCONDER_INTR_DGIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: wrong type argument to unary plus
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: ‘INTR_GIE_MASK’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: ‘PLBV46_2_WB_ENCONDER_INTR_DGIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: wrong type argument to unary plus
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:75:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: warning: assignment makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:76: error: ‘PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:89:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:88: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:88: warning: assignment makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:90: error: ‘PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:103:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptClear’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:102: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:102: warning: assignment makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:104: error: ‘PLBV46_2_WB_ENCONDER_INTR_IPISR_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:116:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGetEnabled’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:115: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:115: warning: return makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:125:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGetStatus’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:124: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:124: warning: return makes integer from pointer without a cast
+In file included from TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:23:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:78: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_DEVICE_ID’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:79: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_BASEADDR’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_CfgInitialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: ‘wbEncoder_Config’ has no member named ‘readData’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_LookupConfig’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:60: error: ‘XPAR_PLBV46_2_WB_ENCODER_NUM_INSTANCES’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:60: warning: comparison between pointer and integer
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: error: ‘deviceId’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: warning: comparison between pointer and integer
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:62: error: ‘configPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_Initialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:78: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:80: error: ‘configPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:82: error: ‘wbEncoder_Config’ has no member named ‘isReady’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:83: error: ‘wbEncoder_Config’ has no member named ‘readData’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:89: warning: passing argument 1 of ‘wbEncoder_CfgInitialize’ from incompatible pointer type
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 16:31:59 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderExample’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:74: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:74: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:74: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:80: warning: passing argument 2 of ‘wbEncoder_IntSetup’ makes pointer from integer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:80: warning: passing argument 3 of ‘wbEncoder_IntSetup’ makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:160: error: ‘PLBV46_2_WB_ENCONDER_SLV_REG0_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:160: error: too many arguments to function ‘Xil_In32’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoder_IntSetup’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:180: error: ‘XST_SUCESS’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:185: error: ‘instPrt’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:191: error: too few arguments to function ‘wbEncoder_InterruptEnable’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:199: error: ‘XIL_EXCEPTION_ID_INT’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:200: error: ‘Xil_ExceptionHandler’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:200: error: expected ‘)’ before ‘XIntc_InterruptHandler’
+In file included from TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:23:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:78: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_DEVICE_ID’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:79: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_BASEADDR’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: ‘PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: wrong type argument to unary plus
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: ‘PLBV46_2_WB_ENCONDER_INTR_DIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: wrong type argument to unary plus
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: ‘INTR_TERR_MASK’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: ‘INTR_DPTO_MASK’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: invalid operands to binary |
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: ‘INTR_IPIR_MASK’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: invalid operands to binary |
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: ‘PLBV46_2_WB_ENCONDER_INTR_DGIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: wrong type argument to unary plus
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: ‘INTR_GIE_MASK’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: ‘PLBV46_2_WB_ENCONDER_INTR_DGIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: wrong type argument to unary plus
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:75:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: warning: assignment makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:76: error: ‘PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:89:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:88: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:88: warning: assignment makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:90: error: ‘PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:103:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptClear’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:102: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:102: warning: assignment makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:104: error: ‘PLBV46_2_WB_ENCONDER_INTR_IPISR_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:116:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGetEnabled’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:115: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:115: warning: return makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:125:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGetStatus’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:124: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:124: warning: return makes integer from pointer without a cast
+
+In file included from TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:23:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:78: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_DEVICE_ID’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:79: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_BASEADDR’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_CfgInitialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: ‘wbEncoder_Config’ has no member named ‘readData’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_LookupConfig’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:60: error: ‘XPAR_PLBV46_2_WB_ENCODER_NUM_INSTANCES’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:60: warning: comparison between pointer and integer
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: error: ‘deviceId’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: warning: comparison between pointer and integer
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:62: error: ‘configPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_Initialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:78: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:80: error: ‘configPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:82: error: ‘wbEncoder_Config’ has no member named ‘isReady’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:83: error: ‘wbEncoder_Config’ has no member named ‘readData’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:89: warning: passing argument 1 of ‘wbEncoder_CfgInitialize’ from incompatible pointer type
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 16:35:19 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderExample’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:80: warning: passing argument 1 of ‘wbEncoder_IntSetup’ from incompatible pointer type
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:80: warning: passing argument 2 of ‘wbEncoder_IntSetup’ makes pointer from integer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:80: warning: passing argument 3 of ‘wbEncoder_IntSetup’ makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:160: error: ‘PLBV46_2_WB_ENCONDER_SLV_REG0_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:160: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:160: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:160: error: too many arguments to function ‘Xil_In32’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoder_IntSetup’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:180: error: ‘XST_SUCESS’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:185: error: ‘instPrt’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:191: error: too few arguments to function ‘wbEncoder_InterruptEnable’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:199: error: ‘XIL_EXCEPTION_ID_INT’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:200: error: ‘Xil_ExceptionHandler’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:200: error: expected ‘)’ before ‘XIntc_InterruptHandler’
+
+In file included from TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:23:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:78: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_DEVICE_ID’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:79: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_BASEADDR’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: ‘PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: wrong type argument to unary plus
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: ‘PLBV46_2_WB_ENCONDER_INTR_DIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: wrong type argument to unary plus
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: ‘INTR_TERR_MASK’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: ‘INTR_DPTO_MASK’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: invalid operands to binary |
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: ‘INTR_IPIR_MASK’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: invalid operands to binary |
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: ‘PLBV46_2_WB_ENCONDER_INTR_DGIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: wrong type argument to unary plus
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: ‘INTR_GIE_MASK’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: ‘PLBV46_2_WB_ENCONDER_INTR_DGIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: wrong type argument to unary plus
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:75:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: warning: assignment makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:76: error: ‘PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:89:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:88: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:88: warning: assignment makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:90: error: ‘PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:103:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptClear’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:102: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:102: warning: assignment makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:104: error: ‘PLBV46_2_WB_ENCONDER_INTR_IPISR_OFFSET’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:116:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGetEnabled’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:115: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:115: warning: return makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:125:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGetStatus’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:124: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:124: warning: return makes integer from pointer without a cast
+In file included from TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:23:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:78: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_DEVICE_ID’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:79: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_BASEADDR’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_CfgInitialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: ‘wbEncoder_Config’ has no member named ‘readData’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_LookupConfig’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:60: error: ‘XPAR_PLBV46_2_WB_ENCODER_NUM_INSTANCES’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:60: warning: comparison between pointer and integer
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: error: ‘deviceId’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: warning: comparison between pointer and integer
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:62: error: ‘configPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_Initialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:78: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:80: error: ‘configPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:82: error: ‘wbEncoder_Config’ has no member named ‘isReady’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:83: error: ‘wbEncoder_Config’ has no member named ‘readData’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:89: warning: passing argument 1 of ‘wbEncoder_CfgInitialize’ from incompatible pointer type
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 16:37:42 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderExample’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:81: warning: passing argument 1 of ‘wbEncoder_IntSetup’ from incompatible pointer type
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:81: warning: passing argument 2 of ‘wbEncoder_IntSetup’ makes pointer from integer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:81: warning: passing argument 3 of ‘wbEncoder_IntSetup’ makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:161: error: too many arguments to function ‘Xil_In32’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoder_IntSetup’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:181: error: ‘XST_SUCESS’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:181: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:181: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:186: error: ‘instPrt’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:192: error: too few arguments to function ‘wbEncoder_InterruptEnable’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:200: error: ‘XIL_EXCEPTION_ID_INT’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:201: error: ‘Xil_ExceptionHandler’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:201: error: expected ‘)’ before ‘XIntc_InterruptHandler’
+
+In file included from TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:23:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:78: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_DEVICE_ID’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:79: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_BASEADDR’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:75:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: warning: assignment makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:89:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:88: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:88: warning: assignment makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:103:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptClear’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:102: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:102: warning: assignment makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:116:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGetEnabled’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:115: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:115: warning: return makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:125:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGetStatus’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:124: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:124: warning: return makes integer from pointer without a cast
+In file included from TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:23:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:78: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_DEVICE_ID’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h:79: error: ‘XPAR_PLBV46_2_WB_ENCONDER_0_BASEADDR’ undeclared here (not in a function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_CfgInitialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: ‘wbEncoder_Config’ has no member named ‘readData’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_LookupConfig’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:60: error: ‘XPAR_PLBV46_2_WB_ENCODER_NUM_INSTANCES’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:60: warning: comparison between pointer and integer
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: error: ‘deviceId’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: warning: comparison between pointer and integer
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:62: error: ‘configPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_Initialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:78: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:80: error: ‘configPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:82: error: ‘wbEncoder_Config’ has no member named ‘isReady’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:83: error: ‘wbEncoder_Config’ has no member named ‘readData’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:89: warning: passing argument 1 of ‘wbEncoder_CfgInitialize’ from incompatible pointer type
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 16:42:15 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderExample’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:81: warning: passing argument 1 of ‘wbEncoder_IntSetup’ from incompatible pointer type
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:81: warning: passing argument 2 of ‘wbEncoder_IntSetup’ makes pointer from integer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:81: warning: passing argument 3 of ‘wbEncoder_IntSetup’ makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:161: error: too many arguments to function ‘Xil_In32’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoder_IntSetup’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:181: error: ‘XST_SUCESS’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:181: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:181: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:186: error: ‘instPrt’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:192: error: too few arguments to function ‘wbEncoder_InterruptEnable’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:200: error: ‘XIL_EXCEPTION_ID_INT’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:201: error: ‘Xil_ExceptionHandler’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:201: error: expected ‘)’ before ‘XIntc_InterruptHandler’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:75:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:89:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:88: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:103:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptClear’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:102: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:116:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGetEnabled’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:115: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:125:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGetStatus’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:124: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_CfgInitialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_LookupConfig’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:60: error: ‘XPAR_PLBV46_2_WB_ENCODER_NUM_INSTANCES’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: error: ‘deviceId’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:62: error: ‘configPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_Initialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:78: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:80: error: ‘configPtr’ undeclared (first use in this function)
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 16:56:56 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderExample’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:81: warning: passing argument 1 of ‘wbEncoder_IntSetup’ from incompatible pointer type
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:81: warning: passing argument 2 of ‘wbEncoder_IntSetup’ makes pointer from integer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:81: warning: passing argument 3 of ‘wbEncoder_IntSetup’ makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:162:39: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:161: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:161: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:161: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:164: error: ‘data’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoder_IntSetup’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:188: error: ‘XST_SUCESS’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:192: error: too few arguments to function ‘wbEncoder_InterruptEnable’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:200: error: ‘XIL_EXCEPTION_ID_INT’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:201: error: ‘Xil_ExceptionHandler’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:201: error: expected ‘)’ before ‘XIntc_InterruptHandler’
+
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:75:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:74: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:89:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:88: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:103:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptClear’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:102: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:116:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGetEnabled’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:115: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:125:47: error: macro "wbEncoder_ReadReg" requires 3 arguments, but only 2 given
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGetStatus’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:124: error: ‘wbEncoder_ReadReg’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_CfgInitialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_LookupConfig’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:60: error: ‘XPAR_PLBV46_2_WB_ENCODER_NUM_INSTANCES’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: error: ‘deviceId’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:62: error: ‘configPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_Initialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:78: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:80: error: ‘configPtr’ undeclared (first use in this function)
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 16:58:48 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderExample’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:83: warning: passing argument 1 of ‘wbEncoder_IntSetup’ from incompatible pointer type
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:83: warning: passing argument 2 of ‘wbEncoder_IntSetup’ makes pointer from integer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:83: warning: passing argument 3 of ‘wbEncoder_IntSetup’ makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:163: error: too many arguments to function ‘Xil_In32’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoder_IntSetup’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:190: error: ‘XST_SUCESS’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:190: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:190: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:194: error: too few arguments to function ‘wbEncoder_InterruptEnable’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:202: error: ‘XIL_EXCEPTION_ID_INT’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:203: error: ‘Xil_ExceptionHandler’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:203: error: expected ‘)’ before ‘XIntc_InterruptHandler’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:43: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:47: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:51: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:62: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_CfgInitialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_LookupConfig’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:60: error: ‘XPAR_PLBV46_2_WB_ENCODER_NUM_INSTANCES’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: error: ‘deviceId’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:62: error: ‘configPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_Initialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:78: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:80: error: ‘configPtr’ undeclared (first use in this function)
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 17:05:07 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderExample’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:83: warning: passing argument 1 of ‘wbEncoder_IntSetup’ from incompatible pointer type
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:83: warning: passing argument 2 of ‘wbEncoder_IntSetup’ makes pointer from integer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:83: warning: passing argument 3 of ‘wbEncoder_IntSetup’ makes integer from pointer without a cast
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:163: error: too many arguments to function ‘Xil_In32’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoder_IntSetup’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:194: error: too few arguments to function ‘wbEncoder_InterruptEnable’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:211: error: ‘XST_SUCESS’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:211: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:211: error: for each function it appears in.)
+
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:44: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:44: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:48: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:48: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:52: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:52: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:63: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:63: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_CfgInitialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_LookupConfig’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:60: error: ‘XPAR_PLBV46_2_WB_ENCODER_NUM_INSTANCES’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: error: ‘deviceId’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:62: error: ‘configPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_Initialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:78: error: ‘instPtr’ undeclared (first use in this function)
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 17:09:54 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:162: error: too many arguments to function ‘Xil_In32’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoder_IntSetup’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:193: error: too few arguments to function ‘wbEncoder_InterruptEnable’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:210: error: ‘XST_SUCESS’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:210: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:210: error: for each function it appears in.)
+
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:44: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:44: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:48: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:48: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:52: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:52: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:63: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:63: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_CfgInitialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:45: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_LookupConfig’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:60: error: ‘XPAR_PLBV46_2_WB_ENCODER_NUM_INSTANCES’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: error: ‘deviceId’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:62: error: ‘configPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_Initialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:78: error: ‘instPtr’ undeclared (first use in this function)
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 17:15:41 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:162: error: too many arguments to function ‘Xil_In32’
+
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:45: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:45: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:49: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:49: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:53: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:53: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:64: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:64: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_CfgInitialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:40: error: ‘instPrt’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:40: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:40: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_LookupConfig’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:60: error: ‘XPAR_PLBV46_2_WB_ENCODER_NUM_INSTANCES’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:62: error: ‘configPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_Initialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:84: error: ‘instPrt’ undeclared (first use in this function)
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 17:17:33 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:162: error: too many arguments to function ‘Xil_In32’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalEnable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:45: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:45: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:45: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:49: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:49: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:53: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:53: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:64: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:64: error: conversion to non-scalar type requested
+
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_LookupConfig’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: error: ‘XPAR_PLBV46_2_WB_ENCODER_NUM_INSTANCES’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:61: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:63: error: ‘configPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_Initialize’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:85: error: ‘instPrt’ undeclared (first use in this function)
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 17:19:54 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:162: error: too many arguments to function ‘Xil_In32’
+
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:64: error: expected ‘)’ before ‘->’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:64: error: conversion to non-scalar type requested
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c: In function ‘wbEncoder_LookupConfig’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:62: error: ‘XPAR_PLBV46_2_WB_ENCODER_NUM_INSTANCES’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:62: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:62: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:64: error: ‘configPtr’ undeclared (first use in this function)
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 17:23:01 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:162: error: too many arguments to function ‘Xil_In32’
+
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c: In function ‘wbEncoder_InterruptGlobalDisable’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:64: error: ‘instPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:64: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:64: error: for each function it appears in.)
+
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 17:23:55 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:162: error: too many arguments to function ‘Xil_In32’
+
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 17:25:55 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:162: error: too many arguments to function ‘Xil_In32’
+
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 17:28:22 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:162: error: too many arguments to function ‘Xil_In32’
+
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 17:31:24 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:162: error: too many arguments to function ‘Xil_In32’
+
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+Save project successfully
+
+Writing filter settings....
+
+Done writing filter settings to:
+	/home/aalonso/workspace/xlnx/xilinx-ml507-updated/__xps/system.filters
+
+Done writing Tab View settings to:
+	/home/aalonso/workspace/xlnx/xilinx-ml507-updated/__xps/system.gui
+

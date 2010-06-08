@@ -26,6 +26,8 @@
 #include "xil_types.h"
 #include "xstatus.h"
 #include "xil_assert.h"
+#include "plbv46_2_wb_enconder.h"
+#include "xparameters.h"
 
 /*
  * Constant definitions
@@ -41,9 +43,8 @@
 #define wbEncoder_WriteReg(baseAddress, regOffset, data) \
 		Xil_Out32((baseAddress) + (regOffset), (u32)(data))
 
-#define wbEncoder_ReadReg(baseAddress, regOffset, data) \
-		Xil_In32((baseAddress) + (regOffset), (u32)(data))
-
+#define wbEncoder_ReadReg(baseAddress, regOffset) \
+		Xil_In32(baseAddress, regOffset)
 
 /*
  * wbEncoder_Config: Configuration information of device
@@ -52,7 +53,6 @@
 typedef struct {
 	u16 deviceId;			/* device id */
 	u32 baseAddress;		/* device base address */
-	int interruptPresent;	/* Interrupts supported in hw */
 } wbEncoder_Config;
 
 /*
@@ -65,7 +65,6 @@ typedef struct {
 	u32 isReady;		/* device initialized */
 	u32 readData;
 	u32 readDelta;
-	int interruptPresent;
 } wbEncoder;
 
 /*
@@ -77,8 +76,7 @@ wbEncoder_Config wbEncoder_ConfigTable[] =
 {
 	{
 		XPAR_PLBV46_2_WB_ENCONDER_0_DEVICE_ID,
-		XPAR_PLBV46_2_WB_ENCONDER_0_BASEADDR,
-		XPAR_PLBV46_2_WB_ENCONDER_0_INTERRUPT_PRESENT
+		XPAR_PLBV46_2_WB_ENCONDER_0_BASEADDR		
 	}
 };
 

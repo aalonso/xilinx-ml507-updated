@@ -21,6 +21,8 @@
  * Include files
  */
 #include "wbEncoder.h"
+#include "xparameters.h"
+#include "plbv46_2_wb_enconder.h"
 
 /*
  * Constant definitions
@@ -34,34 +36,32 @@
  * wbEncoder Interrupt controller functions
  */
 
-void wbEncoder_InterruptGlobalEnable(wbEncoder *instPrt)
+void wbEncoder_InterruptGlobalEnable(wbEncoder *instPtr)
 {
-	xil_AssertVoid(instPrt != NULL);
-	xil_AssertVoid(instPrt->isReady == XIL_COMPONENT_IS_READY);
-	xil_AssertVoid(instPrt->interruptPresent == TRUE);
+	xil_AssertVoid(instPtr != NULL);
+	xil_AssertVoid(instPtr->isReady == XIL_COMPONENT_IS_READY);
 
 	/* Enable interrupt source from user_logic */
-	wbEncoder_WriteReg(wbEncoder->baseAddress,
+	wbEncoder_WriteReg(instPtr->baseAddress,
 						PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET,
 						0x00000001);
 	/* Enable interrupt all source from device */
-	wbEncoder_WriteReg(wbEncoder->baseAddress,
+	wbEncoder_WriteReg(instPtr->baseAddress,
 						PLBV46_2_WB_ENCONDER_INTR_DIER_OFFSET,
 						INTR_TERR_MASK | INTR_DPTO_MASK | INTR_IPIR_MASK);
 	/* Enable global interrupts */
-	wbEncoder_WriteReg(wbEncoder->baseAddress,
+	wbEncoder_WriteReg(instPtr->baseAddress,
 						PLBV46_2_WB_ENCONDER_INTR_DGIER_OFFSET,
 						INTR_GIE_MASK);
 
 }
-void wbEncoder_InterruptGlobalDisable(wbEncoder *instPrt)
+void wbEncoder_InterruptGlobalDisable(wbEncoder *instPtr)
 {
-	xil_AssertVoid(instPrt != NULL);
-	xil_AssertVoid(instPrt->isReady == XIL_COMPONENT_IS_READY);
-	xil_AssertVoid(instPrt->interruptPresent == TRUE);
+	xil_AssertVoid(instPtr != NULL);
+	xil_AssertVoid(instPtr->isReady == XIL_COMPONENT_IS_READY);
 
 	/* Disable global interrupts */
-	wbEncoder_WriteReg(wbEncoder->baseAddress,
+	wbEncoder_WriteReg(instPtr->baseAddress,
 						PLBV46_2_WB_ENCONDER_INTR_DGIER_OFFSET,
 						0x0);
 }
@@ -72,7 +72,6 @@ void wbEncoder_InterruptEnable(wbEncoder *instPrt, u32 mask)
 
 	xil_AssertVoid(instPrt != NULL);
 	xil_AssertVoid(instPrt->isReady == XIL_COMPONENT_IS_READY);
-	xil_AssertVoid(instPrt->interruptPresent == TRUE);
 
 	reg_val = wbEncoder_ReadReg(instPrt->baseAddress, 
 								PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET);
@@ -87,7 +86,6 @@ void wbEncoder_InterruptDisable(wbEncoder *instPrt, u32 mask)
 
 	xil_AssertVoid(instPrt != NULL);
 	xil_AssertVoid(instPrt->isReady == XIL_COMPONENT_IS_READY);
-	xil_AssertVoid(instPrt->interruptPresent == TRUE);
 
 	reg_val = wbEncoder_ReadReg(instPrt->baseAddress, 
 								PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET);
@@ -102,7 +100,6 @@ void wbEncoder_InterruptClear(wbEncoder *instPrt, u32 mask)
 
 	xil_AssertVoid(instPrt != NULL);
 	xil_AssertVoid(instPrt->isReady == XIL_COMPONENT_IS_READY);
-	xil_AssertVoid(instPrt->interruptPresent == TRUE);
 
 	reg_val = wbEncoder_ReadReg(instPrt->baseAddress, 
 								PLBV46_2_WB_ENCONDER_INTR_IPISR_OFFSET);
@@ -116,7 +113,6 @@ u32 wbEncoder_InterruptGetEnabled(wbEncoder *instPrt)
 {
 	xil_AssertVoid(instPrt != NULL);
 	xil_AssertVoid(instPrt->isReady == XIL_COMPONENT_IS_READY);
-	xil_AssertVoid(instPrt->interruptPresent == TRUE);
 	
 	return wbEncoder_ReadReg(instPrt->baseAddress, 
 							 PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET);
@@ -126,7 +122,6 @@ u32 wbEncoder_InterruptGetStatus(wbEncoder *instPrt, u32 mask)
 {
 	xil_AssertVoid(instPrt != NULL);
 	xil_AssertVoid(instPrt->isReady == XIL_COMPONENT_IS_READY);
-	xil_AssertVoid(instPrt->interruptPresent == TRUE);
 	
 	return wbEncoder_ReadReg(instPrt->baseAddress, 
 							 PLBV46_2_WB_ENCONDER_INTR_IPISR_OFFSET);

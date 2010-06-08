@@ -1,7 +1,7 @@
 
-<EDKSYSTEM EDKVERSION="12.1" EDWVERSION="1.2" TIMESTAMP="Thu May 27 23:12:11 2010">
+<EDKSYSTEM EDKVERSION="12.1" EDWVERSION="1.2" TIMESTAMP="Tue Jun  8 16:25:29 2010">
 
-  <SYSTEMINFO ARCH="virtex5" DEVICE="5vfx70t" PACKAGE="ff1136" PART="5vfx70tff1136-1" SOURCE="/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/" SPEEDGRADE="-1"/>
+  <SYSTEMINFO ARCH="virtex5" DEVICE="5vfx70t" PACKAGE="ff1136" PART="5vfx70tff1136-1" SOURCE="/home/aalonso/workspace/xlnx/xilinx-ml507-updated/" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" MHS_INDEX="0" NAME="fpga_0_RS232_Uart_1_RX_pin" SIGNAME="fpga_0_RS232_Uart_1_RX_pin"/>
@@ -57,7 +57,7 @@
     <PORT DIR="IO" MHS_INDEX="50" NAME="xps_tft_0_TFT_IIC_SDA" SIGNAME="xps_tft_0_TFT_IIC_SDA"/>
     <PORT DIR="O" MHS_INDEX="51" NAME="xps_tft_0_TFT_HSYNC_pin" SIGNAME="xps_tft_0_TFT_HSYNC"/>
     <PORT DIR="O" MHS_INDEX="52" NAME="xps_tft_0_TFT_DVI_CLK_N_pin" SIGNAME="xps_tft_0_TFT_DVI_CLK_N"/>
-    <PORT DIR="O" ENDIAN="LITTLE" LSB="11" MHS_INDEX="53" MSB="0" NAME="xps_tft_0_TFT_DVI_DATA_pin" SIGNAME="xps_tft_0_TFT_DVI_DATA"/>
+    <PORT DIR="O" ENDIAN="BIG" LSB="11" MHS_INDEX="53" MSB="0" NAME="xps_tft_0_TFT_DVI_DATA_pin" SIGNAME="xps_tft_0_TFT_DVI_DATA"/>
     <PORT DIR="O" MHS_INDEX="54" NAME="xps_tft_0_TFT_DE_pin" SIGNAME="xps_tft_0_TFT_DE"/>
     <PORT DIR="O" MHS_INDEX="55" NAME="xps_tft_0_TFT_VSYNC_pin" SIGNAME="xps_tft_0_TFT_VSYNC"/>
     <PORT DIR="O" MHS_INDEX="56" NAME="xps_tft_0_TFT_DVI_CLK_P_pin" SIGNAME="xps_tft_0_TFT_DVI_CLK_P"/>
@@ -4531,18 +4531,6 @@
       <INTERRUPTINFO TYPE="SOURCE">
         <TARGET INSTANCE="xps_intc_0" INTC_INDEX="0" PRIORITY="1"/>
       </INTERRUPTINFO>
-      <RESOURCES>
-        <RESOURCE PERCENT="0" TOTAL="44800" TYPE="Slice Registers" USED="158"/>
-        <RESOURCE PERCENT="0" TOTAL="44800" TYPE="Slice LUTs" USED="100"/>
-        <RESOURCE PERCENT="NA" TOTAL="NA" TYPE="LUT Flip Flop pairs used" USED="206"/>
-        <RESOURCE PERCENT="25" TOTAL="206" TYPE="fully used LUT-FF pairs" USED="52"/>
-        <RESOURCE PERCENT="NA" TOTAL="NA" TYPE="unique control sets" USED="25"/>
-        <RESOURCE PERCENT="NA" TOTAL="NA" TYPE="IOs" USED="438"/>
-        <RESOURCE PERCENT="0" TOTAL="640" TYPE="bonded IOBs" USED="0"/>
-      </RESOURCES>
-      <TIMING FREQUNITS="MHz" MAXFREQ="313.480">
-        <TIMECLK SIGNAME="SPLB_Clk"/>
-      </TIMING>
     </MODULE>
   </MODULES>
 

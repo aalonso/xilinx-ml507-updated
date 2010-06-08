@@ -23,30 +23,44 @@
 #include "xparameters.h"
 #include "xstatus.h"
 #include "stdio.h"
-#include "wbEencoder.h"
+#include "wbEncoder.h"
+#include "wbEncoder_intc.h"
+#include "plbv46_2_wb_enconder.h"
+#include "xil_assert.h"
+#include "xil_exception.h"
 
 /*
  * Constant definitions
  */
 #define WB_ENCODER_DEVICE_ID XPAR_PLBV46_2_WB_ENCONDER_0_DEVICE_ID
+#define WB_ENCODER_MASK XPAR_PLBV46_2_WB_ENCONDER_0_IP2INTC_IRPT_MASK
+#define ANTICLOCKWISE	0
+#define CLOCKWISE		1
+#define KEYPRESSED		2
 
 /* Global wbEncoder instance */
 static wbEncoder wbEncoderInst;
 /* Interrupt controller instance */
-
+static XIntc intcInst;
+/* direction */
+int direc;
 /*
  * Function prototypes
  */
 
-int wbEncoderExample(wbEncoder *instPtr, u16 deviceId);
-void wbEncoderHandler(void *callbackHandler);
+int wbEncoderExample(wbEncoder *instPtr, u16 deviceId,
+						XIntc *intcPtr, u16 intcId, u16 intcMask);
+int wbEncoder_IntSetup(XIntc *intcPtr, wbEncoder *instPtr, 
+						u16 deviceId, u16 intcId, u16 intcMask);
+void wbEncoderIntHandler(void *callbackHandler);
 
 int
 main (int argc, char **argv)
 {
 	int status;
 	
-	status = wbEncoderExample (&wbEncoderInst, WB_ENCODER_DEVICE_ID);
+	status = wbEncoderExample (&wbEncoderInst, WB_ENCODER_DEVICE_ID,
+								&intcInst,  XPAR_INTC_0_DEVICE_ID, WB_ENCODER_MASK);
 
 	if (status != XST_SUCCESS) {
 		return XST_FAILURE;
@@ -55,20 +69,30 @@ main (int argc, char **argv)
 	return XST_SUCCESS;
 }
 
-int wbEncoderExample (wbEncoder *instPrt, u16 deviceId)
+int wbEncoderExample (wbEncoder *instPtr, u16 deviceId,
+						XIntc *intcPtr, u16 intcId, u16 intcMask)
 {
-	int status, direction;
+	int status;
 
 	status = wbEncoder_Initialize(instPtr, deviceId);
     if (status != XST_SUCCESS) {
         return XST_FAILURE;
-    }
-
-    wbEncoder_InterruptGlobalEnable(instPtr);
+    } 
+	 
+	status = wbEncoder_IntSetup(intcPtr, instPtr,  deviceId,
+									intcId, intcMask);
+    if (status != XST_SUCCESS) {
+        return XST_FAILURE;
+    } 
 
     for(;;) {
-		direction = wbEncoder_Direction(instPtr);
+		if(direc == KEYPRESSED)
+			break;		
     }
+
+	/* Disable interrupts */
+	wbEncoder_InterruptDisable(instPtr, 0x01);
+	XIntc_Disable(intcPtr, intcId);
 	
     return XST_SUCCESS;
 }
@@ -128,18 +152,64 @@ int wbEncoder_Direction(wbEncoder *instPtr)
 	return direction;
 }
 
-
-void wbEncoderHandler(void *callbackHandler)
+void wbEncoderIntHandler(void *callbackHandler)
 {
 	u32 data;
-
-	wbEncoder_InterruptClear(&wbEncoderInst, 0x00000001);
-
+	wbEncoder *instPtr = &wbEncoderInst;
 	/* save prvious value */
 	instPtr->readDelta = instPtr->readData;
 	/* read data register */
-	wbEncoder_ReadReg(instPtr->baseAddress, 
-						WB_ENCODER_DATA_OFFSET, data);
+	data = wbEncoder_ReadReg(instPtr->baseAddress, 
+																WB_ENCODER_DATA_OFFSET);
+	/* TODO FIx Xil_In32 error */
 	
 	instPtr->readData = data & 0x07;
+
+	direc = wbEncoder_Direction(instPtr);
+	
+	printf("direction = %d", direc);
+	
+	wbEncoder_InterruptClear(&wbEncoderInst, 0x01);
+}
+
+int wbEncoder_IntSetup(XIntc *intcPtr, wbEncoder *instPtr, 
+						u16 deviceId, u16 intcId, u16 intcMask)
+{
+	int status;
+
+	/* Initialize interrupt controller */
+	status = XIntc_Initialize(intcPtr, intcId);
+
+	if (status != XST_SUCCESS )
+		return status;
+	/* Hook interrupt service rutine */
+	status = XIntc_Connect(intcPtr, intcId, 
+							(XInterruptHandler)(wbEncoderIntHandler),
+							instPtr);
+
+	if (status != XST_SUCCESS )
+		return status;
+
+	/* Enable wbEncoder Interrupts */
+    wbEncoder_InterruptEnable(instPtr, intcMask);
+    wbEncoder_InterruptGlobalEnable(instPtr);
+
+	/* Enable interrupt controller */
+	XIntc_Enable(intcPtr, intcId);
+
+	/* Initialize exception table */
+	Xil_ExceptionInit();
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, 
+						(Xil_ExceptionHandler)XIntc_InterruptHandler,
+						intcPtr);
+	/* Enable exception table */
+	Xil_ExceptionEnable();
+
+	/* start interrupt controller */
+	status = XIntc_Start(intcPtr, XIN_REAL_MODE);
+	
+	if (status != XST_SUCCESS )
+		return status;
+
+	return XST_SUCCESS;
 }

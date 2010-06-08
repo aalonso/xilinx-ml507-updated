@@ -26,10 +26,14 @@
 #include "xil_types.h"
 #include "xil_assert.h"
 #include "xstatus.h"
+#include "xintc.h"
+#include "wbEncoder.h"
 
 /*
  * Constant definitions
  */
+#define WB_ENCODER_INTC_MASK XPAR_PLBV46_2_WB_ENCONDER_0_IP2INTC_IRPT_MASK
+#define WB_ENCODER_INTC_INTR XPAR_XPS_INTC_0_PLBV46_2_WB_ENCONDER_0_IP2INTC_IRPT_INTR
 
 /*
  * Function prototypes

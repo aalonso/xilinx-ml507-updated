@@ -61,9 +61,6 @@ Source: TestApp_Peripheral_ppc440_0/src/xwdttb_selftest_example.c
 Source: TestApp_Peripheral_ppc440_0/src/xwdttb_intr_example.c
 Source: TestApp_Peripheral_ppc440_0/src/xtmrctr_selftest_example.c
 Source: TestApp_Peripheral_ppc440_0/src/xtmrctr_intr_example.c
-Source: TestApp_Peripheral_ppc440_0/src/wbEncoder_intc.c
-Source: TestApp_Peripheral_ppc440_0/src/wbEncoder_tapp_example.c
-Source: TestApp_Peripheral_ppc440_0/src/wbEncoder.c
 Header: TestApp_Peripheral_ppc440_0/src/intc_header.h
 Header: TestApp_Peripheral_ppc440_0/src/gpio_header.h
 Header: TestApp_Peripheral_ppc440_0/src/gpio_intr_header.h
@@ -76,9 +73,6 @@ Header: TestApp_Peripheral_ppc440_0/src/wdttb_header.h
 Header: TestApp_Peripheral_ppc440_0/src/wdttb_intr_header.h
 Header: TestApp_Peripheral_ppc440_0/src/tmrctr_header.h
 Header: TestApp_Peripheral_ppc440_0/src/tmrctr_intr_header.h
-Header: TestApp_Peripheral_ppc440_0/src/wbEncoder.h
-Header: TestApp_Peripheral_ppc440_0/src/wbEncoder_intc.h
-Header: TestApp_Peripheral_ppc440_0/src/wbEncoder_header.h
 DefaultInit: EXECUTABLE
 InitBram: 0
 Active: 1
@@ -114,7 +108,12 @@ NonXpsApp: 0
 SwProj: TestApp_Peripheral_wb_encoder
 Processor: ppc440_0
 Executable: TestApp_Peripheral_wb_encoder/executable.elf
-DefaultInit: executable
+Source: TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c
+Source: TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c
+Source: TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c
+Header: TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.h
+Header: TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h
+DefaultInit: EXECUTABLE
 InitBram: 0
 Active: 1
 CompilerOptLevel: 2
