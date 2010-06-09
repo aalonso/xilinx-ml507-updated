@@ -123,7 +123,7 @@ ProfileFlag: 0
 ProgStart: 
 StackSize: 
 HeapSize: 
-LinkerScript: 
+LinkerScript: TestApp_Peripheral_ppc440_0_wbEncoder/src/TestApp_Peripheral_LinkScr.ld
 ProgCCFlags: 
 CompileInXps: 1
 NonXpsApp: 0

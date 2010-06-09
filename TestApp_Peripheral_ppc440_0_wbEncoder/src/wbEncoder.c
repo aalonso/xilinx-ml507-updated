@@ -21,9 +21,9 @@
  * Include files
  */
 #include "wbEncoder.h"
+#include "wbEncoder_intc.h"
 #include "xparameters.h"
 #include "plbv46_2_wb_enconder.h"
-
 /*
  * Constant definitions
  */
@@ -36,11 +36,11 @@
  * wbEncoder_CfgInitialize 
  */
 
-int wbEncoder_CfgInitialize (wbEncoder *instPtr, wbEncoder_Config *config,
+int wbEncoder_CfgInitialize(wbEncoder *instPtr, wbEncoder_Config *config,
 							 u32 effectiveAddr)
 {
-	Xil_AssertNonvoid (instPtr != NULL);
-	Xil_AssertNonvoid (config != NULL);
+	if (instPtr == (wbEncoder *) NULL) return XST_FAILURE;
+	if (config == (wbEncoder_Config *) NULL) return XST_FAILURE;
 
 	instPtr->baseAddress = effectiveAddr;
 	instPtr->isReady = XIL_COMPONENT_IS_READY;
@@ -54,7 +54,7 @@ int wbEncoder_CfgInitialize (wbEncoder *instPtr, wbEncoder_Config *config,
  * Look the device configuration in ConfigTable
  */
 
-wbEncoder_Config *wbEncoder_LookupConfig (u16 deviceId)
+wbEncoder_Config *wbEncoder_LookupConfig(u16 deviceId)
 {
 	wbEncoder_Config *configPtr = NULL;
 	int index;
@@ -69,17 +69,16 @@ wbEncoder_Config *wbEncoder_LookupConfig (u16 deviceId)
 	return configPtr;
 }
 
-
 /*
  * wbEncoder initialize function
  */
-int wbEncoder_Initialize (wbEncoder *instPtr, u16 deviceId)
+int wbEncoder_Initialize(wbEncoder *instPtr, u16 deviceId)
 {
 	wbEncoder_Config *configPtr;
 	/* valid instPtr */
-	Xil_AssertNonvoid (instPtr != NULL);
+	if (instPtr == (wbEncoder *) NULL) return XST_FAILURE;
 
-	configPtr = wbEncoder_LookupConfig (deviceId);
+	configPtr = wbEncoder_LookupConfig(deviceId);
 	if (configPtr == (wbEncoder_Config *) NULL) {
 		instPtr->isReady = 0;
 		instPtr->readData = 0;
@@ -87,6 +86,6 @@ int wbEncoder_Initialize (wbEncoder *instPtr, u16 deviceId)
 		return XST_DEVICE_NOT_FOUND;
 	}
 
-	return wbEncoder_CfgInitialize (instPtr, configPtr,
+	return wbEncoder_CfgInitialize(instPtr, configPtr,
 									configPtr->baseAddress);
 }

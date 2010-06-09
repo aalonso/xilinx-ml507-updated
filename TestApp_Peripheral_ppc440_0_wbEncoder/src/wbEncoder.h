@@ -25,7 +25,6 @@
  */
 #include "xil_types.h"
 #include "xstatus.h"
-#include "xil_assert.h"
 #include "plbv46_2_wb_enconder.h"
 #include "xparameters.h"
 
@@ -44,7 +43,7 @@
 		Xil_Out32((baseAddress) + (regOffset), (u32)(data))
 
 #define wbEncoder_ReadReg(baseAddress, regOffset) \
-		Xil_In32(baseAddress, regOffset)
+		Xil_In32((baseAddress) + (regOffset))
 
 /*
  * wbEncoder_Config: Configuration information of device
@@ -87,15 +86,14 @@ wbEncoder_Config wbEncoder_ConfigTable[] =
 /*
  * wbEncoder_CfgInitialize
  */
-int wbEncoder_CfgIntialize (wbEncoder *instPtr, wbEncoder_Config *config,
+int wbEncoder_CfgIntialize(wbEncoder *instPtr, wbEncoder_Config *config,
 							u32 effectiveAddr);
-
 
 /*
  * Look the device configuration in ConfigTable
  */
 
-wbEncoder_Config *wbEncoder_LookupConfig (u16 deviceId);
+wbEncoder_Config *wbEncoder_LookupConfig(u16 deviceId);
 
 /*
  * wbEncoder initialize function

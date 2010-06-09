@@ -26,7 +26,6 @@
 #include "wbEncoder.h"
 #include "wbEncoder_intc.h"
 #include "plbv46_2_wb_enconder.h"
-#include "xil_assert.h"
 #include "xil_exception.h"
 
 /*
@@ -53,13 +52,14 @@ int wbEncoderExample(wbEncoder *instPtr, u16 deviceId,
 int wbEncoder_IntSetup(XIntc *intcPtr, wbEncoder *instPtr, 
 						u16 deviceId, u16 intcId, u16 intcMask);
 void wbEncoderIntHandler(void *callbackHandler);
+int wbEncoder_Direction(wbEncoder *instPtr);
 
 int
-main (int argc, char **argv)
+main(int argc, char **argv)
 {
 	int status;
 	
-	status = wbEncoderExample (&wbEncoderInst, WB_ENCODER_DEVICE_ID,
+	status = wbEncoderExample(&wbEncoderInst, WB_ENCODER_DEVICE_ID,
 								&intcInst,  XPAR_INTC_0_DEVICE_ID, WB_ENCODER_MASK);
 
 	if (status != XST_SUCCESS) {
@@ -69,7 +69,7 @@ main (int argc, char **argv)
 	return XST_SUCCESS;
 }
 
-int wbEncoderExample (wbEncoder *instPtr, u16 deviceId,
+int wbEncoderExample(wbEncoder *instPtr, u16 deviceId,
 						XIntc *intcPtr, u16 intcId, u16 intcMask)
 {
 	int status;
@@ -160,8 +160,7 @@ void wbEncoderIntHandler(void *callbackHandler)
 	instPtr->readDelta = instPtr->readData;
 	/* read data register */
 	data = wbEncoder_ReadReg(instPtr->baseAddress, 
-																WB_ENCODER_DATA_OFFSET);
-	/* TODO FIx Xil_In32 error */
+								WB_ENCODER_DATA_OFFSET);
 	
 	instPtr->readData = data & 0x07;
 

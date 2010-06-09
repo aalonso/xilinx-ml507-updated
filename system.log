@@ -2205,3 +2205,318 @@ Done writing filter settings to:
 Done writing Tab View settings to:
 	/home/aalonso/workspace/xlnx/xilinx-ml507-updated/__xps/system.gui
 
+Generating Block Diagram to Buffer 
+
+/opt/Xilinx/12.1/ISE_DS/EDK/data/xml/xslscripts/ConvertEdwardVersion.xsl
+
+Generated Block Diagram SVG
+
+At Local date and time: Tue Jun  8 23:06:52 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderIntHandler’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:162: error: too many arguments to function ‘Xil_In32’
+
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 23:12:11 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+/tmp/cc4ujRAE.o: In function `wbEncoder_InterruptGetStatus':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:122: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccBUGRKq.o:/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder
+/src/TespApp_wbEncoder.c:103: first defined here
+/tmp/ccvEC7MS.o: In function `wbEncoder_LookupConfig':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:63: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccBUGRKq.o:/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+/tmp/cc4ujRAE.o: In function `wbEncoder_InterruptGetStatus':
+wbEncoder_intc.c:(.text+0x1c): undefined reference to `xil_AssertVoid'
+wbEncoder_intc.c:(.text+0x38): undefined reference to `xil_AssertVoid'
+/tmp/cc4ujRAE.o: In function `wbEncoder_InterruptGetEnabled':
+wbEncoder_intc.c:(.text+0x78): undefined reference to `xil_AssertVoid'
+wbEncoder_intc.c:(.text+0x94): undefined reference to `xil_AssertVoid'
+/tmp/cc4ujRAE.o: In function `wbEncoder_InterruptClear':
+wbEncoder_intc.c:(.text+0xdc): undefined reference to `xil_AssertVoid'
+/tmp/cc4ujRAE.o:wbEncoder_intc.c:(.text+0xf8): more undefined references to `xil_AssertVoid' follow
+collect2: ld returned 1 exit status
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 23:24:50 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+/
+tmp/ccraSyzM.o: In function `wbEncoder_InterruptGetStatus':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:122: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccngIBjn.o:/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+/tmp/cc9k6gYc.o: In function `wbEncoder_LookupConfig':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:63: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccngIBjn.o:/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+/tmp/ccraSyzM.o: In function `wbEncoder_InterruptGetStatus':
+wbEncoder_intc.c:(.text+0x1c): undefined reference to `xil_AssertNonvoid'
+wbEncoder_intc.c:(.text+0x38): undefined reference to `xil_AssertNonvoid'
+/tmp/ccraSyzM.o: In function `wbEncoder_InterruptGetEnabled':
+wbEncoder_intc.c:(.text+0x78): undefined reference to `xil_AssertNonvoid'
+wbEncoder_intc.c:(.text+0x94): undefined reference to `xil_AssertNonvoid'
+/tmp/ccraSyzM.o: In function `wbEncoder_InterruptClear':
+wbEncoder_intc.c:(.text+0xdc): undefined reference to `xil_AssertVoid'
+wbEncoder_intc.c:(.text+0xf8): undefined reference to `xil_AssertVoid'
+/tmp/ccraSyzM.o: In function `wbEncoder_InterruptDisable':
+wbEncoder_intc.c:(.text+0x154): undefined reference to `xil_AssertVoid'
+wbEncoder_intc.c:(.text+0x170): undefined reference to `xil_AssertVoid'
+/tmp/ccraSyzM.o: In function `wbEncoder_InterruptEnable':
+wbEncoder_intc.c:(.text+0x1d0): undefined reference to `xil_AssertVoid'
+/tmp/ccraSyzM.o:wbEncoder_intc.c:(.text+0x1ec): more undefined references to `xil_AssertVoid' follow
+collect2: ld returned 1 exit status
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 23:30:17 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_programclean started...
+
+rm -f TestApp_Peripheral_wb_encoder/executable.elf 
+
+
+Done!
+
+At Local date and time: Tue Jun  8 23:35:36 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_programclean started...
+
+rm -f TestApp_Peripheral_wb_encoder/executable.elf 
+
+
+Done!
+
+At Local date and time: Tue Jun  8 23:35:41 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+/tmp/ccszN6Vo.o: In function `wbEncoder_InterruptGetStatus':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:122: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccicVg3m.o:/home/aalonso/workspace/ppc44x/xilinx-
+ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+/tmp/ccMBcc9s.o: In function `wbEncoder_LookupConfig':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:63: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccicVg3m.o:/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+/tmp/ccszN6Vo.o: In function `wbEncoder_InterruptGetStatus':
+wbEncoder_intc.c:(.text+0x1c): undefined reference to `xil_AssertNonvoid'
+wbEncoder_intc.c:(.text+0x38): undefined reference to `xil_AssertNonvoid'
+/tmp/ccszN6Vo.o: In function `wbEncoder_InterruptGetEnabled':
+wbEncoder_intc.c:(.text+0x78): undefined reference to `xil_AssertNonvoid'
+wbEncoder_intc.c:(.text+0x94): undefined reference to `xil_AssertNonvoid'
+/tmp/ccszN6Vo.o: In function `wbEncoder_InterruptClear':
+wbEncoder_intc.c:(.text+0xdc): undefined reference to `xil_AssertVoid'
+wbEncoder_intc.c:(.text+0xf8): undefined reference to `xil_AssertVoid'
+/tmp/ccszN6Vo.o: In function `wbEncoder_InterruptDisable':
+wbEncoder_intc.c:(.text+0x154): undefined reference to `xil_AssertVoid'
+wbEncoder_intc.c:(.text+0x170): undefined reference to `xil_AssertVoid'
+/tmp/ccszN6Vo.o: In function `wbEncoder_InterruptEnable':
+wbEncoder_intc.c:(.text+0x1d0): undefined reference to `xil_AssertVoid'
+/tmp/ccszN6Vo.o:wbEncoder_intc.c:(.text+0x1ec): more undefined references to `xil_AssertVoid' follow
+collect2: ld returned 1 exit status
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 23:47:03 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440  -Wl,-T -Wl,TestApp_Peripheral_ppc440_0_wbEncoder/src/TestApp_Peripheral_LinkScr.ld  -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+/tmp/ccnK88RI.o: In function `wbEncoder_InterruptGetStatus':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:122: multiple definition of `wbEncoder_ConfigTable'
+/tmp/cc17UXeG.o:/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+/tmp/cc4zHC30.o: In function `wbEncoder_LookupConfig':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:63: multiple definition of `wbEncoder_ConfigTable'
+/tmp/cc17UXeG.o:/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+/tmp/ccnK88RI.o: In function `wbEncoder_InterruptGetStatus':
+wbEncoder_intc.c:(.text+0x1c): undefined reference to `xil_AssertNonvoid'
+wbEncoder_intc.c:(.text+0x38): undefined reference to `xil_AssertNonvoid'
+/tmp/ccnK88RI.o: In function `wbEncoder_InterruptGetEnabled':
+wbEncoder_intc.c:(.text+0x78): undefined reference to `xil_AssertNonvoid'
+wbEncoder_intc.c:(.text+0x94): undefined reference to `xil_AssertNonvoid'
+/tmp/ccnK88RI.o: In function `wbEncoder_InterruptClear':
+wbEncoder_intc.c:(.text+0xdc): undefined reference to `xil_AssertVoid'
+wbEncoder_intc.c:(.text+0xf8): undefined reference to `xil_AssertVoid'
+/tmp/ccnK88RI.o: In function `wbEncoder_InterruptDisable':
+wbEncoder_intc.c:(.text+0x154): undefined reference to `xil_AssertVoid'
+wbEncoder_intc.c:(.text+0x170): undefined reference to `xil_AssertVoid'
+/tmp/ccnK88RI.o: In function `wbEncoder_InterruptEnable':
+wbEncoder_intc.c:(.text+0x1d0): undefined reference to `xil_AssertVoid'
+/tmp/ccnK88RI.o:wbEncoder_intc.c:(.text+0x1ec): more undefined references to `xil_AssertVoid' follow
+collect2: ld returned 1 exit status
+
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Tue Jun  8 23:58:24 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440  -Wl,-T -Wl,TestApp_Peripheral_ppc440_0_wbEncoder/src/TestApp_Peripheral_LinkScr.ld  -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+/tmp/ccPq4u3a.o: In function `wbEncoder_InterruptGetStatus':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:120: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccYHxoer.o:/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:102: first defined 
+here
+/tmp/ccinkER1.o: In function `wbEncoder_CfgInitialize':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:41: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccYHxoer.o:/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:102: first defined here
+collect2: ld returned 1 exit status
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Wed Jun  9 00:12:49 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440  -Wl,-T -Wl,TestApp_Peripheral_ppc440_0_wbEncoder/src/TestApp_Peripheral_LinkScr.ld  -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+/tmp/ccc1g9Am.o: In function `wbEncoder_InterruptGetStatus':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:120: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccMxyrUA.o:/home/
+aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+/tmp/cc8CFOoa.o: In function `wbEncoder_CfgInitialize':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:41: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccMxyrUA.o:/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+collect2: ld returned 1 exit status
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Wed Jun  9 00:39:10 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_programclean started...
+
+rm -f TestApp_Peripheral_wb_encoder/executable.elf 
+
+
+Done!
+
+At Local date and time: Wed Jun  9 00:39:19 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440  -Wl,-T -Wl,TestApp_Peripheral_ppc440_0_wbEncoder/src/TestApp_Peripheral_LinkScr.ld  -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+/tmp/ccuNoh2p.o: In function `wbEncoder_InterruptGetStatus':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:120: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccQTHWvN.o:/home/aalonso/workspace/ppc44x/xilinx
+-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+/tmp/ccCUUSt4.o: In function `wbEncoder_CfgInitialize':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:41: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccQTHWvN.o:/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+collect2: ld returned 1 exit status
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Wed Jun  9 00:40:14 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_programclean started...
+
+rm -f TestApp_Peripheral_wb_encoder/executable.elf 
+
+
+Done!
+
+At Local date and time: Wed Jun  9 00:40:20 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+/tmp/cc4yg6RR.o: In function
+ `wbEncoder_InterruptGetStatus':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:120: multiple definition of `wbEncoder_ConfigTable'
+/tmp/cc6XYIBe.o:/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+/tmp/ccWOGcjx.o: In function `wbEncoder_CfgInitialize':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:41: multiple definition of `wbEncoder_ConfigTable'
+/tmp/cc6XYIBe.o:/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+collect2: ld returned 1 exit status
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Wed Jun  9 00:41:58 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+/tmp/cc28Kxhm.o: In function `wbEncoder_InterruptGetStatus':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:121: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccwkkAKk.o:/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+/tmp/ccoE0mhq.o: In function `wbEncoder_CfgInitialize':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:42: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccwkkAKk.o:/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+collect2: ld returned 1 exit status
+
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Wed Jun  9 00:42:34 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_wb_encoder/executable.elf \
+	    -mcpu=440  -Wl,-T -Wl,TestApp_Peripheral_ppc440_0_wbEncoder/src/TestApp_Peripheral_LinkScr.ld  -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+/tmp/cctoslcA.o: In function `wbEncoder_InterruptGetStatus':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:121: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccWduMFJ.o:/
+home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+/tmp/cckVYYPs.o: In function `wbEncoder_CfgInitialize':
+/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:42: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccWduMFJ.o:/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+collect2: ld returned 1 exit status
+make: *** [TestApp_Peripheral_wb_encoder/executable.elf] Error 1
+
+
+
+Done!
+
+Writing filter settings....
+
+Done writing filter settings to:
+	/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/__xps/system.filters
+
+Done writing Tab View settings to:
+	/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/__xps/system.gui
+

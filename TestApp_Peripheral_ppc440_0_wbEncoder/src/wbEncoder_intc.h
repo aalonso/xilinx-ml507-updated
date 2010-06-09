@@ -24,7 +24,6 @@
  * Include files
  */
 #include "xil_types.h"
-#include "xil_assert.h"
 #include "xstatus.h"
 #include "xintc.h"
 #include "wbEncoder.h"
