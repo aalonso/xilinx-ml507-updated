@@ -27,6 +27,7 @@
 #include "wbEncoder_intc.h"
 #include "plbv46_2_wb_enconder.h"
 #include "xil_exception.h"
+#include "xintc.h"
 
 /*
  * Constant definitions

@@ -33,10 +33,11 @@
  */
 
 /* Registers offsets */
-#define WB_ENCODER_DATA_OFFSET			PLBV46_2_WB_ENCONDER_SLV_REG0_OFFSET
-#define WB_ENCODER_CONTROL_OFFSET		PLBV46_2_WB_ENCONDER_SLV_REG1_OFFSET
+#define WB_ENCODER_DATA_OFFSET		PLBV46_2_WB_ENCONDER_SLV_REG0_OFFSET
+#define WB_ENCODER_CONTROL_OFFSET	PLBV46_2_WB_ENCONDER_SLV_REG1_OFFSET
 #define WB_ENCODER_INT_CONTROL_OFFSET	PLBV46_2_WB_ENCONDER_SLV_REG2_OFFSET
 #define WB_ENCODER_INT_STATUS_OFFSET	PLBV46_2_WB_ENCONDER_SLV_REG3_OFFSET
+
 
 /* macros for accessign registers */
 #define wbEncoder_WriteReg(baseAddress, regOffset, data) \
@@ -71,13 +72,7 @@ typedef struct {
  *
  */
 
-wbEncoder_Config wbEncoder_ConfigTable[] =
-{
-	{
-		XPAR_PLBV46_2_WB_ENCONDER_0_DEVICE_ID,
-		XPAR_PLBV46_2_WB_ENCONDER_0_BASEADDR		
-	}
-};
+extern wbEncoder_Config wbEncoder_ConfigTable[];
 
 /*
  * Function prototypes
@@ -99,5 +94,7 @@ wbEncoder_Config *wbEncoder_LookupConfig(u16 deviceId);
  * wbEncoder initialize function
  */
 int wbEncoder_Initialize(wbEncoder *instPrt, u16 deviceId);
+
+
 
 #endif		/* WB_ENCODER_H */

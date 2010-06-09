@@ -2520,3 +2520,226 @@ Done writing filter settings to:
 Done writing Tab View settings to:
 	/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/__xps/system.gui
 
+Xilinx Platform Studio (XPS)
+Xilinx EDK 12.1 Build EDK_MS1.53d
+
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Generating Block Diagram to Buffer 
+
+/opt/Xilinx/12.1/ISE_DS/EDK/data/xml/xslscripts/ConvertEdwardVersion.xsl
+
+Generated Block Diagram SVG
+
+At Local date and time: Wed Jun  9 13:05:20 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_programclean started...
+
+rm -f TestApp_Peripheral_wbEncoder/executable.elf 
+
+
+Done!
+
+At Local date and time: Wed Jun  9 13:05:30 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+make: *** No rule to make target `TestApp_Peripheral_ppc440_0_wbEncoder/src/TestApp_Peripheral_LinkScr.ld', needed by `TestApp_Peripheral_wbEncoder/executable.elf'.  Stop.
+
+
+
+Done!
+
+At Local date and time: Wed Jun  9 13:07:18 2010
+ make -f system.make TestApp_Peripheral_wb_encoder_program started...
+
+make: *** No rule to make target `TestApp_Peripheral_ppc440_0_wbEncoder/src/TestApp_Peripheral_LinkScr.ld', needed by `TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf'.  Stop.
+
+
+
+Done!
+
+Writing filter settings....
+
+Done writing filter settings to:
+	/home/aalonso/workspace/xlnx/xilinx-ml507-updated/__xps/system.filters
+
+Done writing Tab View settings to:
+	/home/aalonso/workspace/xlnx/xilinx-ml507-updated/__xps/system.gui
+
+Xilinx Platform Studio (XPS)
+Xilinx EDK 12.1 Build EDK_MS1.53d
+
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Generating Block Diagram to Buffer 
+
+/opt/Xilinx/12.1/ISE_DS/EDK/data/xml/xslscripts/ConvertEdwardVersion.xsl
+
+Generated Block Diagram SVG
+
+At Local date and time: Wed Jun  9 13:31:33 2010
+ make -f system.make TestApp_Peripheral_ppc440_0_wbEncoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+/tmp/ccbRu0je.o: In function `wbEncoder_InterruptGetStatus':
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:121: multiple definition of `wbEncoder_ConfigTable'
+/tmp/cc62PySg.o:/home/aalonso/workspace/xlnx/xilinx-ml507
+-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+/tmp/cc8sLfyd.o: In function `wbEncoder_CfgInitialize':
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:42: multiple definition of `wbEncoder_ConfigTable'
+/tmp/cc62PySg.o:/home/aalonso/workspace/xlnx/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+collect2: ld returned 1 exit status
+make: *** [TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Wed Jun  9 13:38:25 2010
+ make -f system.make TestApp_Peripheral_ppc440_0_wbEncoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+/tmp/ccTakPos.o: In function `wbEncoder_InterruptGetStatus':
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c:121: multiple definition of `wbEncoder_ConfigTable'
+/
+tmp/ccw4S5ZX.o:/home/aalonso/workspace/xlnx/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+/tmp/cc0U3lwY.o: In function `wbEncoder_CfgInitialize':
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:41: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccw4S5ZX.o:/home/aalonso/workspace/xlnx/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:103: first defined here
+collect2: ld returned 1 exit status
+make: *** [TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Wed Jun  9 13:39:36 2010
+ make -f system.make TestApp_Peripheral_ppc440_0_wbEncoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:42: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘intcInst’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:50: error: expected declaration specifiers or ‘...’ before ‘XIntc’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:51: error: expected ‘)’ before ‘*’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘main’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:62: error: ‘intcInst’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:62: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:62: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:62: error: too many arguments to function ‘wbEncoderExample’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: At top level:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:72: error: expected declaration specifiers or ‘...’ before ‘XIntc’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderExample’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:81: error: ‘intcPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: At top level:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:173: error: expected ‘)’ before ‘*’ token
+
+make: *** [TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Wed Jun  9 13:48:50 2010
+ make -f system.make TestApp_Peripheral_ppc440_0_wbEncoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:42: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘intcInst’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:50: error: expected declaration specifiers or ‘...’ before ‘XIntc’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:51: error: expected ‘)’ before ‘*’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘main’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:62: error: ‘intcInst’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:62: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:62: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:62: error: too many arguments to function ‘wbEncoderExample’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: At top level:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:72: error: expected declaration specifiers or ‘...’ before ‘XIntc’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderExample’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:81: error: ‘intcPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: At top level:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:173: error: expected ‘)’ before ‘*’ token
+
+make: *** [TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Wed Jun  9 13:51:01 2010
+ make -f system.make TestApp_Peripheral_ppc440_0_wbEncoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:42: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘intcInst’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:50: error: expected declaration specifiers or ‘...’ before ‘XIntc’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:51: error: expected ‘)’ before ‘*’ token
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘main’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:62: error: ‘intcInst’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:62: error: (Each undeclared identifier is reported only once
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:62: error: for each function it appears in.)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:62: error: too many arguments to function ‘wbEncoderExample’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: At top level:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:72: error: expected declaration specifiers or ‘...’ before ‘XIntc’
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: In function ‘wbEncoderExample’:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:81: error: ‘intcPtr’ undeclared (first use in this function)
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c: At top level:
+TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:173: error: expected ‘)’ before ‘*’ token
+
+make: *** [TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Wed Jun  9 13:51:31 2010
+ make -f system.make TestApp_Peripheral_ppc440_0_wbEncoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c  -o TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+/tmp/ccQpu4ar.o: In function `wbEncoder_CfgInitialize':
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c:42: multiple definition of `wbEncoder_ConfigTable'
+/tmp/ccaGQKuD.o:/home/aalonso/workspace/xlnx/xilinx
+-ml507-updated/TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c:104: first defined here
+collect2: ld returned 1 exit status
+make: *** [TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Wed Jun  9 14:19:26 2010
+ make -f system.make TestApp_Peripheral_ppc440_0_wbEncoder_programclean started...
+
+rm -f TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf 
+
+
+Done!
+
+At Local date and time: Wed Jun  9 14:19:37 2010
+ make -f system.make TestApp_Peripheral_ppc440_0_wbEncoder_program started...
+
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c  -o TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0_wbEncoder/src/  -L./ppc440_0/lib/  \
+	  
+powerpc-eabi-size TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50195	   1576	   8668	  60439	   ec17	TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf
+
+
+Done!
+
+Writing filter settings....
+
+Done writing filter settings to:
+	/home/aalonso/workspace/xlnx/xilinx-ml507-updated/__xps/system.filters
+
+Done writing Tab View settings to:
+	/home/aalonso/workspace/xlnx/xilinx-ml507-updated/__xps/system.gui
+

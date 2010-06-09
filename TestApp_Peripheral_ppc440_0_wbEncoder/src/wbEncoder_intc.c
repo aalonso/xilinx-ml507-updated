@@ -1,4 +1,4 @@
-/* wbEncoder_intc.c - Wishbone encoder basic driver implementation
+/* wbEncoder_intc.h - Wishbone encoder interrupt file
  * Copyright (C) 2010 Adrian Alonso <aalonso00@gmail.com>
  *
  * This program is free software; you can redistribute it and/or
@@ -21,16 +21,9 @@
  * Include files
  */
 #include "wbEncoder.h"
-#include "wbEncoder_intc.h"
 #include "xparameters.h"
 #include "plbv46_2_wb_enconder.h"
-/*
- * Constant definitions
- */
-
-/*
- * Function prototypes
- */
+#include "xintc.h"
 
 /*
  * wbEncoder Interrupt controller functions
@@ -88,10 +81,10 @@ void wbEncoder_InterruptDisable(wbEncoder *instPrt, u32 mask)
 	if (instPrt->isReady == XIL_COMPONENT_IS_READY) return;
 
 	reg_val = wbEncoder_ReadReg(instPrt->baseAddress, 
-								PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET);
+					PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET);
 	wbEncoder_WriteReg(instPrt->baseAddress, 
-						PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET,
-						reg_val & ~(mask));
+				PLBV46_2_WB_ENCONDER_INTR_IPIER_OFFSET,
+				reg_val & ~(mask));
 }
 
 void wbEncoder_InterruptClear(wbEncoder *instPrt, u32 mask)
@@ -102,10 +95,10 @@ void wbEncoder_InterruptClear(wbEncoder *instPrt, u32 mask)
 	if (instPrt->isReady == XIL_COMPONENT_IS_READY) return;
 
 	reg_val = wbEncoder_ReadReg(instPrt->baseAddress, 
-								PLBV46_2_WB_ENCONDER_INTR_IPISR_OFFSET);
+					PLBV46_2_WB_ENCONDER_INTR_IPISR_OFFSET);
 	wbEncoder_WriteReg(instPrt->baseAddress,
-						PLBV46_2_WB_ENCONDER_INTR_IPISR_OFFSET,
-						reg_val & mask);
+					PLBV46_2_WB_ENCONDER_INTR_IPISR_OFFSET,
+					reg_val & mask);
 }
 
 u32 wbEncoder_InterruptGetEnabled(wbEncoder *instPrt)
@@ -123,5 +116,6 @@ u32 wbEncoder_InterruptGetStatus(wbEncoder *instPrt, u32 mask)
 	if (instPrt->isReady == XIL_COMPONENT_IS_READY) return XST_FAILURE;
 	
 	return wbEncoder_ReadReg(instPrt->baseAddress, 
-							 PLBV46_2_WB_ENCONDER_INTR_IPISR_OFFSET);
+				 PLBV46_2_WB_ENCONDER_INTR_IPISR_OFFSET);
 }
+

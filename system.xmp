@@ -105,14 +105,14 @@ LinkerScript:
 ProgCCFlags: 
 CompileInXps: 1
 NonXpsApp: 0
-SwProj: TestApp_Peripheral_wb_encoder
+SwProj: TestApp_Peripheral_ppc440_0_wbEncoder
 Processor: ppc440_0
-Executable: TestApp_Peripheral_wb_encoder/executable.elf
+Executable: TestApp_Peripheral_ppc440_0_wbEncoder/executable.elf
 Source: TestApp_Peripheral_ppc440_0_wbEncoder/src/TespApp_wbEncoder.c
-Source: TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c
 Source: TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.c
-Header: TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.h
+Source: TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.c
 Header: TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder.h
+Header: TestApp_Peripheral_ppc440_0_wbEncoder/src/wbEncoder_intc.h
 DefaultInit: EXECUTABLE
 InitBram: 0
 Active: 1
@@ -123,7 +123,7 @@ ProfileFlag: 0
 ProgStart: 
 StackSize: 
 HeapSize: 
-LinkerScript: TestApp_Peripheral_ppc440_0_wbEncoder/src/TestApp_Peripheral_LinkScr.ld
+LinkerScript: 
 ProgCCFlags: 
 CompileInXps: 1
 NonXpsApp: 0

@@ -1,4 +1,4 @@
-/* wb-encoder.c - Wishbone encoder basic driver implementation
+/* wbEncoder_intc.h - Wishbone encoder interrupt header file
  * Copyright (C) 2010 Adrian Alonso <aalonso00@gmail.com>
  *
  * This program is free software; you can redistribute it and/or
@@ -17,40 +17,56 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef WB_ENCODER_INT_C_H
-#define WB_ENCODER_INT_C_H
+#ifndef WB_ENCODER_INTC_H
+#define WB_ENCODER_INTC_H
 
 /*
  * Include files
  */
 #include "xil_types.h"
 #include "xstatus.h"
-#include "xintc.h"
-#include "wbEncoder.h"
+#include "plbv46_2_wb_enconder.h"
+#include "xparameters.h"
 
 /*
  * Constant definitions
  */
-#define WB_ENCODER_INTC_MASK XPAR_PLBV46_2_WB_ENCONDER_0_IP2INTC_IRPT_MASK
-#define WB_ENCODER_INTC_INTR XPAR_XPS_INTC_0_PLBV46_2_WB_ENCONDER_0_IP2INTC_IRPT_INTR
+#define WB_ENCODER_INTC_MASK 		XPAR_PLBV46_2_WB_ENCONDER_0_IP2INTC_IRPT_MASK
+#define WB_ENCODER_INTC_INTR 		XPAR_XPS_INTC_0_PLBV46_2_WB_ENCONDER_0_IP2INTC_IRPT_INTR
 
 /*
- * Function prototypes
+ * wbEncoder iterrupt global enable
  */
-
-/*
- * wbEncoder Interrupt controller functions
- */
-
 void wbEncoder_InterruptGlobalEnable(wbEncoder *instPrt);
+
+/*
+ * wbEncoder iterrupt global disable
+ */
 void wbEncoder_InterruptGlobalDisable(wbEncoder *instPrt);
+
+/*
+ * wbEncoder iterrupt enable
+ */
 void wbEncoder_InterruptEnable(wbEncoder *instPrt, u32 mask);
+
+/*
+ * wbEncoder iterrupt disable
+ */
 void wbEncoder_InterruptDisable(wbEncoder *instPrt, u32 mask);
+
+/*
+ * wbEncoder clear iterrupt
+ */
 void wbEncoder_InterruptClear(wbEncoder *instPrt, u32 mask);
+
+/*
+ * wbEncoder iterrupt getEnabled
+ */
 u32 wbEncoder_InterruptGetEnabled(wbEncoder *instPrt);
+
+/*
+ * wbEncoder iterrupt get status
+ */
 u32 wbEncoder_InterruptGetStatus(wbEncoder *instPrt, u32 mask);
 
-
-
-#endif	/* WB_ENCODER_INT_C_H */
-
+#endif /* WB_ENCODER_INTC_H */

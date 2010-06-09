@@ -21,12 +21,19 @@
  * Include files
  */
 #include "wbEncoder.h"
-#include "wbEncoder_intc.h"
 #include "xparameters.h"
 #include "plbv46_2_wb_enconder.h"
+#include "xintc.h"
 /*
  * Constant definitions
  */
+wbEncoder_Config wbEncoder_ConfigTable[] =
+{
+    {
+        XPAR_PLBV46_2_WB_ENCONDER_0_DEVICE_ID,
+        XPAR_PLBV46_2_WB_ENCONDER_0_BASEADDR
+    }
+};
 
 /*
  * Function prototypes
@@ -54,7 +61,7 @@ int wbEncoder_CfgInitialize(wbEncoder *instPtr, wbEncoder_Config *config,
  * Look the device configuration in ConfigTable
  */
 
-wbEncoder_Config *wbEncoder_LookupConfig(u16 deviceId)
+wbEncoder_Config* wbEncoder_LookupConfig(u16 deviceId)
 {
 	wbEncoder_Config *configPtr = NULL;
 	int index;
@@ -89,3 +96,5 @@ int wbEncoder_Initialize(wbEncoder *instPtr, u16 deviceId)
 	return wbEncoder_CfgInitialize(instPtr, configPtr,
 									configPtr->baseAddress);
 }
+
+

@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2010-06-08T23:04:31</DateModified>
+  <DateModified>2010-06-09T13:27:07</DateModified>
   <ModuleName>system</ModuleName>
-  <SummaryTimeStamp>2010-06-08T23:04:31</SummaryTimeStamp>
-  <SavedFilePath>/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/__xps/ise/system.xreport</SavedFilePath>
+  <SummaryTimeStamp>2010-06-09T13:27:07</SummaryTimeStamp>
+  <SavedFilePath>/home/aalonso/workspace/xlnx/xilinx-ml507-updated/__xps/ise/system.xreport</SavedFilePath>
   <FilterFile>filter.filter</FilterFile>
-  <SavedFilterFilePath>/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/__xps/ise</SavedFilterFilePath>
+  <SavedFilterFilePath>/home/aalonso/workspace/xlnx/xilinx-ml507-updated/__xps/ise</SavedFilterFilePath>
   <DateInitialized>2010-05-05T13:49:05</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
