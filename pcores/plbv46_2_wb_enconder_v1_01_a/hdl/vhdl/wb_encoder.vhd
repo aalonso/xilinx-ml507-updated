@@ -31,10 +31,8 @@ use ieee.std_logic_1164.all;
 -- wb_dreg (2) -> Push button
 -- wb_dreg (1) -> Inc B
 -- wb_dreg (0) -> Inc A
--- wb_creg  status/control register
--- wb_creg (2) -> Interrupt flag    *Not implemented
--- wb_creg (1) -> Interrupt ack
--- wb_creg (0) -> Interrupt enable
+-- PLBV46_2_WB_ENCONDER_INTR_IPISR 0x0000_0120 interrupt status register
+-- PLBV46_2_WB_ENCONDER_INTR_IPIER 0x0000_0128 interrupt enable register
 
 entity wb_encoder is
     generic (
@@ -65,8 +63,9 @@ architecture behavioral of wb_encoder is
     -- Signals
     signal r_ack: std_logic;
     signal w_ack: std_logic;
-    signal wb_creg: std_logic_vector (0 to C_WB_DBUS_SIZE-1);
     signal wb_dreg: std_logic_vector (0 to C_WB_DBUS_SIZE-1);
+    signal wb_isreg: std_logic_vector (0 to C_WB_DBUS_SIZE-1);
+    signal wb_iereg: std_logic_vector (0 to C_WB_DBUS_SIZE-1);
     signal wb_ireg: std_logic_vector (0 to C_WB_DBUS_SIZE-1);
 
 begin
@@ -84,14 +83,13 @@ begin
             if (wb_we_in = '0' and wb_stb_in = '1' 
                 and wb_cyc_in = '1') then
                 r_ack <= '1';
-                if (wb_addr_in = X"0000_0000") then
+                if (wb_addr_in = X"0000_0000") then     -- data register
                     wb_data_out <= wb_dreg;
-                elsif (wb_addr_in = X"4000_0000") then
-                    wb_data_out <= wb_creg;
-                -- elsif (wb_addr_in = X"8000_0000") then
-                --    wb_data_out <= std_logic_vector(to_unsigned(C_WB_ID,C_WB_DBUS_SIZE));
+                elsif (wb_addr_in = X"0000_0120") then
+                    wb_data_out <= wb_isreg;            -- irq status register
+                elsif (wb_addr_in = x"0000_0128") then
+                    wb_data_out <= x"0000_0001" & wb_iereg;  -- irq conrol reg
                 end if;
-            -- writing registers
             else
                 r_ack <= '0';
                 wb_data_out <= (others => '0');
@@ -103,13 +101,15 @@ begin
     begin
         if (wb_rst_in = '1') then
             w_ack <= '0';
-            wb_creg <= (others => '0');
         elsif (rising_edge(wb_clk_in)) then
             if (wb_we_in = '1' and wb_stb_in = '1'
                 and wb_cyc_in = '1') then
-                if (wb_addr_in = X"4000_0000") then
-                    wb_creg <= wb_creg & wb_data_in;
+                if (wb_addr_in = X"0000_0120") then
+                    wb_isreg <= wb_isreg & wb_data_in;
                     w_ack <= '1';
+                elsif (wb_addr_in = X"0000_0128") then
+                    wb_iereg <= wb_iereg & wb_data_in;
+                    w_ack < '1';
                 else
                     w_ack <= '0';
                 end if;
@@ -126,17 +126,20 @@ begin
         end if;
     end process pmon;
     -- generate interrupts
-    pirq: process (wb_rst_in, wb_clk_in, wb_creg)
+    pirq: process (wb_rst_in, wb_clk_in, wb_isreg, wb_iereg)
     begin
-        if (wb_rst_in = '1' or wb_creg(1) = '1') then   -- Ack interrupt
+        if (wb_rst_in = '1' or wb_isreg(0) = '1') then   -- Ack interrupt
             wb_irq_out <= '0';
+            wb_isreg(1) <= '0';                 -- Clear interrupt flag
             wb_ireg <= (others => '0');
         elsif (rising_edge(wb_clk_in)) then
-            if (wb_creg(0) = '1') then                  -- Interrupts enabled
+            if (wb_iereg(0) = '1') then         -- Interrupts enabled
                 if (wb_ireg /= wb_dreg) then
                     wb_irq_out <= '1';
+                    wb_isreg(1) <= '1';         -- Pending interrupt
                 else
-                    wb_irq_out <= '0';
+                    wb_irq_out <= '0';          
+                    wb_isreg(0) <= '0';
                 end if;                
                 wb_ireg <= wb_dreg;
             end if;
