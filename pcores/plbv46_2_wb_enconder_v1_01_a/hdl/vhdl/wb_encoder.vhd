@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------
--- Company: National Polytechnic Institute
+-- Company: None
 -- Engineer: Adrian Alonso <aalonso00@gmail.com>
 -- 
 -- Create Date:    17:48:30 04/07/2010 
