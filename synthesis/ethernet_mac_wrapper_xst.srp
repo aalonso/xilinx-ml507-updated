@@ -25,7 +25,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "ethernet_mac_wrapper_xst.prj"
-Verilog Include Directory          : {"/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/" "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc5vfx70tff1136-1
@@ -327,7 +327,7 @@ Entity <xemac> (Architecture <imp>) compiled.
 Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_ethernetlite_v4_00_a/hdl/vhdl/xps_ethernetlite.vhd" in Library xps_ethernetlite_v4_00_a.
 Entity <xps_ethernetlite> compiled.
 Entity <xps_ethernetlite> (Architecture <imp>) compiled.
-Compiling vhdl file "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/ethernet_mac_wrapper.vhd" in Library work.
+Compiling vhdl file "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/ethernet_mac_wrapper.vhd" in Library work.
 Entity <ethernet_mac_wrapper> compiled.
 Entity <ethernet_mac_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -2092,7 +2092,7 @@ Unit <xps_ethernetlite> synthesized.
 
 
 Synthesizing Unit <ethernet_mac_wrapper>.
-    Related source file is "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/ethernet_mac_wrapper.vhd".
+    Related source file is "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/ethernet_mac_wrapper.vhd".
 Unit <ethernet_mac_wrapper> synthesized.
 
 Release 12.1 - generatecore $Revision: 1.29.4.1 $ (lin64)
@@ -2526,18 +2526,18 @@ Timing constraint: Default period analysis for Clock 'SPLB_Clk'
   Total number of paths / destination ports: 19270 / 1571
 -------------------------------------------------------------------------
 Delay:               4.886ns (Levels of Logic = 7)
-  Source:            Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/Mac_addr_ram_addr_wr_3 (FF)
+  Source:            Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/Mac_addr_ram_addr_wr_0 (FF)
   Destination:       Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/Mac_addr_ram_addr_rd_1 (FF)
   Source Clock:      SPLB_Clk rising
   Destination Clock: SPLB_Clk rising
 
-  Data Path: Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/Mac_addr_ram_addr_wr_3 to Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/Mac_addr_ram_addr_rd_1
+  Data Path: Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/Mac_addr_ram_addr_wr_0 to Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/Mac_addr_ram_addr_rd_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRS:C->Q             1   0.471   0.710  Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/Mac_addr_ram_addr_wr_3 (Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/Mac_addr_ram_addr_wr_3)
-     LUT3:I0->O            8   0.094   0.374  Ethernet_MAC/XEMAC_I/EMAC_I/mac_addr_ram_addr<3>1 (Ethernet_MAC/XEMAC_I/EMAC_I/mac_addr_ram_addr<3>)
-     RAM16X1S:A0->O        2   0.094   0.715  Ethernet_MAC/XEMAC_I/EMAC_I/NODEMACADDRRAMI/ram16x4i/ram16x1_2 (Ethernet_MAC/XEMAC_I/EMAC_I/mac_addr_ram_data<1>)
+     FDR:C->Q              1   0.471   0.710  Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/Mac_addr_ram_addr_wr_0 (Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/Mac_addr_ram_addr_wr_0)
+     LUT3:I0->O            8   0.094   0.374  Ethernet_MAC/XEMAC_I/EMAC_I/mac_addr_ram_addr<0>1 (Ethernet_MAC/XEMAC_I/EMAC_I/mac_addr_ram_addr<0>)
+     RAM16X1S:A3->O        2   0.094   0.715  Ethernet_MAC/XEMAC_I/EMAC_I/NODEMACADDRRAMI/ram16x4i/ram16x1_2 (Ethernet_MAC/XEMAC_I/EMAC_I/mac_addr_ram_data<1>)
      LUT6:I3->O            1   0.094   0.480  Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/startReadDataNib_D1_SW1 (N178)
      LUT6:I5->O            2   0.094   0.485  Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/startReadDataNib_D1 (Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/N6)
      LUT6:I5->O            5   0.094   0.502  Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/rdDestAddrNib_D_t_q_FSM_FFd4-In41 (Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/rdDestAddrNib_D_t_q_FSM_N13)
@@ -2717,12 +2717,12 @@ Delay:               1.180ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 93.00 secs
-Total CPU time to Xst completion: 56.47 secs
+Total CPU time to Xst completion: 56.00 secs
  
 --> 
 
 
-Total memory usage is 667448 kilobytes
+Total memory usage is 667452 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  432 (   0 filtered)

@@ -25,7 +25,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "iic_eeprom_wrapper_xst.prj"
-Verilog Include Directory          : {"/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/" "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc5vfx70tff1136-1
@@ -274,7 +274,7 @@ Entity <iic> (Architecture <imp>) compiled.
 Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_iic_v2_03_a/hdl/vhdl/xps_iic.vhd" in Library xps_iic_v2_03_a.
 Entity <xps_iic> compiled.
 Entity <xps_iic> (Architecture <imp>) compiled.
-Compiling vhdl file "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/iic_eeprom_wrapper.vhd" in Library work.
+Compiling vhdl file "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/iic_eeprom_wrapper.vhd" in Library work.
 Entity <iic_eeprom_wrapper> compiled.
 Entity <iic_eeprom_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -1660,7 +1660,7 @@ Unit <xps_iic> synthesized.
 
 
 Synthesizing Unit <iic_eeprom_wrapper>.
-    Related source file is "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/iic_eeprom_wrapper.vhd".
+    Related source file is "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/iic_eeprom_wrapper.vhd".
 Unit <iic_eeprom_wrapper> synthesized.
 
 
@@ -2085,12 +2085,12 @@ Offset:              2.213ns (Levels of Logic = 2)
 
 
 Total REAL time to Xst completion: 28.00 secs
-Total CPU time to Xst completion: 26.80 secs
+Total CPU time to Xst completion: 26.70 secs
  
 --> 
 
 
-Total memory usage is 820632 kilobytes
+Total memory usage is 821008 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  370 (   0 filtered)

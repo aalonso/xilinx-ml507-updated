@@ -11,4 +11,4 @@ run
 -iobuf YES
 -max_fanout 10000
 -sd {../implementation}
--vlgincdir {"/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/" "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+-vlgincdir {"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }

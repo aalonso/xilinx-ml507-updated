@@ -196,24 +196,6 @@ TestApp_Peripheral_ppc440_0_tft_programclean:
 	rm -f $(TESTAPP_PERIPHERAL_PPC440_0_TFT_OUTPUT) 
 
 #################################################################
-# SOFTWARE APPLICATION TESTAPP_PERIPHERAL_PPC440_0_WBENCODER
-#################################################################
-
-TestApp_Peripheral_ppc440_0_wbEncoder_program: $(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_OUTPUT) 
-
-$(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_OUTPUT) : $(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_SOURCES) $(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_HEADERS) $(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_LINKER_SCRIPT) \
-                    $(LIBRARIES) __xps/testapp_peripheral_ppc440_0_wbencoder_compiler.opt
-	@mkdir -p $(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_OUTPUT_DIR) 
-	$(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_CC) $(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_CC_OPT) $(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_SOURCES) -o $(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_OUTPUT) \
-	$(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_OTHER_CC_FLAGS) $(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_INCLUDES) $(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_LIBPATH) \
-	$(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_CFLAGS) $(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_LFLAGS) 
-	$(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_CC_SIZE) $(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_OUTPUT) 
-	@echo ""
-
-TestApp_Peripheral_ppc440_0_wbEncoder_programclean:
-	rm -f $(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_OUTPUT) 
-
-#################################################################
 # BOOTLOOP ELF FILES
 #################################################################
 
@@ -266,11 +248,11 @@ $(DOWNLOAD_BIT): $(SYSTEM_BIT) $(BRAMINIT_ELF_FILES) __xps/bitinit.opt
 	-bt $(SYSTEM_BIT) -o $(DOWNLOAD_BIT)
 	@rm -f $(SYSTEM)_bd.bmm
 
-$(SYSTEM_ACE): $(DOWNLOAD_BIT) $(TESTAPP_MEMORY_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_TFT_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_OUTPUT) 
+$(SYSTEM_ACE): $(DOWNLOAD_BIT) $(TESTAPP_MEMORY_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_TFT_OUTPUT) 
 	@echo "*********************************************"
 	@echo "Creating system ace file"
 	@echo "*********************************************"
-	xmd -tcl genace.tcl -jprog -hw $(DOWNLOAD_BIT) -elf $(TESTAPP_MEMORY_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_TFT_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_WBENCODER_OUTPUT)  -target ppc_hw  -ace $(SYSTEM_ACE)
+	xmd -tcl genace.tcl -jprog -hw $(DOWNLOAD_BIT) -elf $(TESTAPP_MEMORY_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_TFT_OUTPUT)  -target ppc_hw  -ace $(SYSTEM_ACE)
 
 #################################################################
 # EXPORT_TO_SDK FLOW
@@ -298,6 +280,7 @@ $(CYG_SYSTEM_HW_HANDOFF_BMM): implementation/$(SYSTEM)_bd.bmm
 ################## BEHAVIORAL SIMULATION ##################
 
 $(BEHAVIORAL_SIM_SCRIPT): $(MHSFILE) __xps/simgen.opt \
+                          $(WRAPPER_NGC_FILES) \
                           $(BRAMINIT_ELF_FILES)
 	@echo "*********************************************"
 	@echo "Creating behavioral simulation models..."

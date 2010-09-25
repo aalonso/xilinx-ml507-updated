@@ -25,7 +25,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "xps_ps2_0_wrapper_xst.prj"
-Verilog Include Directory          : {"/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/" "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc5vfx70tff1136-1
@@ -255,7 +255,7 @@ Entity <ps2> (Architecture <IMP>) compiled.
 Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_ps2_v1_01_b/hdl/vhdl/xps_ps2.vhd" in Library xps_ps2_v1_01_b.
 Entity <xps_ps2> compiled.
 Entity <xps_ps2> (Architecture <imp>) compiled.
-Compiling vhdl file "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/xps_ps2_0_wrapper.vhd" in Library work.
+Compiling vhdl file "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/xps_ps2_0_wrapper.vhd" in Library work.
 Entity <xps_ps2_0_wrapper> compiled.
 Entity <xps_ps2_0_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -1269,7 +1269,7 @@ Unit <xps_ps2> synthesized.
 
 
 Synthesizing Unit <xps_ps2_0_wrapper>.
-    Related source file is "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/xps_ps2_0_wrapper.vhd".
+    Related source file is "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/xps_ps2_0_wrapper.vhd".
 Unit <xps_ps2_0_wrapper> synthesized.
 
 
@@ -1684,12 +1684,12 @@ Offset:              2.242ns (Levels of Logic = 2)
 
 
 Total REAL time to Xst completion: 28.00 secs
-Total CPU time to Xst completion: 26.44 secs
+Total CPU time to Xst completion: 26.81 secs
  
 --> 
 
 
-Total memory usage is 857276 kilobytes
+Total memory usage is 857404 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  223 (   0 filtered)

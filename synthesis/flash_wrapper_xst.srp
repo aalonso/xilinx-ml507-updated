@@ -25,7 +25,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "flash_wrapper_xst.prj"
-Verilog Include Directory          : {"/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/" "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc5vfx70tff1136-1
@@ -312,7 +312,7 @@ Entity <EMC> (Architecture <IMP>) compiled.
 Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd" in Library xps_mch_emc_v3_01_a.
 Entity <xps_mch_emc> compiled.
 Entity <xps_mch_emc> (Architecture <implementation>) compiled.
-Compiling vhdl file "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/flash_wrapper.vhd" in Library work.
+Compiling vhdl file "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/flash_wrapper.vhd" in Library work.
 Entity <flash_wrapper> compiled.
 Entity <flash_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -2128,7 +2128,7 @@ Unit <xps_mch_emc> synthesized.
 
 
 Synthesizing Unit <flash_wrapper>.
-    Related source file is "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/flash_wrapper.vhd".
+    Related source file is "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/flash_wrapper.vhd".
 Unit <flash_wrapper> synthesized.
 
 
@@ -2527,13 +2527,13 @@ Offset:              1.146ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 21.00 secs
-Total CPU time to Xst completion: 20.86 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 19.05 secs
  
 --> 
 
 
-Total memory usage is 608248 kilobytes
+Total memory usage is 608264 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  345 (   0 filtered)

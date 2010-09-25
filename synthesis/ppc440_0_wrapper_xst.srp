@@ -25,7 +25,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "ppc440_0_wrapper_xst.prj"
-Verilog Include Directory          : {"/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/" "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc5vfx70tff1136-1
@@ -55,7 +55,7 @@ Cores Search Directories           : {../implementation/ppc440_0_wrapper}
 Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/ppc440_virtex5_v1_01_a/hdl/vhdl/ppc440_virtex5.vhd" in Library ppc440_virtex5_v1_01_a.
 Entity <ppc440_virtex5> compiled.
 Entity <ppc440_virtex5> (Architecture <structure>) compiled.
-Compiling vhdl file "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/ppc440_0_wrapper.vhd" in Library work.
+Compiling vhdl file "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/ppc440_0_wrapper.vhd" in Library work.
 Entity <ppc440_0_wrapper> compiled.
 Entity <ppc440_0_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -206,7 +206,7 @@ Analyzing hierarchy for entity <ppc440_virtex5> in library <ppc440_virtex5_v1_01
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <ppc440_0_wrapper> in library <work> (Architecture <STRUCTURE>).
-WARNING:Xst:753 - "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/ppc440_0_wrapper.vhd" line 782: Unconnected output port 'PPC440MCCLKOUT' of component 'ppc440_virtex5'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/ppc440_0_wrapper.vhd" line 782: Unconnected output port 'PPC440MCCLKOUT' of component 'ppc440_virtex5'.
 Entity <ppc440_0_wrapper> analyzed. Unit <ppc440_0_wrapper> generated.
 
 Analyzing generic Entity <ppc440_virtex5> in library <ppc440_virtex5_v1_01_a> (Architecture <structure>).
@@ -438,7 +438,7 @@ Unit <ppc440_virtex5> synthesized.
 
 
 Synthesizing Unit <ppc440_0_wrapper>.
-    Related source file is "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/ppc440_0_wrapper.vhd".
+    Related source file is "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/ppc440_0_wrapper.vhd".
 Unit <ppc440_0_wrapper> synthesized.
 
 
@@ -687,13 +687,13 @@ Delay:               0.670ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 23.00 secs
-Total CPU time to Xst completion: 22.45 secs
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 17.87 secs
  
 --> 
 
 
-Total memory usage is 491720 kilobytes
+Total memory usage is 491744 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    9 (   0 filtered)

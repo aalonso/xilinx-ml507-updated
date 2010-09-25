@@ -25,7 +25,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "clock_generator_0_wrapper_xst.prj"
-Verilog Include Directory          : {"/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/" "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc5vfx70tff1136-1
@@ -61,10 +61,10 @@ Entity <pll_module> (Architecture <STRUCT>) compiled.
 Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_00_a/hdl/vhdl/mmcm_module.vhd" in Library clock_generator_v4_00_a.
 Entity <mmcm_module> compiled.
 Entity <mmcm_module> (Architecture <STRUCT>) compiled.
-Compiling vhdl file "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/elaborate/clock_generator_0_v4_00_a/hdl/vhdl/clock_generator.vhd" in Library clock_generator_0_v4_00_a.
+Compiling vhdl file "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/elaborate/clock_generator_0_v4_00_a/hdl/vhdl/clock_generator.vhd" in Library clock_generator_0_v4_00_a.
 Entity <clock_generator> compiled.
 Entity <clock_generator> (Architecture <STRUCTURE>) compiled.
-Compiling vhdl file "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/clock_generator_0_wrapper.vhd" in Library work.
+Compiling vhdl file "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/clock_generator_0_wrapper.vhd" in Library work.
 Entity <clock_generator_0_wrapper> compiled.
 Entity <clock_generator_0_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -241,7 +241,7 @@ Unit <pll_module> synthesized.
 
 
 Synthesizing Unit <clock_generator>.
-    Related source file is "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/elaborate/clock_generator_0_v4_00_a/hdl/vhdl/clock_generator.vhd".
+    Related source file is "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/elaborate/clock_generator_0_v4_00_a/hdl/vhdl/clock_generator.vhd".
 WARNING:Xst:1305 - Output <CLKOUT6> is never assigned. Tied to value 0.
 WARNING:Xst:1305 - Output <CLKOUT7> is never assigned. Tied to value 0.
 WARNING:Xst:1305 - Output <CLKOUT8> is never assigned. Tied to value 0.
@@ -274,7 +274,7 @@ Unit <clock_generator> synthesized.
 
 
 Synthesizing Unit <clock_generator_0_wrapper>.
-    Related source file is "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/clock_generator_0_wrapper.vhd".
+    Related source file is "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/clock_generator_0_wrapper.vhd".
 Unit <clock_generator_0_wrapper> synthesized.
 
 
@@ -431,13 +431,13 @@ Delay:               0.238ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.28 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.61 secs
  
 --> 
 
 
-Total memory usage is 503508 kilobytes
+Total memory usage is 503512 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   29 (   0 filtered)

@@ -25,7 +25,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "push_buttons_5bit_wrapper_xst.prj"
-Verilog Include Directory          : {"/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/" "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc5vfx70tff1136-1
@@ -246,7 +246,7 @@ Entity <GPIO_Core> (Architecture <IMP>) compiled.
 Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_gpio_v2_00_a/hdl/vhdl/xps_gpio.vhd" in Library xps_gpio_v2_00_a.
 Entity <xps_gpio> compiled.
 Entity <xps_gpio> (Architecture <imp>) compiled.
-Compiling vhdl file "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/push_buttons_5bit_wrapper.vhd" in Library work.
+Compiling vhdl file "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/push_buttons_5bit_wrapper.vhd" in Library work.
 Entity <push_buttons_5bit_wrapper> compiled.
 Entity <push_buttons_5bit_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -726,7 +726,7 @@ Unit <xps_gpio> synthesized.
 
 
 Synthesizing Unit <push_buttons_5bit_wrapper>.
-    Related source file is "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/push_buttons_5bit_wrapper.vhd".
+    Related source file is "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/push_buttons_5bit_wrapper.vhd".
 Unit <push_buttons_5bit_wrapper> synthesized.
 
 
@@ -1089,12 +1089,12 @@ Offset:              0.471ns (Levels of Logic = 0)
 
 
 Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 12.43 secs
+Total CPU time to Xst completion: 12.31 secs
  
 --> 
 
 
-Total memory usage is 617768 kilobytes
+Total memory usage is 617776 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  182 (   0 filtered)

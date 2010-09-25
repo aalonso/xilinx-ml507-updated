@@ -25,7 +25,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "xps_timebase_wdt_0_wrapper_xst.prj"
-Verilog Include Directory          : {"/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/" "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc5vfx70tff1136-1
@@ -243,7 +243,7 @@ Entity <timebase_wdt_core> (Architecture <imp>) compiled.
 Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_timebase_wdt_v1_01_a/hdl/vhdl/xps_timebase_wdt.vhd" in Library xps_timebase_wdt_v1_01_a.
 Entity <xps_timebase_wdt> compiled.
 Entity <xps_timebase_wdt> (Architecture <imp>) compiled.
-Compiling vhdl file "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/xps_timebase_wdt_0_wrapper.vhd" in Library work.
+Compiling vhdl file "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/xps_timebase_wdt_0_wrapper.vhd" in Library work.
 Entity <xps_timebase_wdt_0_wrapper> compiled.
 Entity <xps_timebase_wdt_0_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -664,7 +664,7 @@ Unit <xps_timebase_wdt> synthesized.
 
 
 Synthesizing Unit <xps_timebase_wdt_0_wrapper>.
-    Related source file is "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/xps_timebase_wdt_0_wrapper.vhd".
+    Related source file is "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/xps_timebase_wdt_0_wrapper.vhd".
 Unit <xps_timebase_wdt_0_wrapper> synthesized.
 
 
@@ -985,12 +985,12 @@ Offset:              1.163ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 13.02 secs
+Total CPU time to Xst completion: 11.86 secs
  
 --> 
 
 
-Total memory usage is 587568 kilobytes
+Total memory usage is 587552 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  130 (   0 filtered)

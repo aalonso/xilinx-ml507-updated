@@ -17,7 +17,7 @@
 <msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">plb_v46</arg> INSTANCE:<arg fmt="%s" index="2">plb_v46_0</arg> - <arg fmt="%s" index="3">/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plb_v46_v1_04_a/data/plb_v46_v2_1_0.mpd line 68</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_PLBV46_NUM_MASTERS</arg> value to <arg fmt="%s" index="7">2</arg>
 </msg>
 
-<msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">plb_v46</arg> INSTANCE:<arg fmt="%s" index="2">plb_v46_0</arg> - <arg fmt="%s" index="3">/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plb_v46_v1_04_a/data/plb_v46_v2_1_0.mpd line 69</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_PLBV46_NUM_SLAVES</arg> value to <arg fmt="%s" index="7">17</arg>
+<msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">plb_v46</arg> INSTANCE:<arg fmt="%s" index="2">plb_v46_0</arg> - <arg fmt="%s" index="3">/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plb_v46_v1_04_a/data/plb_v46_v2_1_0.mpd line 69</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_PLBV46_NUM_SLAVES</arg> value to <arg fmt="%s" index="7">16</arg>
 </msg>
 
 <msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">plb_v46</arg> INSTANCE:<arg fmt="%s" index="2">plb_v46_0</arg> - <arg fmt="%s" index="3">/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plb_v46_v1_04_a/data/plb_v46_v2_1_0.mpd line 70</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_PLBV46_MID_WIDTH</arg> value to <arg fmt="%s" index="7">1</arg>
@@ -140,21 +140,12 @@
 <msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">xps_ps2</arg> INSTANCE:<arg fmt="%s" index="2">xps_ps2_0</arg> - <arg fmt="%s" index="3">/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_ps2_v1_01_b/data/xps_ps2_v2_1_0.mpd line 71</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_SPLB_NUM_MASTERS</arg> value to <arg fmt="%s" index="7">2</arg>
 </msg>
 
-<msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">plbv46_2_wb_enconder</arg> INSTANCE:<arg fmt="%s" index="2">plbv46_2_wb_enconder_0</arg> - <arg fmt="%s" index="3">/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder_v1_01_a/data/plbv46_2_wb_enconder_v2_1_0.mpd line 26</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_SPLB_NUM_MASTERS</arg> value to <arg fmt="%s" index="7">2</arg>
-</msg>
-
-<msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">plbv46_2_wb_enconder</arg> INSTANCE:<arg fmt="%s" index="2">plbv46_2_wb_enconder_0</arg> - <arg fmt="%s" index="3">/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder_v1_01_a/data/plbv46_2_wb_enconder_v2_1_0.mpd line 27</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_SPLB_MID_WIDTH</arg> value to <arg fmt="%s" index="7">1</arg>
-</msg>
-
-<msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">plbv46_2_wb_enconder</arg> INSTANCE:<arg fmt="%s" index="2">plbv46_2_wb_enconder_0</arg> - <arg fmt="%s" index="3">/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/plbv46_2_wb_enconder_v1_01_a/data/plbv46_2_wb_enconder_v2_1_0.mpd line 31</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_SPLB_SMALLEST_MASTER</arg> value to <arg fmt="%s" index="7">64</arg>
-</msg>
-
-<msg type="info" file="EDK" num="1563" delta="new" >IPNAME:<arg fmt="%s" index="1">xps_ethernetlite</arg> INSTANCE:<arg fmt="%s" index="2">Ethernet_MAC</arg> - <arg fmt="%s" index="3">/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 218</arg> - <arg fmt="%s" index="4">This design requires design constraints to guarantee performance.
+<msg type="info" file="EDK" num="1563" delta="new" >IPNAME:<arg fmt="%s" index="1">xps_ethernetlite</arg> INSTANCE:<arg fmt="%s" index="2">Ethernet_MAC</arg> - <arg fmt="%s" index="3">/home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.mhs line 217</arg> - <arg fmt="%s" index="4">This design requires design constraints to guarantee performance.
 Please refer to the data sheet for details.  
 The PLB clock frequency must be greater than or equal to 50 MHz for 100 Mbs Ethernet operation and greater than or equal to 5.0 MHz for 10 Mbs Ethernet operation.</arg>
 </msg>
 
-<msg type="warning" file="EDK" num="2099" delta="new" >PORT:<arg fmt="%s" index="1">Peripheral_Reset</arg> CONNECTOR:<arg fmt="%s" index="2">sys_periph_reset</arg> - <arg fmt="%s" index="3">/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/system.mhs line 416</arg> - floating connection!
+<msg type="warning" file="EDK" num="2099" delta="new" >PORT:<arg fmt="%s" index="1">Peripheral_Reset</arg> CONNECTOR:<arg fmt="%s" index="2">sys_periph_reset</arg> - <arg fmt="%s" index="3">/home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.mhs line 415</arg> - floating connection!
 </msg>
 
 <msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">ppc440_virtex5</arg> INSTANCE:<arg fmt="%s" index="2">ppc440_0</arg> - <arg fmt="%s" index="3">/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/ppc440_virtex5_v1_01_a/data/ppc440_virtex5_v2_1_0.mpd line 122</arg> - <arg fmt="%s" index="4">tcl</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_PPC440MC_ADDR_BASE</arg> value to <arg fmt="%s" index="7">0x00000000</arg>
@@ -166,10 +157,10 @@ The PLB clock frequency must be greater than or equal to 50 MHz for 100 Mbs Ethe
 <msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">jtagppc_cntlr</arg> INSTANCE:<arg fmt="%s" index="2">jtagppc_cntlr_inst</arg> - <arg fmt="%s" index="3">/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_01_c/data/jtagppc_cntlr_v2_1_0.mpd line 68</arg> - <arg fmt="%s" index="4">tcl</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_NUM_PPC_USED</arg> value to <arg fmt="%s" index="7">1</arg>
 </msg>
 
-<msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">xps_intc</arg> INSTANCE:<arg fmt="%s" index="2">xps_intc_0</arg> - <arg fmt="%s" index="3">/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_intc_v2_01_a/data/xps_intc_v2_1_0.mpd line 77</arg> - <arg fmt="%s" index="4">tcl</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_NUM_INTR_INPUTS</arg> value to <arg fmt="%s" index="7">13</arg>
+<msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">xps_intc</arg> INSTANCE:<arg fmt="%s" index="2">xps_intc_0</arg> - <arg fmt="%s" index="3">/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_intc_v2_01_a/data/xps_intc_v2_1_0.mpd line 77</arg> - <arg fmt="%s" index="4">tcl</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_NUM_INTR_INPUTS</arg> value to <arg fmt="%s" index="7">12</arg>
 </msg>
 
-<msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">xps_intc</arg> INSTANCE:<arg fmt="%s" index="2">xps_intc_0</arg> - <arg fmt="%s" index="3">/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_intc_v2_01_a/data/xps_intc_v2_1_0.mpd line 78</arg> - <arg fmt="%s" index="4">tcl</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_KIND_OF_INTR</arg> value to <arg fmt="%s" index="7">0b11111111111111111111000010101010</arg>
+<msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">xps_intc</arg> INSTANCE:<arg fmt="%s" index="2">xps_intc_0</arg> - <arg fmt="%s" index="3">/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_intc_v2_01_a/data/xps_intc_v2_1_0.mpd line 78</arg> - <arg fmt="%s" index="4">tcl</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_KIND_OF_INTR</arg> value to <arg fmt="%s" index="7">0b11111111111111111111100010101010</arg>
 </msg>
 
 <msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">xps_intc</arg> INSTANCE:<arg fmt="%s" index="2">xps_intc_0</arg> - <arg fmt="%s" index="3">/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_intc_v2_01_a/data/xps_intc_v2_1_0.mpd line 79</arg> - <arg fmt="%s" index="4">tcl</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_KIND_OF_EDGE</arg> value to <arg fmt="%s" index="7">0b11111111111111111111111111111111</arg>

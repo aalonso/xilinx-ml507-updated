@@ -71,8 +71,7 @@ entity system_stub is
     xps_ps2_0_PS2_1_CLK : inout std_logic;
     xps_ps2_0_PS2_2_DATA : inout std_logic;
     xps_ps2_0_PS2_2_CLK : inout std_logic;
-    xps_ps2_0_PS2_1_DATA : inout std_logic;
-    plbv46_2_wb_enconder_0_wb_encoder_in_pin : in std_logic_vector(0 to 31)
+    xps_ps2_0_PS2_1_DATA : inout std_logic
   );
 end system_stub;
 
@@ -142,8 +141,7 @@ architecture STRUCTURE of system_stub is
       xps_ps2_0_PS2_1_CLK : inout std_logic;
       xps_ps2_0_PS2_2_DATA : inout std_logic;
       xps_ps2_0_PS2_2_CLK : inout std_logic;
-      xps_ps2_0_PS2_1_DATA : inout std_logic;
-      plbv46_2_wb_enconder_0_wb_encoder_in_pin : in std_logic_vector(0 to 31)
+      xps_ps2_0_PS2_1_DATA : inout std_logic
     );
   end component;
 
@@ -220,8 +218,7 @@ begin
       xps_ps2_0_PS2_1_CLK => xps_ps2_0_PS2_1_CLK,
       xps_ps2_0_PS2_2_DATA => xps_ps2_0_PS2_2_DATA,
       xps_ps2_0_PS2_2_CLK => xps_ps2_0_PS2_2_CLK,
-      xps_ps2_0_PS2_1_DATA => xps_ps2_0_PS2_1_DATA,
-      plbv46_2_wb_enconder_0_wb_encoder_in_pin => plbv46_2_wb_enconder_0_wb_encoder_in_pin
+      xps_ps2_0_PS2_1_DATA => xps_ps2_0_PS2_1_DATA
     );
 
 end architecture STRUCTURE;

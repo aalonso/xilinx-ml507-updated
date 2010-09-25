@@ -25,7 +25,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "rs232_uart_1_wrapper_xst.prj"
-Verilog Include Directory          : {"/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/pcores/" "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc5vfx70tff1136-1
@@ -252,7 +252,7 @@ Entity <uartlite_core> (Architecture <imp>) compiled.
 Compiling vhdl file "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_uartlite_v1_01_a/hdl/vhdl/xps_uartlite.vhd" in Library xps_uartlite_v1_01_a.
 Entity <xps_uartlite> compiled.
 Entity <xps_uartlite> (Architecture <imp>) compiled.
-Compiling vhdl file "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/rs232_uart_1_wrapper.vhd" in Library work.
+Compiling vhdl file "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/rs232_uart_1_wrapper.vhd" in Library work.
 Entity <rs232_uart_1_wrapper> compiled.
 Entity <rs232_uart_1_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -910,7 +910,7 @@ Unit <xps_uartlite> synthesized.
 
 
 Synthesizing Unit <rs232_uart_1_wrapper>.
-    Related source file is "/home/aalonso/workspace/ppc44x/xilinx-ml507-updated/hdl/rs232_uart_1_wrapper.vhd".
+    Related source file is "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/rs232_uart_1_wrapper.vhd".
 Unit <rs232_uart_1_wrapper> synthesized.
 
 
@@ -1304,13 +1304,13 @@ Offset:              0.471ns (Levels of Logic = 0)
 =========================================================================
 
 
-Total REAL time to Xst completion: 17.00 secs
-Total CPU time to Xst completion: 16.26 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 16.32 secs
  
 --> 
 
 
-Total memory usage is 714708 kilobytes
+Total memory usage is 714836 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  193 (   0 filtered)
