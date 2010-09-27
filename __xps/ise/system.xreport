@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2010-09-26T20:52:56</DateModified>
+  <DateModified>2010-09-26T22:03:35</DateModified>
   <ModuleName>system</ModuleName>
-  <SummaryTimeStamp>2010-09-26T20:52:55</SummaryTimeStamp>
+  <SummaryTimeStamp>2010-09-26T22:03:35</SummaryTimeStamp>
   <SavedFilePath>/home/aalonso/workspace/xlnx/xilinx-ml507-updated/__xps/ise/system.xreport</SavedFilePath>
   <FilterFile>filter.filter</FilterFile>
   <SavedFilterFilePath>/home/aalonso/workspace/xlnx/xilinx-ml507-updated/__xps/ise</SavedFilterFilePath>

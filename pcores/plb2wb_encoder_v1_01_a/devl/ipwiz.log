@@ -1,0 +1,328 @@
+HDL language for the peripheral (top level) design unit wb_encoder is verilog
+...
+INFO:EDK:3391 - Create temporary xst project file:
+   /home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder.prj
+Compiling verilog file
+"/opt/Xilinx/12.1/ISE_DS/ISE/verilog/src/iSE/unisim_comp.v"
+Compiling verilog file
+"/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder.prj"
+Compiling verilog include file
+"/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_00_a
+/hdl/verilog/user_logic.v"
+WARNING:HDLCompilers:301 -
+   "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_0
+   0_a/hdl/verilog/user_logic.v" line 173 Too many digits specified in hex
+   constant
+Compiling verilog include file
+"/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_00_a
+/hdl/verilog/wb_encoder.v"
+Module <user_logic> compiled
+WARNING:HDLCompilers:301 -
+   "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_0
+   0_a/hdl/verilog/wb_encoder.v" line 64 Too many digits specified in hex
+   constant
+WARNING:HDLCompilers:301 -
+   "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_0
+   0_a/hdl/verilog/wb_encoder.v" line 72 Too many digits specified in hex
+   constant
+WARNING:HDLCompilers:301 -
+   "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_0
+   0_a/hdl/verilog/wb_encoder.v" line 84 Too many digits specified in hex
+   constant
+WARNING:HDLCompilers:301 -
+   "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_0
+   0_a/hdl/verilog/wb_encoder.v" line 86 Too many digits specified in hex
+   constant
+Module <wb_encoder> compiled
+
+
+Analyzing Verilog code ...
+ERROR:EDK - Could not find top level module plb2wb_encoder
+HDL language for the peripheral (top level) design unit plb2wb_encoder is vhdl
+...
+INFO:EDK:3391 - Create temporary xst project file:
+   /home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder.prj
+WARNING:HDLParsers:3497 - Ignoring Verilog File
+   "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_0
+   0_a/hdl/verilog/user_logic.v"
+WARNING:HDLParsers:3497 - Ignoring Verilog File
+   "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_0
+   0_a/hdl/verilog/wb_encoder.v"
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/proc_common_pkg.vhd" in Library proc_common_v3_00_a.
+Package <proc_common_pkg> compiled.
+Package body <proc_common_pkg> compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/or_muxcy.vhd" in Library proc_common_v3_00_a.
+Entity <or_muxcy> compiled.
+Entity <or_muxcy> (Architecture <implementation>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/family_support.vhd" in Library proc_common_v3_00_a.
+Package <family_support> compiled.
+Package body <family_support> compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/counter_f.vhd" in Library proc_common_v3_00_a.
+Entity <counter_f> compiled.
+Entity <counter_f> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/pselect_f.vhd" in Library proc_common_v3_00_a.
+Entity <pselect_f> compiled.
+Entity <pselect_f> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/or_gate128.vhd" in Library proc_common_v3_00_a.
+Entity <or_gate128> compiled.
+Entity <or_gate128> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/ipif_pkg.vhd" in Library proc_common_v3_00_a.
+Package <ipif_pkg> compiled.
+Package body <ipif_pkg> compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_
+v1_01_a/hdl/vhdl/plb_address_decoder.vhd" in Library
+plbv46_slave_single_v1_01_a.
+Entity <plb_address_decoder> compiled.
+Entity <plb_address_decoder> (Architecture <IMP>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_
+v1_01_a/hdl/vhdl/plb_slave_attachment.vhd" in Library
+plbv46_slave_single_v1_01_a.
+Entity <plb_slave_attachment> compiled.
+Entity <plb_slave_attachment> (Architecture <implementation>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_
+v1_01_a/hdl/vhdl/plbv46_slave_single.vhd" in Library
+plbv46_slave_single_v1_01_a.
+Entity <plbv46_slave_single> compiled.
+Entity <plbv46_slave_single> (Architecture <implementation>) compiled.
+Compiling vhdl file
+"/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_00_a
+/hdl/vhdl/plb2wb_encoder.vhd" in Library plb2wb_encoder_v1_01_a.
+ERROR:HDLParsers:3317 -
+   "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_0
+   0_a/hdl/vhdl/plb2wb_encoder.vhd" Line 69.  Library interrupt_control_v2_01_a
+   cannot be found.
+ERROR:HDLParsers:3014 -
+   "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_0
+   0_a/hdl/vhdl/plb2wb_encoder.vhd" Line 70. Library unit
+   interrupt_control_v2_01_a is not available in library plb2wb_encoder_v1_01_a.
+WARNING:HDLParsers:3481 - Library plb2wb_encoder_v1_01_a has no units. Did not
+   save reference file "xst/plb2wb_encoder_v1_01_a/hdllib.ref" for it.
+ERROR:EDK:2121 - Parse Errors encountered in HDL source
+HDL language for the peripheral (top level) design unit plb2wb_encoder is vhdl
+...
+INFO:EDK:3391 - Create temporary xst project file:
+   /home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder.prj
+WARNING:HDLParsers:3497 - Ignoring Verilog File
+   "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_0
+   0_a/hdl/verilog/user_logic.v"
+WARNING:HDLParsers:3497 - Ignoring Verilog File
+   "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_0
+   0_a/hdl/verilog/wb_encoder.v"
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/proc_common_pkg.vhd" in Library proc_common_v3_00_a.
+Package <proc_common_pkg> compiled.
+Package body <proc_common_pkg> compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/or_muxcy.vhd" in Library proc_common_v3_00_a.
+Entity <or_muxcy> compiled.
+Entity <or_muxcy> (Architecture <implementation>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/family_support.vhd" in Library proc_common_v3_00_a.
+Package <family_support> compiled.
+Package body <family_support> compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/counter_f.vhd" in Library proc_common_v3_00_a.
+Entity <counter_f> compiled.
+Entity <counter_f> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/pselect_f.vhd" in Library proc_common_v3_00_a.
+Entity <pselect_f> compiled.
+Entity <pselect_f> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/or_gate128.vhd" in Library proc_common_v3_00_a.
+Entity <or_gate128> compiled.
+Entity <or_gate128> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/ipif_pkg.vhd" in Library proc_common_v3_00_a.
+Package <ipif_pkg> compiled.
+Package body <ipif_pkg> compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_
+v1_01_a/hdl/vhdl/plb_address_decoder.vhd" in Library
+plbv46_slave_single_v1_01_a.
+Entity <plb_address_decoder> compiled.
+Entity <plb_address_decoder> (Architecture <IMP>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_
+v1_01_a/hdl/vhdl/plb_slave_attachment.vhd" in Library
+plbv46_slave_single_v1_01_a.
+Entity <plb_slave_attachment> compiled.
+Entity <plb_slave_attachment> (Architecture <implementation>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/interrupt_control_v2
+_01_a/hdl/vhdl/interrupt_control.vhd" in Library interrupt_control_v2_01_a.
+Entity <interrupt_control> compiled.
+Entity <interrupt_control> (Architecture <implementation>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_
+v1_01_a/hdl/vhdl/plbv46_slave_single.vhd" in Library
+plbv46_slave_single_v1_01_a.
+Entity <plbv46_slave_single> compiled.
+Entity <plbv46_slave_single> (Architecture <implementation>) compiled.
+Compiling vhdl file
+"/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_00_a
+/hdl/vhdl/plb2wb_encoder.vhd" in Library plb2wb_encoder_v1_01_a.
+Entity <plb2wb_encoder> compiled.
+Entity <plb2wb_encoder> (Architecture <IMP>) compiled.
+
+
+Analyzing HDL attributes ...
+Entity name = plb2wb_encoder
+INFO:EDK:1607 - IPTYPE set to value : PERIPHERAL
+INFO:EDK:1511 - IMP_NETLIST set to value : TRUE
+INFO:EDK:1486 - HDL set to value : VHDL
+WARNING:EDK:2065 - PARAMETER:_NUM_SLAVES - SLAVE PLBV46 parameter is not defined
+   in the HDL source
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Clk!
+INFO:EDK:1631 - Infer bus clock [SPLB_Clk] for bus interface SPLB ...
+ERROR:EDK:1987 - No port was associated to bus connector SPLB_Rst!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_abort!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_ABus!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_UABus!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_BE!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_busLock!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_lockErr!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_masterID!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_PAValid!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_rdPendPri!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_wrPendPri!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_rdPendReq!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_wrPendReq!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_rdBurst!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_rdPrim!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_reqPri!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_RNW!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_SAValid!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_MSize!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_size!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_TAttribute!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_type!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_wrBurst!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_wrDBus!
+ERROR:EDK:1987 - No port was associated to bus connector PLB_wrPrim!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_addrAck!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_MBusy!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_MRdErr!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_MWrErr!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_MIRQ!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_rdBTerm!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_rdComp!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_rdDAck!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_rdDBus!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_rdWdAddr!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_rearbitrate!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_SSize!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_wait!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_wrBTerm!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_wrComp!
+ERROR:EDK:1987 - No port was associated to bus connector Sl_wrDAck!
+Copying file user_logic.v to
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_01_a/
+hdl/verilog/ ...
+Copying file wb_encoder.v to
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_01_a/
+hdl/verilog/ ...
+Copying file plb2wb_encoder.vhd to
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_01_a/
+hdl/vhdl/ ...
+
+Thank you for using Create and Import Peripheral Wizard! Please find your
+imported peripheral under
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_01_a.
+
+Summary:
+
+  Logical library     : plb2wb_encoder_v1_01_a
+  Version             : 1.01.a
+  Bus interface(s)    : SPLB 
+
+The following sub-directories will be created:
+
+  - plb2wb_encoder_v1_01_a/data
+  - plb2wb_encoder_v1_01_a/hdl
+  - plb2wb_encoder_v1_01_a/hdl/verilog
+  - plb2wb_encoder_v1_01_a/hdl/vhdl
+
+The following HDL source files will be copied into the
+plb2wb_encoder_v1_01_a/hdl/verilog directory:
+
+  - user_logic.v
+  - wb_encoder.v
+
+The following HDL source files will be copied into the
+plb2wb_encoder_v1_01_a/hdl/vhdl directory:
+
+  - plb2wb_encoder.vhd
+
+The following files will be created under the plb2wb_encoder_v1_01_a/data
+directory:
+
+  - plb2wb_encoder_v2_1_0.mpd
+  - plb2wb_encoder_v2_1_0.pao
+
+
