@@ -163,7 +163,7 @@ entity plb2wb_encoder is
   port
   (
     -- ADD USER PORTS BELOW THIS LINE ------------------
-    --USER ports added here
+    enc_data                       : in  std_logic_vector(0 to 2);
     -- ADD USER PORTS ABOVE THIS LINE ------------------
 
     -- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -354,7 +354,7 @@ architecture IMP of plb2wb_encoder is
     generic
     (
       -- ADD USER GENERICS BELOW THIS LINE ---------------
-      --USER generics added here
+      C_BASEADDR                     : std_logic_vector := USER_SLV_BASEADDR;
       -- ADD USER GENERICS ABOVE THIS LINE ---------------
 
       -- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -367,7 +367,7 @@ architecture IMP of plb2wb_encoder is
     port
     (
       -- ADD USER PORTS BELOW THIS LINE ------------------
-      --USER ports added here
+      enc_data                       : in  std_logic_vector(0 to 2);
       -- ADD USER PORTS ABOVE THIS LINE ------------------
 
       -- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -517,7 +517,7 @@ begin
     generic map
     (
       -- MAP USER GENERICS BELOW THIS LINE ---------------
-      --USER generics mapped here
+      C_BASEADDR                    => USER_SLV_BASEADDR,
       -- MAP USER GENERICS ABOVE THIS LINE ---------------
 
       C_SLV_DWIDTH                   => USER_SLV_DWIDTH,
@@ -527,7 +527,7 @@ begin
     port map
     (
       -- MAP USER PORTS BELOW THIS LINE ------------------
-      --USER ports mapped here
+      enc_data                       => enc_data,
       -- MAP USER PORTS ABOVE THIS LINE ------------------
 
       Bus2IP_Clk                     => ipif_Bus2IP_Clk,

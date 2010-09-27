@@ -21,8 +21,168 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="plb2wb_encoder.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="plb2wb_encoder.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="plb2wb_encoder.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="plb2wb_encoder.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="plb2wb_encoder.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="plb2wb_encoder.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="plb2wb_encoder.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="plb2wb_encoder.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="plb2wb_encoder.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="plb2wb_encoder.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="plb2wb_encoder.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="plb2wb_encoder.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="plb2wb_encoder.ptwx"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="plb2wb_encoder.spl"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="plb2wb_encoder.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="plb2wb_encoder.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="plb2wb_encoder.syr"/>
+    <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="plb2wb_encoder.tfi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="plb2wb_encoder.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="plb2wb_encoder.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="plb2wb_encoder.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="plb2wb_encoder.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="plb2wb_encoder.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="plb2wb_encoder_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="plb2wb_encoder_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="plb2wb_encoder_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="plb2wb_encoder_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="plb2wb_encoder_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="plb2wb_encoder_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="plb2wb_encoder_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="plb2wb_encoder_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="plb2wb_encoder_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="plb2wb_encoder_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="plb2wb_encoder_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="plb2wb_encoder_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="plb2wb_encoder_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="plb2wb_encoder_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="plb2wb_encoder_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_LSO" xil_pn:name="user_logic.lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="user_logic.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="user_logic.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="user_logic.xst"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1285554063" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1285554063">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1285554063" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-6456891449874993396" xil_pn:start_ts="1285554063">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1285554063" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="8681851830944420322" xil_pn:start_ts="1285554063">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1285554063" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1285554063">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1285554063" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="7370616627154610270" xil_pn:start_ts="1285554063">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1285554063" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="9113450265161349581" xil_pn:start_ts="1285554063">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1285554063" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="1249974756399334124" xil_pn:start_ts="1285554063">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1285554085" xil_pn:in_ck="-4624028744333417227" xil_pn:name="TRANEXT_xstsynthesize_virtex5" xil_pn:prop_ck="-991548727914211416" xil_pn:start_ts="1285554063">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="plb2wb_encoder.cmd_log"/>
+      <outfile xil_pn:name="plb2wb_encoder.lso"/>
+      <outfile xil_pn:name="plb2wb_encoder.ngc"/>
+      <outfile xil_pn:name="plb2wb_encoder.ngr"/>
+      <outfile xil_pn:name="plb2wb_encoder.prj"/>
+      <outfile xil_pn:name="plb2wb_encoder.stx"/>
+      <outfile xil_pn:name="plb2wb_encoder.syr"/>
+      <outfile xil_pn:name="plb2wb_encoder.xst"/>
+      <outfile xil_pn:name="plb2wb_encoder_envsettings.html"/>
+      <outfile xil_pn:name="plb2wb_encoder_summary.html"/>
+      <outfile xil_pn:name="plb2wb_encoder_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1285539210" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-4268246304830959607" xil_pn:start_ts="1285539210">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1285539216" xil_pn:in_ck="-7155886571550543346" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-7750512483816225269" xil_pn:start_ts="1285539210">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="plb2wb_encoder.bld"/>
+      <outfile xil_pn:name="plb2wb_encoder.cmd_log"/>
+      <outfile xil_pn:name="plb2wb_encoder.ngd"/>
+      <outfile xil_pn:name="plb2wb_encoder_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="xlnx_auto_0_xdb"/>
+    </transform>
+    <transform xil_pn:end_ts="1285539264" xil_pn:in_ck="-7155886571550543345" xil_pn:name="TRANEXT_map_virtex5" xil_pn:prop_ck="-3560446297043170381" xil_pn:start_ts="1285539216">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="plb2wb_encoder.pcf"/>
+      <outfile xil_pn:name="plb2wb_encoder_map.map"/>
+      <outfile xil_pn:name="plb2wb_encoder_map.mrp"/>
+      <outfile xil_pn:name="plb2wb_encoder_map.ncd"/>
+      <outfile xil_pn:name="plb2wb_encoder_map.ngm"/>
+      <outfile xil_pn:name="plb2wb_encoder_map.xrpt"/>
+      <outfile xil_pn:name="plb2wb_encoder_summary.xml"/>
+      <outfile xil_pn:name="plb2wb_encoder_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1285539321" xil_pn:in_ck="-2228172068157181784" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="3827441349880383221" xil_pn:start_ts="1285539264">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="plb2wb_encoder.ncd"/>
+      <outfile xil_pn:name="plb2wb_encoder.pad"/>
+      <outfile xil_pn:name="plb2wb_encoder.par"/>
+      <outfile xil_pn:name="plb2wb_encoder.ptwx"/>
+      <outfile xil_pn:name="plb2wb_encoder.unroutes"/>
+      <outfile xil_pn:name="plb2wb_encoder.xpi"/>
+      <outfile xil_pn:name="plb2wb_encoder_pad.csv"/>
+      <outfile xil_pn:name="plb2wb_encoder_pad.txt"/>
+      <outfile xil_pn:name="plb2wb_encoder_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1285539321" xil_pn:in_ck="-7155886571550543477" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1285539306">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="plb2wb_encoder.twr"/>
+      <outfile xil_pn:name="plb2wb_encoder.twx"/>
+    </transform>
+  </transforms>
 
 </generated_project>

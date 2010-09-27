@@ -51,7 +51,7 @@
 module user_logic
 (
   // -- ADD USER PORTS BELOW THIS LINE ---------------
-  // --USER ports added here 
+  enc_data,
   // -- ADD USER PORTS ABOVE THIS LINE ---------------
 
   // -- DO NOT EDIT BELOW THIS LINE ------------------
@@ -74,7 +74,13 @@ module user_logic
 ); // user_logic
 
 // -- ADD USER PARAMETERS BELOW THIS LINE ------------
-// --USER parameters added here 
+/* Wishbone bridge states */
+parameter ST_IDLE  = 6'b100000;
+parameter ST_READ  = 6'b010000;
+parameter ST_WRITE = 6'b001000;
+parameter ST_ACK   = 6'b000100;
+parameter ST_RTY   = 6'b000010;
+parameter ST_ERROR = 6'b000001;
 // -- ADD USER PARAMETERS ABOVE THIS LINE ------------
 
 // -- DO NOT EDIT BELOW THIS LINE --------------------
@@ -82,10 +88,12 @@ module user_logic
 parameter C_SLV_DWIDTH                   = 32;
 parameter C_NUM_REG                      = 1;
 parameter C_NUM_INTR                     = 1;
+parameter C_BASEADDR                     = 0;
+parameter C_NUM_RTY                      = 4;
 // -- DO NOT EDIT ABOVE THIS LINE --------------------
 
 // -- ADD USER PORTS BELOW THIS LINE -----------------
-// --USER ports added here 
+input      [0 : 2]                        enc_data;
 // -- ADD USER PORTS ABOVE THIS LINE -----------------
 
 // -- DO NOT EDIT BELOW THIS LINE --------------------
@@ -111,16 +119,34 @@ output     [0 : C_NUM_INTR-1]             IP2Bus_IntrEvent;
 //----------------------------------------------------------------------------
 
   // --USER nets declarations added here, as needed for user logic
-
   // Nets for user logic slave model s/w accessible register example
-  reg        [0 : C_SLV_DWIDTH-1]           slv_reg0;
+  /*reg        [0 : C_SLV_DWIDTH-1]           slv_reg0;*/
   wire       [0 : 0]                        slv_reg_write_sel;
   wire       [0 : 0]                        slv_reg_read_sel;
   reg        [0 : C_SLV_DWIDTH-1]           slv_ip2bus_data;
   wire                                      slv_read_ack;
   wire                                      slv_write_ack;
   integer                                   byte_index, bit_index;
-
+  reg                                       slv_error;
+  reg [0:3]  state;
+  wire write_req;
+  wire read_req;
+  /* Wishbone interface */  
+  wire wb_clk;    
+  wire wb_rst;
+  wire wb_ack;
+  reg wb_we;
+  reg wb_cyc;
+  reg wb_stb;
+  wire [0:C_SLV_DWIDTH-1] wb_addr;
+  wire [0:C_SLV_DWIDTH-1] wb_data_in;
+  wire [0:C_SLV_DWIDTH-1] wb_data_out;
+  wire enc_irq;
+  /* Retry logic registers */
+  reg [0:C_NUM_RTY-1] rty_count;
+  reg rty_abort;
+  reg rty_en;
+  
   // --USER logic implementation added here
 
   // ------------------------------------------------------
@@ -142,13 +168,120 @@ output     [0 : C_NUM_INTR-1]             IP2Bus_IntrEvent;
   // 
   // ------------------------------------------------------
 
+  /* Wishbone complaint module instance */
+
+  defparam wb_enc_inst.C_WB_DATAREG = C_BASEADDR + 4'h0000;
+  wb_encoder wb_enc_inst (
+    .wb_clk_i (wb_clk),
+    .wb_rst_i (wb_rst),
+    .wb_we_i  (wb_we),
+    .wb_cyc_i (wb_cyc),
+    .wb_stb_i (wb_stb),
+    .wb_ack_o (wb_ack),
+    .wb_addr_i(wb_addr),
+    .wb_data_i(wb_data_in),
+    .wb_data_o(wb_data_out),
+    .enc_data (enc_data),
+    .irq_o    (enc_irq)    
+  );  
+
   assign
     slv_reg_write_sel = Bus2IP_WrCE[0:0],
     slv_reg_read_sel  = Bus2IP_RdCE[0:0],
     slv_write_ack     = Bus2IP_WrCE[0],
-    slv_read_ack      = Bus2IP_RdCE[0];
+    slv_read_ack      = Bus2IP_RdCE[0],
+    /* Wishbone foward signals */
+    wb_clk            = Bus2IP_Clk,
+    wb_rst            = Bus2IP_Reset,
+    wb_addr           = Bus2IP_Addr,    
+    read_req          = | slv_reg_read_sel,
+    write_req         = | slv_write_ack;
+
+  /* Wishbone bridge state machine */
+  always @(posedge Bus2IP_Clk)
+  begin
+    if(Bus2IP_Reset == 1) begin
+        wb_cyc <= 1'b0;
+        wb_stb <= 1'b0;
+        rty_en <= 1'b0;
+        slv_error <= 1'b0;
+        state <= #1 ST_IDLE;
+    end
+    else begin
+    case(state)
+        ST_IDLE: begin   /* Idle state */
+            wb_cyc <= 1'b0;
+            wb_stb <= 1'b0;
+            rty_en <= 1'b0;
+            slv_error <= 1'b0;
+            if (read_req == 1 && write_req == 0)
+                state <= #1 ST_READ;
+            else if (read_req == 0 && write_req == 1)
+                state <= #1 ST_WRITE;
+            else
+                state <= #1 ST_IDLE;
+        end
+        ST_READ: begin  /* Read request state */
+            wb_cyc <= 1'b1;     /* Wishbone read request */
+            wb_stb <= 1'b1;
+            wb_we  <= 1'b0;
+            state  <= #1 ST_ACK;
+        end
+        ST_WRITE: begin  /* Write request state */
+            wb_cyc <= 1'b1;     /* Wishbone write request */
+            wb_stb <= 1'b1;
+            wb_we  <= 1'b1;
+            state  <= #1 ST_ACK;
+        end
+        ST_ACK: begin    /* Ack state */
+            if(wb_ack == 1)
+                state <= #1 ST_IDLE;
+            else
+                state <= #1 ST_RTY;
+        end
+        ST_RTY: begin    /* Rerty state */
+            rty_en <= 1'b1; /* Enable rty counter */
+            if(rty_abort == 1)
+                state <= #1 ST_ERROR;
+            else
+                state <= #1 ST_ACK;
+        end
+        ST_ERROR: begin  /* Error state */
+            slv_error <= 1'b1;
+            state <= #1 ST_IDLE;
+        end
+        default :
+            state <= #1 ST_IDLE;
+    endcase
+    end
+  end /* Wishbone state machine */
+
+  /* Wishbone retry logic */
+  always @(posedge Bus2IP_Clk)
+  begin
+    if(Bus2IP_Reset == 1) begin
+        rty_abort  <= 1'b0;
+        rty_count  <= {C_NUM_RTY-1 {1'b0}};
+    end
+    else begin
+        if(rty_en == 0)
+            rty_count <= {C_NUM_RTY-1 {1'b0}};
+        else
+            rty_count <= rty_count + 1;
+            
+        rty_abort <= 1'b0;
+
+        if(rty_count == C_NUM_RTY-1)
+            rty_abort <= 1'b1;
+    end
+  end
 
   // implement slave model register(s)
+  /* 
+   * Wishbone wheel encoder 
+   * Only implements a read only register
+   */
+  /*
   always @( posedge Bus2IP_Clk )
     begin: SLAVE_REG_WRITE_PROC
 
@@ -166,26 +299,27 @@ output     [0 : C_NUM_INTR-1]             IP2Bus_IntrEvent;
           default : ;
         endcase
 
-    end // SLAVE_REG_WRITE_PROC
+    end */// SLAVE_REG_WRITE_PROC
 
   // implement slave model register read mux
-  always @( slv_reg_read_sel or slv_reg0 )
+  always @(posedge Bus2IP_Clk)
     begin: SLAVE_REG_READ_PROC
 
       case ( slv_reg_read_sel )
-        1'b1 : slv_ip2bus_data <= slv_reg0;
+        1'b1 : slv_ip2bus_data <= wb_data_out;
         default : slv_ip2bus_data <= 0;
       endcase
 
     end // SLAVE_REG_READ_PROC
 
   // ------------------------------------------------------------
-  // Example code to drive IP to Bus signals
+  // drive IP to Bus signals
   // ------------------------------------------------------------
 
   assign IP2Bus_Data    = slv_ip2bus_data;
-  assign IP2Bus_WrAck   = slv_write_ack;
-  assign IP2Bus_RdAck   = slv_read_ack;
-  assign IP2Bus_Error   = 0;
+  assign IP2Bus_WrAck   = slv_write_ack | wb_ack;
+  assign IP2Bus_RdAck   = slv_read_ack | wb_ack;
+  assign IP2Bus_Error   = slv_error;
+  assign IP2Bus_IntrEvent = enc_irq;
 
 endmodule
