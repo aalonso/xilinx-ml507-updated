@@ -170,7 +170,7 @@ output     [0 : C_NUM_INTR-1]             IP2Bus_IntrEvent;
 
   /* Wishbone complaint module instance */
 
-  defparam wb_enc_inst.C_WB_DATAREG = C_BASEADDR + 4'h0000;
+  defparam wb_enc_inst.C_WB_DATAREG = C_BASEADDR + {C_SLV_DWIDTH {1'b0}};
   wb_encoder wb_enc_inst (
     .wb_clk_i (wb_clk),
     .wb_rst_i (wb_rst),
@@ -261,11 +261,11 @@ output     [0 : C_NUM_INTR-1]             IP2Bus_IntrEvent;
   begin
     if(Bus2IP_Reset == 1) begin
         rty_abort  <= 1'b0;
-        rty_count  <= {C_NUM_RTY-1 {1'b0}};
+        rty_count  <= {C_NUM_RTY {1'b0}};
     end
     else begin
         if(rty_en == 0)
-            rty_count <= {C_NUM_RTY-1 {1'b0}};
+            rty_count <= {C_NUM_RTY {1'b0}};
         else
             rty_count <= rty_count + 1;
             
