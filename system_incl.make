@@ -100,7 +100,8 @@ implementation/jtagppc_cntlr_inst_wrapper.ngc \
 implementation/proc_sys_reset_0_wrapper.ngc \
 implementation/xps_intc_0_wrapper.ngc \
 implementation/xps_tft_0_wrapper.ngc \
-implementation/xps_ps2_0_wrapper.ngc
+implementation/xps_ps2_0_wrapper.ngc \
+implementation/plb2wb_encoder_0_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 

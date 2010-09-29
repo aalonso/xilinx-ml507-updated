@@ -265,7 +265,10 @@ Net xps_ps2_0_PS2_1_CLK LOC = R27 |SLEW = SLOW | IOSTANDARD = LVCMOS18 | TIG;
 # xps_ps2 keyboard
 Net xps_ps2_0_PS2_2_DATA LOC = T25 |SLEW = SLOW | IOSTANDARD = LVCMOS18 | TIG;
 Net xps_ps2_0_PS2_2_CLK LOC = T26 |SLEW = SLOW | IOSTANDARD = LVCMOS18 | TIG;
-
+# wishbone encoder
+Net plb2wb_encoder_0_enc_data_pin<0> LOC = AH30 | IOSTANDARD = LVCMOS18 | SLEW=SLOW | DRIVE=2;
+Net plb2wb_encoder_0_enc_data_pin<1> LOC = AG30 | IOSTANDARD = LVCMOS18 | SLEW=SLOW | DRIVE=2;
+Net plb2wb_encoder_0_enc_data_pin<2> LOC = AH29 | IOSTANDARD = LVCMOS18 | SLEW=SLOW | DRIVE=2;
 ###### DDR2_SDRAM
 ############################################################################
 #

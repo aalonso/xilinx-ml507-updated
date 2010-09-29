@@ -1,13 +1,12 @@
-Created pcores directory
 
 Checking platform configuration ...
 IPNAME:plb_v46 INSTANCE:plb_v46_0 -
-/home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.mhs line 110 - 2
-master(s) : 16 slave(s)
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.mhs line 111 - 2
+master(s) : 17 slave(s)
 
 Checking port drivers...
 WARNING:EDK:2099 - PORT:Peripheral_Reset CONNECTOR:sys_periph_reset -
-   /home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.mhs line 415 -
+   /home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.mhs line 416 -
    floating connection!
 
 Performing Clock DRCs...
@@ -27,4 +26,7 @@ Performing System level DRCs on properties...
 Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
 Port present in Ethernet_MAC
 I'm now in proc syslevel_check_micontrol
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/synthesis/plb2wb_encoder_0_wra
+pper_xst.srp not found
+WARNING:EDK:1027 - Device utilization and timing not added for plb2wb_encoder_0
 Conversion to XML complete.

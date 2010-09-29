@@ -6636,3 +6636,388 @@ Generating Block Diagram to Buffer
 
 Generated Block Diagram SVG
 
+Xilinx Platform Studio (XPS)
+Xilinx EDK 12.1 Build EDK_MS1.53d
+
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Generating Block Diagram to Buffer 
+
+/opt/Xilinx/12.1/ISE_DS/EDK/data/xml/xslscripts/ConvertEdwardVersion.xsl
+
+Generated Block Diagram SVG
+
+Saved MSS File.
+
+Saved MSS File.
+
+Saved MSS File.
+
+At Local date and time: Tue Sep 28 20:51:25 2010
+ make -f system.make libs started...
+
+*********************************************
+Creating software libraries...
+*********************************************
+libgen -mhs system.mhs -p xc5vfx70tff1136-1   -msg __xps/ise/xmsgprops.lst system.mss
+libgen
+Xilinx EDK 12.1 Build EDK_MS1.53d
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+Command Line: libgen -mhs system.mhs -p xc5vfx70tff1136-1 -msg
+__xps/ise/xmsgprops.lst system.mss 
+Release 12.1 - psf2Edward EDK_MS1.53d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+Checking platform configuration ...
+IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.mhs line 110 - 2
+master(s) : 16 slave(s)
+Checking port drivers...
+WARNING:EDK:2099 - PORT:Peripheral_Reset CONNECTOR:sys_periph_reset -
+   /home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.mhs line 415 -
+   floating connection!
+Performing Clock DRCs...
+Performing Reset DRCs...
+Overriding system level properties...
+Running system level update procedures...
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+Running system level DRCs...
+Performing System level DRCs on properties...
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Port present in Ethernet_MAC
+I'm now in proc syslevel_check_micontrol
+Conversion to XML complete.
+-- Generating libraries for processor: ppc440_0 --
+Staging source files.
+Running DRCs.
+#--------------------------------------
+# device-tree BSP DRC...!
+#--------------------------------------
+Running generate.
+#--------------------------------------
+# device-tree BSP generate...
+#--------------------------------------
+--- device tree generator version: v1.3 ---
+generating xilinx.dts
+Clock Port Summary:
+ppc440_0.CPMC440CLK connected to clk_400_0000MHzPLL0:
+    CLK_FREQ_HZ = 400000000
+ppc440_0.CPMINTERCONNECTCLK connected to clk_200_0000MHzPLL0:
+    CLK_FREQ_HZ = 200000000
+ppc440_0.CPMMCCLK connected to clk_200_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 200000000
+ppc440_0.CPMPPCMPLBCLK connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+ppc440_0.CPMPPCS0PLBCLK connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+plb_v46_0.PLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+xps_bram_if_cntlr_1.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+xps_bram_if_cntlr_1_bram.BRAM_Clk_A connected to
+xps_bram_if_cntlr_1_port_BRAM_Clk:
+    CLK_FREQ_HZ = 100000000
+RS232_Uart_1.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+LEDs_8Bit.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+LEDs_Positions.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+Push_Buttons_5Bit.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+DIP_Switches_8Bit.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+IIC_EEPROM.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+Ethernet_MAC.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+DDR2_SDRAM.mc_mibclk connected to clk_200_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 200000000
+DDR2_SDRAM.mi_mcclk90 connected to clk_200_0000MHz90PLL0_ADJUST:
+    CLK_FREQ_HZ = 200000000
+DDR2_SDRAM.mi_mcclkdiv2 connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+DDR2_SDRAM.mi_mcclk_200 connected to clk_200_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 200000000
+SysACE_CompactFlash.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+FLASH.RdClk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+FLASH.MCH_SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+xps_timebase_wdt_0.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+xps_timer_0.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+clock_generator_0.CLKIN connected to dcm_clk_s:
+    CLK_FREQ_HZ = 100000000
+clock_generator_0.CLKOUT0 connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+    CLK_INPORT = 
+    CLK_FACTOR = 
+clock_generator_0.CLKOUT1 connected to clk_200_0000MHz90PLL0_ADJUST:
+    CLK_FREQ_HZ = 200000000
+    CLK_INPORT = 
+    CLK_FACTOR = 
+clock_generator_0.CLKOUT2 connected to clk_200_0000MHzPLL0:
+    CLK_FREQ_HZ = 200000000
+    CLK_INPORT = 
+    CLK_FACTOR = 
+clock_generator_0.CLKOUT3 connected to clk_200_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 200000000
+    CLK_INPORT = 
+    CLK_FACTOR = 
+clock_generator_0.CLKOUT4 connected to clk_400_0000MHzPLL0:
+    CLK_FREQ_HZ = 400000000
+    CLK_INPORT = 
+    CLK_FACTOR = 
+clock_generator_0.CLKOUT5 connected to clk_25_0000MHz:
+    CLK_FREQ_HZ = 25000000
+    CLK_INPORT = 
+    CLK_FACTOR = 
+proc_sys_reset_0.Slowest_sync_clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+xps_intc_0.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+xps_tft_0.SYS_TFT_Clk connected to clk_25_0000MHz:
+    CLK_FREQ_HZ = 25000000
+xps_tft_0.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+xps_tft_0.MPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+xps_ps2_0.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+Clock Frequency: 400000000
+IP connected to bus: plb_v46_0
+-master MPLB plb_v46_0 ppc440_0
+-master MPLB plb_v46_0 xps_tft_0
+-slave SPLB0 plb_v46_0 ppc440_0
+-slave SPLB plb_v46_0 xps_bram_if_cntlr_1
+-slave SPLB plb_v46_0 RS232_Uart_1
+-slave SPLB plb_v46_0 LEDs_8Bit
+-slave SPLB plb_v46_0 LEDs_Positions
+-slave SPLB plb_v46_0 Push_Buttons_5Bit
+-slave SPLB plb_v46_0 DIP_Switches_8Bit
+-slave SPLB plb_v46_0 IIC_EEPROM
+-slave SPLB plb_v46_0 Ethernet_MAC
+-slave SPLB plb_v46_0 SysACE_CompactFlash
+-slave SPLB plb_v46_0 FLASH
+-slave SPLB plb_v46_0 xps_timebase_wdt_0
+-slave SPLB plb_v46_0 xps_timer_0
+-slave SPLB plb_v46_0 xps_intc_0
+-slave SPLB plb_v46_0 xps_tft_0
+-slave SPLB plb_v46_0 xps_ps2_0
+WARNING:EDK - : Bank 0 of EMC core FLASH is used in asynchronous mode.  We
+   assume this core is connected to a flash memory, although in some older
+   designs this configuration may have been used to interface to a peripheral. 
+   Current design recommendations suggest using an EPC core to interface to such
+   peripherals.
+Running post_generate.
+Running execs_generate.
+
+
+Done!
+
+Assigned Driver plb2wb_encoder 1.00.a for instance plb2wb_encoder_0
+
+WARNING:EDK:2137 - Peripheral plb2wb_encoder_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+
+plb2wb_encoder_0 has been added to the project
+
+WARNING:EDK:2137 - Peripheral plb2wb_encoder_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+
+Make instance plb2wb_encoder_0 port enc_data external with net as port name
+
+Instance plb2wb_encoder_0 port enc_data connector undefined, using plb2wb_encoder_0_enc_data
+
+ERROR:EDK:1519 - INST:plb2wb_encoder_0 BASEADDR-HIGHADDR:0000000000-0x0000ffff and INST:ppc440_0 BASEADDR-HIGHADDR:0000000000-0x0fffffff - /home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.mhs line 0 and /home/aalonso/workspace/xlnx/xilinx-ml507-updated/_xps_tempmhsfilename.mhs line 70 - address space overlap!
+
+ERROR:EDK:1519 - INST:plb2wb_encoder_0 BASEADDR-HIGHADDR:0000000000-0x0000ffff and INST:ppc440_0 BASEADDR-HIGHADDR:0000000000-0x0fffffff - /home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.mhs line 0 and /home/aalonso/workspace/xlnx/xilinx-ml507-updated/_xps_tempmhsfilename.mhs line 70 - address space overlap!
+
+At Local date and time: Tue Sep 28 20:58:42 2010
+ make -f system.make libsclean started...
+
+rm -rf ppc440_0/
+rm -f libgen.log
+rm -f __xps/ise/_xmsgs/libgen.xmsgs
+
+
+Done!
+
+At Local date and time: Tue Sep 28 20:58:47 2010
+ make -f system.make libs started...
+
+*********************************************
+Creating software libraries...
+*********************************************
+libgen -mhs system.mhs -p xc5vfx70tff1136-1   -msg __xps/ise/xmsgprops.lst system.mss
+libgen
+Xilinx EDK 12.1 Build EDK_MS1.53d
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+Command Line: libgen -mhs system.mhs -p xc5vfx70tff1136-1 -msg
+__xps/ise/xmsgprops.lst system.mss 
+Release 12.1 - psf2Edward EDK_MS1.53d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+Checking platform configuration ...
+IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.mhs line 111 - 2
+master(s) : 17 slave(s)
+Checking port drivers...
+WARNING:EDK:2099 - PORT:Peripheral_Reset CONNECTOR:sys_periph_reset -
+   /home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.mhs line 416 -
+   floating connection!
+Performing Clock DRCs...
+Performing Reset DRCs...
+Overriding system level properties...
+Running system level update procedures...
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+Running system level DRCs...
+Performing System level DRCs on properties...
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Port present in Ethernet_MAC
+I'm now in proc syslevel_check_micontrol
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/synthesis/plb2wb_encoder_0_wra
+pper_xst.srp not found
+WARNING:EDK:1027 - Device utilization and timing not added for plb2wb_encoder_0
+Conversion to XML complete.
+-- Generating libraries for processor: ppc440_0 --
+Staging source files.
+Running DRCs.
+#--------------------------------------
+# device-tree BSP DRC...!
+#--------------------------------------
+Running generate.
+#--------------------------------------
+# device-tree BSP generate...
+#--------------------------------------
+--- device tree generator version: v1.3 ---
+generating xilinx.dts
+Clock Port Summary:
+ppc440_0.CPMC440CLK connected to clk_400_0000MHzPLL0:
+    CLK_FREQ_HZ = 400000000
+ppc440_0.CPMINTERCONNECTCLK connected to clk_200_0000MHzPLL0:
+    CLK_FREQ_HZ = 200000000
+ppc440_0.CPMMCCLK connected to clk_200_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 200000000
+ppc440_0.CPMPPCMPLBCLK connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+ppc440_0.CPMPPCS0PLBCLK connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+plb_v46_0.PLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+xps_bram_if_cntlr_1.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+xps_bram_if_cntlr_1_bram.BRAM_Clk_A connected to
+xps_bram_if_cntlr_1_port_BRAM_Clk:
+    CLK_FREQ_HZ = 100000000
+RS232_Uart_1.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+LEDs_8Bit.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+LEDs_Positions.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+Push_Buttons_5Bit.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+DIP_Switches_8Bit.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+IIC_EEPROM.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+Ethernet_MAC.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+DDR2_SDRAM.mc_mibclk connected to clk_200_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 200000000
+DDR2_SDRAM.mi_mcclk90 connected to clk_200_0000MHz90PLL0_ADJUST:
+    CLK_FREQ_HZ = 200000000
+DDR2_SDRAM.mi_mcclkdiv2 connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+DDR2_SDRAM.mi_mcclk_200 connected to clk_200_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 200000000
+SysACE_CompactFlash.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+FLASH.RdClk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+FLASH.MCH_SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+xps_timebase_wdt_0.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+xps_timer_0.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+clock_generator_0.CLKIN connected to dcm_clk_s:
+    CLK_FREQ_HZ = 100000000
+clock_generator_0.CLKOUT0 connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+    CLK_INPORT = 
+    CLK_FACTOR = 
+clock_generator_0.CLKOUT1 connected to clk_200_0000MHz90PLL0_ADJUST:
+    CLK_FREQ_HZ = 200000000
+    CLK_INPORT = 
+    CLK_FACTOR = 
+clock_generator_0.CLKOUT2 connected to clk_200_0000MHzPLL0:
+    CLK_FREQ_HZ = 200000000
+    CLK_INPORT = 
+    CLK_FACTOR = 
+clock_generator_0.CLKOUT3 connected to clk_200_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 200000000
+    CLK_INPORT = 
+    CLK_FACTOR = 
+clock_generator_0.CLKOUT4 connected to clk_400_0000MHzPLL0:
+    CLK_FREQ_HZ = 400000000
+    CLK_INPORT = 
+    CLK_FACTOR = 
+clock_generator_0.CLKOUT5 connected to clk_25_0000MHz:
+    CLK_FREQ_HZ = 25000000
+    CLK_INPORT = 
+    CLK_FACTOR = 
+proc_sys_reset_0.Slowest_sync_clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+xps_intc_0.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+xps_tft_0.SYS_TFT_Clk connected to clk_25_0000MHz:
+    CLK_FREQ_HZ = 25000000
+xps_tft_0.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+xps_tft_0.MPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+xps_ps2_0.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+plb2wb_encoder_0.SPLB_Clk connected to clk_100_0000MHzPLL0_ADJUST:
+    CLK_FREQ_HZ = 100000000
+Clock Frequency: 400000000
+IP connected to bus: plb_v46_0
+-master MPLB plb_v46_0 ppc440_0
+-master MPLB plb_v46_0 xps_tft_0
+-slave SPLB0 plb_v46_0 ppc440_0
+-slave SPLB plb_v46_0 xps_bram_if_cntlr_1
+-slave SPLB plb_v46_0 RS232_Uart_1
+-slave SPLB plb_v46_0 LEDs_8Bit
+-slave SPLB plb_v46_0 LEDs_Positions
+-slave SPLB plb_v46_0 Push_Buttons_5Bit
+-slave SPLB plb_v46_0 DIP_Switches_8Bit
+-slave SPLB plb_v46_0 IIC_EEPROM
+-slave SPLB plb_v46_0 Ethernet_MAC
+-slave SPLB plb_v46_0 SysACE_CompactFlash
+-slave SPLB plb_v46_0 FLASH
+-slave SPLB plb_v46_0 xps_timebase_wdt_0
+-slave SPLB plb_v46_0 xps_timer_0
+-slave SPLB plb_v46_0 xps_intc_0
+-slave SPLB plb_v46_0 xps_tft_0
+-slave SPLB plb_v46_0 xps_ps2_0
+-slave SPLB plb_v46_0 plb2wb_encoder_0
+WARNING:EDK - : Bank 0 of EMC core FLASH is used in asynchronous mode.  We
+   assume this core is connected to a flash memory, although in some older
+   designs this configuration may have been used to interface to a peripheral. 
+   Current design recommendations suggest using an EPC core to interface to such
+   peripherals.
+Running post_generate.
+Running execs_generate.
+
+
+Done!
+
+Writing filter settings....
+
+Done writing filter settings to:
+	/home/aalonso/workspace/xlnx/xilinx-ml507-updated/__xps/system.filters
+
+Done writing Tab View settings to:
+	/home/aalonso/workspace/xlnx/xilinx-ml507-updated/__xps/system.gui
+
