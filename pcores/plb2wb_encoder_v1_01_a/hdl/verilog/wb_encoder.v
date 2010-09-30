@@ -35,7 +35,7 @@ module wb_encoder
     );
     /* Parameters definition */
     parameter C_WB_DWIDTH   = 32;
-    parameter C_WB_DATAREG  = 0;
+    parameter C_WB_DATAREG  = {C_WB_DWIDTH {1'b0}};
     /* Port definitions */
     input wb_clk_i;
     input wb_rst_i;
@@ -61,7 +61,7 @@ module wb_encoder
     begin
         if(wb_rst_i == 1) begin
             wb_ack_o <= 1'b0;
-            wb_data_o <= 4'h0000;
+            wb_data_o <= {C_WB_DWIDTH {1'b0}};
         end
         else begin
             if(wb_stb_i == 1 && wb_cyc_i ==1 &&
@@ -69,11 +69,14 @@ module wb_encoder
                 if(C_WB_DATAREG == wb_addr_i)
                     wb_data_o <= data_reg;
                 else
-                    wb_data_o <= 4'h0000;
+                    wb_data_o <= {C_WB_DWIDTH {1'b 0}};
+
                 wb_ack_o <= 1'b1;
             end
-            else
+            else begin
                 wb_ack_o <= 1'b0;
+                wb_data_o <= {C_WB_DWIDTH {1'b 0}};
+            end
         end
     end
 
@@ -81,9 +84,9 @@ module wb_encoder
     always @(posedge wb_clk_i)
     begin
         if(wb_rst_i == 1)
-            data_reg <= 4'h0000;
+            data_reg <= {C_WB_DWIDTH {1'b 0}};
         else
-            data_reg <= enc_data | 4'h0000;
+            data_reg <= {enc_data, {C_WB_DWIDTH-3{1'b0}}};
     end
 
     /* Wheel encoder interrupt logic */
