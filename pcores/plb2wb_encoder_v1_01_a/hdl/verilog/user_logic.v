@@ -128,7 +128,7 @@ output     [0 : C_NUM_INTR-1]             IP2Bus_IntrEvent;
   wire                                      slv_write_ack;
   integer                                   byte_index, bit_index;
   reg                                       slv_error;
-  reg [0:3]  state;
+  reg [0:5]  state, next_state;
   wire write_req;
   wire read_req;
   /* Wishbone interface */  
@@ -170,7 +170,7 @@ output     [0 : C_NUM_INTR-1]             IP2Bus_IntrEvent;
 
   /* Wishbone complaint module instance */
 
-  defparam wb_enc_inst.C_WB_DATAREG = C_BASEADDR + 4'h0000;
+  defparam wb_enc_inst.C_WB_DATAREG = C_BASEADDR + {C_SLV_DWIDTH {1'b0}};
   wb_encoder wb_enc_inst (
     .wb_clk_i (wb_clk),
     .wb_rst_i (wb_rst),
@@ -197,17 +197,18 @@ output     [0 : C_NUM_INTR-1]             IP2Bus_IntrEvent;
     read_req          = | slv_reg_read_sel,
     write_req         = | slv_write_ack;
 
-  /* Wishbone bridge state machine */
+  /* Wishbone next state logic */
   always @(posedge Bus2IP_Clk)
   begin
-    if(Bus2IP_Reset == 1) begin
-        wb_cyc <= 1'b0;
-        wb_stb <= 1'b0;
-        rty_en <= 1'b0;
-        slv_error <= 1'b0;
-        state <= #1 ST_IDLE;
-    end
-    else begin
+    if(Bus2IP_Reset == 1)
+        state = ST_IDLE;
+    else
+        state = next_state;
+  end
+
+  /* Wishbone bridge state machine */
+  always @(state)
+  begin
     case(state)
         ST_IDLE: begin   /* Idle state */
             wb_cyc <= 1'b0;
@@ -215,45 +216,44 @@ output     [0 : C_NUM_INTR-1]             IP2Bus_IntrEvent;
             rty_en <= 1'b0;
             slv_error <= 1'b0;
             if (read_req == 1 && write_req == 0)
-                state <= #1 ST_READ;
+                next_state <= ST_READ;
             else if (read_req == 0 && write_req == 1)
-                state <= #1 ST_WRITE;
+                next_state <= ST_WRITE;
             else
-                state <= #1 ST_IDLE;
+                next_state <= ST_IDLE;
         end
         ST_READ: begin  /* Read request state */
             wb_cyc <= 1'b1;     /* Wishbone read request */
             wb_stb <= 1'b1;
             wb_we  <= 1'b0;
-            state  <= #1 ST_ACK;
+            next_state  <= ST_ACK;
         end
         ST_WRITE: begin  /* Write request state */
             wb_cyc <= 1'b1;     /* Wishbone write request */
             wb_stb <= 1'b1;
             wb_we  <= 1'b1;
-            state  <= #1 ST_ACK;
+            next_state  <= ST_ACK;
         end
         ST_ACK: begin    /* Ack state */
             if(wb_ack == 1)
-                state <= #1 ST_IDLE;
+                next_state <= ST_IDLE;
             else
-                state <= #1 ST_RTY;
+                next_state <= ST_RTY;
         end
         ST_RTY: begin    /* Rerty state */
             rty_en <= 1'b1; /* Enable rty counter */
             if(rty_abort == 1)
-                state <= #1 ST_ERROR;
+                next_state <= ST_ERROR;
             else
-                state <= #1 ST_ACK;
+                next_state <= ST_ACK;
         end
         ST_ERROR: begin  /* Error state */
             slv_error <= 1'b1;
-            state <= #1 ST_IDLE;
+            next_state <= ST_IDLE;
         end
         default :
-            state <= #1 ST_IDLE;
+            next_state <= ST_IDLE;
     endcase
-    end
   end /* Wishbone state machine */
 
   /* Wishbone retry logic */
@@ -261,11 +261,11 @@ output     [0 : C_NUM_INTR-1]             IP2Bus_IntrEvent;
   begin
     if(Bus2IP_Reset == 1) begin
         rty_abort  <= 1'b0;
-        rty_count  <= {C_NUM_RTY-1 {1'b0}};
+        rty_count  <= {C_NUM_RTY {1'b0}};
     end
     else begin
         if(rty_en == 0)
-            rty_count <= {C_NUM_RTY-1 {1'b0}};
+            rty_count <= {C_NUM_RTY {1'b0}};
         else
             rty_count <= rty_count + 1;
             
