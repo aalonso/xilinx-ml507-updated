@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_02_a/devl/projnav/plb2wb_encoder.xst" -ofn "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_02_a/devl/projnav/plb2wb_encoder.syr" 

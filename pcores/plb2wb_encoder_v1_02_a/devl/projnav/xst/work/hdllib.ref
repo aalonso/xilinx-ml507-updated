@@ -1,0 +1,4 @@
+MO user_logic NULL ../../hdl/verilog/user_logic.v vlg08/user__logic.bin 1286218256
+EN plb2wb_encoder NULL /home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_02_a/hdl/vhdl/plb2wb_encoder.vhd sub00/vhpl00 1286218277
+AR plb2wb_encoder imp /home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_02_a/hdl/vhdl/plb2wb_encoder.vhd sub00/vhpl01 1286218278
+MO wb_encoder NULL ../../hdl/verilog/wb_encoder.v vlg30/wb__encoder.bin 1286218256

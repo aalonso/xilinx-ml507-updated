@@ -1,0 +1,20 @@
+##############################################################################
+## Filename:          /home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_03_a/data/plb2wb_encoder_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Mon Oct  4 15:05:10 2010 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a family_support vhdl
+lib interrupt_control_v2_01_a interrupt_control vhdl
+lib proc_common_v3_00_a proc_common_pkg vhdl
+lib proc_common_v3_00_a ipif_pkg vhdl
+lib proc_common_v3_00_a or_muxcy vhdl
+lib proc_common_v3_00_a or_gate128 vhdl
+lib proc_common_v3_00_a pselect_f vhdl
+lib proc_common_v3_00_a counter_f vhdl
+lib plbv46_slave_single_v1_01_a plb_address_decoder vhdl
+lib plbv46_slave_single_v1_01_a plb_slave_attachment vhdl
+lib plbv46_slave_single_v1_01_a plbv46_slave_single vhdl
+lib plb2wb_encoder_v1_03_a wb_encoder verilog
+lib plb2wb_encoder_v1_03_a user_logic verilog
+lib plb2wb_encoder_v1_03_a plb2wb_encoder vhdl
