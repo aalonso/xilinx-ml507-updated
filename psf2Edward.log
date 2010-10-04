@@ -26,7 +26,4 @@ Performing System level DRCs on properties...
 Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
 Port present in Ethernet_MAC
 I'm now in proc syslevel_check_micontrol
-/home/aalonso/workspace/xlnx/xilinx-ml507-updated/synthesis/plb2wb_encoder_0_wra
-pper_xst.srp not found
-WARNING:EDK:1027 - Device utilization and timing not added for plb2wb_encoder_0
 Conversion to XML complete.

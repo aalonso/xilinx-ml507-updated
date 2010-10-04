@@ -25,7 +25,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "ddr2_sdram_wrapper_xst.prj"
-Verilog Include Directory          : {"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/" "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc5vfx70tff1136-1
@@ -5095,13 +5095,13 @@ WARNING:Xst:616 - Invalid property "SYN_PRESERVE 1": Did not attach to DDR2_SDRA
 WARNING:Xst:616 - Invalid property "SYN_PRESERVE 1": Did not attach to DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dm_inst.gen_dm[7].u_iob_dm/u_dm_ce.
 
 
-Total REAL time to Xst completion: 80.00 secs
-Total CPU time to Xst completion: 78.40 secs
+Total REAL time to Xst completion: 58.00 secs
+Total CPU time to Xst completion: 56.69 secs
  
 --> 
 
 
-Total memory usage is 595368 kilobytes
+Total memory usage is 595236 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings : 1431 (   0 filtered)

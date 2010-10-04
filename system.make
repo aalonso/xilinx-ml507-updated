@@ -196,6 +196,24 @@ TestApp_Peripheral_ppc440_0_tft_programclean:
 	rm -f $(TESTAPP_PERIPHERAL_PPC440_0_TFT_OUTPUT) 
 
 #################################################################
+# SOFTWARE APPLICATION TESTAPP_WB-ENCODER
+#################################################################
+
+TestApp_wb-encoder_program: $(TESTAPP_WB-ENCODER_OUTPUT) 
+
+$(TESTAPP_WB-ENCODER_OUTPUT) : $(TESTAPP_WB-ENCODER_SOURCES) $(TESTAPP_WB-ENCODER_HEADERS) $(TESTAPP_WB-ENCODER_LINKER_SCRIPT) \
+                    $(LIBRARIES) __xps/testapp_wb-encoder_compiler.opt
+	@mkdir -p $(TESTAPP_WB-ENCODER_OUTPUT_DIR) 
+	$(TESTAPP_WB-ENCODER_CC) $(TESTAPP_WB-ENCODER_CC_OPT) $(TESTAPP_WB-ENCODER_SOURCES) -o $(TESTAPP_WB-ENCODER_OUTPUT) \
+	$(TESTAPP_WB-ENCODER_OTHER_CC_FLAGS) $(TESTAPP_WB-ENCODER_INCLUDES) $(TESTAPP_WB-ENCODER_LIBPATH) \
+	$(TESTAPP_WB-ENCODER_CFLAGS) $(TESTAPP_WB-ENCODER_LFLAGS) 
+	$(TESTAPP_WB-ENCODER_CC_SIZE) $(TESTAPP_WB-ENCODER_OUTPUT) 
+	@echo ""
+
+TestApp_wb-encoder_programclean:
+	rm -f $(TESTAPP_WB-ENCODER_OUTPUT) 
+
+#################################################################
 # BOOTLOOP ELF FILES
 #################################################################
 
@@ -248,11 +266,11 @@ $(DOWNLOAD_BIT): $(SYSTEM_BIT) $(BRAMINIT_ELF_FILES) __xps/bitinit.opt
 	-bt $(SYSTEM_BIT) -o $(DOWNLOAD_BIT)
 	@rm -f $(SYSTEM)_bd.bmm
 
-$(SYSTEM_ACE): $(DOWNLOAD_BIT) $(TESTAPP_MEMORY_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_TFT_OUTPUT) 
+$(SYSTEM_ACE): $(DOWNLOAD_BIT) $(TESTAPP_MEMORY_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_TFT_OUTPUT) $(TESTAPP_WB-ENCODER_OUTPUT) 
 	@echo "*********************************************"
 	@echo "Creating system ace file"
 	@echo "*********************************************"
-	xmd -tcl genace.tcl -jprog -hw $(DOWNLOAD_BIT) -elf $(TESTAPP_MEMORY_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_TFT_OUTPUT)  -target ppc_hw  -ace $(SYSTEM_ACE)
+	xmd -tcl genace.tcl -jprog -hw $(DOWNLOAD_BIT) -elf $(TESTAPP_MEMORY_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_OUTPUT) $(TESTAPP_PERIPHERAL_PPC440_0_TFT_OUTPUT) $(TESTAPP_WB-ENCODER_OUTPUT)  -target ppc_hw  -ace $(SYSTEM_ACE)
 
 #################################################################
 # EXPORT_TO_SDK FLOW
@@ -280,7 +298,6 @@ $(CYG_SYSTEM_HW_HANDOFF_BMM): implementation/$(SYSTEM)_bd.bmm
 ################## BEHAVIORAL SIMULATION ##################
 
 $(BEHAVIORAL_SIM_SCRIPT): $(MHSFILE) __xps/simgen.opt \
-                          $(WRAPPER_NGC_FILES) \
                           $(BRAMINIT_ELF_FILES)
 	@echo "*********************************************"
 	@echo "Creating behavioral simulation models..."

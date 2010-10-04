@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Sat Sep 25 14:23:52 2010">
+  <application stringID="Xst" timeStamp="Mon Oct  4 15:19:45 2010">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -16,7 +16,7 @@
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="LD_LIBRARY_PATH"/>
-          <item stringID="value" value="/opt/Xilinx/12.1/ISE_DS/ISE/lib/lin64:/opt/Xilinx/12.1/ISE_DS/EDK/lib/lin64:/opt/Xilinx/12.1/ISE_DS/ISE//lib/lin64:/opt/Xilinx/12.1/ISE_DS/EDK//lib/lin64:/opt/Xilinx/12.1/ISE_DS/ISE/smartmodel/lin64/installed_lin64/lib:/opt/Xilinx/12.1/ISE_DS/common/lib/lin64:/usr/lib64/xulrunner-1.9.2"/>
+          <item stringID="value" value="/opt/Xilinx/12.1/ISE_DS/ISE/lib/lin64:/opt/Xilinx/12.1/ISE_DS/EDK/lib/lin64:/opt/Xilinx/12.1/ISE_DS/ISE//lib/lin64:/opt/Xilinx/12.1/ISE_DS/EDK//lib/lin64"/>
         </row>
         <row stringID="row" value="2">
           <item stringID="variable" value="XILINX_EDK"/>
@@ -24,7 +24,7 @@
         </row>
         <row stringID="row" value="3">
           <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="/opt/Xilinx/12.1/ISE_DS/ISE/bin/lin64:/opt/Xilinx/12.1/ISE_DS/EDK/bin/lin64:/opt/Xilinx/12.1/ISE_DS/EDK/gnu/microblaze/lin64/bin:/opt/Xilinx/12.1/ISE_DS/EDK/gnu/powerpc-eabi/lin64/bin:/opt/Xilinx/12.1/ISE_DS/ISE//bin/lin64:/opt/Xilinx/12.1/ISE_DS/EDK//bin/lin64:/opt/Xilinx/12.1/ISE_DS/ISE/sysgen/util:/opt/Xilinx/12.1/ISE_DS/common/bin/lin64:/opt/Xilinx/12.1/ISE_DS/PlanAhead/bin:/usr/bin:/usr/lib64/qt-3.3/bin:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/aalonso/bin"/>
+          <item stringID="value" value="/opt/Xilinx/12.1/ISE_DS/ISE/bin/lin64:/opt/Xilinx/12.1/ISE_DS/EDK/bin/lin64:/opt/Xilinx/12.1/ISE_DS/EDK/gnu/microblaze/lin64/bin:/opt/Xilinx/12.1/ISE_DS/EDK/gnu/powerpc-eabi/lin64/bin:/opt/Xilinx/12.1/ISE_DS/ISE//bin/lin64:/opt/Xilinx/12.1/ISE_DS/EDK//bin/lin64:/opt/Xilinx/12.1/ISE_DS/ISE/sysgen/util:/opt/Xilinx/12.1/ISE_DS/common/bin/lin64:/opt/Xilinx/12.1/ISE_DS/PlanAhead/bin:/usr/bin:/usr/lib64/qt-3.3/bin:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/lib64/ccache:/usr/local/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/lib64/alliance/bin:/usr/libexec/sdcc:/home/aalonso/bin"/>
         </row>
         <row stringID="row" value="4">
           <item stringID="variable" value="LMC_HOME"/>
@@ -43,13 +43,13 @@
         <item stringID="User_EnvOsname" value="Fedora"/>
         <item stringID="User_EnvOsrelease" value="Fedora release 13 (Goddard)"/>
       </item>
-      <item stringID="User_EnvHost" value="aalonso-pc"/>
+      <item stringID="User_EnvHost" value="devbox"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="AMD Phenom(tm) 9750 Quad-Core Processor"/>
-          <item stringID="speed" value="2410.867 MHz"/>
+          <item stringID="arch" value="Intel(R) Core(TM)2 Duo CPU     E7400  @ 2.80GHz"/>
+          <item stringID="speed" value="1603.000 MHz"/>
         </row>
       </table>
     </section>
@@ -65,7 +65,7 @@
       <item DEFAULT="/" stringID="XST_HIERARCHYSEPARATOR" value="/"/>
       <item DEFAULT="YES" label="-iobuf" stringID="XST_IOBUF" value="NO"/>
       <item DEFAULT="" label="-sd" stringID="XST_SD" value="{../implementation/flash_wrapper}"/>
-      <item DEFAULT="" label="-vlgincdir" stringID="XST_VLGINCDIR" value="{&quot;/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/&quot; }"/>
+      <item DEFAULT="" label="-vlgincdir" stringID="XST_VLGINCDIR" value="{&quot;/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/&quot; &quot;/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/&quot; }"/>
     </section>
     <section stringID="XST_HDL_SYNTHESIS_REPORT">
       <item dataType="int" stringID="XST_COUNTERS" value="2">

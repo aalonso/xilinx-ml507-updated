@@ -1,5 +1,5 @@
 
-<EDKSYSTEM EDKVERSION="12.1" EDWVERSION="1.2" TIMESTAMP="Tue Sep 28 20:58:52 2010">
+<EDKSYSTEM EDKVERSION="12.1" EDWVERSION="1.2" TIMESTAMP="Mon Oct  4 16:49:23 2010">
 
   <SYSTEMINFO ARCH="virtex5" DEVICE="5vfx70t" PACKAGE="ff1136" PART="5vfx70tff1136-1" SOURCE="/home/aalonso/workspace/xlnx/xilinx-ml507-updated/" SPEEDGRADE="-1"/>
 
@@ -57,7 +57,7 @@
     <PORT DIR="IO" MHS_INDEX="50" NAME="xps_tft_0_TFT_IIC_SDA" SIGNAME="xps_tft_0_TFT_IIC_SDA"/>
     <PORT DIR="O" MHS_INDEX="51" NAME="xps_tft_0_TFT_HSYNC_pin" SIGNAME="xps_tft_0_TFT_HSYNC"/>
     <PORT DIR="O" MHS_INDEX="52" NAME="xps_tft_0_TFT_DVI_CLK_N_pin" SIGNAME="xps_tft_0_TFT_DVI_CLK_N"/>
-    <PORT DIR="O" ENDIAN="LITTLE" LSB="11" MHS_INDEX="53" MSB="0" NAME="xps_tft_0_TFT_DVI_DATA_pin" SIGNAME="xps_tft_0_TFT_DVI_DATA"/>
+    <PORT DIR="O" ENDIAN="BIG" LSB="11" MHS_INDEX="53" MSB="0" NAME="xps_tft_0_TFT_DVI_DATA_pin" SIGNAME="xps_tft_0_TFT_DVI_DATA"/>
     <PORT DIR="O" MHS_INDEX="54" NAME="xps_tft_0_TFT_DE_pin" SIGNAME="xps_tft_0_TFT_DE"/>
     <PORT DIR="O" MHS_INDEX="55" NAME="xps_tft_0_TFT_VSYNC_pin" SIGNAME="xps_tft_0_TFT_VSYNC"/>
     <PORT DIR="O" MHS_INDEX="56" NAME="xps_tft_0_TFT_DVI_CLK_P_pin" SIGNAME="xps_tft_0_TFT_DVI_CLK_P"/>
@@ -1189,14 +1189,14 @@
       </MEMORYMAP>
       <RESOURCES>
         <RESOURCE PERCENT="0" TOTAL="44800" TYPE="Slice Registers" USED="174"/>
-        <RESOURCE PERCENT="1" TOTAL="44800" TYPE="Slice LUTs" USED="854"/>
-        <RESOURCE PERCENT="NA" TOTAL="NA" TYPE="LUT Flip Flop pairs used" USED="882"/>
-        <RESOURCE PERCENT="16" TOTAL="882" TYPE="fully used LUT-FF pairs" USED="146"/>
+        <RESOURCE PERCENT="2" TOTAL="44800" TYPE="Slice LUTs" USED="1008"/>
+        <RESOURCE PERCENT="NA" TOTAL="NA" TYPE="LUT Flip Flop pairs used" USED="1036"/>
+        <RESOURCE PERCENT="14" TOTAL="1036" TYPE="fully used LUT-FF pairs" USED="146"/>
         <RESOURCE PERCENT="NA" TOTAL="NA" TYPE="unique control sets" USED="17"/>
-        <RESOURCE PERCENT="NA" TOTAL="NA" TYPE="IOs" USED="3720"/>
+        <RESOURCE PERCENT="NA" TOTAL="NA" TYPE="IOs" USED="3874"/>
         <RESOURCE PERCENT="0" TOTAL="640" TYPE="bonded IOBs" USED="0"/>
       </RESOURCES>
-      <TIMING FREQUNITS="MHz" MAXFREQ="322.165">
+      <TIMING FREQUNITS="MHz" MAXFREQ="321.543">
         <TIMECLK SIGNAME="PLB_Clk"/>
       </TIMING>
     </MODULE>
@@ -4062,19 +4062,19 @@
         <TARGET INSTANCE="ppc440_0"/>
       </INTERRUPTINFO>
       <RESOURCES>
-        <RESOURCE PERCENT="0" TOTAL="44800" TYPE="Slice Registers" USED="237"/>
-        <RESOURCE PERCENT="0" TOTAL="44800" TYPE="Slice LUTs" USED="177"/>
-        <RESOURCE PERCENT="NA" TOTAL="NA" TYPE="LUT Flip Flop pairs used" USED="295"/>
-        <RESOURCE PERCENT="40" TOTAL="295" TYPE="fully used LUT-FF pairs" USED="119"/>
-        <RESOURCE PERCENT="NA" TOTAL="NA" TYPE="unique control sets" USED="101"/>
-        <RESOURCE PERCENT="NA" TOTAL="NA" TYPE="IOs" USED="418"/>
+        <RESOURCE PERCENT="0" TOTAL="44800" TYPE="Slice Registers" USED="246"/>
+        <RESOURCE PERCENT="0" TOTAL="44800" TYPE="Slice LUTs" USED="186"/>
+        <RESOURCE PERCENT="NA" TOTAL="NA" TYPE="LUT Flip Flop pairs used" USED="307"/>
+        <RESOURCE PERCENT="40" TOTAL="307" TYPE="fully used LUT-FF pairs" USED="125"/>
+        <RESOURCE PERCENT="NA" TOTAL="NA" TYPE="unique control sets" USED="106"/>
+        <RESOURCE PERCENT="NA" TOTAL="NA" TYPE="IOs" USED="419"/>
         <RESOURCE PERCENT="0" TOTAL="640" TYPE="bonded IOBs" USED="0"/>
       </RESOURCES>
       <TIMING FREQUNITS="MHz" MAXFREQ="317.360">
         <TIMECLK SIGNAME="SPLB_Clk"/>
         <TIMECLK SIGNAME="Intr&lt;7>"/>
         <TIMECLK SIGNAME="Intr&lt;3>"/>
-        <TIMECLK SIGNAME="Intr&lt;11>"/>
+        <TIMECLK SIGNAME="Intr&lt;12>"/>
         <TIMECLK SIGNAME="Intr&lt;1>"/>
         <TIMECLK SIGNAME="Intr&lt;5>"/>
       </TIMING>
@@ -4455,7 +4455,7 @@
         <TIMECLK SIGNAME="SPLB_Clk"/>
       </TIMING>
     </MODULE>
-    <MODULE HWVERSION="1.01.a" INSTANCE="plb2wb_encoder_0" IPTYPE="PERIPHERAL" MHS_INDEX="22" MODCLASS="PERIPHERAL" MODTYPE="plb2wb_encoder">
+    <MODULE HWVERSION="1.03.a" INSTANCE="plb2wb_encoder_0" IPTYPE="PERIPHERAL" MHS_INDEX="22" MODCLASS="PERIPHERAL" MODTYPE="plb2wb_encoder">
       <LICENSEINFO ICON_NAME="ps_core_local"/>
       <PARAMETERS>
         <PARAMETER ADDRESS="BASE" ADDR_TYPE="REGISTER" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="0" NAME="C_BASEADDR" TYPE="std_logic_vector" VALUE="0x81480000"/>
@@ -4474,49 +4474,50 @@
       </PARAMETERS>
       <PORTS>
         <PORT DIR="I" ENDIAN="BIG" IS_INSTANTIATED="TRUE" LSB="0" MHS_INDEX="0" MPD_INDEX="0" MSB="2" NAME="enc_data" SIGNAME="plb2wb_encoder_0_enc_data" VECFORMULA="[0:2]"/>
-        <PORT DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="1" MPD_INDEX="43" NAME="IP2INTC_Irpt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="plb2wb_encoder_0_IP2INTC_Irpt"/>
-        <PORT BUS="SPLB" CLKFREQUENCY="100000000" DEF_SIGNAME="clk_100_0000MHzPLL0_ADJUST" DIR="I" MPD_INDEX="1" NAME="SPLB_Clk" SIGIS="CLK" SIGNAME="clk_100_0000MHzPLL0_ADJUST"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_SPLB_Rst" DIR="I" MPD_INDEX="2" NAME="SPLB_Rst" SIGIS="RST" SIGNAME="plb_v46_0_SPLB_Rst"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_ABus" DIR="I" MPD_INDEX="3" NAME="PLB_ABus" SIGNAME="plb_v46_0_PLB_ABus" VECFORMULA="[0:31]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_UABus" DIR="I" MPD_INDEX="4" NAME="PLB_UABus" SIGNAME="plb_v46_0_PLB_UABus" VECFORMULA="[0:31]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_PAValid" DIR="I" MPD_INDEX="5" NAME="PLB_PAValid" SIGNAME="plb_v46_0_PLB_PAValid"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_SAValid" DIR="I" MPD_INDEX="6" NAME="PLB_SAValid" SIGNAME="plb_v46_0_PLB_SAValid"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_rdPrim" DIR="I" MPD_INDEX="7" NAME="PLB_rdPrim" SIGNAME="plb_v46_0_PLB_rdPrim"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_wrPrim" DIR="I" MPD_INDEX="8" NAME="PLB_wrPrim" SIGNAME="plb_v46_0_PLB_wrPrim"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_masterID" DIR="I" MPD_INDEX="9" NAME="PLB_masterID" SIGNAME="plb_v46_0_PLB_masterID" VECFORMULA="[0:(C_SPLB_MID_WIDTH-1)]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_abort" DIR="I" MPD_INDEX="10" NAME="PLB_abort" SIGNAME="plb_v46_0_PLB_abort"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_busLock" DIR="I" MPD_INDEX="11" NAME="PLB_busLock" SIGNAME="plb_v46_0_PLB_busLock"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_RNW" DIR="I" MPD_INDEX="12" NAME="PLB_RNW" SIGNAME="plb_v46_0_PLB_RNW"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_BE" DIR="I" MPD_INDEX="13" NAME="PLB_BE" SIGNAME="plb_v46_0_PLB_BE" VECFORMULA="[0:((C_SPLB_DWIDTH/8)-1)]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_MSize" DIR="I" MPD_INDEX="14" NAME="PLB_MSize" SIGNAME="plb_v46_0_PLB_MSize" VECFORMULA="[0:1]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_size" DIR="I" MPD_INDEX="15" NAME="PLB_size" SIGNAME="plb_v46_0_PLB_size" VECFORMULA="[0:3]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_type" DIR="I" MPD_INDEX="16" NAME="PLB_type" SIGNAME="plb_v46_0_PLB_type" VECFORMULA="[0:2]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_lockErr" DIR="I" MPD_INDEX="17" NAME="PLB_lockErr" SIGNAME="plb_v46_0_PLB_lockErr"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_wrDBus" DIR="I" MPD_INDEX="18" NAME="PLB_wrDBus" SIGNAME="plb_v46_0_PLB_wrDBus" VECFORMULA="[0:(C_SPLB_DWIDTH-1)]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_wrBurst" DIR="I" MPD_INDEX="19" NAME="PLB_wrBurst" SIGNAME="plb_v46_0_PLB_wrBurst"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_rdBurst" DIR="I" MPD_INDEX="20" NAME="PLB_rdBurst" SIGNAME="plb_v46_0_PLB_rdBurst"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_wrPendReq" DIR="I" MPD_INDEX="21" NAME="PLB_wrPendReq" SIGNAME="plb_v46_0_PLB_wrPendReq"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_rdPendReq" DIR="I" MPD_INDEX="22" NAME="PLB_rdPendReq" SIGNAME="plb_v46_0_PLB_rdPendReq"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_wrPendPri" DIR="I" MPD_INDEX="23" NAME="PLB_wrPendPri" SIGNAME="plb_v46_0_PLB_wrPendPri" VECFORMULA="[0:1]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_rdPendPri" DIR="I" MPD_INDEX="24" NAME="PLB_rdPendPri" SIGNAME="plb_v46_0_PLB_rdPendPri" VECFORMULA="[0:1]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_reqPri" DIR="I" MPD_INDEX="25" NAME="PLB_reqPri" SIGNAME="plb_v46_0_PLB_reqPri" VECFORMULA="[0:1]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_TAttribute" DIR="I" MPD_INDEX="26" NAME="PLB_TAttribute" SIGNAME="plb_v46_0_PLB_TAttribute" VECFORMULA="[0:15]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_addrAck" DIR="O" MPD_INDEX="27" NAME="Sl_addrAck" SIGNAME="plb_v46_0_Sl_addrAck"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_SSize" DIR="O" MPD_INDEX="28" NAME="Sl_SSize" SIGNAME="plb_v46_0_Sl_SSize" VECFORMULA="[0:1]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_wait" DIR="O" MPD_INDEX="29" NAME="Sl_wait" SIGNAME="plb_v46_0_Sl_wait"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_rearbitrate" DIR="O" MPD_INDEX="30" NAME="Sl_rearbitrate" SIGNAME="plb_v46_0_Sl_rearbitrate"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_wrDAck" DIR="O" MPD_INDEX="31" NAME="Sl_wrDAck" SIGNAME="plb_v46_0_Sl_wrDAck"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_wrComp" DIR="O" MPD_INDEX="32" NAME="Sl_wrComp" SIGNAME="plb_v46_0_Sl_wrComp"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_wrBTerm" DIR="O" MPD_INDEX="33" NAME="Sl_wrBTerm" SIGNAME="plb_v46_0_Sl_wrBTerm"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_rdDBus" DIR="O" MPD_INDEX="34" NAME="Sl_rdDBus" SIGNAME="plb_v46_0_Sl_rdDBus" VECFORMULA="[0:(C_SPLB_DWIDTH-1)]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_rdWdAddr" DIR="O" MPD_INDEX="35" NAME="Sl_rdWdAddr" SIGNAME="plb_v46_0_Sl_rdWdAddr" VECFORMULA="[0:3]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_rdDAck" DIR="O" MPD_INDEX="36" NAME="Sl_rdDAck" SIGNAME="plb_v46_0_Sl_rdDAck"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_rdComp" DIR="O" MPD_INDEX="37" NAME="Sl_rdComp" SIGNAME="plb_v46_0_Sl_rdComp"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_rdBTerm" DIR="O" MPD_INDEX="38" NAME="Sl_rdBTerm" SIGNAME="plb_v46_0_Sl_rdBTerm"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_MBusy" DIR="O" MPD_INDEX="39" NAME="Sl_MBusy" SIGNAME="plb_v46_0_Sl_MBusy" VECFORMULA="[0:(C_SPLB_NUM_MASTERS-1)]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_MWrErr" DIR="O" MPD_INDEX="40" NAME="Sl_MWrErr" SIGNAME="plb_v46_0_Sl_MWrErr" VECFORMULA="[0:(C_SPLB_NUM_MASTERS-1)]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_MRdErr" DIR="O" MPD_INDEX="41" NAME="Sl_MRdErr" SIGNAME="plb_v46_0_Sl_MRdErr" VECFORMULA="[0:(C_SPLB_NUM_MASTERS-1)]"/>
-        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_MIRQ" DIR="O" MPD_INDEX="42" NAME="Sl_MIRQ" SIGNAME="plb_v46_0_Sl_MIRQ" VECFORMULA="[0:(C_SPLB_NUM_MASTERS-1)]"/>
+        <PORT DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="1" MPD_INDEX="44" NAME="IP2INTC_Irpt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="plb2wb_encoder_0_IP2INTC_Irpt"/>
+        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="1" NAME="enc_clk" SIGNAME="clk_25_0000MHz"/>
+        <PORT BUS="SPLB" CLKFREQUENCY="100000000" DEF_SIGNAME="clk_100_0000MHzPLL0_ADJUST" DIR="I" MPD_INDEX="2" NAME="SPLB_Clk" SIGIS="CLK" SIGNAME="clk_100_0000MHzPLL0_ADJUST"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_SPLB_Rst" DIR="I" MPD_INDEX="3" NAME="SPLB_Rst" SIGIS="RST" SIGNAME="plb_v46_0_SPLB_Rst"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_ABus" DIR="I" MPD_INDEX="4" NAME="PLB_ABus" SIGNAME="plb_v46_0_PLB_ABus" VECFORMULA="[0:31]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_UABus" DIR="I" MPD_INDEX="5" NAME="PLB_UABus" SIGNAME="plb_v46_0_PLB_UABus" VECFORMULA="[0:31]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_PAValid" DIR="I" MPD_INDEX="6" NAME="PLB_PAValid" SIGNAME="plb_v46_0_PLB_PAValid"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_SAValid" DIR="I" MPD_INDEX="7" NAME="PLB_SAValid" SIGNAME="plb_v46_0_PLB_SAValid"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_rdPrim" DIR="I" MPD_INDEX="8" NAME="PLB_rdPrim" SIGNAME="plb_v46_0_PLB_rdPrim"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_wrPrim" DIR="I" MPD_INDEX="9" NAME="PLB_wrPrim" SIGNAME="plb_v46_0_PLB_wrPrim"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_masterID" DIR="I" MPD_INDEX="10" NAME="PLB_masterID" SIGNAME="plb_v46_0_PLB_masterID" VECFORMULA="[0:(C_SPLB_MID_WIDTH-1)]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_abort" DIR="I" MPD_INDEX="11" NAME="PLB_abort" SIGNAME="plb_v46_0_PLB_abort"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_busLock" DIR="I" MPD_INDEX="12" NAME="PLB_busLock" SIGNAME="plb_v46_0_PLB_busLock"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_RNW" DIR="I" MPD_INDEX="13" NAME="PLB_RNW" SIGNAME="plb_v46_0_PLB_RNW"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_BE" DIR="I" MPD_INDEX="14" NAME="PLB_BE" SIGNAME="plb_v46_0_PLB_BE" VECFORMULA="[0:((C_SPLB_DWIDTH/8)-1)]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_MSize" DIR="I" MPD_INDEX="15" NAME="PLB_MSize" SIGNAME="plb_v46_0_PLB_MSize" VECFORMULA="[0:1]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_size" DIR="I" MPD_INDEX="16" NAME="PLB_size" SIGNAME="plb_v46_0_PLB_size" VECFORMULA="[0:3]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_type" DIR="I" MPD_INDEX="17" NAME="PLB_type" SIGNAME="plb_v46_0_PLB_type" VECFORMULA="[0:2]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_lockErr" DIR="I" MPD_INDEX="18" NAME="PLB_lockErr" SIGNAME="plb_v46_0_PLB_lockErr"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_wrDBus" DIR="I" MPD_INDEX="19" NAME="PLB_wrDBus" SIGNAME="plb_v46_0_PLB_wrDBus" VECFORMULA="[0:(C_SPLB_DWIDTH-1)]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_wrBurst" DIR="I" MPD_INDEX="20" NAME="PLB_wrBurst" SIGNAME="plb_v46_0_PLB_wrBurst"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_rdBurst" DIR="I" MPD_INDEX="21" NAME="PLB_rdBurst" SIGNAME="plb_v46_0_PLB_rdBurst"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_wrPendReq" DIR="I" MPD_INDEX="22" NAME="PLB_wrPendReq" SIGNAME="plb_v46_0_PLB_wrPendReq"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_rdPendReq" DIR="I" MPD_INDEX="23" NAME="PLB_rdPendReq" SIGNAME="plb_v46_0_PLB_rdPendReq"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_wrPendPri" DIR="I" MPD_INDEX="24" NAME="PLB_wrPendPri" SIGNAME="plb_v46_0_PLB_wrPendPri" VECFORMULA="[0:1]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_rdPendPri" DIR="I" MPD_INDEX="25" NAME="PLB_rdPendPri" SIGNAME="plb_v46_0_PLB_rdPendPri" VECFORMULA="[0:1]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_reqPri" DIR="I" MPD_INDEX="26" NAME="PLB_reqPri" SIGNAME="plb_v46_0_PLB_reqPri" VECFORMULA="[0:1]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_PLB_TAttribute" DIR="I" MPD_INDEX="27" NAME="PLB_TAttribute" SIGNAME="plb_v46_0_PLB_TAttribute" VECFORMULA="[0:15]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_addrAck" DIR="O" MPD_INDEX="28" NAME="Sl_addrAck" SIGNAME="plb_v46_0_Sl_addrAck"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_SSize" DIR="O" MPD_INDEX="29" NAME="Sl_SSize" SIGNAME="plb_v46_0_Sl_SSize" VECFORMULA="[0:1]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_wait" DIR="O" MPD_INDEX="30" NAME="Sl_wait" SIGNAME="plb_v46_0_Sl_wait"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_rearbitrate" DIR="O" MPD_INDEX="31" NAME="Sl_rearbitrate" SIGNAME="plb_v46_0_Sl_rearbitrate"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_wrDAck" DIR="O" MPD_INDEX="32" NAME="Sl_wrDAck" SIGNAME="plb_v46_0_Sl_wrDAck"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_wrComp" DIR="O" MPD_INDEX="33" NAME="Sl_wrComp" SIGNAME="plb_v46_0_Sl_wrComp"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_wrBTerm" DIR="O" MPD_INDEX="34" NAME="Sl_wrBTerm" SIGNAME="plb_v46_0_Sl_wrBTerm"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_rdDBus" DIR="O" MPD_INDEX="35" NAME="Sl_rdDBus" SIGNAME="plb_v46_0_Sl_rdDBus" VECFORMULA="[0:(C_SPLB_DWIDTH-1)]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_rdWdAddr" DIR="O" MPD_INDEX="36" NAME="Sl_rdWdAddr" SIGNAME="plb_v46_0_Sl_rdWdAddr" VECFORMULA="[0:3]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_rdDAck" DIR="O" MPD_INDEX="37" NAME="Sl_rdDAck" SIGNAME="plb_v46_0_Sl_rdDAck"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_rdComp" DIR="O" MPD_INDEX="38" NAME="Sl_rdComp" SIGNAME="plb_v46_0_Sl_rdComp"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_rdBTerm" DIR="O" MPD_INDEX="39" NAME="Sl_rdBTerm" SIGNAME="plb_v46_0_Sl_rdBTerm"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_MBusy" DIR="O" MPD_INDEX="40" NAME="Sl_MBusy" SIGNAME="plb_v46_0_Sl_MBusy" VECFORMULA="[0:(C_SPLB_NUM_MASTERS-1)]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_MWrErr" DIR="O" MPD_INDEX="41" NAME="Sl_MWrErr" SIGNAME="plb_v46_0_Sl_MWrErr" VECFORMULA="[0:(C_SPLB_NUM_MASTERS-1)]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_MRdErr" DIR="O" MPD_INDEX="42" NAME="Sl_MRdErr" SIGNAME="plb_v46_0_Sl_MRdErr" VECFORMULA="[0:(C_SPLB_NUM_MASTERS-1)]"/>
+        <PORT BUS="SPLB" DEF_SIGNAME="plb_v46_0_Sl_MIRQ" DIR="O" MPD_INDEX="43" NAME="Sl_MIRQ" SIGNAME="plb_v46_0_Sl_MIRQ" VECFORMULA="[0:(C_SPLB_NUM_MASTERS-1)]"/>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="plb_v46_0" BUSSTD="PLBV46" BUSSTD_PSF="PLBV46" IS_INSTANTIATED="TRUE" MHS_INDEX="0" MPD_INDEX="0" NAME="SPLB" TYPE="SLAVE"/>
@@ -4531,6 +4532,19 @@
       <INTERRUPTINFO TYPE="SOURCE">
         <TARGET INSTANCE="xps_intc_0" INTC_INDEX="0" PRIORITY="2"/>
       </INTERRUPTINFO>
+      <RESOURCES>
+        <RESOURCE PERCENT="0" TOTAL="44800" TYPE="Slice Registers" USED="181"/>
+        <RESOURCE PERCENT="0" TOTAL="44800" TYPE="Slice LUTs" USED="127"/>
+        <RESOURCE PERCENT="NA" TOTAL="NA" TYPE="LUT Flip Flop pairs used" USED="240"/>
+        <RESOURCE PERCENT="28" TOTAL="240" TYPE="fully used LUT-FF pairs" USED="68"/>
+        <RESOURCE PERCENT="NA" TOTAL="NA" TYPE="unique control sets" USED="28"/>
+        <RESOURCE PERCENT="NA" TOTAL="NA" TYPE="IOs" USED="410"/>
+        <RESOURCE PERCENT="0" TOTAL="640" TYPE="bonded IOBs" USED="0"/>
+      </RESOURCES>
+      <TIMING FREQUNITS="MHz" MAXFREQ="313.480">
+        <TIMECLK SIGNAME="SPLB_Clk"/>
+        <TIMECLK SIGNAME="enc_clk"/>
+      </TIMING>
     </MODULE>
   </MODULES>
 

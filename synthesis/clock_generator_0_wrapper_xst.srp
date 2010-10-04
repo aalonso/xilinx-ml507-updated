@@ -25,7 +25,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "clock_generator_0_wrapper_xst.prj"
-Verilog Include Directory          : {"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/" "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc5vfx70tff1136-1
@@ -431,8 +431,8 @@ Delay:               0.238ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.61 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.34 secs
  
 --> 
 

@@ -10,4 +10,4 @@ run
 -hierarchy_separator /
 -iobuf NO
 -sd {../implementation/xps_bram_if_cntlr_1_wrapper}
--vlgincdir {"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+-vlgincdir {"/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/" "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }

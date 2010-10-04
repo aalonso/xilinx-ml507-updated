@@ -12,6 +12,11 @@
 *
 *******************************************************************/
 
+#define STDIN_BASEADDRESS 0x84000000
+#define STDOUT_BASEADDRESS 0x84000000
+
+/******************************************************************/
+
 
 /* Definitions for peripheral DDR2_SDRAM */
 #define XPAR_DDR2_SDRAM_MEM_BASEADDR 0x00000000

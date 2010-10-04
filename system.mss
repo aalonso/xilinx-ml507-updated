@@ -3,11 +3,11 @@
 
 
 BEGIN OS
- PARAMETER OS_NAME = device-tree
- PARAMETER OS_VER = 0.00.x
+ PARAMETER OS_NAME = standalone
+ PARAMETER OS_VER = 3.00.a
  PARAMETER PROC_INSTANCE = ppc440_0
- PARAMETER bootargs = console=tty0 ip=on root=/dev/xsa3 rootfstype=ext3 rw rootdelay=1
- PARAMETER console device = RS232_Uart_1
+ PARAMETER stdin = RS232_Uart_1
+ PARAMETER stdout = RS232_Uart_1
 END
 
 
@@ -142,7 +142,7 @@ END
 
 BEGIN DRIVER
  PARAMETER DRIVER_NAME = plb2wb_encoder
- PARAMETER DRIVER_VER = 1.00.a
+ PARAMETER DRIVER_VER = 1.02.a
  PARAMETER HW_INSTANCE = plb2wb_encoder_0
 END
 

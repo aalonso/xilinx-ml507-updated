@@ -71,7 +71,8 @@ entity system is
     xps_ps2_0_PS2_1_CLK : inout std_logic;
     xps_ps2_0_PS2_2_DATA : inout std_logic;
     xps_ps2_0_PS2_2_CLK : inout std_logic;
-    xps_ps2_0_PS2_1_DATA : inout std_logic
+    xps_ps2_0_PS2_1_DATA : inout std_logic;
+    plb2wb_encoder_0_enc_data_pin : in std_logic_vector(0 to 2)
   );
 end system;
 
@@ -394,7 +395,7 @@ architecture STRUCTURE of system is
       PLB_Clk : in std_logic;
       SYS_Rst : in std_logic;
       PLB_Rst : out std_logic;
-      SPLB_Rst : out std_logic_vector(0 to 15);
+      SPLB_Rst : out std_logic_vector(0 to 16);
       MPLB_Rst : out std_logic_vector(0 to 1);
       PLB_dcrAck : out std_logic;
       PLB_dcrDBus : out std_logic_vector(0 to 31);
@@ -418,22 +419,22 @@ architecture STRUCTURE of system is
       M_type : in std_logic_vector(0 to 5);
       M_wrBurst : in std_logic_vector(0 to 1);
       M_wrDBus : in std_logic_vector(0 to 255);
-      Sl_addrAck : in std_logic_vector(0 to 15);
-      Sl_MRdErr : in std_logic_vector(0 to 31);
-      Sl_MWrErr : in std_logic_vector(0 to 31);
-      Sl_MBusy : in std_logic_vector(0 to 31);
-      Sl_rdBTerm : in std_logic_vector(0 to 15);
-      Sl_rdComp : in std_logic_vector(0 to 15);
-      Sl_rdDAck : in std_logic_vector(0 to 15);
-      Sl_rdDBus : in std_logic_vector(0 to 2047);
-      Sl_rdWdAddr : in std_logic_vector(0 to 63);
-      Sl_rearbitrate : in std_logic_vector(0 to 15);
-      Sl_SSize : in std_logic_vector(0 to 31);
-      Sl_wait : in std_logic_vector(0 to 15);
-      Sl_wrBTerm : in std_logic_vector(0 to 15);
-      Sl_wrComp : in std_logic_vector(0 to 15);
-      Sl_wrDAck : in std_logic_vector(0 to 15);
-      Sl_MIRQ : in std_logic_vector(0 to 31);
+      Sl_addrAck : in std_logic_vector(0 to 16);
+      Sl_MRdErr : in std_logic_vector(0 to 33);
+      Sl_MWrErr : in std_logic_vector(0 to 33);
+      Sl_MBusy : in std_logic_vector(0 to 33);
+      Sl_rdBTerm : in std_logic_vector(0 to 16);
+      Sl_rdComp : in std_logic_vector(0 to 16);
+      Sl_rdDAck : in std_logic_vector(0 to 16);
+      Sl_rdDBus : in std_logic_vector(0 to 2175);
+      Sl_rdWdAddr : in std_logic_vector(0 to 67);
+      Sl_rearbitrate : in std_logic_vector(0 to 16);
+      Sl_SSize : in std_logic_vector(0 to 33);
+      Sl_wait : in std_logic_vector(0 to 16);
+      Sl_wrBTerm : in std_logic_vector(0 to 16);
+      Sl_wrComp : in std_logic_vector(0 to 16);
+      Sl_wrDAck : in std_logic_vector(0 to 16);
+      Sl_MIRQ : in std_logic_vector(0 to 33);
       PLB_MIRQ : out std_logic_vector(0 to 1);
       PLB_ABus : out std_logic_vector(0 to 31);
       PLB_UABus : out std_logic_vector(0 to 31);
@@ -465,13 +466,13 @@ architecture STRUCTURE of system is
       PLB_rdPendReq : out std_logic;
       PLB_wrPendReq : out std_logic;
       PLB_rdBurst : out std_logic;
-      PLB_rdPrim : out std_logic_vector(0 to 15);
+      PLB_rdPrim : out std_logic_vector(0 to 16);
       PLB_reqPri : out std_logic_vector(0 to 1);
       PLB_size : out std_logic_vector(0 to 3);
       PLB_type : out std_logic_vector(0 to 2);
       PLB_wrBurst : out std_logic;
       PLB_wrDBus : out std_logic_vector(0 to 127);
-      PLB_wrPrim : out std_logic_vector(0 to 15);
+      PLB_wrPrim : out std_logic_vector(0 to 16);
       PLB_SaddrAck : out std_logic;
       PLB_SMRdErr : out std_logic_vector(0 to 1);
       PLB_SMWrErr : out std_logic_vector(0 to 1);
@@ -1362,7 +1363,7 @@ architecture STRUCTURE of system is
       Sl_rdWdAddr : out std_logic_vector(0 to 3);
       Sl_rdBTerm : out std_logic;
       Sl_MIRQ : out std_logic_vector(0 to 1);
-      Intr : in std_logic_vector(11 downto 0);
+      Intr : in std_logic_vector(12 downto 0);
       Irq : out std_logic
     );
   end component;
@@ -1535,6 +1536,56 @@ architecture STRUCTURE of system is
     );
   end component;
 
+  component plb2wb_encoder_0_wrapper is
+    port (
+      enc_data : in std_logic_vector(0 to 2);
+      enc_clk : in std_logic;
+      SPLB_Clk : in std_logic;
+      SPLB_Rst : in std_logic;
+      PLB_ABus : in std_logic_vector(0 to 31);
+      PLB_UABus : in std_logic_vector(0 to 31);
+      PLB_PAValid : in std_logic;
+      PLB_SAValid : in std_logic;
+      PLB_rdPrim : in std_logic;
+      PLB_wrPrim : in std_logic;
+      PLB_masterID : in std_logic_vector(0 to 0);
+      PLB_abort : in std_logic;
+      PLB_busLock : in std_logic;
+      PLB_RNW : in std_logic;
+      PLB_BE : in std_logic_vector(0 to 15);
+      PLB_MSize : in std_logic_vector(0 to 1);
+      PLB_size : in std_logic_vector(0 to 3);
+      PLB_type : in std_logic_vector(0 to 2);
+      PLB_lockErr : in std_logic;
+      PLB_wrDBus : in std_logic_vector(0 to 127);
+      PLB_wrBurst : in std_logic;
+      PLB_rdBurst : in std_logic;
+      PLB_wrPendReq : in std_logic;
+      PLB_rdPendReq : in std_logic;
+      PLB_wrPendPri : in std_logic_vector(0 to 1);
+      PLB_rdPendPri : in std_logic_vector(0 to 1);
+      PLB_reqPri : in std_logic_vector(0 to 1);
+      PLB_TAttribute : in std_logic_vector(0 to 15);
+      Sl_addrAck : out std_logic;
+      Sl_SSize : out std_logic_vector(0 to 1);
+      Sl_wait : out std_logic;
+      Sl_rearbitrate : out std_logic;
+      Sl_wrDAck : out std_logic;
+      Sl_wrComp : out std_logic;
+      Sl_wrBTerm : out std_logic;
+      Sl_rdDBus : out std_logic_vector(0 to 127);
+      Sl_rdWdAddr : out std_logic_vector(0 to 3);
+      Sl_rdDAck : out std_logic;
+      Sl_rdComp : out std_logic;
+      Sl_rdBTerm : out std_logic;
+      Sl_MBusy : out std_logic_vector(0 to 1);
+      Sl_MWrErr : out std_logic_vector(0 to 1);
+      Sl_MRdErr : out std_logic_vector(0 to 1);
+      Sl_MIRQ : out std_logic_vector(0 to 1);
+      IP2INTC_Irpt : out std_logic
+    );
+  end component;
+
   component IOBUF is
     port (
       I : in std_logic;
@@ -1607,7 +1658,9 @@ architecture STRUCTURE of system is
   signal pgassign5 : std_logic_vector(0 to 6);
   signal pgassign6 : std_logic_vector(0 to 0);
   signal pgassign7 : std_logic_vector(0 to 31);
-  signal pgassign8 : std_logic_vector(11 downto 0);
+  signal pgassign8 : std_logic_vector(12 downto 0);
+  signal plb2wb_encoder_0_IP2INTC_Irpt : std_logic;
+  signal plb2wb_encoder_0_enc_data : std_logic_vector(0 to 2);
   signal plb_v46_0_MPLB_Rst : std_logic_vector(0 to 1);
   signal plb_v46_0_M_ABus : std_logic_vector(0 to 63);
   signal plb_v46_0_M_BE : std_logic_vector(0 to 31);
@@ -1654,7 +1707,7 @@ architecture STRUCTURE of system is
   signal plb_v46_0_PLB_rdBurst : std_logic;
   signal plb_v46_0_PLB_rdPendPri : std_logic_vector(0 to 1);
   signal plb_v46_0_PLB_rdPendReq : std_logic;
-  signal plb_v46_0_PLB_rdPrim : std_logic_vector(0 to 15);
+  signal plb_v46_0_PLB_rdPrim : std_logic_vector(0 to 16);
   signal plb_v46_0_PLB_reqPri : std_logic_vector(0 to 1);
   signal plb_v46_0_PLB_size : std_logic_vector(0 to 3);
   signal plb_v46_0_PLB_type : std_logic_vector(0 to 2);
@@ -1662,24 +1715,24 @@ architecture STRUCTURE of system is
   signal plb_v46_0_PLB_wrDBus : std_logic_vector(0 to 127);
   signal plb_v46_0_PLB_wrPendPri : std_logic_vector(0 to 1);
   signal plb_v46_0_PLB_wrPendReq : std_logic;
-  signal plb_v46_0_PLB_wrPrim : std_logic_vector(0 to 15);
-  signal plb_v46_0_SPLB_Rst : std_logic_vector(0 to 15);
-  signal plb_v46_0_Sl_MBusy : std_logic_vector(0 to 31);
-  signal plb_v46_0_Sl_MIRQ : std_logic_vector(0 to 31);
-  signal plb_v46_0_Sl_MRdErr : std_logic_vector(0 to 31);
-  signal plb_v46_0_Sl_MWrErr : std_logic_vector(0 to 31);
-  signal plb_v46_0_Sl_SSize : std_logic_vector(0 to 31);
-  signal plb_v46_0_Sl_addrAck : std_logic_vector(0 to 15);
-  signal plb_v46_0_Sl_rdBTerm : std_logic_vector(0 to 15);
-  signal plb_v46_0_Sl_rdComp : std_logic_vector(0 to 15);
-  signal plb_v46_0_Sl_rdDAck : std_logic_vector(0 to 15);
-  signal plb_v46_0_Sl_rdDBus : std_logic_vector(0 to 2047);
-  signal plb_v46_0_Sl_rdWdAddr : std_logic_vector(0 to 63);
-  signal plb_v46_0_Sl_rearbitrate : std_logic_vector(0 to 15);
-  signal plb_v46_0_Sl_wait : std_logic_vector(0 to 15);
-  signal plb_v46_0_Sl_wrBTerm : std_logic_vector(0 to 15);
-  signal plb_v46_0_Sl_wrComp : std_logic_vector(0 to 15);
-  signal plb_v46_0_Sl_wrDAck : std_logic_vector(0 to 15);
+  signal plb_v46_0_PLB_wrPrim : std_logic_vector(0 to 16);
+  signal plb_v46_0_SPLB_Rst : std_logic_vector(0 to 16);
+  signal plb_v46_0_Sl_MBusy : std_logic_vector(0 to 33);
+  signal plb_v46_0_Sl_MIRQ : std_logic_vector(0 to 33);
+  signal plb_v46_0_Sl_MRdErr : std_logic_vector(0 to 33);
+  signal plb_v46_0_Sl_MWrErr : std_logic_vector(0 to 33);
+  signal plb_v46_0_Sl_SSize : std_logic_vector(0 to 33);
+  signal plb_v46_0_Sl_addrAck : std_logic_vector(0 to 16);
+  signal plb_v46_0_Sl_rdBTerm : std_logic_vector(0 to 16);
+  signal plb_v46_0_Sl_rdComp : std_logic_vector(0 to 16);
+  signal plb_v46_0_Sl_rdDAck : std_logic_vector(0 to 16);
+  signal plb_v46_0_Sl_rdDBus : std_logic_vector(0 to 2175);
+  signal plb_v46_0_Sl_rdWdAddr : std_logic_vector(0 to 67);
+  signal plb_v46_0_Sl_rearbitrate : std_logic_vector(0 to 16);
+  signal plb_v46_0_Sl_wait : std_logic_vector(0 to 16);
+  signal plb_v46_0_Sl_wrBTerm : std_logic_vector(0 to 16);
+  signal plb_v46_0_Sl_wrComp : std_logic_vector(0 to 16);
+  signal plb_v46_0_Sl_wrDAck : std_logic_vector(0 to 16);
   signal ppc440_0_EICC440EXTIRQ : std_logic;
   signal ppc440_0_PPC440MC_MCMIADDRREADYTOACCEPT : std_logic;
   signal ppc440_0_PPC440MC_MCMIREADDATA : std_logic_vector(0 to 127);
@@ -1772,6 +1825,7 @@ architecture STRUCTURE of system is
   attribute BOX_TYPE of xps_intc_0_wrapper : component is "user_black_box";
   attribute BOX_TYPE of xps_tft_0_wrapper : component is "user_black_box";
   attribute BOX_TYPE of xps_ps2_0_wrapper : component is "user_black_box";
+  attribute BOX_TYPE of plb2wb_encoder_0_wrapper : component is "user_black_box";
 
 begin
 
@@ -1787,6 +1841,7 @@ begin
   xps_tft_0_TFT_DE_pin <= xps_tft_0_TFT_DE;
   xps_tft_0_TFT_VSYNC_pin <= xps_tft_0_TFT_VSYNC;
   xps_tft_0_TFT_DVI_CLK_P_pin <= xps_tft_0_TFT_DVI_CLK_P;
+  plb2wb_encoder_0_enc_data <= plb2wb_encoder_0_enc_data_pin;
   pgassign5(0 to 6) <= B"0000000";
   pgassign6(0 to 0) <= B"0";
   fpga_0_DDR2_SDRAM_DDR2_CS_N_pin <= pgassign1(0);
@@ -1794,8 +1849,9 @@ begin
   fpga_0_FLASH_Mem_CEN_pin <= pgassign3(0);
   fpga_0_FLASH_Mem_OEN_pin <= pgassign4(0);
   fpga_0_FLASH_Mem_A_pin_vslice_7_30_concat(7 to 30) <= pgassign7(7 to 30);
-  pgassign8(11) <= RS232_Uart_1_Interrupt;
-  pgassign8(10) <= DIP_Switches_8Bit_IP2INTC_Irpt;
+  pgassign8(12) <= RS232_Uart_1_Interrupt;
+  pgassign8(11) <= DIP_Switches_8Bit_IP2INTC_Irpt;
+  pgassign8(10) <= plb2wb_encoder_0_IP2INTC_Irpt;
   pgassign8(9) <= xps_ps2_0_IP2INTC_Irpt_2;
   pgassign8(8) <= xps_ps2_0_IP2INTC_Irpt_1;
   pgassign8(7) <= xps_tft_0_IP2INTC_Irpt;
@@ -3254,6 +3310,55 @@ begin
       PS2_2_CLK_I => xps_ps2_0_PS2_2_CLK_I,
       PS2_2_CLK_O => xps_ps2_0_PS2_2_CLK_O,
       PS2_2_CLK_T => xps_ps2_0_PS2_2_CLK_T
+    );
+
+  plb2wb_encoder_0 : plb2wb_encoder_0_wrapper
+    port map (
+      enc_data => plb2wb_encoder_0_enc_data,
+      enc_clk => clk_25_0000MHz,
+      SPLB_Clk => clk_100_0000MHzPLL0_ADJUST,
+      SPLB_Rst => plb_v46_0_SPLB_Rst(16),
+      PLB_ABus => plb_v46_0_PLB_ABus,
+      PLB_UABus => plb_v46_0_PLB_UABus,
+      PLB_PAValid => plb_v46_0_PLB_PAValid,
+      PLB_SAValid => plb_v46_0_PLB_SAValid,
+      PLB_rdPrim => plb_v46_0_PLB_rdPrim(16),
+      PLB_wrPrim => plb_v46_0_PLB_wrPrim(16),
+      PLB_masterID => plb_v46_0_PLB_masterID(0 to 0),
+      PLB_abort => plb_v46_0_PLB_abort,
+      PLB_busLock => plb_v46_0_PLB_busLock,
+      PLB_RNW => plb_v46_0_PLB_RNW,
+      PLB_BE => plb_v46_0_PLB_BE,
+      PLB_MSize => plb_v46_0_PLB_MSize,
+      PLB_size => plb_v46_0_PLB_size,
+      PLB_type => plb_v46_0_PLB_type,
+      PLB_lockErr => plb_v46_0_PLB_lockErr,
+      PLB_wrDBus => plb_v46_0_PLB_wrDBus,
+      PLB_wrBurst => plb_v46_0_PLB_wrBurst,
+      PLB_rdBurst => plb_v46_0_PLB_rdBurst,
+      PLB_wrPendReq => plb_v46_0_PLB_wrPendReq,
+      PLB_rdPendReq => plb_v46_0_PLB_rdPendReq,
+      PLB_wrPendPri => plb_v46_0_PLB_wrPendPri,
+      PLB_rdPendPri => plb_v46_0_PLB_rdPendPri,
+      PLB_reqPri => plb_v46_0_PLB_reqPri,
+      PLB_TAttribute => plb_v46_0_PLB_TAttribute,
+      Sl_addrAck => plb_v46_0_Sl_addrAck(16),
+      Sl_SSize => plb_v46_0_Sl_SSize(32 to 33),
+      Sl_wait => plb_v46_0_Sl_wait(16),
+      Sl_rearbitrate => plb_v46_0_Sl_rearbitrate(16),
+      Sl_wrDAck => plb_v46_0_Sl_wrDAck(16),
+      Sl_wrComp => plb_v46_0_Sl_wrComp(16),
+      Sl_wrBTerm => plb_v46_0_Sl_wrBTerm(16),
+      Sl_rdDBus => plb_v46_0_Sl_rdDBus(2048 to 2175),
+      Sl_rdWdAddr => plb_v46_0_Sl_rdWdAddr(64 to 67),
+      Sl_rdDAck => plb_v46_0_Sl_rdDAck(16),
+      Sl_rdComp => plb_v46_0_Sl_rdComp(16),
+      Sl_rdBTerm => plb_v46_0_Sl_rdBTerm(16),
+      Sl_MBusy => plb_v46_0_Sl_MBusy(32 to 33),
+      Sl_MWrErr => plb_v46_0_Sl_MWrErr(32 to 33),
+      Sl_MRdErr => plb_v46_0_Sl_MRdErr(32 to 33),
+      Sl_MIRQ => plb_v46_0_Sl_MIRQ(32 to 33),
+      IP2INTC_Irpt => plb2wb_encoder_0_IP2INTC_Irpt
     );
 
   iobuf_0 : IOBUF

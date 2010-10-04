@@ -12,6 +12,7 @@ UserCmd1:
 UserCmd1Type: 0
 UserCmd2: 
 UserCmd2Type: 0
+ClockInfo: USE_UNIQUE_CLOCK_PRIMS=FALSE|
 GenSimTB: 0
 SdkExportBmmBit: 1
 SdkExportDir: SDK/SDK_Export
@@ -102,6 +103,26 @@ ProgStart:
 StackSize: 
 HeapSize: 
 LinkerScript: 
+ProgCCFlags: 
+CompileInXps: 1
+NonXpsApp: 0
+SwProj: TestApp_wb-encoder
+Processor: ppc440_0
+Executable: TestApp_wb-encoder/executable.elf
+Source: TestApp_wb-encoder/src/wb-encoder_tapp.c
+Source: TestApp_wb-encoder/src/wb-encoder.c
+Header: TestApp_wb-encoder/src/wb-encoder.h
+DefaultInit: EXECUTABLE
+InitBram: 0
+Active: 1
+CompilerOptLevel: 2
+GlobPtrOpt: 0
+DebugSym: 1
+ProfileFlag: 0
+ProgStart: 
+StackSize: 
+HeapSize: 
+LinkerScript: TestApp_wb-encoder/src/TestApp_wb-encoder_LinkSrc.ld
 ProgCCFlags: 
 CompileInXps: 1
 NonXpsApp: 0
