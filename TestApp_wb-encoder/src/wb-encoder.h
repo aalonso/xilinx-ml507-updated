@@ -24,6 +24,7 @@
  * Include files
  */
 #include "xstatus.h"
+#include "xil_io.h"
 #include "xil_types.h"
 #include "xil_assert.h"
 /*

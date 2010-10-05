@@ -7,7 +7,7 @@
 <messages>
 <msg type="warning" file="EDK" num="0" delta="new" ><arg fmt="%s" index="1">INFO:Security:67 - XILINXD_LICENSE_FILE is set to &apos;/opt/Xilinx/12.1/ISE_DS/EDK/data/core_licenses&apos; in /home/aalonso/.flexlmrc.
 INFO:Security:66 - Your license for &apos;XPS&apos; is for evaluation use only.
-WARNING:Security:42 - Your license support version &apos;2010.10&apos; for XPS expires in 26 days after which you will not qualify for Xilinx software updates or new releases.
+WARNING:Security:42 - Your license support version &apos;2010.10&apos; for XPS expires in 25 days after which you will not qualify for Xilinx software updates or new releases.
 
 </arg>
 </msg>
@@ -147,13 +147,13 @@ WARNING:Security:42 - Your license support version &apos;2010.10&apos; for XPS e
 <msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">xps_ps2</arg> INSTANCE:<arg fmt="%s" index="2">xps_ps2_0</arg> - <arg fmt="%s" index="3">/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_ps2_v1_01_b/data/xps_ps2_v2_1_0.mpd line 71</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_SPLB_NUM_MASTERS</arg> value to <arg fmt="%s" index="7">2</arg>
 </msg>
 
-<msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">plb2wb_encoder</arg> INSTANCE:<arg fmt="%s" index="2">plb2wb_encoder_0</arg> - <arg fmt="%s" index="3">/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_03_a/data/plb2wb_encoder_v2_1_0.mpd line 26</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_SPLB_NUM_MASTERS</arg> value to <arg fmt="%s" index="7">2</arg>
+<msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">plb2wb_encoder</arg> INSTANCE:<arg fmt="%s" index="2">plb2wb_encoder_0</arg> - <arg fmt="%s" index="3">/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v2_00_a/data/plb2wb_encoder_v2_1_0.mpd line 26</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_SPLB_NUM_MASTERS</arg> value to <arg fmt="%s" index="7">2</arg>
 </msg>
 
-<msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">plb2wb_encoder</arg> INSTANCE:<arg fmt="%s" index="2">plb2wb_encoder_0</arg> - <arg fmt="%s" index="3">/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_03_a/data/plb2wb_encoder_v2_1_0.mpd line 27</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_SPLB_MID_WIDTH</arg> value to <arg fmt="%s" index="7">1</arg>
+<msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">plb2wb_encoder</arg> INSTANCE:<arg fmt="%s" index="2">plb2wb_encoder_0</arg> - <arg fmt="%s" index="3">/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v2_00_a/data/plb2wb_encoder_v2_1_0.mpd line 27</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_SPLB_MID_WIDTH</arg> value to <arg fmt="%s" index="7">1</arg>
 </msg>
 
-<msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">plb2wb_encoder</arg> INSTANCE:<arg fmt="%s" index="2">plb2wb_encoder_0</arg> - <arg fmt="%s" index="3">/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_03_a/data/plb2wb_encoder_v2_1_0.mpd line 31</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_SPLB_SMALLEST_MASTER</arg> value to <arg fmt="%s" index="7">64</arg>
+<msg type="info" file="EDK" num="1560" delta="new" >IPNAME:<arg fmt="%s" index="1">plb2wb_encoder</arg> INSTANCE:<arg fmt="%s" index="2">plb2wb_encoder_0</arg> - <arg fmt="%s" index="3">/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v2_00_a/data/plb2wb_encoder_v2_1_0.mpd line 31</arg> - <arg fmt="%s" index="4">tool</arg> is overriding <arg fmt="%s" index="5">PARAMETER</arg> <arg fmt="%s" index="6">C_SPLB_SMALLEST_MASTER</arg> value to <arg fmt="%s" index="7">64</arg>
 </msg>
 
 <msg type="info" file="EDK" num="1563" delta="new" >IPNAME:<arg fmt="%s" index="1">xps_ethernetlite</arg> INSTANCE:<arg fmt="%s" index="2">Ethernet_MAC</arg> - <arg fmt="%s" index="3">/home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.mhs line 218</arg> - <arg fmt="%s" index="4">This design requires design constraints to guarantee performance.

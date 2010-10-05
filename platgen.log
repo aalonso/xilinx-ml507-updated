@@ -9,7 +9,7 @@ WARNING:EDK - INFO:Security:67 - XILINXD_LICENSE_FILE is set to
    '/opt/Xilinx/12.1/ISE_DS/EDK/data/core_licenses' in /home/aalonso/.flexlmrc.
    INFO:Security:66 - Your license for 'XPS' is for evaluation use only.
    WARNING:Security:42 - Your license support version '2010.10' for XPS expires
-   in 26 days after which you will not qualify for Xilinx software updates or
+   in 25 days after which you will not qualify for Xilinx software updates or
    new releases.
 
 
@@ -226,15 +226,15 @@ INFO:EDK:1560 - IPNAME:xps_ps2 INSTANCE:xps_ps2_0 -
    ta/xps_ps2_v2_1_0.mpd line 71 - tool is overriding PARAMETER
    C_SPLB_NUM_MASTERS value to 2
 INFO:EDK:1560 - IPNAME:plb2wb_encoder INSTANCE:plb2wb_encoder_0 -
-   /home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_03
+   /home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v2_00
    _a/data/plb2wb_encoder_v2_1_0.mpd line 26 - tool is overriding PARAMETER
    C_SPLB_NUM_MASTERS value to 2
 INFO:EDK:1560 - IPNAME:plb2wb_encoder INSTANCE:plb2wb_encoder_0 -
-   /home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_03
+   /home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v2_00
    _a/data/plb2wb_encoder_v2_1_0.mpd line 27 - tool is overriding PARAMETER
    C_SPLB_MID_WIDTH value to 1
 INFO:EDK:1560 - IPNAME:plb2wb_encoder INSTANCE:plb2wb_encoder_0 -
-   /home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_03
+   /home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v2_00
    _a/data/plb2wb_encoder_v2_1_0.mpd line 31 - tool is overriding PARAMETER
    C_SPLB_SMALLEST_MASTER value to 64
 
@@ -343,10 +343,10 @@ ClkGen elaborate status: PASSED
 Writing HDL for elaborated instances ...
 
 Inserting wrapper level ...
-Completion time: 1.00 seconds
+Completion time: 0.00 seconds
 
 Constructing platform-level connectivity ...
-Completion time: 0.00 seconds
+Completion time: 1.00 seconds
 
 Writing (top-level) BMM ...
 
@@ -452,4 +452,4 @@ NGCBUILD
 
 Rebuilding cache ...
 
-Total run time: 476.00 seconds
+Total run time: 481.00 seconds

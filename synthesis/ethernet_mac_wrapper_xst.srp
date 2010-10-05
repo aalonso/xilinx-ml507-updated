@@ -2105,6 +2105,8 @@ XSTHandler: XST: HDL Analysis
 XSTHandler: XST: HDL Synthesis
 XSTHandler: XST: Advanced HDL Synthesis
 XSTHandler: XST: Low Level Synthesis
+XSTHandler: XST: Partition Report
+XSTHandler: XST: Final Report
 
 Successfully generated unit: <ethernet_mac_wrapper_fifo_generator_v4_3>.
 
@@ -2715,7 +2717,7 @@ Delay:               1.180ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 85.00 secs
-Total CPU time to Xst completion: 42.45 secs
+Total CPU time to Xst completion: 44.09 secs
  
 --> 
 

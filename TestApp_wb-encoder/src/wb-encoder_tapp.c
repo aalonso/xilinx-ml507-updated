@@ -21,9 +21,13 @@
  * Include files
  */
 #include "xparameters.h"
-#include "xstatus.h"
 #include "stdio.h"
 #include "wb-encoder.h"
+#include "xil_types.h"
+#include "xil_assert.h"
+#include "xintc.h"
+
+
 /*
  * Constant definitions
  */
@@ -31,10 +35,7 @@
 #define CLOCKWISE		1
 #define KEYPRESSED		2
 
-/* Global wbEncoder instance */
-wbEncoder wbEncoderInst;
-/* Interrupt controller instance */
-XIntc intcInst;
+
 /* direction */
 int direc;
 /*
@@ -42,7 +43,7 @@ int direc;
  */
 
 int wbEncoderExample(wbEncoder *instPtr, u16 deviceId,
-						XIntc *intcPtr, u16 intcId, u16 intcMask);
+					 XIntc *intcPtr, u16 intcId, u16 intcMask);
 int wbEncoder_IntSetup(XIntc *intcPtr, wbEncoder *instPtr, 
 						u16 deviceId, u16 intcId, u16 intcMask);
 void wbEncoderIntHandler(void *callbackRef);
@@ -51,19 +52,30 @@ int
 main(int argc, char **argv)
 {
 	int status;
+	Xil_ICacheEnableRegion(0xc0000000);
+	Xil_DCacheEnableRegion(0xc0000000);
+	/* Global wbEncoder instance */
+	static wbEncoder wbEncoderInst;
+	/* Interrupt controller instance */
+	static XIntc intcInst;
 	
-	status = wbEncoderExample(&wbEncoderInst, PLB2WB_DEVICEID,
-							  &intcInst, INTC_DEVICEID, PLB2WB_ENCODER_INTC_MASK);
+	status = wbEncoderExample(&wbEncoderInst,
+							  (u16)(PLB2WB_ENCODER_DEVICEID),
+							  &intcInst, (u16)(INTC_DEVICEID),
+							  (u16)(PLB2WB_ENCODER_INTC_MASK));
 
 	if (status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
 	
+	Xil_DCacheDisable();
+	Xil_ICacheDisable();
+	
 	return XST_SUCCESS;
 }
 
-int wbEncoderExample(wbEncoder *instPrt, u16 deviceId,
-						XIntc *intcPtr, u16 intcId, u16 intcMask)
+int wbEncoderExample(wbEncoder *instPtr u16 deviceId,
+					 XIntc *intcPtr, u16 intcId, u16 intcMask)
 {
 	int status;
 
@@ -72,8 +84,8 @@ int wbEncoderExample(wbEncoder *instPrt, u16 deviceId,
         return XST_FAILURE;
     } 
 
-	status = wbEncoder_IntSetup((wbEncoder *)instPtr, deviceId, intcPtr,
-									intcId, intcMask);
+	status = wbEncoder_IntSetup(instPtr, deviceId, intcPtr,
+								intcId, intcMask);
     if (status != XST_SUCCESS) {
         return XST_FAILURE;
     } 
@@ -173,7 +185,7 @@ int wbEncoder_IntSetup(XIntc *intcPtr, wbEncoder *instPtr,
 	/* Initialize interrupt controller */
 	status = XIntc_Initialize(intcPtr, intcId);
 
-	if (status != XST_SUCESS )
+	if (status != XST_SUCCESS )
 		return status;
 	/* Hook interrupt service rutine */
 	status = XIntc_Connect(intcPtr, 

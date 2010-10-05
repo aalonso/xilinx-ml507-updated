@@ -466,12 +466,12 @@ END
 
 BEGIN plb2wb_encoder
  PARAMETER INSTANCE = plb2wb_encoder_0
- PARAMETER HW_VER = 1.03.a
+ PARAMETER HW_VER = 2.00.a
  PARAMETER C_BASEADDR = 0x81480000
  PARAMETER C_HIGHADDR = 0x8148FFFF
  BUS_INTERFACE SPLB = plb_v46_0
  PORT enc_data = plb2wb_encoder_0_enc_data
- PORT IP2INTC_Irpt = plb2wb_encoder_0_IP2INTC_Irpt
  PORT enc_clk = clk_25_0000MHz
+ PORT IP2INTC_Irpt = plb2wb_encoder_0_IP2INTC_Irpt
 END
 

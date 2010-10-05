@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2010-10-04T13:48:06</DateModified>
+  <DateModified>2010-10-05T13:45:57</DateModified>
   <ModuleName>plb2wb_encoder</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_02_a/devl/projnav/iseconfig/plb2wb_encoder.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_02_a/devl/projnav</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_02_a/devl/projnav/</ImplementationReportsDirectory>
   <DateInitialized>2010-10-04T13:48:06</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
