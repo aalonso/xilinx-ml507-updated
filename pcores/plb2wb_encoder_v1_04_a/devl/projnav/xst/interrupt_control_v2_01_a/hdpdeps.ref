@@ -1,0 +1,11 @@
+V3 5
+FL /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/interrupt_control_v2_01_a/hdl/vhdl/interrupt_control.vhd 2008/07/02.08:30:09 M.53d
+EN interrupt_control_v2_01_a/interrupt_control 1286304440 \
+      FL /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/interrupt_control_v2_01_a/hdl/vhdl/interrupt_control.vhd \
+      PB ieee/std_logic_1164 1270894585 PB ieee/std_logic_misc 1270894586 \
+      PB ieee/NUMERIC_STD 1270894586 LB proc_common_v3_00_a \
+      PB proc_common_v3_00_a/proc_common_pkg 1286304421 \
+      PB proc_common_v3_00_a/ipif_pkg 1286304435
+AR interrupt_control_v2_01_a/interrupt_control/implementation 1286304441 \
+      FL /opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/interrupt_control_v2_01_a/hdl/vhdl/interrupt_control.vhd \
+      EN interrupt_control_v2_01_a/interrupt_control 1286304440 CP std_logic

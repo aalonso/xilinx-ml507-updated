@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_04_a/devl/synthesis/plb2wb_encoder_xst.prj"
+-top plb2wb_encoder
+-p virtex5
+-ofn "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_04_a/devl/synthesis/plb2wb_encoder_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib plb2wb_encoder_v1_04_a

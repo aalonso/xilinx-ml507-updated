@@ -1,0 +1,18 @@
+V3 10
+FL /home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_04_a/hdl/vhdl/plb2wb_encoder.vhd 2010/10/05.13:43:01 M.53d
+EN work/plb2wb_encoder 1286304444 \
+      FL /home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_04_a/hdl/vhdl/plb2wb_encoder.vhd \
+      PB ieee/std_logic_1164 1270894585 PB ieee/std_logic_arith 1270894586 \
+      PB ieee/STD_LOGIC_UNSIGNED 1270894587 LB proc_common_v3_00_a \
+      PB proc_common_v3_00_a/proc_common_pkg 1286304421 \
+      PB proc_common_v3_00_a/ipif_pkg 1286304435 \
+      EN proc_common_v3_00_a/soft_reset 1286304428 LB interrupt_control_v2_01_a \
+      EN interrupt_control_v2_01_a/interrupt_control 1286304440 \
+      LB plbv46_slave_single_v1_01_a \
+      EN plbv46_slave_single_v1_01_a/plbv46_slave_single 1286304442
+AR work/plb2wb_encoder/IMP 1286304445 \
+      FL /home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_04_a/hdl/vhdl/plb2wb_encoder.vhd \
+      EN work/plb2wb_encoder 1286304444 \
+      CP plbv46_slave_single_v1_01_a/plbv46_slave_single \
+      CP proc_common_v3_00_a/soft_reset \
+      CP interrupt_control_v2_01_a/interrupt_control CP user_logic

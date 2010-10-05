@@ -1,0 +1,13 @@
+-batch 
+-create plb2wb_encoder 
+-ver 1.04.a 
+-dir "/home/aalonso/workspace/xlnx/xilinx-ml507-updated" 
+-lang verilog 
+-bus plbv46 s 
+-rst 
+-isc 1 
+-intrn 1 1 
+-reg 1 
+-xps 
+-ise 
+-driver 

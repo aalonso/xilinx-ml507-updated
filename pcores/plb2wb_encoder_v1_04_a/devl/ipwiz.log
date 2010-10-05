@@ -1,0 +1,201 @@
+
+----------------------------------------------------------------------------
+--                            Design Analysis                             --
+----------------------------------------------------------------------------
+Analyze pcore plb2wb_encoder ...
+
+INFO:EDK:3161 - connect reset input Bus2IP_Reset of component interrupt_control
+   to the soft reset...
+
+----------------------------------------------------------------------------
+--                            File Generation                             --
+----------------------------------------------------------------------------
+Creating HDL source directory ...
+Generating top peripheral VHDL template ...
+Generating stub user logic Verilog template ...
+HDL templates successfully generated ...
+Creating data directory ...
+Generating XPS inteface files ...
+WARNING:HDLParsers:3497 - Ignoring Verilog File
+   "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_0
+   4_a/data/../hdl/verilog/user_logic.v"
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/proc_common_pkg.vhd" in Library proc_common_v3_00_a.
+Package <proc_common_pkg> compiled.
+Package body <proc_common_pkg> compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/or_muxcy.vhd" in Library proc_common_v3_00_a.
+Entity <or_muxcy> compiled.
+Entity <or_muxcy> (Architecture <implementation>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/family_support.vhd" in Library proc_common_v3_00_a.
+Package <family_support> compiled.
+Package body <family_support> compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/counter_f.vhd" in Library proc_common_v3_00_a.
+Entity <counter_f> compiled.
+Entity <counter_f> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/soft_reset.vhd" in Library proc_common_v3_00_a.
+Entity <soft_reset> compiled.
+Entity <soft_reset> (Architecture <implementation>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/pselect_f.vhd" in Library proc_common_v3_00_a.
+Entity <pselect_f> compiled.
+Entity <pselect_f> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/or_gate128.vhd" in Library proc_common_v3_00_a.
+Entity <or_gate128> compiled.
+Entity <or_gate128> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/
+hdl/vhdl/ipif_pkg.vhd" in Library proc_common_v3_00_a.
+Package <ipif_pkg> compiled.
+Package body <ipif_pkg> compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_
+v1_01_a/hdl/vhdl/plb_address_decoder.vhd" in Library
+plbv46_slave_single_v1_01_a.
+Entity <plb_address_decoder> compiled.
+Entity <plb_address_decoder> (Architecture <IMP>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_
+v1_01_a/hdl/vhdl/plb_slave_attachment.vhd" in Library
+plbv46_slave_single_v1_01_a.
+Entity <plb_slave_attachment> compiled.
+Entity <plb_slave_attachment> (Architecture <implementation>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/interrupt_control_v2
+_01_a/hdl/vhdl/interrupt_control.vhd" in Library interrupt_control_v2_01_a.
+Entity <interrupt_control> compiled.
+Entity <interrupt_control> (Architecture <implementation>) compiled.
+Compiling vhdl file
+"/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_
+v1_01_a/hdl/vhdl/plbv46_slave_single.vhd" in Library
+plbv46_slave_single_v1_01_a.
+Entity <plbv46_slave_single> compiled.
+Entity <plbv46_slave_single> (Architecture <implementation>) compiled.
+Compiling vhdl file
+"/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_04_a
+/data/../hdl/vhdl/plb2wb_encoder.vhd" in Library plb2wb_encoder_v1_04_a.
+Entity <plb2wb_encoder> compiled.
+Entity <plb2wb_encoder> (Architecture <IMP>) compiled.
+
+
+Analyzing HDL attributes ...
+Entity name = plb2wb_encoder
+INFO:EDK:1607 - IPTYPE set to value : PERIPHERAL
+INFO:EDK:1511 - IMP_NETLIST set to value : TRUE
+INFO:EDK:1486 - HDL set to value : VHDL
+XPS interface files successfully generated ...
+Creating development directory ...
+Generating command option file ...
+Generating readme file ...
+Development misc files successfully generated ...
+Creating projnav directory ...
+Generating ProjNav support files ...
+ProjNav support files successfully generated ...
+Creating synthesis directory ...
+Generating XST synthesis support files ...
+XST synthesis support files successfully generated ...
+No BFM simulation files will be generated at this time ...
+Creating software driver data directory ...
+Generating software driver XPS interface (mdd/tcl) files ...
+Software driver data definition file (.mdd) successfully generated ...
+Software driver data generation file (.tcl) successfully generated ...
+Creating software driver src directory ...
+Generating software driver template files ...
+Software driver compile file (Makefile) successfully generated ...
+output user slave register(s) offset to software driver header ...
+output software reset offset to software driver header ...
+output interrupt control register(s) offset to software driver header ...
+Software driver header file (.h) successfully generated ...
+Software driver source file (.c) successfully generated ...
+Software driver SelfTest file (.c) successfully generated ...
+Software driver template files successfully generated ...
+
+----------------------------------------------------------------------------
+--                              Final Report                              --
+----------------------------------------------------------------------------
+Thank you for using Create and Import Peripheral Wizard! Please find your
+peripheral hardware templates under
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_04_a
+and peripheral software templates under
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/drivers/plb2wb_encoder_v1_04_a
+respectively.
+
+Peripheral Summary:
+
+  top name       : plb2wb_encoder
+  version        : 1.04.a
+  type           : PLB (v4.6) slave
+  features       : slave attachment
+                   soft reset
+                   interrupt control
+                   user s/w registers
+
+Address Block Summary:
+
+  user logic slv : C_BASEADDR + 0x00000000
+                 : C_BASEADDR + 0x000000FF
+  soft reset     : C_BASEADDR + 0x00000100
+                 : C_BASEADDR + 0x000001FF
+  interrupt      : C_BASEADDR + 0x00000200
+                 : C_BASEADDR + 0x000002FF
+
+File Summary
+
+  - HDL source -
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_04_a/
+hdl
+  top entity     : vhdl/plb2wb_encoder.vhd
+  user logic     : verilog/user_logic.v
+
+  - XPS interface -
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_04_a/
+data
+  mpd            : plb2wb_encoder_v2_1_0.mpd
+  pao            : plb2wb_encoder_v2_1_0.pao
+
+  - ISE project -
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_04_a/
+devl/projnav
+  ise project    : plb2wb_encoder.xise
+  tcl script     : plb2wb_encoder.tcl
+
+
+  - XST synthesis -
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_04_a/
+devl/synthesis
+  xst script     : plb2wb_encoder_xst.scr
+  xst project    : plb2wb_encoder_xst.prj
+
+  - Misc file -
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/plb2wb_encoder_v1_04_a/
+devl
+  help           : README.txt
+  option         : ipwiz.opt
+  log            : ipwiz.log
+
+  - Driver source -
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/drivers/plb2wb_encoder_v1_04_a
+/src
+  makefile       : Makefile
+  header         : plb2wb_encoder.h
+  source         : plb2wb_encoder.c
+  selftest       : plb2wb_encoder_selftest.c
+
+  - Driver interface -
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/drivers/plb2wb_encoder_v1_04_a
+/data
+  mdd            : plb2wb_encoder_v2_1_0.mdd
+  tcl            : plb2wb_encoder_v2_1_0.tcl
+
+
