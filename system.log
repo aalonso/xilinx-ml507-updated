@@ -16242,3 +16242,213 @@ Done writing filter settings to:
 Done writing Tab View settings to:
 	/home/aalonso/workspace/xlnx/xilinx-ml507-updated/__xps/system.gui
 
+Xilinx Platform Studio (XPS)
+Xilinx EDK 12.1 Build EDK_MS1.53d
+
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Generating Block Diagram to Buffer 
+
+/opt/Xilinx/12.1/ISE_DS/EDK/data/xml/xslscripts/ConvertEdwardVersion.xsl
+
+Generated Block Diagram SVG
+
+At Local date and time: Wed Oct  6 16:21:10 2010
+ make -f system.make programclean started...
+
+rm -f TestApp_Memory_ppc440_0/executable.elf 
+rm -f TestApp_Peripheral_ppc440_0/executable.elf 
+rm -f TestApp_Peripheral_ppc440_0_tft/executable.elf 
+rm -f TestApp_wbEncoder/executable.elf 
+
+
+Done!
+
+At Local date and time: Wed Oct  6 16:21:33 2010
+ make -f system.make download started...
+
+*********************************************
+Downloading Bitstream onto the target board
+*********************************************
+impact -batch etc/download.cmd
+Release 12.1 - iMPACT M.53d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+Preference Table
+Name                 Setting             
+StartupClock         Auto_Correction     
+AutoSignature        False               
+KeepSVF              False               
+ConcurrentMode       False               
+UseHighz             False               
+ConfigOnFailure      Stop                
+UserLevel            Novice              
+MessageLevel         Detailed            
+svfUseTime           false               
+SpiByteSwap          Auto_Correction     
+AutoInfer            false               
+SvfPlayDisplayComments false               
+AutoDetecting cable. Please wait.
+Reusing A0010002 key.
+Reusing 24010002 key.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+File version of /opt/Xilinx/12.1/ISE_DS/ISE/bin/lin64/xusbdfwu.hex = 1030.
+File version of /usr/share/xusbdfwu.hex = 1030.
+ Using libusb.
+ Kernel release = 2.6.34.7-56.fc13.x86_64.
+ Max current requested during enumeration is 300 mA.
+Type = 0x0005.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 2401.
+File version of /opt/Xilinx/12.1/ISE_DS/ISE/data/xusb_xp2.hex = 2401.
+Firmware hex file version = 2401.
+PLD file version = 200Dh.
+ PLD version = 200Dh.
+Type = 0x0005.
+ESN option: 000013E9185A01.
+Identifying chain contents...
+'0': : Manufacturer's ID = Xilinx xc5vfx70t, Version : 6
+INFO:iMPACT:1777 - 
+   Reading 
+/opt/Xilinx/12.1/ISE_DS/ISE/virtex5/data/xc5vfx70t.bsd...
+
+INFO:iMPACT:501 - '1': Added Device xc5vfx70t successfully.
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+'1': : Manufacturer's ID = Xilinx xccace, Version : 0
+INFO:iMPACT:1777 - 
+   Reading /opt/Xilinx/12.1/ISE_DS/ISE/acecf/data/xccace.bsd...
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+'2': : Manufacturer's ID = Xilinx xc95144xl, Version : 5
+INFO:iMPACT:501 - '1': Added Device xccace successfully.
+
+INFO:iMPACT:1777 - 
+   Reading /opt/Xilinx/12.1/ISE_DS/ISE/xc9500xl/data/xc95144xl.bsd...
+
+INFO:iMPACT:501 - '1': Added Device xc95144xl successfully.
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+'3': : Manufacturer's ID = Xilinx xcf32p, Version : 15
+INFO:iMPACT:1777 - 
+   Reading /opt/Xilinx/12.1/ISE_DS/ISE/xcfp/data/xcf32p.bsd...
+INFO:iMPACT:501 - '1': Added Device xcf32p successfully.
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+'4': : Manufacturer's ID = Xilinx xcf32p, Version : 15
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+done.
+Elapsed time =      1 sec.
+Elapsed time =      0 sec.
+'5': Loading file 'implementation/download.bit' ...
+INFO:iMPACT:501 - '1': Added Device xcf32p successfully.
+
+done.
+UserID read from the bitstream file = 0xFFFFFFFF.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+INFO:iMPACT:501 - '5': Added Device xc5vfx70t successfully.
+
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+5: Device Temperature: Current Reading:   31.18 C, Min. Reading:   28.72 C, Max.
+Reading:   31.18 C
+5: VCCINT Supply: Current Reading:   0.996 V, Min. Reading:   0.993 V, Max.
+Reading:   1.002 V
+5: VCCAUX Supply: Current Reading:   2.479 V, Min. Reading:   2.479 V, Max.
+Reading:   2.487 V
+'5': Programming device...
+ Match_cycle = 2.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+ Match_cycle = 2.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+'5': Programmed successfully.
+Elapsed time =     10 sec.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 1011 1110 0000 1011 1000 0000 
+INFO:iMPACT:579 - '5': Completed downloading bit file to device.
+INFO:iMPACT:188 - '5': Programming completed successfully.
+INFO:iMPACT - '5': Checking done pin....done.
+
+
+
+Done!
+
+xterm -e xmd -xmp system.xmp -opt etc/xmd_ppc440_0.opt&
+
+At Local date and time: Wed Oct  6 16:22:29 2010
+ make -f system.make program started...
+
+powerpc-eabi-gcc -O2 TestApp_Memory_ppc440_0/src/TestApp_Memory.c  -o TestApp_Memory_ppc440_0/executable.elf \
+	    -mcpu=440  -Wl,-T -Wl,TestApp_Memory_ppc440_0/src/TestApp_Memory_LinkScr.ld  -g    -I./ppc440_0/include/  -L./ppc440_0/lib/  \
+	  
+powerpc-eabi-size TestApp_Memory_ppc440_0/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5758	    316	   6192	  12266	   2fea	TestApp_Memory_ppc440_0/executable.elf
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0/src/TestApp_Peripheral.c TestApp_Peripheral_ppc440_0/src/xintc_tapp_example.c TestApp_Peripheral_ppc440_0/src/xgpio_tapp_example.c TestApp_Peripheral_ppc440_0/src/xgpio_intr_tapp_example.c TestApp_Peripheral_ppc440_0/src/xiic_selftest_example.c TestApp_Peripheral_ppc440_0/src/xemaclite_polled_example.c TestApp_Peripheral_ppc440_0/src/xemaclite_intr_example.c TestApp_Peripheral_ppc440_0/src/xemaclite_example_util.c TestApp_Peripheral_ppc440_0/src/xsysace_selftest_example.c TestApp_Peripheral_ppc440_0/src/xwdttb_selftest_example.c TestApp_Peripheral_ppc440_0/src/xwdttb_intr_example.c TestApp_Peripheral_ppc440_0/src/xtmrctr_selftest_example.c TestApp_Peripheral_ppc440_0/src/xtmrctr_intr_example.c  -o TestApp_Peripheral_ppc440_0/executable.elf \
+	    -mcpu=440  -Wl,-T -Wl,TestApp_Peripheral_ppc440_0/src/TestApp_Peripheral_LinkScr.ld  -g    -I./ppc440_0/include/  -ITestApp_Peripheral_ppc440_0/src/  -L./ppc440_0/lib/  \
+	  
+powerpc-eabi-size TestApp_Peripheral_ppc440_0/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41270	    580	  20208	  62058	   f26a	TestApp_Peripheral_ppc440_0/executable.elf
+powerpc-eabi-gcc -O2 TestApp_Peripheral_ppc440_0_tft/src/xps-tft-colorbar.c  -o TestApp_Peripheral_ppc440_0_tft/executable.elf \
+	    -mcpu=440   -g    -I./ppc440_0/include/  -L./ppc440_0/lib/  \
+	  
+powerpc-eabi-size TestApp_Peripheral_ppc440_0_tft/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12434	   1492	   8276	  22202	   56ba	TestApp_Peripheral_ppc440_0_tft/executable.elf
+powerpc-eabi-gcc -O2 TestApp_wbEncoder/src/wbEncoder_tapp.c  -o TestApp_wbEncoder/executable.elf \
+	    -mcpu=440  -Wl,-T -Wl,TestApp_wbEncoder/src/TestApp_wb-encoder_LinkSrc.ld  -g    -I./ppc440_0/include/  -L./ppc440_0/lib/  \
+	  
+TestApp_wbEncoder/src/wbEncoder_tapp.c: In function ‘main’:
+
+TestApp_wbEncoder/src/wbEncoder_tapp.c:46: error: ‘status’ undeclared (first use in this function)
+TestApp_wbEncoder/src/wbEncoder_tapp.c:46: error: (Each undeclared identifier is reported only once
+TestApp_wbEncoder/src/wbEncoder_tapp.c:46: error: for each function it appears in.)
+make: *** [TestApp_wbEncoder/executable.elf] Error 1
+
+
+
+Done!
+
+At Local date and time: Wed Oct  6 16:22:54 2010
+ make -f system.make program started...
+
+powerpc-eabi-gcc -O2 TestApp_wbEncoder/src/wbEncoder_tapp.c  -o TestApp_wbEncoder/executable.elf \
+	    -mcpu=440  -Wl,-T -Wl,TestApp_wbEncoder/src/TestApp_wb-encoder_LinkSrc.ld  -g    -I./ppc440_0/include/  -L./ppc440_0/lib/  \
+	  
+powerpc-eabi-size TestApp_wbEncoder/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11678	    444	  16784	  28906	   70ea	TestApp_wbEncoder/executable.elf
+
+
+Done!
+
+Writing filter settings....
+
+Done writing filter settings to:
+	/home/aalonso/workspace/xlnx/xilinx-ml507-updated/__xps/system.filters
+
+Done writing Tab View settings to:
+	/home/aalonso/workspace/xlnx/xilinx-ml507-updated/__xps/system.gui
+

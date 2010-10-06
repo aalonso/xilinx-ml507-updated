@@ -1,5 +1,5 @@
 
-<EDKSYSTEM EDKVERSION="12.1" EDWVERSION="1.2" TIMESTAMP="Wed Oct  6 15:56:29 2010">
+<EDKSYSTEM EDKVERSION="12.1" EDWVERSION="1.2" TIMESTAMP="Wed Oct  6 16:21:58 2010">
 
   <SYSTEMINFO ARCH="virtex5" DEVICE="xc5vfx70t" PACKAGE="ff1136" PART="xc5vfx70tff1136-1" SOURCE="/home/aalonso/workspace/xlnx/xilinx-ml507-updated/system.xmp" SPEEDGRADE="-1"/>
 

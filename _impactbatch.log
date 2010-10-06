@@ -1,6 +1,6 @@
 iMPACT Version: Apr  9 2010 22:15:09
 
-iMPACT log file Started on Wed Oct  6 15:56:09 2010
+iMPACT log file Started on Wed Oct  6 16:21:33 2010
 
 Preference Table
 Name                 Setting             
@@ -66,7 +66,7 @@ INFO:iMPACT:501 - '1': Added Device xcf32p successfully.
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
 done.
-Elapsed time =      0 sec.
+Elapsed time =      1 sec.
 Elapsed time =      0 sec.
 '5': Loading file 'implementation/download.bit' ...
 done.
@@ -78,8 +78,8 @@ INFO:iMPACT:501 - '5': Added Device xc5vfx70t successfully.
 Maximum TCK operating frequency for this device chain: 10000000.
 Validating chain...
 Boundary-scan chain validated successfully.
-5: Device Temperature: Current Reading:   35.12 C, Min. Reading:   33.15 C, Max.Reading:   35.12 C
-5: VCCINT Supply: Current Reading:   0.996 V, Min. Reading:   0.996 V, Max.Reading:   1.002 V
+5: Device Temperature: Current Reading:   31.18 C, Min. Reading:   28.72 C, Max.Reading:   31.18 C
+5: VCCINT Supply: Current Reading:   0.996 V, Min. Reading:   0.993 V, Max.Reading:   1.002 V
 5: VCCAUX Supply: Current Reading:   2.479 V, Min. Reading:   2.479 V, Max.Reading:   2.487 V
 '5': Programming device...
  Match_cycle = 2.
