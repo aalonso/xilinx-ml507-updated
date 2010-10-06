@@ -106,12 +106,10 @@ LinkerScript:
 ProgCCFlags: 
 CompileInXps: 1
 NonXpsApp: 0
-SwProj: TestApp_wb-encoder
+SwProj: TestApp_wbEncoder
 Processor: ppc440_0
-Executable: TestApp_wb-encoder/executable.elf
-Source: TestApp_wb-encoder/src/wb-encoder_tapp.c
-Source: TestApp_wb-encoder/src/wb-encoder.c
-Header: TestApp_wb-encoder/src/wb-encoder.h
+Executable: TestApp_wbEncoder/executable.elf
+Source: TestApp_wbEncoder/src/wbEncoder_tapp.c
 DefaultInit: EXECUTABLE
 InitBram: 0
 Active: 1
@@ -122,7 +120,7 @@ ProfileFlag: 0
 ProgStart: 
 StackSize: 
 HeapSize: 
-LinkerScript: TestApp_wb-encoder/src/TestApp_wb-encoder_LinkSrc.ld
+LinkerScript: TestApp_wbEncoder/src/TestApp_wb-encoder_LinkSrc.ld
 ProgCCFlags: 
 CompileInXps: 1
 NonXpsApp: 0

@@ -8,6 +8,7 @@
 
 /***************************** Include Files *******************************/
 
+#include "xil_assert.h"
 #include "plb2wb_encoder.h"
 
 /************************** Function Definitions ***************************/
@@ -26,7 +27,7 @@
  */
 int PLB2WB_ENCODER_Initialize(wbEncoder *instPtr)
 {
-	Xil_assertNonvoid(instPtr != NULL);
+	Xil_AssertNonvoid(instPtr != NULL);
 
 	instPtr->deviceId = XPAR_PLB2WB_ENCODER_0_DEVICE_ID;
 	instPtr->baseAddress = XPAR_PLB2WB_ENCODER_0_BASEADDR;
@@ -51,8 +52,8 @@ int PLB2WB_ENCODER_Initialize(wbEncoder *instPtr)
 int PLB2WB_ENCODER_EnableInterrupt(wbEncoder *instPtr)
 {
 	Xuint32 baseaddr;
-	Xil_assertVoid(instPtr != NULL);
-	Xil_assertVoid(instPtr->isReady == XIL_COMPONENT_IS_READY);
+	Xil_AssertVoid(instPtr != NULL);
+	Xil_AssertVoid(instPtr->isReady == XIL_COMPONENT_IS_READY);
 
 	baseaddr = (Xuint32) instPtr->baseAddress;
 
@@ -84,8 +85,8 @@ int PLB2WB_ENCODER_EnableInterrupt(wbEncoder *instPtr)
 int PLB2WB_ENCODER_DisableInterrupt(wbEncoder *instPtr)
 {
 	Xuint32 baseaddr, regVal;
-	Xil_assertVoid(instPtr != NULL);
-	Xil_assertVoid(instPtr->isReady == XIL_COMPONENT_IS_READY);
+	Xil_AssertVoid(instPtr != NULL);
+	Xil_AssertVoid(instPtr->isReady == XIL_COMPONENT_IS_READY);
 
 	baseaddr = (Xuint32) instPtr->baseAddress;
 	
@@ -116,8 +117,8 @@ int PLB2WB_ENCODER_DisableInterrupt(wbEncoder *instPtr)
 int PLB2WB_ENCODER_ClearInterrupt(wbEncoder *instPtr)
 {
 	Xuint32 baseaddr, regVal;
-	Xil_assertVoid(instPtr != NULL);
-	Xil_assertVoid(instPtr->isReady == XIL_COMPONENT_IS_READY);
+	Xil_AssertVoid(instPtr != NULL);
+	Xil_AssertVoid(instPtr->isReady == XIL_COMPONENT_IS_READY);
 
 	baseaddr = (Xuint32) instPtr->baseAddress;
 	
@@ -143,17 +144,32 @@ int PLB2WB_ENCODER_ClearInterrupt(wbEncoder *instPtr)
  * @note    None.
  *
  */
-void PLB2WB_ENCODER_Intr_DefaultHandler(wbEncoder *instPtr)
+void PLB2WB_ENCODER_Intr_DefaultHandler(void *callbackRef)
 {
-	Xuint32 baseaddr;
+	Xuint32 baseaddr, regVal;
 	Xuint32 IntrStatus;
 	Xuint32 IpStatus;
+	wbEncoder *instPtr;
 
-	Xil_assertVoid(instPtr != NULL);
-	Xil_assertVoid(instPtr->isReady == XIL_COMPONENT_IS_READY);
+	instPtr = (wbEncoder *)(callbackRef);
+
+	Xil_AssertVoid(instPtr != NULL);
+	Xil_AssertVoid(instPtr->isReady == XIL_COMPONENT_IS_READY);
 	baseaddr = (Xuint32) instPtr->baseAddress;
 
 	xil_printf("User logic interrupt! \n\r");
+
+	/* Save prevoius value */
+	instPtr->readDelta = instPtr->readData;
+
+
+	regVal = PLB2WB_ENCODER_mReadReg(baseaddr,
+									 PLB2WB_ENCODER_SLV_REG0_OFFSET);
+
+	instPtr->readData = regVal & 0xE0;
+
+	xil_printf("data  = 0x%x \n\r", instPtr->readData);
+	xil_printf("delta = 0x%x \n\r", instPtr->readDelta);
 	
 	PLB2WB_ENCODER_ClearInterrupt(instPtr);
 

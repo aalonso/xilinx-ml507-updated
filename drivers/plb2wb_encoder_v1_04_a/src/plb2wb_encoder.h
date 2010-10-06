@@ -102,7 +102,7 @@ typedef struct{
  *
  */
 #define PLB2WB_ENCODER_mWriteReg(BaseAddress, RegOffset, Data) \
- 	xil_io_out32((BaseAddress) + (RegOffset), (Xuint32)(Data))
+ 	XIo_Out32((BaseAddress + RegOffset), (u32)(Data))
 
 /**
  *
@@ -122,8 +122,7 @@ typedef struct{
  *
  */
 #define PLB2WB_ENCODER_mReadReg(BaseAddress, RegOffset) \
- 	xil_io_in32((BaseAddress) + (RegOffset))
-
+ 	XIo_In32((BaseAddress) + (RegOffset))
 
 /**
  *
@@ -225,14 +224,14 @@ int PLB2WB_ENCODER_ClearInterrupt(wbEncoder *instPtr);
  *
  * Example interrupt controller handler.
  *
- * @param   instPtr is a pointer to the wbEncoder struct.
+ * @param   callbackRef is a pointer to void.
  *
  * @return  None.
  *
  * @note    None.
  *
  */
-void PLB2WB_ENCODER_Intr_DefaultHandler(wbEncoder *instPtr);
+void PLB2WB_ENCODER_Intr_DefaultHandler(void *callbackRef);
 
 /**
  *
