@@ -1,0 +1,1624 @@
+Release 12.1 Xflow M.53d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+xflow -wd implementation -p xc5vfx70tff1136-1 -implement xflow.opt system.ngc  
+PMSPEC -- Overriding Xilinx file
+</opt/Xilinx/12.1/ISE_DS/EDK/virtex5/data/virtex5.acd> with local file
+</opt/Xilinx/12.1/ISE_DS/ISE/virtex5/data/virtex5.acd>
+.... Copying flowfile /opt/Xilinx/12.1/ISE_DS/ISE/xilinx/data/fpga.flw into
+working directory
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/implementation 
+
+Using Flow File:
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/implementation/fpga.flw 
+Using Option File(s): 
+ /home/aalonso/workspace/xlnx/xilinx-ml507-updated/implementation/xflow.opt 
+
+Creating Script File ... 
+
+#----------------------------------------------#
+# Starting program ngdbuild
+# ngdbuild -p xc5vfx70tff1136-1 -nt timestamp -bm system.bmm
+"/home/aalonso/workspace/xlnx/xilinx-ml507-updated/implementation/system.ngc"
+-uc system.ucf system.ngd 
+#----------------------------------------------#
+Release 12.1 - ngdbuild M.53d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+</opt/Xilinx/12.1/ISE_DS/EDK/virtex5/data/virtex5.acd> with local file
+</opt/Xilinx/12.1/ISE_DS/ISE/virtex5/data/virtex5.acd>
+
+Command Line: /opt/Xilinx/12.1/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -p
+xc5vfx70tff1136-1 -nt timestamp -bm system.bmm
+/home/aalonso/workspace/xlnx/xilinx-ml507-updated/implementation/system.ngc -uc
+system.ucf system.ngd
+
+Reading NGO file
+"/home/aalonso/workspace/xlnx/xilinx-ml507-updated/implementation/system.ngc"
+...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "system.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:ConstraintSystem:134 - Constraint <INST
+   /system/EXPANDED/system/xps_tft_0/xps_tft_0\/TFT_CTRL_I\/tft_rst_d1_or000011_
+   INV_0 TNM = TNM_TFT_RST_xps_tft_0>: No appropriate instances for the TNM
+   constraint were found under block
+   "xps_tft_0/xps_tft_0/TFT_CTRL_I/tft_rst_d1_or000011_INV_0" (type=INV).
+
+WARNING:ConstraintSystem:134 - Constraint <INST
+   /system/EXPANDED/system/xps_tft_0/xps_tft_0\/TFT_CTRL_I\/VSYNC_U3\/V_bp_cnt_t
+   c_cmp_eq00001 TNM = TNM_TFT_CLOCK_xps_tft_0>: No appropriate instances for
+   the TNM constraint were found under block
+   "xps_tft_0/xps_tft_0/TFT_CTRL_I/VSYNC_U3/V_bp_cnt_tc_cmp_eq00001"
+   (type=LUT5).
+
+WARNING:ConstraintSystem:134 - Constraint <INST
+   /system/EXPANDED/system/xps_tft_0/xps_tft_0\/TFT_CTRL_I\/VSYNC_U3\/V_p_cnt_tc
+   _cmp_eq00001 TNM = TNM_TFT_CLOCK_xps_tft_0>: No appropriate instances for the
+   TNM constraint were found under block
+   "xps_tft_0/xps_tft_0/TFT_CTRL_I/VSYNC_U3/V_p_cnt_tc_cmp_eq00001" (type=LUT2).
+
+WARNING:ConstraintSystem:56 - Constraint <AREA_GROUP "DDR_CAPTURE_FFS" GROUP =
+   CLOSED;> [system.ucf(425)]: Unable to find an active 'Area_Group' constraint
+   named 'DDR_CAPTURE_FFS'.
+
+WARNING:ConstraintSystem:194 - The TNM 'TNM_TFT_RST_xps_tft_0', does not
+   directly or indirectly drive any flip-flops, latches and/or RAMs and is not
+   actively used by any referencing constraint.
+
+WARNING:ConstraintSystem:194 - The TNM 'TNM_TFT_CLOCK_xps_tft_0', does not
+   directly or indirectly drive any flip-flops, latches and/or RAMs and is not
+   actively used by any referencing constraint.
+
+WARNING:ConstraintSystem:194 - The TNM 'TNM_TFT_CLOCK_xps_tft_0', does not
+   directly or indirectly drive any flip-flops, latches and/or RAMs and is not
+   actively used by any referencing constraint.
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0" TS_sys_clk_pin
+   HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT1: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT1 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT1" TS_sys_clk_pin
+   * 2 PHASE 1.25 ns HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT2: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2" TS_sys_clk_pin
+   * 2 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT3: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT3 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT3" TS_sys_clk_pin
+   * 2 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT4: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT4 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT4" TS_sys_clk_pin
+   * 4 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT5: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT5 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT5" TS_sys_clk_pin
+   * 0.25 HIGH 50%>
+
+Done...
+
+Processing BMM file "system.bmm" ...
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_bram_if_cntlr_1/xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_
+   ATTACH/I_DBEAT_CONTROL/I_DBEAT_CNTR/STRUCTURAL_A_GEN.I_ADDSUB_GEN[4].FDRE_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/COLLISION_SYNC' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'Ethernet_MAC/Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHME
+   NT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.I_BKEND_CS_REG' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'Ethernet_MAC/Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHME
+   NT/I_BURST_SUPPORT/RESPONSE_DBEAT_CNTR_I/STRUCTURAL_A_GEN.I_ADDSUB_GEN[7].FDR
+   E_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'Ethernet_MAC/Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHME
+   NT/I_BURST_SUPPORT/CONTROL_DBEAT_CNTR_I/STRUCTURAL_A_GEN.I_ADDSUB_GEN[7].FDRE
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'Ethernet_MAC/Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHME
+   NT/I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[0].I_FDRSE_BE0to3'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'Ethernet_MAC/Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHME
+   NT/I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[1].I_FDRSE_BE0to3'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'Ethernet_MAC/Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHME
+   NT/I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[2].I_FDRSE_BE0to3'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'Ethernet_MAC/Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHME
+   NT/I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[3].I_FDRSE_BE0to3'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'Ethernet_MAC/Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHME
+   NT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[0].I_SIZE_S_H_REG'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'Ethernet_MAC/Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHME
+   NT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[0].I_SIZE_S_H_REG'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/u_phy_calib
+   /gen_rden[1].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/u_phy_calib
+   /gen_rden[2].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/u_phy_calib
+   /gen_rden[3].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/u_phy_calib
+   /gen_rden[4].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/u_phy_calib
+   /gen_rden[5].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/u_phy_calib
+   /gen_rden[6].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/u_phy_calib
+   /gen_rden[7].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'FLASH/FLASH/EMC_CTRL_I/MEM_STATE_MACHINE_I/READ_COMPLETE_PIPE_GEN[6].READ_CO
+   MPLETE_PIPE' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'FLASH/FLASH/EMC_CTRL_I/MEM_STEER_I/RDDATA_PATH_MUX_GEN.ASYNC_ADDR_CNT_GEN.RD
+   DATA_EN_GEN_ASYNC[3].RDDATA_EN_REG_ASYNC' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'FLASH/FLASH/EMC_CTRL_I/MEM_STEER_I/ASYNC_MEM_RDACK_GEN.AALIGN_PIPE_GEN[1].AA
+   LIGN_PIPE' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'FLASH/FLASH/EMC_CTRL_I/ADDR_COUNTER_MUX_I/ADDRESS_STORE_GEN[31].ADDRESS_REG'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'FLASH/FLASH/EMC_CTRL_I/ADDR_COUNTER_MUX_I/ADDRESS_STORE_GEN[30].ADDRESS_REG'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'FLASH/FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTAC
+   HMENT/I_DECODER/GEN_CE_FOR_SHARED.GEN_BKEND_CE_REGISTERS[0].I_BKEND_WRCE_REG'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'FLASH/FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTAC
+   HMENT/I_DECODER/GEN_CE_FOR_SHARED.GEN_BKEND_CE_REGISTERS[0].I_BKEND_RDCE_REG'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'FLASH/FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTAC
+   HMENT/I_BURST_SUPPORT/RESPONSE_DBEAT_CNTR_I/STRUCTURAL_A_GEN.I_ADDSUB_GEN[7].
+   FDRE_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'FLASH/FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTAC
+   HMENT/I_BURST_SUPPORT/CONTROL_DBEAT_CNTR_I/STRUCTURAL_A_GEN.I_ADDSUB_GEN[7].F
+   DRE_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'FLASH/FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTAC
+   HMENT/I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[0].I_FDRSE_BE0t
+   o3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'FLASH/FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTAC
+   HMENT/I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[1].I_FDRSE_BE0t
+   o3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'FLASH/FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTAC
+   HMENT/I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[2].I_FDRSE_BE0t
+   o3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'FLASH/FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTAC
+   HMENT/I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[3].I_FDRSE_BE0t
+   o3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'FLASH/FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTAC
+   HMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[0].I_SIZE_S_H_REG
+   ' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'FLASH/FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTAC
+   HMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[0].I_SIZE_S_H_R
+   EG' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[0].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[1].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[2].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[3].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[4].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[5].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[6].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[7].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[8].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[9].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[10].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[11].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[12].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[13].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[14].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[15].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[16].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[17].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[18].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[19].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[20].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[0].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[1].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[2].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[3].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[4].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[5].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[6].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[7].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[8].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[9].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[10].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[11].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[12].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[13].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[14].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[15].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[16].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[17].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[18].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[19].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[20].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst" of type "PLL_ADV". 
+   This attribute will be ignored.
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_tft_0/xps_tft_0/PLBV46_MASTER_BURST_I/I_RD_WR_CONTROL/I_RDSOP_REG' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_tft_0/xps_tft_0/PLBV46_MASTER_BURST_I/I_RD_WR_CONTROL/I_WRERR_REG' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_tft_0/xps_tft_0/PLBV46_MASTER_BURST_I/I_RD_WR_CONTROL/I_RDERR_REG' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_tft_0/xps_tft_0/PLBV46_MASTER_BURST_I/I_RD_WR_CONTROL/I_FIFO_REN_WRACK_R
+   EG' has unconnected output pin
+WARNING:NgdBuild:452 - logical net 'N208' has no driver
+WARNING:NgdBuild:452 - logical net 'N209' has no driver
+WARNING:NgdBuild:452 - logical net 'N210' has no driver
+WARNING:NgdBuild:452 - logical net 'N211' has no driver
+WARNING:NgdBuild:452 - logical net 'N212' has no driver
+WARNING:NgdBuild:452 - logical net 'N213' has no driver
+WARNING:NgdBuild:452 - logical net 'N214' has no driver
+WARNING:NgdBuild:452 - logical net 'N215' has no driver
+WARNING:NgdBuild:452 - logical net 'N216' has no driver
+WARNING:NgdBuild:452 - logical net 'N217' has no driver
+WARNING:NgdBuild:452 - logical net 'N218' has no driver
+WARNING:NgdBuild:452 - logical net 'N219' has no driver
+WARNING:NgdBuild:452 - logical net 'N220' has no driver
+WARNING:NgdBuild:452 - logical net 'N221' has no driver
+WARNING:NgdBuild:452 - logical net 'N222' has no driver
+WARNING:NgdBuild:452 - logical net 'N223' has no driver
+WARNING:NgdBuild:452 - logical net 'N224' has no driver
+WARNING:NgdBuild:452 - logical net 'N225' has no driver
+WARNING:NgdBuild:452 - logical net 'N226' has no driver
+WARNING:NgdBuild:452 - logical net 'N227' has no driver
+WARNING:NgdBuild:452 - logical net 'N228' has no driver
+WARNING:NgdBuild:452 - logical net 'N229' has no driver
+WARNING:NgdBuild:452 - logical net 'N230' has no driver
+WARNING:NgdBuild:452 - logical net 'N231' has no driver
+WARNING:NgdBuild:452 - logical net 'N232' has no driver
+WARNING:NgdBuild:452 - logical net 'N233' has no driver
+WARNING:NgdBuild:452 - logical net 'N234' has no driver
+WARNING:NgdBuild:452 - logical net 'N235' has no driver
+WARNING:NgdBuild:452 - logical net 'N236' has no driver
+WARNING:NgdBuild:452 - logical net 'N237' has no driver
+WARNING:NgdBuild:452 - logical net 'N238' has no driver
+WARNING:NgdBuild:452 - logical net 'N239' has no driver
+WARNING:NgdBuild:452 - logical net 'N240' has no driver
+WARNING:NgdBuild:452 - logical net 'N241' has no driver
+WARNING:NgdBuild:452 - logical net 'N242' has no driver
+WARNING:NgdBuild:452 - logical net 'N243' has no driver
+WARNING:NgdBuild:452 - logical net 'N244' has no driver
+WARNING:NgdBuild:452 - logical net 'N245' has no driver
+WARNING:NgdBuild:452 - logical net 'N246' has no driver
+WARNING:NgdBuild:452 - logical net 'N247' has no driver
+WARNING:NgdBuild:452 - logical net 'N248' has no driver
+WARNING:NgdBuild:452 - logical net 'N249' has no driver
+WARNING:NgdBuild:452 - logical net 'N250' has no driver
+WARNING:NgdBuild:452 - logical net 'N251' has no driver
+WARNING:NgdBuild:452 - logical net 'N252' has no driver
+WARNING:NgdBuild:452 - logical net 'N253' has no driver
+WARNING:NgdBuild:452 - logical net 'N254' has no driver
+WARNING:NgdBuild:452 - logical net 'N255' has no driver
+WARNING:NgdBuild:452 - logical net 'N256' has no driver
+WARNING:NgdBuild:452 - logical net 'N257' has no driver
+WARNING:NgdBuild:452 - logical net 'N258' has no driver
+WARNING:NgdBuild:452 - logical net 'N259' has no driver
+WARNING:NgdBuild:452 - logical net 'N260' has no driver
+WARNING:NgdBuild:452 - logical net 'N261' has no driver
+WARNING:NgdBuild:452 - logical net 'N262' has no driver
+WARNING:NgdBuild:452 - logical net 'N263' has no driver
+WARNING:NgdBuild:452 - logical net 'N264' has no driver
+WARNING:NgdBuild:452 - logical net 'N265' has no driver
+WARNING:NgdBuild:452 - logical net 'N266' has no driver
+WARNING:NgdBuild:452 - logical net 'N267' has no driver
+WARNING:NgdBuild:452 - logical net 'N268' has no driver
+WARNING:NgdBuild:452 - logical net 'N269' has no driver
+WARNING:NgdBuild:452 - logical net 'N270' has no driver
+WARNING:NgdBuild:452 - logical net 'N271' has no driver
+WARNING:NgdBuild:452 - logical net 'N280' has no driver
+WARNING:NgdBuild:452 - logical net 'N281' has no driver
+WARNING:NgdBuild:452 - logical net 'N282' has no driver
+WARNING:NgdBuild:452 - logical net 'N283' has no driver
+WARNING:NgdBuild:452 - logical net 'N284' has no driver
+WARNING:NgdBuild:452 - logical net 'N285' has no driver
+WARNING:NgdBuild:452 - logical net 'N286' has no driver
+WARNING:NgdBuild:452 - logical net 'N287' has no driver
+WARNING:NgdBuild:452 - logical net 'N288' has no driver
+WARNING:NgdBuild:452 - logical net 'N289' has no driver
+WARNING:NgdBuild:452 - logical net 'N290' has no driver
+WARNING:NgdBuild:452 - logical net 'N291' has no driver
+WARNING:NgdBuild:452 - logical net 'N292' has no driver
+WARNING:NgdBuild:452 - logical net 'N293' has no driver
+WARNING:NgdBuild:452 - logical net 'N294' has no driver
+WARNING:NgdBuild:452 - logical net 'N295' has no driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings: 167
+
+Writing NGD file "system.ngd" ...
+Total REAL time to NGDBUILD completion:  17 sec
+Total CPU time to NGDBUILD completion:   17 sec
+
+Writing NGDBUILD log file "system.bld"...
+
+NGDBUILD done.
+
+
+
+#----------------------------------------------#
+# Starting program map
+# map -o system_map.ncd -w -pr b -ol high -timing -detail system.ngd system.pcf 
+#----------------------------------------------#
+Release 12.1 - Map M.53d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+</opt/Xilinx/12.1/ISE_DS/EDK/data/Xdh_PrimTypeLib.xda> with local file
+</opt/Xilinx/12.1/ISE_DS/ISE/data/Xdh_PrimTypeLib.xda>
+Using target part "5vfx70tff1136-1".
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:67 - XILINXD_LICENSE_FILE is set to
+'/opt/Xilinx/12.1/ISE_DS/EDK/data/core_licenses' in /home/aalonso/.flexlmrc.
+INFO:Security:56 - Part 'xc5vfx70t' is not a WebPack part.
+INFO:Security:66 - Your license for 'ISE' is for evaluation use only.
+WARNING:Security:42 - Your license support version '2010.10' for ISE expires in
+25 days after which you will not qualify for Xilinx software updates or new
+releases.
+----------------------------------------------------------------------
+Mapping design into LUTs...
+WARNING:MapLib:701 - Signal fpga_0_Ethernet_MAC_PHY_col_pin connected to top
+   level port fpga_0_Ethernet_MAC_PHY_col_pin has been removed.
+Writing file system_map.ngm...
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_0
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_0_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_0
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_0_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_1
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_1_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_1
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_1_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_10
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_10_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_10
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_10_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_11
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_11_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_11
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_11_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_12
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_12_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_12
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_12_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_13
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_13_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_13
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_13_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_14
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_14_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_14
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_14_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_15
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_15_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_15
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_15_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_2
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_2_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_2
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_2_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_3
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_3_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_3
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_3_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_4
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_4_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_4
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_4_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_5
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_5_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_5
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_5_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_6
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_6_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_6
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_6_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_7
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_7_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_7
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_7_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_8
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_8_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_8
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_8_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_9
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_9_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_9
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_9_REGCLKAL_tiesig
+Running directed packing...
+WARNING:Pack:2515 - The LUT-1 inverter
+   "xps_tft_0/xps_tft_0/TFT_CTRL_I/VSYNC_U3/Clk_stb_inv1_INV_0" failed to join
+   the OLOGIC comp matched to output buffer "xps_tft_0_TFT_HSYNC_pin_OBUF". 
+   This may result in suboptimal timing.  The LUT-1 inverter
+   xps_tft_0/xps_tft_0/TFT_CTRL_I/VSYNC_U3/Clk_stb_inv1_INV_0 drives multiple
+   loads.
+Running delay-based LUT packing...
+Updating timing models...
+WARNING:Timing:3223 - Timing constraint TS_MC_RDEN_SEL_MUX = MAXDELAY FROM
+   TIMEGRP "TNM_RDEN_SEL_MUX" TO TIMEGRP "TNM_CLK0" TS_MC_CLK * 4 ignored during
+   timing analysis.
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 41 secs 
+Total CPU  time at the beginning of Placer: 38 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:1c0cd8d9) REAL time: 45 secs 
+
+Phase 2.7  Design Feasibility Check
+WARNING:Place:838 - An IO Bus with more than one IO standard is found.
+   Components associated with this bus are as follows: 
+   	 Comp: fpga_0_LEDs_8Bit_GPIO_IO_pin<7>   IOSTANDARD = LVCMOS25
+   	 Comp: fpga_0_LEDs_8Bit_GPIO_IO_pin<6>   IOSTANDARD = LVCMOS25
+   	 Comp: fpga_0_LEDs_8Bit_GPIO_IO_pin<5>   IOSTANDARD = LVCMOS25
+   	 Comp: fpga_0_LEDs_8Bit_GPIO_IO_pin<4>   IOSTANDARD = LVCMOS18
+   	 Comp: fpga_0_LEDs_8Bit_GPIO_IO_pin<3>   IOSTANDARD = LVCMOS25
+   	 Comp: fpga_0_LEDs_8Bit_GPIO_IO_pin<2>   IOSTANDARD = LVCMOS18
+   	 Comp: fpga_0_LEDs_8Bit_GPIO_IO_pin<1>   IOSTANDARD = LVCMOS18
+   	 Comp: fpga_0_LEDs_8Bit_GPIO_IO_pin<0>   IOSTANDARD = LVCMOS18
+
+
+Phase 2.7  Design Feasibility Check (Checksum:1c0cd8d9) REAL time: 46 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:bc29211c) REAL time: 46 secs 
+
+Phase 4.37  Local Placement Optimization
+Phase 4.37  Local Placement Optimization (Checksum:d6c4a766) REAL time: 46 secs 
+
+Phase 5.33  Local Placement Optimization
+Phase 5.33  Local Placement Optimization (Checksum:d6c4a766) REAL time: 2 mins 32 secs 
+
+Phase 6.32  Local Placement Optimization
+Phase 6.32  Local Placement Optimization (Checksum:d6c4a766) REAL time: 2 mins 33 secs 
+
+Phase 7.2  Initial Clock and IO Placement
+
+
+
+There are 16 clock regions on the target FPGA device:
+|------------------------------------------|------------------------------------------|
+| CLOCKREGION_X0Y7:                        | CLOCKREGION_X1Y7:                        |
+|   2 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
+|   4 Regional Clock Spines, 0 in use      |   4 Regional Clock Spines, 0 in use      |
+|   4 edge BUFIOs available, 0 in use      |   4 edge BUFIOs available, 0 in use      |
+|   4 center BUFIOs available, 0 in use    |   0 center BUFIOs available, 0 in use    |
+|                                          |                                          |
+|------------------------------------------|------------------------------------------|
+| CLOCKREGION_X0Y6:                        | CLOCKREGION_X1Y6:                        |
+|   2 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
+|   4 Regional Clock Spines, 0 in use      |   4 Regional Clock Spines, 0 in use      |
+|   4 edge BUFIOs available, 3 in use      |   4 edge BUFIOs available, 0 in use      |
+|   0 center BUFIOs available, 0 in use    |   0 center BUFIOs available, 0 in use    |
+|                                          |                                          |
+|------------------------------------------|------------------------------------------|
+| CLOCKREGION_X0Y5:                        | CLOCKREGION_X1Y5:                        |
+|   2 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
+|   4 Regional Clock Spines, 0 in use      |   4 Regional Clock Spines, 0 in use      |
+|   4 edge BUFIOs available, 0 in use      |   4 edge BUFIOs available, 0 in use      |
+|   2 center BUFIOs available, 0 in use    |   0 center BUFIOs available, 0 in use    |
+|                                          |                                          |
+|------------------------------------------|------------------------------------------|
+| CLOCKREGION_X0Y4:                        | CLOCKREGION_X1Y4:                        |
+|   2 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
+|   4 Regional Clock Spines, 0 in use      |   4 Regional Clock Spines, 0 in use      |
+|   4 edge BUFIOs available, 0 in use      |   4 edge BUFIOs available, 0 in use      |
+|   2 center BUFIOs available, 0 in use    |   0 center BUFIOs available, 0 in use    |
+|                                          |                                          |
+|------------------------------------------|------------------------------------------|
+| CLOCKREGION_X0Y3:                        | CLOCKREGION_X1Y3:                        |
+|   2 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
+|   4 Regional Clock Spines, 0 in use      |   4 Regional Clock Spines, 0 in use      |
+|   4 edge BUFIOs available, 0 in use      |   4 edge BUFIOs available, 0 in use      |
+|   2 center BUFIOs available, 0 in use    |   0 center BUFIOs available, 0 in use    |
+|                                          |                                          |
+|------------------------------------------|------------------------------------------|
+| CLOCKREGION_X0Y2:                        | CLOCKREGION_X1Y2:                        |
+|   2 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
+|   4 Regional Clock Spines, 0 in use      |   4 Regional Clock Spines, 0 in use      |
+|   4 edge BUFIOs available, 3 in use      |   4 edge BUFIOs available, 0 in use      |
+|   2 center BUFIOs available, 0 in use    |   0 center BUFIOs available, 0 in use    |
+|                                          |                                          |
+|------------------------------------------|------------------------------------------|
+| CLOCKREGION_X0Y1:                        | CLOCKREGION_X1Y1:                        |
+|   2 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
+|   4 Regional Clock Spines, 0 in use      |   4 Regional Clock Spines, 0 in use      |
+|   4 edge BUFIOs available, 2 in use      |   4 edge BUFIOs available, 0 in use      |
+|   0 center BUFIOs available, 0 in use    |   0 center BUFIOs available, 0 in use    |
+|                                          |                                          |
+|------------------------------------------|------------------------------------------|
+| CLOCKREGION_X0Y0:                        | CLOCKREGION_X1Y0:                        |
+|   2 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
+|   4 Regional Clock Spines, 0 in use      |   4 Regional Clock Spines, 0 in use      |
+|   4 edge BUFIOs available, 0 in use      |   4 edge BUFIOs available, 0 in use      |
+|   4 center BUFIOs available, 0 in use    |   0 center BUFIOs available, 0 in use    |
+|                                          |                                          |
+|------------------------------------------|------------------------------------------|
+
+
+Clock-Region: <CLOCKREGION_X0Y1>
+  key resource utilizations (used/available): edge-bufios - 2/4; bufrs - 0/2; regional-clock-spines - 0/4
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|       |    clock    | BRAM |     |    |        |        |       |       |       |      |      |     |      |
+|       |    region   | FIFO | DCM | GT | ILOGIC | OLOGIC |   FF  |  LUTM |  LUTL | MULT | EMAC | PPC | PCIe | <- (Types of Resources in Clock Region)
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       | Upper Region|  24  |  2  |  0 |   60   |   60   |  3200 |  1600 |  4800 |   0  |   0  |  0  |   0  | <- Available resources in the upper region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       |CurrentRegion|  24  |  4  |  0 |   40   |   40   |  3200 |  1600 |  4800 |   0  |   0  |  0  |   0  | <- Available resources in the current region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       | Lower Region|  24  |  0  |  0 |   80   |   80   |  3200 |  1600 |  4800 |   0  |   0  |  0  |   0  | <- Available resources in the lower region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| clock |    region   |                                                                                      -----------------------------------------------
+|  type |  expansion  |                                                                                      | <IO/Regional clock Net Name>
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| BUFIO |             |   0  |  0  |  0 |    9   |    0   |     0 |     0 |     0 |   0  |   0  |  0  |   0  | "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<1>"
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| BUFIO |             |   0  |  0  |  0 |    9   |    0   |     0 |     0 |     0 |   0  |   0  |  0  |   0  | "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<2>"
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X0Y2>
+  key resource utilizations (used/available): edge-bufios - 3/4; center-bufios - 0/2; bufrs - 0/2; regional-clock-spines - 0/4
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|       |    clock    | BRAM |     |    |        |        |       |       |       |      |      |     |      |
+|       |    region   | FIFO | DCM | GT | ILOGIC | OLOGIC |   FF  |  LUTM |  LUTL | MULT | EMAC | PPC | PCIe | <- (Types of Resources in Clock Region)
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       | Upper Region|   8  |  0  |  0 |   60   |   60   |  1280 |   640 |  1920 |   0  |   0  |  1  |   0  | <- Available resources in the upper region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       |CurrentRegion|  24  |  2  |  0 |   60   |   60   |  3200 |  1600 |  4800 |   0  |   0  |  0  |   0  | <- Available resources in the current region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       | Lower Region|  24  |  4  |  0 |   40   |   40   |  3200 |  1600 |  4800 |   0  |   0  |  0  |   0  | <- Available resources in the lower region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| clock |    region   |                                                                                      -----------------------------------------------
+|  type |  expansion  |                                                                                      | <IO/Regional clock Net Name>
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| BUFIO |             |   0  |  0  |  0 |    9   |    0   |     0 |     0 |     0 |   0  |   0  |  0  |   0  | "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<0>"
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| BUFIO |             |   0  |  0  |  0 |    9   |    0   |     0 |     0 |     0 |   0  |   0  |  0  |   0  | "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<4>"
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| BUFIO |             |   0  |  0  |  0 |    9   |    0   |     0 |     0 |     0 |   0  |   0  |  0  |   0  | "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<3>"
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X0Y6>
+  key resource utilizations (used/available): edge-bufios - 3/4; bufrs - 0/2; regional-clock-spines - 0/4
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|       |    clock    | BRAM |     |    |        |        |       |       |       |      |      |     |      |
+|       |    region   | FIFO | DCM | GT | ILOGIC | OLOGIC |   FF  |  LUTM |  LUTL | MULT | EMAC | PPC | PCIe | <- (Types of Resources in Clock Region)
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       | Upper Region|  24  |  0  |  0 |   80   |   80   |  3200 |  1600 |  4800 |   0  |   0  |  0  |   0  | <- Available resources in the upper region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       |CurrentRegion|  24  |  4  |  0 |   40   |   40   |  3200 |  1600 |  4800 |   0  |   0  |  0  |   0  | <- Available resources in the current region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       | Lower Region|  24  |  2  |  0 |   60   |   60   |  3200 |  1600 |  4800 |   0  |   0  |  0  |   0  | <- Available resources in the lower region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| clock |    region   |                                                                                      -----------------------------------------------
+|  type |  expansion  |                                                                                      | <IO/Regional clock Net Name>
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| BUFIO |             |   0  |  0  |  0 |    9   |    0   |     0 |     0 |     0 |   0  |   0  |  0  |   0  | "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<7>"
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| BUFIO |             |   0  |  0  |  0 |    9   |    0   |     0 |     0 |     0 |   0  |   0  |  0  |   0  | "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<5>"
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| BUFIO |             |   0  |  0  |  0 |    9   |    0   |     0 |     0 |     0 |   0  |   0  |  0  |   0  | "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<6>"
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+
+
+
+
+######################################################################################
+# REGIONAL CLOCKING RESOURCE DISTRIBUTION UCF REPORT:
+#
+# Number of Regional Clocking Regions in the device: 16  (4 clock spines in each)
+# Number of Regional Clock Networks used in this design: 8 (each network can be
+# composed of up to 3 clock spines and cover up to 3 regional clock regions)
+# 
+######################################################################################
+
+# IO-Clock "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<7>" driven by "BUFIO_X0Y27"
+INST "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[7].u_iob_dqs/u_bufio_dqs" LOC =
+"BUFIO_X0Y27" ;
+NET "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<7>" TNM_NET =
+"TN_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<7>" ;
+TIMEGRP "TN_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<7>" AREA_GROUP =
+"CLKAG_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<7>" ;
+AREA_GROUP "CLKAG_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<7>" RANGE =
+CLOCKREGION_X0Y6;
+
+
+# IO-Clock "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<0>" driven by "BUFIO_X0Y9"
+INST "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[0].u_iob_dqs/u_bufio_dqs" LOC =
+"BUFIO_X0Y9" ;
+NET "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<0>" TNM_NET =
+"TN_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<0>" ;
+TIMEGRP "TN_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<0>" AREA_GROUP =
+"CLKAG_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<0>" ;
+AREA_GROUP "CLKAG_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<0>" RANGE =
+CLOCKREGION_X0Y2;
+
+
+# IO-Clock "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<4>" driven by "BUFIO_X0Y11"
+INST "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[4].u_iob_dqs/u_bufio_dqs" LOC =
+"BUFIO_X0Y11" ;
+NET "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<4>" TNM_NET =
+"TN_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<4>" ;
+TIMEGRP "TN_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<4>" AREA_GROUP =
+"CLKAG_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<4>" ;
+AREA_GROUP "CLKAG_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<4>" RANGE =
+CLOCKREGION_X0Y2;
+
+
+# IO-Clock "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<1>" driven by "BUFIO_X0Y4"
+INST "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[1].u_iob_dqs/u_bufio_dqs" LOC =
+"BUFIO_X0Y4" ;
+NET "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<1>" TNM_NET =
+"TN_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<1>" ;
+TIMEGRP "TN_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<1>" AREA_GROUP =
+"CLKAG_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<1>" ;
+AREA_GROUP "CLKAG_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<1>" RANGE =
+CLOCKREGION_X0Y1;
+
+
+# IO-Clock "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<5>" driven by "BUFIO_X0Y25"
+INST "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[5].u_iob_dqs/u_bufio_dqs" LOC =
+"BUFIO_X0Y25" ;
+NET "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<5>" TNM_NET =
+"TN_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<5>" ;
+TIMEGRP "TN_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<5>" AREA_GROUP =
+"CLKAG_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<5>" ;
+AREA_GROUP "CLKAG_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<5>" RANGE =
+CLOCKREGION_X0Y6;
+
+
+# IO-Clock "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<2>" driven by "BUFIO_X0Y7"
+INST "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[2].u_iob_dqs/u_bufio_dqs" LOC =
+"BUFIO_X0Y7" ;
+NET "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<2>" TNM_NET =
+"TN_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<2>" ;
+TIMEGRP "TN_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<2>" AREA_GROUP =
+"CLKAG_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<2>" ;
+AREA_GROUP "CLKAG_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<2>" RANGE =
+CLOCKREGION_X0Y1;
+
+
+# IO-Clock "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<6>" driven by "BUFIO_X0Y26"
+INST "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[6].u_iob_dqs/u_bufio_dqs" LOC =
+"BUFIO_X0Y26" ;
+NET "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<6>" TNM_NET =
+"TN_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<6>" ;
+TIMEGRP "TN_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<6>" AREA_GROUP =
+"CLKAG_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<6>" ;
+AREA_GROUP "CLKAG_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<6>" RANGE =
+CLOCKREGION_X0Y6;
+
+
+# IO-Clock "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<3>" driven by "BUFIO_X0Y10"
+INST "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[3].u_iob_dqs/u_bufio_dqs" LOC =
+"BUFIO_X0Y10" ;
+NET "DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<3>" TNM_NET =
+"TN_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<3>" ;
+TIMEGRP "TN_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<3>" AREA_GROUP =
+"CLKAG_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<3>" ;
+AREA_GROUP "CLKAG_DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/delayed_dqs<3>" RANGE =
+CLOCKREGION_X0Y2;
+
+
+Phase 7.2  Initial Clock and IO Placement (Checksum:4938d1e9) REAL time: 2 mins 35 secs 
+
+Phase 8.36  Local Placement Optimization
+Phase 8.36  Local Placement Optimization (Checksum:4938d1e9) REAL time: 2 mins 35 secs 
+
+Phase 9.30  Global Clock Region Assignment
+Phase 9.30  Global Clock Region Assignment (Checksum:4938d1e9) REAL time: 2 mins 35 secs 
+
+Phase 10.3  Local Placement Optimization
+Phase 10.3  Local Placement Optimization (Checksum:4938d1e9) REAL time: 2 mins 36 secs 
+
+Phase 11.5  Local Placement Optimization
+Phase 11.5  Local Placement Optimization (Checksum:4938d1e9) REAL time: 2 mins 36 secs 
+
+Phase 12.8  Global Placement
+............................................................................
+...............................................................
+....................................................................................................
+..............................
+..............................
+................
+Phase 12.8  Global Placement (Checksum:8293cb52) REAL time: 3 mins 19 secs 
+
+Phase 13.29  Local Placement Optimization
+Phase 13.29  Local Placement Optimization (Checksum:8293cb52) REAL time: 3 mins 19 secs 
+
+Phase 14.5  Local Placement Optimization
+Phase 14.5  Local Placement Optimization (Checksum:8293cb52) REAL time: 3 mins 20 secs 
+
+Phase 15.18  Placement Optimization
+Phase 15.18  Placement Optimization (Checksum:621678c6) REAL time: 4 mins 4 secs 
+
+Phase 16.5  Local Placement Optimization
+Phase 16.5  Local Placement Optimization (Checksum:621678c6) REAL time: 4 mins 5 secs 
+
+Phase 17.34  Placement Validation
+Phase 17.34  Placement Validation (Checksum:621678c6) REAL time: 4 mins 5 secs 
+
+Total REAL time to Placer completion: 4 mins 6 secs 
+Total CPU  time to Placer completion: 4 mins 
+Running post-placement packing...
+Writing output files...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   42
+Slice Logic Utilization:
+  Number of Slice Registers:                 7,015 out of  44,800   15%
+    Number used as Flip Flops:               7,011
+    Number used as Latches:                      4
+  Number of Slice LUTs:                      6,673 out of  44,800   14%
+    Number used as logic:                    6,460 out of  44,800   14%
+      Number using O6 output only:           5,858
+      Number using O5 output only:             273
+      Number using O5 and O6:                  329
+    Number used as Memory:                     179 out of  13,120    1%
+      Number used as Dual Port RAM:             14
+        Number using O6 output only:             6
+        Number using O5 and O6:                  8
+      Number used as Single Port RAM:            4
+        Number using O6 output only:             4
+      Number used as Shift Register:           161
+        Number using O6 output only:           161
+    Number used as exclusive route-thru:        34
+  Number of route-thrus:                       310
+    Number using O6 output only:               302
+    Number using O5 output only:                 3
+    Number using O5 and O6:                      5
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 4,456 out of  11,200   39%
+  Number of LUT Flip Flop pairs used:        9,965
+    Number with an unused Flip Flop:         2,950 out of   9,965   29%
+    Number with an unused LUT:               3,292 out of   9,965   33%
+    Number of fully used LUT-FF pairs:       3,723 out of   9,965   37%
+    Number of unique control sets:           1,082
+    Number of slice register sites lost
+      to control set restrictions:           2,482 out of  44,800    5%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                       263 out of     640   41%
+    Number of LOCed IOBs:                      263 out of     263  100%
+    IOB Flip Flops:                            477
+
+Specific Feature Utilization:
+  Number of BlockRAM/FIFO:                      23 out of     148   15%
+    Number using BlockRAM only:                 21
+    Number using FIFO only:                      2
+    Total primitives used:
+      Number of 36k BlockRAM used:              21
+      Number of 36k FIFO used:                   2
+    Total Memory used (KB):                    828 out of   5,328   15%
+  Number of BUFG/BUFGCTRLs:                      7 out of      32   21%
+    Number used as BUFGs:                        7
+  Number of IDELAYCTRLs:                         3 out of      22   13%
+  Number of BUFIOs:                              8 out of      80   10%
+  Number of PLL_ADVs:                            1 out of       6   16%
+  Number of PPC440s:                             1 out of       1  100%
+
+Average Fanout of Non-Clock Nets:                3.44
+
+Peak Memory Usage:  1007 MB
+Total REAL time to MAP completion:  4 mins 17 secs 
+Total CPU time to MAP completion:   4 mins 11 secs 
+
+Mapping completed.
+See MAP report file "system_map.mrp" for details.
+
+
+
+#----------------------------------------------#
+# Starting program par
+# par -w -ol high system_map.ncd system.ncd system.pcf 
+#----------------------------------------------#
+Release 12.1 - par M.53d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file </opt/Xilinx/12.1/ISE_DS/EDK/data/parBmgr.acd> with local file
+</opt/Xilinx/12.1/ISE_DS/ISE/data/parBmgr.acd>
+
+
+
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '5vfx70t.nph' in environment
+/opt/Xilinx/12.1/ISE_DS/ISE:/opt/Xilinx/12.1/ISE_DS/EDK.
+   "system" is an NCD, version 3.2, device xc5vfx70t, package ff1136, speed -1
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:67 - XILINXD_LICENSE_FILE is set to '/opt/Xilinx/12.1/ISE_DS/EDK/data/core_licenses' in
+/home/aalonso/.flexlmrc.
+INFO:Security:56 - Part 'xc5vfx70t' is not a WebPack part.
+INFO:Security:66 - Your license for 'ISE' is for evaluation use only.
+WARNING:Security:42 - Your license support version '2010.10' for ISE expires in 25 days after which you will not qualify
+for Xilinx software updates or new releases.
+
+----------------------------------------------------------------------
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.68 2010-04-09".
+
+
+
+Device Utilization Summary:
+
+   Number of BUFGs                           7 out of 32     21%
+   Number of BUFIOs                          8 out of 80     10%
+   Number of FIFO36_72_EXPs                  2 out of 148     1%
+      Number of LOCed FIFO36_72_EXPs         2 out of 2     100%
+
+   Number of IDELAYCTRLs                     3 out of 22     13%
+   Number of ILOGICs                       123 out of 800    15%
+      Number of LOCed ILOGICs                8 out of 123     6%
+
+   Number of External IOBs                 263 out of 640    41%
+      Number of LOCed IOBs                 263 out of 263   100%
+
+   Number of IODELAYs                       80 out of 800    10%
+      Number of LOCed IODELAYs               8 out of 80     10%
+
+   Number of JTAGPPCs                        1 out of 1     100%
+   Number of OLOGICs                       238 out of 800    29%
+   Number of PLL_ADVs                        1 out of 6      16%
+   Number of PPC440s                         1 out of 1     100%
+   Number of RAMB36_EXPs                    21 out of 148    14%
+      Number of LOCed RAMB36_EXPs            2 out of 21      9%
+
+   Number of Slices                       4456 out of 11200  39%
+   Number of Slice Registers              7015 out of 44800  15%
+      Number used as Flip Flops           7011
+      Number used as Latches                 4
+      Number used as LatchThrus              0
+
+   Number of Slice LUTS                   6673 out of 44800  14%
+   Number of Slice LUT-Flip Flop pairs    9965 out of 44800  22%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+WARNING:Timing:3223 - Timing constraint TS_MC_RDEN_SEL_MUX = MAXDELAY FROM TIMEGRP "TNM_RDEN_SEL_MUX" TO TIMEGRP       
+   "TNM_CLK0" TS_MC_CLK * 4; ignored during timing analysis.
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please
+   consult the Xilinx Command Line Tools User Guide for information on generating a TSI report.
+Starting initial Timing Analysis.  REAL time: 20 secs 
+Finished initial Timing Analysis.  REAL time: 21 secs 
+
+WARNING:Par:288 - The signal xps_bram_if_cntlr_1_port_BRAM_Addr<30> has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal xps_bram_if_cntlr_1_port_BRAM_Addr<31> has no load.  PAR will not attempt to route this
+   signal.
+Starting Router
+
+
+Phase  1  : 45768 unrouted;      REAL time: 23 secs 
+INFO:Route:538 - One or more MIG cores have been detected in your design and have been successfully
+   placed and routed. These MIG core(s) have critical skew and delay requirements 
+   that are independent of the user (UCF) timing constraints. These MIG-related timing 
+   constraints have been successfully met in this design. However, the user must verify
+   separately that all timing constraints specified in the UCF file have been met.
+
+
+Phase  2  : 38923 unrouted;      REAL time: 27 secs 
+
+Phase  3  : 13050 unrouted;      REAL time: 51 secs 
+
+Phase  4  : 13065 unrouted; (Setup:0, Hold:425, Component Switching Limit:0)     REAL time: 1 mins 
+
+Updating file: system.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:448, Component Switching Limit:0)     REAL time: 1 mins 13 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:448, Component Switching Limit:0)     REAL time: 1 mins 13 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:448, Component Switching Limit:0)     REAL time: 1 mins 13 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:448, Component Switching Limit:0)     REAL time: 1 mins 13 secs 
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 14 secs 
+
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 18 secs 
+Total REAL time to Router completion: 1 mins 18 secs 
+Total CPU time to Router completion: 1 mins 22 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+WARNING:ParHelpers:81 - 
+   The following Clock signals have USELOWSKEWLINES constraint
+   specified. The router was not able to completely route using
+   the LOW SKEW resources. Check the timing report to verify the
+   delay and skew for this net.
+Net Name: fpga_0_Ethernet_MAC_PHY_rx_clk_pin_IBUF
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|clk_100_0000MHzPLL0_ |              |      |      |            |             |
+|              ADJUST | BUFGCTRL_X0Y1| No   | 2890 |  0.531     |  2.071      |
++---------------------+--------------+------+------+------------+-------------+
+|clk_200_0000MHzPLL0_ |              |      |      |            |             |
+|              ADJUST | BUFGCTRL_X0Y4| No   |  488 |  0.301     |  2.045      |
++---------------------+--------------+------+------+------------+-------------+
+|clk_200_0000MHz90PLL |              |      |      |            |             |
+|            0_ADJUST | BUFGCTRL_X0Y2| No   |  167 |  0.274     |  2.028      |
++---------------------+--------------+------+------+------------+-------------+
+|      clk_25_0000MHz | BUFGCTRL_X0Y0| No   |   68 |  0.289     |  1.957      |
++---------------------+--------------+------+------+------------+-------------+
+|fpga_0_SysACE_Compac |              |      |      |            |             |
+|tFlash_SysACE_CLK_pi |              |      |      |            |             |
+|             n_BUFGP | BUFGCTRL_X0Y6| No   |   54 |  0.100     |  1.770      |
++---------------------+--------------+------+------+------------+-------------+
+|DDR2_SDRAM/DDR2_SDRA |              |      |      |            |             |
+|M/u_ddr2_top/u_mem_i |              |      |      |            |             |
+|f_top/u_phy_top/u_ph |              |      |      |            |             |
+| y_io/delayed_dqs<0> |        IO Clk| No   |   17 |  0.095     |  0.419      |
++---------------------+--------------+------+------+------------+-------------+
+|DDR2_SDRAM/DDR2_SDRA |              |      |      |            |             |
+|M/u_ddr2_top/u_mem_i |              |      |      |            |             |
+|f_top/u_phy_top/u_ph |              |      |      |            |             |
+| y_io/delayed_dqs<1> |        IO Clk| No   |   17 |  0.083     |  0.380      |
++---------------------+--------------+------+------+------------+-------------+
+|DDR2_SDRAM/DDR2_SDRA |              |      |      |            |             |
+|M/u_ddr2_top/u_mem_i |              |      |      |            |             |
+|f_top/u_phy_top/u_ph |              |      |      |            |             |
+| y_io/delayed_dqs<2> |        IO Clk| No   |   17 |  0.101     |  0.425      |
++---------------------+--------------+------+------+------------+-------------+
+|DDR2_SDRAM/DDR2_SDRA |              |      |      |            |             |
+|M/u_ddr2_top/u_mem_i |              |      |      |            |             |
+|f_top/u_phy_top/u_ph |              |      |      |            |             |
+| y_io/delayed_dqs<3> |        IO Clk| No   |   17 |  0.107     |  0.404      |
++---------------------+--------------+------+------+------------+-------------+
+|DDR2_SDRAM/DDR2_SDRA |              |      |      |            |             |
+|M/u_ddr2_top/u_mem_i |              |      |      |            |             |
+|f_top/u_phy_top/u_ph |              |      |      |            |             |
+| y_io/delayed_dqs<5> |        IO Clk| No   |   17 |  0.101     |  0.425      |
++---------------------+--------------+------+------+------------+-------------+
+|DDR2_SDRAM/DDR2_SDRA |              |      |      |            |             |
+|M/u_ddr2_top/u_mem_i |              |      |      |            |             |
+|f_top/u_phy_top/u_ph |              |      |      |            |             |
+| y_io/delayed_dqs<4> |        IO Clk| No   |   17 |  0.101     |  0.425      |
++---------------------+--------------+------+------+------------+-------------+
+|DDR2_SDRAM/DDR2_SDRA |              |      |      |            |             |
+|M/u_ddr2_top/u_mem_i |              |      |      |            |             |
+|f_top/u_phy_top/u_ph |              |      |      |            |             |
+| y_io/delayed_dqs<6> |        IO Clk| No   |   17 |  0.096     |  0.393      |
++---------------------+--------------+------+------+------------+-------------+
+|DDR2_SDRAM/DDR2_SDRA |              |      |      |            |             |
+|M/u_ddr2_top/u_mem_i |              |      |      |            |             |
+|f_top/u_phy_top/u_ph |              |      |      |            |             |
+| y_io/delayed_dqs<7> |        IO Clk| No   |   17 |  0.101     |  0.425      |
++---------------------+--------------+------+------+------------+-------------+
+| clk_200_0000MHzPLL0 | BUFGCTRL_X0Y3| No   |    1 |  0.000     |  1.738      |
++---------------------+--------------+------+------+------------+-------------+
+| clk_400_0000MHzPLL0 | BUFGCTRL_X0Y5| No   |    1 |  0.000     |  1.738      |
++---------------------+--------------+------+------+------------+-------------+
+|xps_timer_0_Interrup |              |      |      |            |             |
+|                   t |         Local|      |    1 |  0.000     |  1.151      |
++---------------------+--------------+------+------+------------+-------------+
+|Ethernet_MAC/Etherne |              |      |      |            |             |
+|  t_MAC/phy_tx_clk_i |         Local|      |   21 |  3.849     |  5.955      |
++---------------------+--------------+------+------+------------+-------------+
+|fpga_0_Ethernet_MAC_ |              |      |      |            |             |
+| PHY_rx_clk_pin_IBUF |         Local|      |   19 |  1.066     |  3.199      |
++---------------------+--------------+------+------+------------+-------------+
+|plb2wb_encoder_0/plb |              |      |      |            |             |
+|2wb_encoder_0/USER_L |              |      |      |            |             |
+|OGIC_I/slv_error_or0 |              |      |      |            |             |
+|                 000 |         Local|      |    1 |  0.000     |  1.001      |
++---------------------+--------------+------+------+------------+-------------+
+|RS232_Uart_1_Interru |              |      |      |            |             |
+|                  pt |         Local|      |    1 |  0.000     |  0.604      |
++---------------------+--------------+------+------+------------+-------------+
+|xps_timebase_wdt_0_T |              |      |      |            |             |
+|   imebase_Interrupt |         Local|      |    1 |  0.000     |  1.487      |
++---------------------+--------------+------+------+------------+-------------+
+|Ethernet_MAC_IP2INTC |              |      |      |            |             |
+|               _Irpt |         Local|      |    1 |  0.000     |  1.615      |
++---------------------+--------------+------+------+------------+-------------+
+|xps_tft_0_IP2INTC_Ir |              |      |      |            |             |
+|                  pt |         Local|      |    1 |  0.000     |  0.777      |
++---------------------+--------------+------+------+------------+-------------+
+|plb2wb_encoder_0/plb |              |      |      |            |             |
+|2wb_encoder_0/USER_L |              |      |      |            |             |
+|OGIC_I/rty_en_or0000 |              |      |      |            |             |
+|                     |         Local|      |    1 |  0.000     |  0.482      |
++---------------------+--------------+------+------+------------+-------------+
+|ppc440_0_jtagppc_bus |              |      |      |            |             |
+|         _JTGC405TCK |         Local|      |    1 |  0.000     |  1.713      |
++---------------------+--------------+------+------+------------+-------------+
+|plb2wb_encoder_0/plb |              |      |      |            |             |
+|2wb_encoder_0/USER_L |              |      |      |            |             |
+|OGIC_I/wb_cyc_mux000 |              |      |      |            |             |
+|                   0 |         Local|      |    1 |  0.000     |  0.455      |
++---------------------+--------------+------+------+------------+-------------+
+|plb2wb_encoder_0/plb |              |      |      |            |             |
+|2wb_encoder_0/USER_L |              |      |      |            |             |
+|OGIC_I/wb_cyc_or0000 |              |      |      |            |             |
+|                     |         Local|      |    1 |  0.000     |  0.576      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Number of Timing Constraints that were not applied: 5
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_DQ_CE = MAXDELAY FROM TIMEGRP "TNM_DQ_ | SETUP       |     0.031ns|     1.869ns|       0|           0
+  CE_IDDR" TO TIMEGRP "TNM_DQS_FLOPS"       | HOLD        |     0.998ns|            |       0|           0
+     1.9 ns                                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clock_generator_0_clock_generator_0_SI | SETUP       |     0.034ns|     4.966ns|       0|           0
+  G_PLL0_CLKOUT3 = PERIOD TIMEGRP         " | HOLD        |     0.018ns|            |       0|           0
+  clock_generator_0_clock_generator_0_SIG_P |             |            |            |        |            
+  LL0_CLKOUT3" TS_sys_clk_pin         * 2 H |             |            |            |        |            
+  IGH 50%                                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clock_generator_0_clock_generator_0_SI | SETUP       |     0.036ns|     9.964ns|       0|           0
+  G_PLL0_CLKOUT0 = PERIOD TIMEGRP         " | HOLD        |     0.177ns|            |       0|           0
+  clock_generator_0_clock_generator_0_SIG_P |             |            |            |        |            
+  LL0_CLKOUT0" TS_sys_clk_pin         HIGH  |             |            |            |        |            
+  50%                                       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/u_ddr2 | MAXDELAY    |     0.045ns|     0.805ns|       0|           0
+  _top/u_mem_if_top/u_phy_top/u_phy_io/gen_ |             |            |            |        |            
+  dqs[0].u_iob_dqs/en_dqs_sync"         MAX |             |            |            |        |            
+  DELAY = 0.85 ns                           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/u_ddr2 | MAXDELAY    |     0.045ns|     0.805ns|       0|           0
+  _top/u_mem_if_top/u_phy_top/u_phy_io/gen_ |             |            |            |        |            
+  dqs[1].u_iob_dqs/en_dqs_sync"         MAX |             |            |            |        |            
+  DELAY = 0.85 ns                           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/u_ddr2 | MAXDELAY    |     0.045ns|     0.805ns|       0|           0
+  _top/u_mem_if_top/u_phy_top/u_phy_io/gen_ |             |            |            |        |            
+  dqs[5].u_iob_dqs/en_dqs_sync"         MAX |             |            |            |        |            
+  DELAY = 0.85 ns                           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "Ethernet_MAC/Ethernet_MAC/phy_tx_clk | NETSKEW     |     0.045ns|     5.955ns|       0|           0
+  _i" MAXSKEW = 6 ns                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/u_ddr2 | MAXDELAY    |     0.047ns|     0.803ns|       0|           0
+  _top/u_mem_if_top/u_phy_top/u_phy_io/gen_ |             |            |            |        |            
+  dqs[2].u_iob_dqs/en_dqs_sync"         MAX |             |            |            |        |            
+  DELAY = 0.85 ns                           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/u_ddr2 | MAXDELAY    |     0.047ns|     0.803ns|       0|           0
+  _top/u_mem_if_top/u_phy_top/u_phy_io/gen_ |             |            |            |        |            
+  dqs[3].u_iob_dqs/en_dqs_sync"         MAX |             |            |            |        |            
+  DELAY = 0.85 ns                           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/u_ddr2 | MAXDELAY    |     0.047ns|     0.803ns|       0|           0
+  _top/u_mem_if_top/u_phy_top/u_phy_io/gen_ |             |            |            |        |            
+  dqs[4].u_iob_dqs/en_dqs_sync"         MAX |             |            |            |        |            
+  DELAY = 0.85 ns                           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/u_ddr2 | MAXDELAY    |     0.047ns|     0.803ns|       0|           0
+  _top/u_mem_if_top/u_phy_top/u_phy_io/gen_ |             |            |            |        |            
+  dqs[6].u_iob_dqs/en_dqs_sync"         MAX |             |            |            |        |            
+  DELAY = 0.85 ns                           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/u_ddr2 | MAXDELAY    |     0.047ns|     0.803ns|       0|           0
+  _top/u_mem_if_top/u_phy_top/u_phy_io/gen_ |             |            |            |        |            
+  dqs[7].u_iob_dqs/en_dqs_sync"         MAX |             |            |            |        |            
+  DELAY = 0.85 ns                           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/u_ddr2 | MAXDELAY    |     0.071ns|     0.529ns|       0|           0
+  _top/u_mem_if_top/u_phy_top/u_phy_io/en_d |             |            |            |        |            
+  qs<6>"         MAXDELAY = 0.6 ns          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/u_ddr2 | MAXDELAY    |     0.071ns|     0.529ns|       0|           0
+  _top/u_mem_if_top/u_phy_top/u_phy_io/en_d |             |            |            |        |            
+  qs<5>"         MAXDELAY = 0.6 ns          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/u_ddr2 | MAXDELAY    |     0.071ns|     0.529ns|       0|           0
+  _top/u_mem_if_top/u_phy_top/u_phy_io/en_d |             |            |            |        |            
+  qs<4>"         MAXDELAY = 0.6 ns          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/u_ddr2 | MAXDELAY    |     0.071ns|     0.529ns|       0|           0
+  _top/u_mem_if_top/u_phy_top/u_phy_io/en_d |             |            |            |        |            
+  qs<3>"         MAXDELAY = 0.6 ns          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/u_ddr2 | MAXDELAY    |     0.071ns|     0.529ns|       0|           0
+  _top/u_mem_if_top/u_phy_top/u_phy_io/en_d |             |            |            |        |            
+  qs<7>"         MAXDELAY = 0.6 ns          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/u_ddr2 | MAXDELAY    |     0.071ns|     0.529ns|       0|           0
+  _top/u_mem_if_top/u_phy_top/u_phy_io/en_d |             |            |            |        |            
+  qs<2>"         MAXDELAY = 0.6 ns          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/u_ddr2 | MAXDELAY    |     0.071ns|     0.529ns|       0|           0
+  _top/u_mem_if_top/u_phy_top/u_phy_io/en_d |             |            |            |        |            
+  qs<1>"         MAXDELAY = 0.6 ns          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/u_ddr2 | MAXDELAY    |     0.071ns|     0.529ns|       0|           0
+  _top/u_mem_if_top/u_phy_top/u_phy_io/en_d |             |            |            |        |            
+  qs<0>"         MAXDELAY = 0.6 ns          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clock_generator_0_clock_generator_0_SI | SETUP       |     0.119ns|     4.881ns|       0|           0
+  G_PLL0_CLKOUT1 = PERIOD TIMEGRP         " | HOLD        |     0.307ns|            |       0|           0
+  clock_generator_0_clock_generator_0_SIG_P |             |            |            |        |            
+  LL0_CLKOUT1" TS_sys_clk_pin         * 2 P |             |            |            |        |            
+  HASE 1.25 ns HIGH 50%                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | MINLOWPULSE |     6.000ns|     4.000ns|       0|           0
+  pin" 100 MHz HIGH 50%                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clock_generator_0_clock_generator_0_SI | MINPERIOD   |     1.900ns|     3.100ns|       0|           0
+  G_PLL0_CLKOUT2 = PERIOD TIMEGRP         " |             |            |            |        |            
+  clock_generator_0_clock_generator_0_SIG_P |             |            |            |        |            
+  LL0_CLKOUT2" TS_sys_clk_pin         * 2 H |             |            |            |        |            
+  IGH 50%                                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_MC_CLK = PERIOD TIMEGRP "mc_clk" 5 ns  | MINPERIOD   |     1.900ns|     3.100ns|       0|           0
+  HIGH 50%                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_ppc440_0_PPCS0PLBMBUSY = MAXDELAY FROM | SETUP       |     2.569ns|     2.431ns|       0|           0
+   TIMEGRP "CPUS" TO TIMEGRP         "ppc44 | HOLD        |     1.749ns|            |       0|           0
+  0_0_PPCS0PLBMBUSY" 5 ns                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "fpga_0_Ethernet_MAC_PHY_rx_clk_pin_I | NETSKEW     |     4.785ns|     1.215ns|       0|           0
+  BUF" MAXSKEW = 6 ns                       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clock_generator_0_clock_generator_0_SI | SETUP       |     5.023ns|    19.908ns|       0|           0
+  G_PLL0_CLKOUT5 = PERIOD TIMEGRP         " | HOLD        |     0.442ns|            |       0|           0
+  clock_generator_0_clock_generator_0_SIG_P |             |            |            |        |            
+  LL0_CLKOUT5" TS_sys_clk_pin         * 0.2 |             |            |            |        |            
+  5 HIGH 50%                                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TSTXOUT_Ethernet_MAC = MAXDELAY FROM TIME | MAXDELAY    |     7.423ns|     2.577ns|       0|           0
+  GRP "TXCLK_GRP_Ethernet_MAC" TO         T |             |            |            |        |            
+  IMEGRP "PADS" 10 ns                       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "fpga_0_Ethernet_MAC_PHY_rx_clk_pin_I | SETUP       |     7.542ns|    18.451ns|       0|           0
+  BUF" PERIOD = 40 ns HIGH 14 ns            | HOLD        |     0.241ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  OFFSET = IN 6 ns BEFORE COMP "fpga_0_Ethe | SETUP       |     8.250ns|    -2.250ns|       0|           0
+  rnet_MAC_PHY_rx_clk_pin"                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "Ethernet_MAC/Ethernet_MAC/phy_tx_clk | SETUP       |    10.594ns|     9.731ns|       0|           0
+  _i" PERIOD = 40 ns HIGH 14 ns             | HOLD        |     0.194ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_MC_PHY_INIT_DATA_SEL_90 = MAXDELAY FRO | SETUP       |    14.461ns|     5.539ns|       0|           0
+  M TIMEGRP "TNM_PHY_INIT_DATA_SEL" TO      | HOLD        |     0.291ns|            |       0|           0
+      TIMEGRP "TNM_CLK90" TS_MC_CLK * 4     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_MC_RD_DATA_SEL = MAXDELAY FROM TIMEGRP | SETUP       |    14.711ns|     5.289ns|       0|           0
+   "TNM_RD_DATA_SEL" TO TIMEGRP         "TN | HOLD        |     0.420ns|            |       0|           0
+  M_CLK0" TS_MC_CLK * 4                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_MC_PHY_INIT_DATA_SEL_0 = MAXDELAY FROM | SETUP       |    14.853ns|     5.147ns|       0|           0
+   TIMEGRP "TNM_PHY_INIT_DATA_SEL" TO       | HOLD        |     1.225ns|            |       0|           0
+     TIMEGRP "TNM_CLK0" TS_MC_CLK * 4       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_MC_GATE_DLY = MAXDELAY FROM TIMEGRP "T | SETUP       |    17.711ns|     2.289ns|       0|           0
+  NM_GATE_DLY" TO TIMEGRP "TNM_CLK0"        | HOLD        |     0.014ns|            |       0|           0
+    TS_MC_CLK * 4                           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_MC_RDEN_DLY = MAXDELAY FROM TIMEGRP "T | SETUP       |    18.099ns|     1.901ns|       0|           0
+  NM_RDEN_DLY" TO TIMEGRP "TNM_CLK0"        | HOLD        |     0.213ns|            |       0|           0
+    TS_MC_CLK * 4                           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_MC_CAL_RDEN_DLY = MAXDELAY FROM TIMEGR | SETUP       |    18.267ns|     1.733ns|       0|           0
+  P "TNM_CAL_RDEN_DLY" TO TIMEGRP         " | HOLD        |     0.116ns|            |       0|           0
+  TNM_CLK0" TS_MC_CLK * 4                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "fpga_0_SysACE_CompactFlash_SysACE_CL | SETUP       |    26.031ns|     3.969ns|       0|           0
+  K_pin_BUFGP/IBUFG" PERIOD = 30 ns         | HOLD        |     0.457ns|            |       0|           0
+   HIGH 50%                                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_MC_RDEN_SEL_MUX = MAXDELAY FROM TIMEGR | N/A         |         N/A|         N/A|     N/A|         N/A
+  P "TNM_RDEN_SEL_MUX" TO TIMEGRP         " |             |            |            |        |            
+  TNM_CLK0" TS_MC_CLK * 4                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_MPLB2TFT1_xps_tft_0_path" TIG    | SETUP       |         N/A|     1.466ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_TFT_MPLB_CLOCK_xps_tft_0_path" T | SETUP       |         N/A|     3.456ns|     N/A|           0
+  IG                                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_MPLB2TFT_xps_tft_0_path" TIG     | SETUP       |         N/A|     1.801ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_SPLB2MPLB_xps_tft_0_path" TIG    | SETUP       |         N/A|     2.870ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  TS_clock_generator_0_clock_generator_0_SI | N/A         |         N/A|         N/A|     N/A|         N/A
+  G_PLL0_CLKOUT4 = PERIOD TIMEGRP         " |             |            |            |        |            
+  clock_generator_0_clock_generator_0_SIG_P |             |            |            |        |            
+  LL0_CLKOUT4" TS_sys_clk_pin         * 4 H |             |            |            |        |            
+  IGH 50%                                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_sys_clk_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_sys_clk_pin                 |     10.000ns|      4.000ns|      9.964ns|            0|            0|            0|       122279|
+| TS_clock_generator_0_clock_gen|     10.000ns|      9.964ns|          N/A|            0|            0|       115970|            0|
+| erator_0_SIG_PLL0_CLKOUT0     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      5.000ns|      4.881ns|          N/A|            0|            0|          630|            0|
+| erator_0_SIG_PLL0_CLKOUT1     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      5.000ns|      3.100ns|          N/A|            0|            0|            0|            0|
+| erator_0_SIG_PLL0_CLKOUT2     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      5.000ns|      4.966ns|          N/A|            0|            0|         4646|            0|
+| erator_0_SIG_PLL0_CLKOUT3     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      2.500ns|          N/A|          N/A|            0|            0|            0|            0|
+| erator_0_SIG_PLL0_CLKOUT4     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|     40.000ns|     19.908ns|          N/A|            0|            0|         1033|            0|
+| erator_0_SIG_PLL0_CLKOUT5     |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_MC_CLK
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_MC_CLK                      |      5.000ns|      3.100ns|      1.385ns|            0|            0|            0|          474|
+| TS_MC_RD_DATA_SEL             |     20.000ns|      5.289ns|          N/A|            0|            0|          128|            0|
+| TS_MC_PHY_INIT_DATA_SEL_0     |     20.000ns|      5.147ns|          N/A|            0|            0|           22|            0|
+| TS_MC_PHY_INIT_DATA_SEL_90    |     20.000ns|      5.539ns|          N/A|            0|            0|          274|            0|
+| TS_MC_GATE_DLY                |     20.000ns|      2.289ns|          N/A|            0|            0|           40|            0|
+| TS_MC_RDEN_DLY                |     20.000ns|      1.901ns|          N/A|            0|            0|            5|            0|
+| TS_MC_CAL_RDEN_DLY            |     20.000ns|      1.733ns|          N/A|            0|            0|            5|            0|
+| TS_MC_RDEN_SEL_MUX            |     20.000ns|          N/A|          N/A|            0|            0|            0|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 1 mins 27 secs 
+Total CPU time to PAR completion: 1 mins 30 secs 
+
+Peak Memory Usage:  851 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 6
+Number of info messages: 2
+
+Writing design to file system.ncd
+
+
+
+PAR done!
+
+
+
+#----------------------------------------------#
+# Starting program post_par_trce
+# trce -e 3 -xml system.twx system.ncd system.pcf 
+#----------------------------------------------#
+Release 12.1 - Trace  (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+
+PMSPEC -- Overriding Xilinx file
+</opt/Xilinx/12.1/ISE_DS/EDK/virtex5/data/virtex5.acd> with local file
+</opt/Xilinx/12.1/ISE_DS/ISE/virtex5/data/virtex5.acd>
+Loading device for application Rf_Device from file '5vfx70t.nph' in environment
+/opt/Xilinx/12.1/ISE_DS/ISE:/opt/Xilinx/12.1/ISE_DS/EDK.
+   "system" is an NCD, version 3.2, device xc5vfx70t, package ff1136, speed -1
+WARNING:Timing:3223 - Timing constraint TS_MC_RDEN_SEL_MUX = MAXDELAY FROM
+   TIMEGRP "TNM_RDEN_SEL_MUX" TO TIMEGRP        "TNM_CLK0" TS_MC_CLK * 4;
+   ignored during timing analysis.
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more
+   information, see the TSI report.  Please consult the Xilinx Command Line
+   Tools User Guide for information on generating a TSI report.
+--------------------------------------------------------------------------------
+Release 12.1 Trace  (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/12.1/ISE_DS/ISE/bin/lin64/unwrapped/trce -e 3 -xml system.twx
+system.ncd system.pcf
+
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,speed:             xc5vfx70t,-1 (PRODUCTION 1.68 2010-04-09, STEPPING
+level 0)
+Report level:             error report
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on a
+   50 Ohm transmission line loading model.  For the details of this model, and
+   for more information on accounting for different loading conditions, please
+   see the device datasheet.
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0 (Setup/Max: 0, Hold: 0)
+
+Constraints cover 123400 paths, 18 nets, and 40935 connections
+
+Design statistics:
+   Minimum period:  19.908ns (Maximum frequency:  50.231MHz)
+   Maximum path delay from/to any node:   5.539ns
+   Maximum net delay:   0.805ns
+   Maximum net skew:   5.955ns
+
+
+Analysis completed Tue Oct  5 14:19:12 2010
+--------------------------------------------------------------------------------
+
+Generating Report ...
+
+Number of warnings: 1
+Number of info messages: 3
+Total time: 24 secs 
+
+

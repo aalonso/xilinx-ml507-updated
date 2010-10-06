@@ -1,0 +1,1049 @@
+Release 12.1 - xst M.53d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_xst.prj"
+Verilog Include Directory          : {"/home/aalonso/workspace/xlnx/xilinx-ml507-updated/pcores/" "/opt/Xilinx/12.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+
+---- Target Parameters
+Target Device                      : xc5vfx70tff1136-1
+Output File Name                   : "../implementation/system.ngc"
+
+---- Source Options
+Top Module Name                    : system
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 10000
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" in Library work.
+Entity <system> compiled.
+Entity <system> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <system> in library <work> (architecture <STRUCTURE>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <system> in library <work> (Architecture <STRUCTURE>).
+    Set property "BUFFER_TYPE = IBUF" for signal <fpga_0_Ethernet_MAC_PHY_tx_clk_pin> in unit <system>.
+    Set property "BUFFER_TYPE = IBUF" for signal <fpga_0_Ethernet_MAC_PHY_rx_clk_pin> in unit <system>.
+    Set property "BUFFER_TYPE = BUFGP" for signal <fpga_0_SysACE_CompactFlash_SysACE_CLK_pin> in unit <system>.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'C440MACHINECHECK' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'C440CPMCORESLEEPREQ' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'C440CPMDECIRPTREQ' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'C440CPMFITIRPTREQ' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'C440CPMMSRCE' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'C440CPMMSREE' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'C440CPMTIMERRESETREQ' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'C440CPMWDIRPTREQ' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCCPMINTERCONNECTBUSY' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'C440DBGSYSTEMCONTROL' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'SPLB0_Error' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'SPLB1_Error' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCEICINTERCONNECTIRQ' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCDMDCRREAD' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCDMDCRWRITE' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCDMDCRABUS' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCDMDCRDBUSOUT' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCDSDCRACK' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCDSDCRDBUSIN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCDSDCRTIMEOUTWAIT' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMDECNONAUTON' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMDECFPUOP' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMDECLDSTXFERSIZE' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMDECLOAD' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMNEXTINSTRREADY' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMDECSTORE' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMDECUDI' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMDECUDIVALID' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMENDIAN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMFLUSH' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMINSTRUCTION' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMINSTRVALID' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMLOADBYTEADDR' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMLOADDATA' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMLOADDVALID' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMOPERANDVALID' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMRADATA' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMRBDATA' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMWRITEBACKOK' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMMSRFE0' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'APUFCMMSRFE1' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCS1PLBADDRACK' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCS1PLBWAIT' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCS1PLBREARBITRATE' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCS1PLBWRDACK' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCS1PLBWRCOMP' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCS1PLBRDDBUS' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCS1PLBRDWDADDR' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCS1PLBRDDACK' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCS1PLBRDCOMP' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCS1PLBRDBTERM' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCS1PLBWRBTERM' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCS1PLBMBUSY' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCS1PLBMRDERR' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCS1PLBMWRERR' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCS1PLBMIRQ' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'PPCS1PLBSSIZE' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA0LLTXD' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA0LLTXREM' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA0LLTXSOFN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA0LLTXEOFN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA0LLTXSOPN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA0LLTXEOPN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA0LLTXSRCRDYN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA0LLRXDSTRDYN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA0LLRSTENGINEACK' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA0TXIRQ' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA0RXIRQ' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA1LLTXD' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA1LLTXREM' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA1LLTXSOFN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA1LLTXEOFN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA1LLTXSOPN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA1LLTXEOPN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA1LLTXSRCRDYN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA1LLRXDSTRDYN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA1LLRSTENGINEACK' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA1TXIRQ' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA1RXIRQ' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA2LLTXD' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA2LLTXREM' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA2LLTXSOFN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA2LLTXEOFN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA2LLTXSOPN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA2LLTXEOPN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA2LLTXSRCRDYN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA2LLRXDSTRDYN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA2LLRSTENGINEACK' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA2TXIRQ' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA2RXIRQ' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA3LLTXD' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA3LLTXREM' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA3LLTXSOFN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA3LLTXEOFN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA3LLTXSOPN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA3LLTXEOPN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA3LLTXSRCRDYN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA3LLRXDSTRDYN' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA3LLRSTENGINEACK' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA3TXIRQ' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'DMA3RXIRQ' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'C440TRCBRANCHSTATUS' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'C440TRCCYCLE' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'C440TRCEXECUTIONSTATUS' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'C440TRCTRACESTATUS' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'C440TRCTRIGGEREVENTOUT' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 1879: Unconnected output port 'C440TRCTRIGGEREVENTTYPE' of component 'ppc440_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_Rst' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_dcrAck' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_dcrDBus' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_SaddrAck' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_SMRdErr' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_SMWrErr' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_SMBusy' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_SrdBTerm' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_SrdComp' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_SrdDAck' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_SrdDBus' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_SrdWdAddr' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_Srearbitrate' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_Sssize' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_Swait' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_SwrBTerm' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_SwrComp' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'PLB_SwrDAck' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2190: Unconnected output port 'Bus_Error_Det' of component 'plb_v46_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2344: Unconnected output port 'BRAM_Din_B' of component 'xps_bram_if_cntlr_1_bram_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2411: Unconnected output port 'IP2INTC_Irpt' of component 'leds_8bit_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2411: Unconnected output port 'GPIO2_IO_O' of component 'leds_8bit_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2411: Unconnected output port 'GPIO2_IO_T' of component 'leds_8bit_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2464: Unconnected output port 'IP2INTC_Irpt' of component 'leds_positions_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2464: Unconnected output port 'GPIO2_IO_O' of component 'leds_positions_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2464: Unconnected output port 'GPIO2_IO_T' of component 'leds_positions_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2517: Unconnected output port 'IP2INTC_Irpt' of component 'push_buttons_5bit_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2517: Unconnected output port 'GPIO2_IO_O' of component 'push_buttons_5bit_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2517: Unconnected output port 'GPIO2_IO_T' of component 'push_buttons_5bit_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2570: Unconnected output port 'GPIO2_IO_O' of component 'dip_switches_8bit_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2570: Unconnected output port 'GPIO2_IO_T' of component 'dip_switches_8bit_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2623: Unconnected output port 'Gpo' of component 'iic_eeprom_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2738: Unconnected output port 'idelay_ctrl_rdy' of component 'ddr2_sdram_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'MCH0_Access_Full' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'MCH0_ReadData_Control' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'MCH0_ReadData_Data' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'MCH0_ReadData_Exists' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'MCH1_Access_Full' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'MCH1_ReadData_Control' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'MCH1_ReadData_Data' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'MCH1_ReadData_Exists' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'MCH2_Access_Full' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'MCH2_ReadData_Control' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'MCH2_ReadData_Data' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'MCH2_ReadData_Exists' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'MCH3_Access_Full' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'MCH3_ReadData_Control' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'MCH3_ReadData_Data' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'MCH3_ReadData_Exists' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'Mem_RPN' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'Mem_QWEN' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'Mem_BEN' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'Mem_CE' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'Mem_LBON' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'Mem_CKEN' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2831: Unconnected output port 'Mem_RNW' of component 'flash_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2925: Unconnected output port 'WDT_Reset' of component 'xps_timebase_wdt_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2974: Unconnected output port 'GenerateOut0' of component 'xps_timer_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2974: Unconnected output port 'GenerateOut1' of component 'xps_timer_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 2974: Unconnected output port 'PWM0' of component 'xps_timer_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3027: Unconnected output port 'CLKOUT6' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3027: Unconnected output port 'CLKOUT7' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3027: Unconnected output port 'CLKOUT8' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3027: Unconnected output port 'CLKOUT9' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3027: Unconnected output port 'CLKOUT10' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3027: Unconnected output port 'CLKOUT11' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3027: Unconnected output port 'CLKOUT12' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3027: Unconnected output port 'CLKOUT13' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3027: Unconnected output port 'CLKOUT14' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3027: Unconnected output port 'CLKOUT15' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3027: Unconnected output port 'CLKFBOUT' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3027: Unconnected output port 'PSDONE' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3056: Unconnected output port 'DBGC405DEBUGHALT0' of component 'jtagppc_cntlr_inst_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3056: Unconnected output port 'DBGC405DEBUGHALT1' of component 'jtagppc_cntlr_inst_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3056: Unconnected output port 'JTGC405TCK1' of component 'jtagppc_cntlr_inst_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3056: Unconnected output port 'JTGC405TDI1' of component 'jtagppc_cntlr_inst_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3056: Unconnected output port 'JTGC405TMS1' of component 'jtagppc_cntlr_inst_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3056: Unconnected output port 'JTGC405TRSTNEG1' of component 'jtagppc_cntlr_inst_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3077: Unconnected output port 'RstcPPCresetcore_1' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3077: Unconnected output port 'RstcPPCresetchip_1' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3077: Unconnected output port 'RstcPPCresetsys_1' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3077: Unconnected output port 'MB_Reset' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3077: Unconnected output port 'Peripheral_Reset' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3149: Unconnected output port 'MD_error' of component 'xps_tft_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3149: Unconnected output port 'Sl_DCRDBus' of component 'xps_tft_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3149: Unconnected output port 'Sl_DCRAck' of component 'xps_tft_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3149: Unconnected output port 'TFT_DPS' of component 'xps_tft_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3149: Unconnected output port 'TFT_VGA_CLK' of component 'xps_tft_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3149: Unconnected output port 'TFT_VGA_R' of component 'xps_tft_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3149: Unconnected output port 'TFT_VGA_G' of component 'xps_tft_0_wrapper'.
+WARNING:Xst:753 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3149: Unconnected output port 'TFT_VGA_B' of component 'xps_tft_0_wrapper'.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3364: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3372: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3380: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3388: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3396: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3404: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3412: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3420: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3428: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3436: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3444: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3452: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3460: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3468: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3476: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3484: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3492: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3500: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3508: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3516: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3524: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3532: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3540: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3548: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3556: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3564: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3572: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3580: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3588: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3596: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3604: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3612: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3620: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3628: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3636: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3644: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3652: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3660: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3668: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3676: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3684: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3692: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3700: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3708: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3716: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3724: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3732: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3740: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3748: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3756: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3764: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3772: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3780: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3788: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3796: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3804: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3812: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3820: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3828: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3836: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3844: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3852: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3860: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3868: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3876: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3884: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd" line 3892: Instantiating black box module <IOBUF>.
+Entity <system> analyzed. Unit <system> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <system>.
+    Related source file is "/home/aalonso/workspace/xlnx/xilinx-ml507-updated/hdl/system.vhd".
+WARNING:Xst:646 - Signal <plb_v46_0_SPLB_Rst<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <plb_v46_0_MPLB_Rst<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <pgassign7<0:6>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <pgassign7<31>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <pgassign6<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <pgassign5> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <system> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <../implementation/ppc440_0_wrapper.ngc>.
+Reading core <../implementation/plb_v46_0_wrapper.ngc>.
+Reading core <../implementation/xps_bram_if_cntlr_1_wrapper.ngc>.
+Reading core <../implementation/xps_bram_if_cntlr_1_bram_wrapper.ngc>.
+Reading core <../implementation/rs232_uart_1_wrapper.ngc>.
+Reading core <../implementation/leds_8bit_wrapper.ngc>.
+Reading core <../implementation/leds_positions_wrapper.ngc>.
+Reading core <../implementation/push_buttons_5bit_wrapper.ngc>.
+Reading core <../implementation/dip_switches_8bit_wrapper.ngc>.
+Reading core <../implementation/iic_eeprom_wrapper.ngc>.
+Reading core <../implementation/ethernet_mac_wrapper.ngc>.
+Reading core <../implementation/ddr2_sdram_wrapper.ngc>.
+Reading core <../implementation/sysace_compactflash_wrapper.ngc>.
+Reading core <../implementation/flash_wrapper.ngc>.
+Reading core <../implementation/xps_timebase_wdt_0_wrapper.ngc>.
+Reading core <../implementation/xps_timer_0_wrapper.ngc>.
+Reading core <../implementation/clock_generator_0_wrapper.ngc>.
+Reading core <../implementation/jtagppc_cntlr_inst_wrapper.ngc>.
+Reading core <../implementation/proc_sys_reset_0_wrapper.ngc>.
+Reading core <../implementation/xps_intc_0_wrapper.ngc>.
+Reading core <../implementation/xps_tft_0_wrapper.ngc>.
+Reading core <../implementation/xps_ps2_0_wrapper.ngc>.
+Reading core <../implementation/plb2wb_encoder_0_wrapper.ngc>.
+Loading core <ppc440_0_wrapper> for timing and area information for instance <ppc440_0>.
+Loading core <plb_v46_0_wrapper> for timing and area information for instance <plb_v46_0>.
+Loading core <xps_bram_if_cntlr_1_wrapper> for timing and area information for instance <xps_bram_if_cntlr_1>.
+Loading core <xps_bram_if_cntlr_1_bram_wrapper> for timing and area information for instance <xps_bram_if_cntlr_1_bram>.
+Loading core <rs232_uart_1_wrapper> for timing and area information for instance <RS232_Uart_1>.
+Loading core <leds_8bit_wrapper> for timing and area information for instance <LEDs_8Bit>.
+Loading core <leds_positions_wrapper> for timing and area information for instance <LEDs_Positions>.
+Loading core <push_buttons_5bit_wrapper> for timing and area information for instance <Push_Buttons_5Bit>.
+Loading core <dip_switches_8bit_wrapper> for timing and area information for instance <DIP_Switches_8Bit>.
+Loading core <iic_eeprom_wrapper> for timing and area information for instance <IIC_EEPROM>.
+Loading core <ethernet_mac_wrapper> for timing and area information for instance <Ethernet_MAC>.
+Loading core <ddr2_sdram_wrapper> for timing and area information for instance <DDR2_SDRAM>.
+Loading core <sysace_compactflash_wrapper> for timing and area information for instance <SysACE_CompactFlash>.
+Loading core <flash_wrapper> for timing and area information for instance <FLASH>.
+Loading core <xps_timebase_wdt_0_wrapper> for timing and area information for instance <xps_timebase_wdt_0>.
+Loading core <xps_timer_0_wrapper> for timing and area information for instance <xps_timer_0>.
+Loading core <clock_generator_0_wrapper> for timing and area information for instance <clock_generator_0>.
+Loading core <jtagppc_cntlr_inst_wrapper> for timing and area information for instance <jtagppc_cntlr_inst>.
+Loading core <proc_sys_reset_0_wrapper> for timing and area information for instance <proc_sys_reset_0>.
+Loading core <xps_intc_0_wrapper> for timing and area information for instance <xps_intc_0>.
+Loading core <xps_tft_0_wrapper> for timing and area information for instance <xps_tft_0>.
+Loading core <xps_ps2_0_wrapper> for timing and area information for instance <xps_ps2_0>.
+Loading core <plb2wb_encoder_0_wrapper> for timing and area information for instance <plb2wb_encoder_0>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <system> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2260 - The FF/Latch <plb_v46_0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1> in Unit <plb_v46_0> is equivalent to the following FF/Latch : <plb_v46_0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_1> 
+INFO:Xst:2260 - The FF/Latch <plb_v46_0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0> in Unit <plb_v46_0> is equivalent to the following FF/Latch : <plb_v46_0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_1> 
+INFO:Xst:2260 - The FF/Latch <plb_v46_0/GEN_MPLB_RST[1].I_MPLB_RST> in Unit <plb_v46_0> is equivalent to the following 19 FFs/Latches : <plb_v46_0/GEN_MPLB_RST[0].I_MPLB_RST> <plb_v46_0/GEN_SPLB_RST[16].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[15].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[14].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[13].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[12].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[11].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[10].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[9].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[8].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[7].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[6].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[5].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[4].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[3].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[2].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[1].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[0].I_SPLB_RST> <plb_v46_0/I_PLB_RST> 
+INFO:Xst:2260 - The FF/Latch <plb_v46_0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbSecRdInProgReg_i> in Unit <plb_v46_0> is equivalent to the following FF/Latch : <plb_v46_0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbSecRdInProgReg_i_1> 
+INFO:Xst:2260 - The FF/Latch <xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_ADDRACK> in Unit <xps_bram_if_cntlr_1> is equivalent to the following FF/Latch : <xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_SET_SLBUSY> 
+INFO:Xst:2260 - The FF/Latch <xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_WRACK_2BUS> in Unit <xps_bram_if_cntlr_1> is equivalent to the following FF/Latch : <xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_WRACK> 
+INFO:Xst:2260 - The FF/Latch <Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/STATE21A> in Unit <Ethernet_MAC> is equivalent to the following 2 FFs/Latches : <Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/STATE19A> <Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/state21a> 
+INFO:Xst:2260 - The FF/Latch <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.I_SNGL_S_H_REG> in Unit <Ethernet_MAC> is equivalent to the following FF/Latch : <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.I_SNGL_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[3].I_SIZE_S_H_REG> in Unit <Ethernet_MAC> is equivalent to the following FF/Latch : <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[3].I_SIZE_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/sl_wrdack_i> in Unit <Ethernet_MAC> is equivalent to the following 2 FFs/Latches : <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/GEN_WRITE_BUFFER.GEN_WRBUF_WREN1> <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/GEN_WRITE_BUFFER.GEN_WRBUF_WREN2> 
+INFO:Xst:2260 - The FF/Latch <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.I_BURST_S_H_REG> in Unit <Ethernet_MAC> is equivalent to the following FF/Latch : <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.I_BURST_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.I_CACHLN_S_H_REG> in Unit <Ethernet_MAC> is equivalent to the following FF/Latch : <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.I_CACHLN_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[2].I_SIZE_S_H_REG> in Unit <Ethernet_MAC> is equivalent to the following FF/Latch : <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[2].I_SIZE_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG> in Unit <Ethernet_MAC> is equivalent to the following FF/Latch : <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/wr_rst_reg_1> in Unit <BU3> is equivalent to the following FF/Latch : <U0/grf.rf/rstblk/wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i> in Unit <BU3> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i> in Unit <BU3> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/rd_rst_reg_2> in Unit <BU3> is equivalent to the following 2 FFs/Latches : <U0/grf.rf/rstblk/rd_rst_reg_1> <U0/grf.rf/rstblk/rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/wr_rst_reg_1> in Unit <BU3> is equivalent to the following FF/Latch : <U0/grf.rf/rstblk/wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i> in Unit <BU3> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i> in Unit <BU3> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/rd_rst_reg_2> in Unit <BU3> is equivalent to the following 2 FFs/Latches : <U0/grf.rf/rstblk/rd_rst_reg_1> <U0/grf.rf/rstblk/rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/clk_reset/rst0_sync_r_2> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/clk_reset/rst0_sync_r_2_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/clk_reset/rst90_sync_r_2> in Unit <DDR2_SDRAM> is equivalent to the following 6 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/clk_reset/rst90_sync_r_2_1> <DDR2_SDRAM/u_ddr2_top/clk_reset/rst90_sync_r_2_2> <DDR2_SDRAM/u_ddr2_top/clk_reset/rst90_sync_r_2_3> <DDR2_SDRAM/u_ddr2_top/clk_reset/rst90_sync_r_2_4> <DDR2_SDRAM/u_ddr2_top/clk_reset/rst90_sync_r_2_5> <DDR2_SDRAM/u_ddr2_top/clk_reset/rst90_sync_r_2_6> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_usr_top/usr_rd/gen_rden_sel_mux[0].u_ff_rden_sel_mux> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_usr_top/usr_rd/rden_sel_r_0> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_26> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_26_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_26_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_31> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_31_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_31_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_11> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_11_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_6> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_6_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_23> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_23_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_23_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_18> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_18_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_18_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_10> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_10_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_5> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_5_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dm_inst.gen_dm[0].u_iob_dm/u_dm_ce> in Unit <DDR2_SDRAM> is equivalent to the following 7 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dm_inst.gen_dm[1].u_iob_dm/u_dm_ce> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dm_inst.gen_dm[2].u_iob_dm/u_dm_ce> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dm_inst.gen_dm[3].u_iob_dm/u_dm_ce> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dm_inst.gen_dm[4].u_iob_dm/u_dm_ce> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dm_inst.gen_dm[5].u_iob_dm/u_dm_ce> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dm_inst.gen_dm[6].u_iob_dm/u_dm_ce> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dm_inst.gen_dm[7].u_iob_dm/u_dm_ce> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_40> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_40_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_40_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_35> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_35_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_35_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_44> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_44_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_44_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_39> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_39_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_39_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_30> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_30_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_30_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_25> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_25_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_25_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_1> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_1_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_hit_r_1> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_hit_r_1_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_13> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_13_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_22> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_22_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_22_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_17> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_17_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_17_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0> in Unit <DDR2_SDRAM> is equivalent to the following 40 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_1> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_2> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_3> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_4> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_5> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_6> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_7> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_8> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_9> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_10> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_11> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_12> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_13> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_14> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_15> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_16>
+   <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_17> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_18> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_19> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_20> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_21> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_22> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_23> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_24> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_25> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_26> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_27> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_28> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_29> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_30> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_31> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_32> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_33> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_34>
+   <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_35> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_36> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_37> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_38> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_39> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_40> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_0> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_0_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_12> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_12_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_34> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_34_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_34_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_29> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_29_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_29_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_43> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_43_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_43_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_38> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_38_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_38_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_59> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_59_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_21> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_21_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_21_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_16> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_16_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_16_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_2> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_2_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_7> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_7_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_33> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_33_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_33_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_28> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_28_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_28_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_14> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_14_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[0].u_iob_dqs/dqs_rst_n_r> in Unit <DDR2_SDRAM> is equivalent to the following 7 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[1].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[2].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[3].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[4].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[5].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[6].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[7].u_iob_dqs/dqs_rst_n_r> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_42> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_42_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_42_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_37> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_37_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_37_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_58> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_58_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_hit_r_2> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_hit_r_2_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_15> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_15_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_15_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_20> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_20_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_20_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_32> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_32_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_32_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_27> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_27_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_27_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_9> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_9_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_4> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_4_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_24> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_24_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_24_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_19> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_19_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_19_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_8> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_8_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_3> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_3_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_41> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_41_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_41_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_36> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_36_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_36_2> 
+INFO:Xst:2260 - The FF/Latch <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[3].I_SIZE_S_H_REG> in Unit <FLASH> is equivalent to the following FF/Latch : <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[3].I_SIZE_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.I_CACHLN_S_H_REG> in Unit <FLASH> is equivalent to the following FF/Latch : <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.I_CACHLN_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.I_BURST_S_H_REG> in Unit <FLASH> is equivalent to the following FF/Latch : <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.I_BURST_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[2].I_SIZE_S_H_REG> in Unit <FLASH> is equivalent to the following FF/Latch : <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[2].I_SIZE_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG> in Unit <FLASH> is equivalent to the following FF/Latch : <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.I_SNGL_S_H_REG> in Unit <FLASH> is equivalent to the following FF/Latch : <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.I_SNGL_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/sl_wrdack_i> in Unit <FLASH> is equivalent to the following 2 FFs/Latches : <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/GEN_WRITE_BUFFER.GEN_WRBUF_WREN1> <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/GEN_WRITE_BUFFER.GEN_WRBUF_WREN2> 
+INFO:Xst:2260 - The FF/Latch <xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[21].TCSR0_FF_I> in Unit <xps_timer_0> is equivalent to the following FF/Latch : <xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[21].TCSR1_FF_I> 
+INFO:Xst:2260 - The FF/Latch <plb_v46_0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1> in Unit <plb_v46_0> is equivalent to the following FF/Latch : <plb_v46_0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_1> 
+INFO:Xst:2260 - The FF/Latch <plb_v46_0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0> in Unit <plb_v46_0> is equivalent to the following FF/Latch : <plb_v46_0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_1> 
+INFO:Xst:2260 - The FF/Latch <plb_v46_0/GEN_MPLB_RST[1].I_MPLB_RST> in Unit <plb_v46_0> is equivalent to the following 19 FFs/Latches : <plb_v46_0/GEN_MPLB_RST[0].I_MPLB_RST> <plb_v46_0/GEN_SPLB_RST[16].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[15].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[14].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[13].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[12].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[11].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[10].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[9].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[8].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[7].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[6].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[5].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[4].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[3].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[2].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[1].I_SPLB_RST> <plb_v46_0/GEN_SPLB_RST[0].I_SPLB_RST> <plb_v46_0/I_PLB_RST> 
+INFO:Xst:2260 - The FF/Latch <plb_v46_0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbSecRdInProgReg_i> in Unit <plb_v46_0> is equivalent to the following FF/Latch : <plb_v46_0/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbSecRdInProgReg_i_1> 
+INFO:Xst:2260 - The FF/Latch <xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_ADDRACK> in Unit <xps_bram_if_cntlr_1> is equivalent to the following FF/Latch : <xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_SET_SLBUSY> 
+INFO:Xst:2260 - The FF/Latch <xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_WRACK_2BUS> in Unit <xps_bram_if_cntlr_1> is equivalent to the following FF/Latch : <xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_WRACK> 
+INFO:Xst:2260 - The FF/Latch <Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/STATE21A> in Unit <Ethernet_MAC> is equivalent to the following 2 FFs/Latches : <Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_STATE_MACHINE/STATE19A> <Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_STATE/state21a> 
+INFO:Xst:2260 - The FF/Latch <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.I_SNGL_S_H_REG> in Unit <Ethernet_MAC> is equivalent to the following FF/Latch : <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.I_SNGL_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[3].I_SIZE_S_H_REG> in Unit <Ethernet_MAC> is equivalent to the following FF/Latch : <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[3].I_SIZE_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/sl_wrdack_i> in Unit <Ethernet_MAC> is equivalent to the following 2 FFs/Latches : <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/GEN_WRITE_BUFFER.GEN_WRBUF_WREN1> <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/GEN_WRITE_BUFFER.GEN_WRBUF_WREN2> 
+INFO:Xst:2260 - The FF/Latch <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.I_BURST_S_H_REG> in Unit <Ethernet_MAC> is equivalent to the following FF/Latch : <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.I_BURST_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.I_CACHLN_S_H_REG> in Unit <Ethernet_MAC> is equivalent to the following FF/Latch : <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.I_CACHLN_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[2].I_SIZE_S_H_REG> in Unit <Ethernet_MAC> is equivalent to the following FF/Latch : <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[2].I_SIZE_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG> in Unit <Ethernet_MAC> is equivalent to the following FF/Latch : <Ethernet_MAC/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/wr_rst_reg_1> in Unit <BU3> is equivalent to the following FF/Latch : <U0/grf.rf/rstblk/wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i> in Unit <BU3> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i> in Unit <BU3> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/rd_rst_reg_2> in Unit <BU3> is equivalent to the following 2 FFs/Latches : <U0/grf.rf/rstblk/rd_rst_reg_1> <U0/grf.rf/rstblk/rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/wr_rst_reg_1> in Unit <BU3> is equivalent to the following FF/Latch : <U0/grf.rf/rstblk/wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i> in Unit <BU3> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i> in Unit <BU3> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/rd_rst_reg_2> in Unit <BU3> is equivalent to the following 2 FFs/Latches : <U0/grf.rf/rstblk/rd_rst_reg_1> <U0/grf.rf/rstblk/rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/clk_reset/rst0_sync_r_2> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/clk_reset/rst0_sync_r_2_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/clk_reset/rst90_sync_r_2> in Unit <DDR2_SDRAM> is equivalent to the following 6 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/clk_reset/rst90_sync_r_2_1> <DDR2_SDRAM/u_ddr2_top/clk_reset/rst90_sync_r_2_2> <DDR2_SDRAM/u_ddr2_top/clk_reset/rst90_sync_r_2_3> <DDR2_SDRAM/u_ddr2_top/clk_reset/rst90_sync_r_2_4> <DDR2_SDRAM/u_ddr2_top/clk_reset/rst90_sync_r_2_5> <DDR2_SDRAM/u_ddr2_top/clk_reset/rst90_sync_r_2_6> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_usr_top/usr_rd/gen_rden_sel_mux[0].u_ff_rden_sel_mux> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_usr_top/usr_rd/rden_sel_r_0> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_26> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_26_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_26_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_31> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_31_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_31_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_11> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_11_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_6> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_6_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_23> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_23_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_23_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_18> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_18_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_18_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_10> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_10_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_5> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_5_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dm_inst.gen_dm[0].u_iob_dm/u_dm_ce> in Unit <DDR2_SDRAM> is equivalent to the following 7 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dm_inst.gen_dm[1].u_iob_dm/u_dm_ce> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dm_inst.gen_dm[2].u_iob_dm/u_dm_ce> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dm_inst.gen_dm[3].u_iob_dm/u_dm_ce> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dm_inst.gen_dm[4].u_iob_dm/u_dm_ce> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dm_inst.gen_dm[5].u_iob_dm/u_dm_ce> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dm_inst.gen_dm[6].u_iob_dm/u_dm_ce> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dm_inst.gen_dm[7].u_iob_dm/u_dm_ce> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_40> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_40_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_40_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_35> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_35_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_35_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_44> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_44_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_44_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_39> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_39_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_39_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_30> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_30_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_30_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_25> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_25_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_25_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_1> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_1_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_hit_r_1> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_hit_r_1_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_13> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_13_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_22> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_22_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_22_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_17> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_17_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_17_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0> in Unit <DDR2_SDRAM> is equivalent to the following 40 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_1> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_2> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_3> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_4> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_5> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_6> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_7> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_8> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_9> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_10> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_11> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_12> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_13> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_14> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_15> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_16>
+   <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_17> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_18> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_19> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_20> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_21> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_22> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_23> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_24> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_25> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_26> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_27> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_28> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_29> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_30> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_31> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_32> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_33> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_34>
+   <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_35> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_36> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_37> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_38> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_39> <DDR2_SDRAM/u_ddr2_top/clk_reset/rstdiv0_sync_r_0_40> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_0> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_0_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_12> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_12_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_34> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_34_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_34_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_29> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_29_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_29_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_43> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_43_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_43_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_38> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_38_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_38_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_59> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_59_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_21> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_21_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_21_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_16> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_16_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_16_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_2> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_2_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_7> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_7_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_33> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_33_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_33_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_28> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_28_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_28_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_14> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_14_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[0].u_iob_dqs/dqs_rst_n_r> in Unit <DDR2_SDRAM> is equivalent to the following 7 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[1].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[2].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[3].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[4].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[5].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[6].u_iob_dqs/dqs_rst_n_r> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[7].u_iob_dqs/dqs_rst_n_r> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_42> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_42_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_42_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_37> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_37_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_37_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_58> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_58_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_hit_r_2> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_hit_r_2_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_15> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_15_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_15_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_20> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_20_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_20_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_32> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_32_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_32_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_27> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_27_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_27_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_9> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_9_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_4> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_4_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_24> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_24_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_24_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_19> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_19_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_19_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_8> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_8_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_3> in Unit <DDR2_SDRAM> is equivalent to the following FF/Latch : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_3_1> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_41> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_41_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_41_2> 
+INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_36> in Unit <DDR2_SDRAM> is equivalent to the following 2 FFs/Latches : <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_36_1> <DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_u_ctrl/bank_cmp_addr_r_36_2> 
+INFO:Xst:2260 - The FF/Latch <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG> in Unit <FLASH> is equivalent to the following FF/Latch : <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/sl_wrdack_i> in Unit <FLASH> is equivalent to the following 2 FFs/Latches : <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/GEN_WRITE_BUFFER.GEN_WRBUF_WREN1> <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/GEN_WRITE_BUFFER.GEN_WRBUF_WREN2> 
+INFO:Xst:2260 - The FF/Latch <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[3].I_SIZE_S_H_REG> in Unit <FLASH> is equivalent to the following FF/Latch : <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[3].I_SIZE_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[2].I_SIZE_S_H_REG> in Unit <FLASH> is equivalent to the following FF/Latch : <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[2].I_SIZE_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.I_BURST_S_H_REG> in Unit <FLASH> is equivalent to the following FF/Latch : <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.I_BURST_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.I_SNGL_S_H_REG> in Unit <FLASH> is equivalent to the following FF/Latch : <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.I_SNGL_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.I_CACHLN_S_H_REG> in Unit <FLASH> is equivalent to the following FF/Latch : <FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.I_CACHLN_S_H_REG> 
+INFO:Xst:2260 - The FF/Latch <xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[21].TCSR0_FF_I> in Unit <xps_timer_0> is equivalent to the following FF/Latch : <xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[21].TCSR1_FF_I> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/system.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 264
+
+Cell Usage :
+# BELS                             : 8899
+#      GND                         : 26
+#      INV                         : 179
+#      LUT1                        : 296
+#      LUT2                        : 926
+#      LUT3                        : 923
+#      LUT3_L                      : 4
+#      LUT4                        : 1415
+#      LUT5                        : 1400
+#      LUT6                        : 1915
+#      MULT_AND                    : 64
+#      MUXCY                       : 763
+#      MUXCY_L                     : 140
+#      MUXF7                       : 77
+#      VCC                         : 23
+#      XORCY                       : 748
+# FlipFlops/Latches                : 7810
+#      FD                          : 786
+#      FD_1                        : 4
+#      FDC                         : 134
+#      FDCE                        : 62
+#      FDCPE                       : 22
+#      FDCPE_1                     : 8
+#      FDE                         : 150
+#      FDP                         : 99
+#      FDPE                        : 10
+#      FDR                         : 2699
+#      FDR_1                       : 3
+#      FDRE                        : 2221
+#      FDRS                        : 172
+#      FDRSE                       : 532
+#      FDRSE_1                     : 136
+#      FDS                         : 385
+#      FDS_1                       : 3
+#      FDSE                        : 156
+#      IDDR_2CLK                   : 64
+#      LD                          : 4
+#      ODDR                        : 160
+# RAMS                             : 37
+#      RAM16X1D                    : 12
+#      RAM16X1S                    : 4
+#      RAMB16                      : 3
+#      RAMB36_EXP                  : 18
+# Shift Registers                  : 170
+#      SRL16                       : 1
+#      SRL16E                      : 82
+#      SRLC16E                     : 69
+#      SRLC32E                     : 18
+# Clock Buffers                    : 8
+#      BUFG                        : 7
+#      BUFGP                       : 1
+# IO Buffers                       : 253
+#      IBUF                        : 18
+#      IOBUF                       : 131
+#      IOBUFDS                     : 8
+#      OBUF                        : 94
+#      OBUFDS                      : 2
+# Others                           : 99
+#      BUFIO                       : 8
+#      FIFO36_72_EXP               : 2
+#      IDELAYCTRL                  : 3
+#      IODELAY                     : 80
+#      JTAGPPC440                  : 1
+#      PLL_ADV                     : 1
+#      PPC440                      : 1
+#      TIMESPEC                    : 3
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vfx70tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            7709  out of  44800    17%  
+ Number of Slice LUTs:                 7256  out of  44800    16%  
+    Number used as Logic:              7058  out of  44800    15%  
+    Number used as Memory:              198  out of  13120     1%  
+       Number used as RAM:               28
+       Number used as SRL:              170
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:  11515
+   Number with an unused Flip Flop:    3806  out of  11515    33%  
+   Number with an unused LUT:          4259  out of  11515    36%  
+   Number of fully used LUT-FF pairs:  3450  out of  11515    29%  
+   Number of unique control sets:      1189
+
+IO Utilization: 
+ Number of IOs:                         264
+ Number of bonded IOBs:                 264  out of    640    41%  
+    IOB Flip Flops/Latches:             101
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               20  out of    148    13%  
+    Number using Block RAM only:         20
+ Number of BUFG/BUFGCTRLs:                8  out of     32    25%  
+ Number of PPC440s:                       1  out of      1   100%  
+ Number of PLL_ADVs:                      1  out of      6    16%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                                                                                                                                                                        | Clock buffer(FF name)                                                                                               | Load  |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+-------+
+Ethernet_MAC/PHY_tx_clk                                                                                                                                                                                             | NONE(Ethernet_MAC/Ethernet_MAC/IOFFS_GEN[3].TX_FF_I)                                                                | 46    |
+Ethernet_MAC/PHY_rx_clk                                                                                                                                                                                             | NONE(Ethernet_MAC/Ethernet_MAC/IOFFS_GEN[3].RX_FF_I)                                                                | 47    |
+clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT0                                                                                                                                                                | BUFG                                                                                                                | 6299  |
+N1                                                                                                                                                                                                                  | NONE(ppc440_0/ppc440_0/PPCS1PLBMBUSY_reg_0)                                                                         | 1     |
+N0                                                                                                                                                                                                                  | NONE(xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_0)                                                    | 16    |
+clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT3                                                                                                                                                                | BUFG                                                                                                                | 1005  |
+clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1                                                                                                                                                                | BUFG                                                                                                                | 322   |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[0].u_iob_dqs/dqs_ibuf(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[0].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[0].u_iob_dqs/u_iddr_dq_ce)| 1     |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[1].u_iob_dqs/dqs_ibuf(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[1].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[1].u_iob_dqs/u_iddr_dq_ce)| 1     |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[2].u_iob_dqs/dqs_ibuf(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[2].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[2].u_iob_dqs/u_iddr_dq_ce)| 1     |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[3].u_iob_dqs/dqs_ibuf(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[3].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[3].u_iob_dqs/u_iddr_dq_ce)| 1     |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[4].u_iob_dqs/dqs_ibuf(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[4].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[4].u_iob_dqs/u_iddr_dq_ce)| 1     |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[5].u_iob_dqs/dqs_ibuf(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[5].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[5].u_iob_dqs/u_iddr_dq_ce)| 1     |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[6].u_iob_dqs/dqs_ibuf(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[6].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[6].u_iob_dqs/u_iddr_dq_ce)| 1     |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[7].u_iob_dqs/dqs_ibuf(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[7].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[7].u_iob_dqs/u_iddr_dq_ce)| 1     |
+fpga_0_SysACE_CompactFlash_SysACE_CLK_pin                                                                                                                                                                           | BUFGP                                                                                                               | 95    |
+xps_tft_0/IP2INTC_Irpt                                                                                                                                                                                              | NONE(xps_intc_0/xps_intc_0/INTC_CORE_I/intr_sync2_7)                                                                | 1     |
+xps_timebase_wdt_0/Timebase_Interrupt                                                                                                                                                                               | NONE(xps_intc_0/xps_intc_0/INTC_CORE_I/intr_sync0_3)                                                                | 1     |
+RS232_Uart_1/Interrupt                                                                                                                                                                                              | NONE(xps_intc_0/xps_intc_0/INTC_CORE_I/intr_sync3_12)                                                               | 1     |
+xps_timer_0/Interrupt                                                                                                                                                                                               | NONE(xps_intc_0/xps_intc_0/INTC_CORE_I/intr_sync_1)                                                                 | 1     |
+Ethernet_MAC/IP2INTC_Irpt                                                                                                                                                                                           | NONE(xps_intc_0/xps_intc_0/INTC_CORE_I/intr_sync1_5)                                                                | 1     |
+clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT5                                                                                                                                                                | BUFG                                                                                                                | 126   |
+plb2wb_encoder_0/plb2wb_encoder_0/USER_LOGIC_I/wb_cyc_or0000(plb2wb_encoder_0/plb2wb_encoder_0/USER_LOGIC_I/wb_cyc_or00001:O)                                                                                       | NONE(*)(plb2wb_encoder_0/plb2wb_encoder_0/USER_LOGIC_I/wb_cyc)                                                      | 1     |
+plb2wb_encoder_0/plb2wb_encoder_0/USER_LOGIC_I/rty_en_or0000(plb2wb_encoder_0/plb2wb_encoder_0/USER_LOGIC_I/rty_en_or00001:O)                                                                                       | NONE(*)(plb2wb_encoder_0/plb2wb_encoder_0/USER_LOGIC_I/rty_en)                                                      | 1     |
+plb2wb_encoder_0/plb2wb_encoder_0/USER_LOGIC_I/slv_error_or0000(plb2wb_encoder_0/plb2wb_encoder_0/USER_LOGIC_I/slv_error_or00001:O)                                                                                 | NONE(*)(plb2wb_encoder_0/plb2wb_encoder_0/USER_LOGIC_I/slv_error)                                                   | 1     |
+plb2wb_encoder_0/plb2wb_encoder_0/USER_LOGIC_I/wb_cyc_mux0000(plb2wb_encoder_0/plb2wb_encoder_0/USER_LOGIC_I/wb_cyc_mux00001:O)                                                                                     | NONE(*)(plb2wb_encoder_0/plb2wb_encoder_0/USER_LOGIC_I/wb_we)                                                       | 1     |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+-------+
+(*) These 12 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                                                                                                                           | Buffer(FF name)                                                                                                                                                             | Load  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/net_gnd0(xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/XST_GND:G)                                                                                                                                                                                                  | NONE(xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_0)                                                                                                            | 128   |
+plb_v46_0/SPLB_Rst<9>(plb_v46_0/plb_v46_0/GEN_SPLB_RST[9].I_SPLB_RST:Q)                                                                                                                                                                                                                                                  | NONE(SysACE_CompactFlash/SysACE_CompactFlash/I_SYSACE_CONTROLLER/MEM_STATE_MACHINE_I/Done)                                                                                  | 89    |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/clk_reset/rst_tmp(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/clk_reset/rst_tmp1:O)                                                                                                                                                                                                                | NONE(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/clk_reset/rst0_sync_r_0)                                                                                                              | 54    |
+DDR2_SDRAM/mc_mireaddataerr(DDR2_SDRAM/XST_GND:G)                                                                                                                                                                                                                                                                        | NONE(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_ctl_io/gen_addr[0].u_ff_addr)                                                                            | 53    |
+Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_reg<1>(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_reg_1:Q)| NONE(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/gcx.clkx/rd_pntr_gc_0)          | 16    |
+Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/wr_rst_reg<0>(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/wr_rst_reg_0:Q)| NONE(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/gcx.clkx/rd_pntr_bin_0)         | 16    |
+Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_reg<1>(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_reg_1:Q)| NONE(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/gcx.clkx/rd_pntr_gc_0)          | 16    |
+Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/wr_rst_reg<0>(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/wr_rst_reg_0:Q)| NONE(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/gcx.clkx/rd_pntr_bin_0)         | 16    |
+Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/wr_rst_reg<1>(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/wr_rst_reg_1:Q)| NONE(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i) | 14    |
+Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/wr_rst_reg<1>(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/wr_rst_reg_1:Q)| NONE(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i) | 14    |
+Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_reg<2>(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_reg_2:Q)| NONE(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i)| 11    |
+Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_reg<2>(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_reg_2:Q)| NONE(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i)| 11    |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/clk_reset/rst0_sync_r_2_1(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/clk_reset/rst0_sync_r_2_1:Q)                                                                                                                                                                                                 | NONE(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[0].u_iob_dqs/u_tri_state_dqs)                                                                 | 8     |
+DDR2_SDRAM/N1(DDR2_SDRAM/XST_VCC:P)                                                                                                                                                                                                                                                                                      | NONE(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_usr_top/u_wr_fifos/.gen_wdf[0].u_usr_wr_fifo/.u_wdf)                                                                   | 8     |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/clk_reset/rst0_sync_r<2>(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/clk_reset/rst0_sync_r_2:Q)                                                                                                                                                                                                    | NONE(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_ctl_io/gen_cke[0].u_ff_cke)                                                                              | 7     |
+Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_reg<0>(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_reg_0:Q)| NONE(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/mem/gdm.dm/dout_i_0)            | 6     |
+Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_reg<0>(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_reg_0:Q)| NONE(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/mem/gdm.dm/dout_i_0)            | 6     |
+SysACE_CompactFlash/SysACE_CompactFlash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/done3(SysACE_CompactFlash/SysACE_CompactFlash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/DONE_REG3:Q)                                                                                                                                               | NONE(SysACE_CompactFlash/SysACE_CompactFlash/I_SYSACE_CONTROLLER/SYNC_2_CLOCKS_I/RDCE_REG1)                                                                                 | 6     |
+Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_comb(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_comb1:O)  | NONE(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_reg_0)            | 3     |
+Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_comb(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_comb1:O)  | NONE(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_reg_0)            | 3     |
+proc_sys_reset_0/Bus_Struct_Reset<0>(proc_sys_reset_0/proc_sys_reset_0/Bus_Struct_Reset_0:Q)                                                                                                                                                                                                                             | NONE(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/clk_reset/rst200_sync_r_0)                                                                                                            | 3     |
+Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/wr_rst_comb(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/wr_rst_comb1:O)  | NONE(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/wr_rst_reg_0)            | 2     |
+Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/fifo_reset(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/fifo_reset1:O)                                                                                                                                                                                                        | NONE(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_asreg)            | 2     |
+Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/wr_rst_comb(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/wr_rst_comb1:O)  | NONE(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/wr_rst_reg_0)            | 2     |
+Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/txComboBusFifoRst(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/txComboBusFifoRst1:O)                                                                                                                                                                                          | NONE(Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/rstblk/rd_rst_asreg)            | 2     |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[0].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[0].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                                                                                                         | NONE(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[0].u_iob_dqs/u_iddr_dq_ce)                                                                    | 1     |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[1].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[1].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                                                                                                         | NONE(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[1].u_iob_dqs/u_iddr_dq_ce)                                                                    | 1     |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[2].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[2].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                                                                                                         | NONE(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[2].u_iob_dqs/u_iddr_dq_ce)                                                                    | 1     |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[3].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[3].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                                                                                                         | NONE(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[3].u_iob_dqs/u_iddr_dq_ce)                                                                    | 1     |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[4].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[4].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                                                                                                         | NONE(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[4].u_iob_dqs/u_iddr_dq_ce)                                                                    | 1     |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[5].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[5].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                                                                                                         | NONE(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[5].u_iob_dqs/u_iddr_dq_ce)                                                                    | 1     |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[6].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[6].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                                                                                                         | NONE(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[6].u_iob_dqs/u_iddr_dq_ce)                                                                    | 1     |
+DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[7].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[7].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)                                                                                                         | NONE(DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/gen_dqs[7].u_iob_dqs/u_iddr_dq_ce)                                                                    | 1     |
+xps_intc_0/xps_intc_0/INTC_CORE_I/iar_12_or0000(xps_intc_0/xps_intc_0/INTC_CORE_I/iar_12_or00001:O)                                                                                                                                                                                                                      | NONE(xps_intc_0/xps_intc_0/INTC_CORE_I/intr_sync3_12)                                                                                                                       | 1     |
+xps_intc_0/xps_intc_0/INTC_CORE_I/intr_sync2_7_or0000(xps_intc_0/xps_intc_0/INTC_CORE_I/intr_sync2_7_or00001:O)                                                                                                                                                                                                          | NONE(xps_intc_0/xps_intc_0/INTC_CORE_I/intr_sync2_7)                                                                                                                        | 1     |
+xps_intc_0/xps_intc_0/INTC_CORE_I/isr_1_or0000(xps_intc_0/xps_intc_0/INTC_CORE_I/isr_1_or00001:O)                                                                                                                                                                                                                        | NONE(xps_intc_0/xps_intc_0/INTC_CORE_I/intr_sync_1)                                                                                                                         | 1     |
+xps_intc_0/xps_intc_0/INTC_CORE_I/isr_3_or0000(xps_intc_0/xps_intc_0/INTC_CORE_I/isr_3_or00001:O)                                                                                                                                                                                                                        | NONE(xps_intc_0/xps_intc_0/INTC_CORE_I/intr_sync0_3)                                                                                                                        | 1     |
+xps_intc_0/xps_intc_0/INTC_CORE_I/isr_5_or0000(xps_intc_0/xps_intc_0/INTC_CORE_I/isr_5_or00001:O)                                                                                                                                                                                                                        | NONE(xps_intc_0/xps_intc_0/INTC_CORE_I/intr_sync1_5)                                                                                                                        | 1     |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 6.032ns (Maximum Frequency: 165.770MHz)
+   Minimum input arrival time before clock: 5.807ns
+   Maximum output required time after clock: 4.502ns
+   Maximum combinational path delay: 3.617ns
+
+=========================================================================
+Timing constraint: TS_ppc440_0_PPCS0PLBMBUSY = MAXDELAY FROM TIMEGRP "CPUS" TO TIMEGRP "ppc440_0_PPCS0PLBMBUSY" 5 nS
+-------------------------------------------------------------------------
+WARNING:Xst:1415 - No path found for this constraint.
+
+=========================================================================
+Timing constraint: TSTXOUT_Ethernet_MAC = MAXDELAY FROM TIMEGRP "TXCLK_GRP_Ethernet_MAC" TO TIMEGRP "PADS" 10 nS
+  Total number of paths / destination ports: 5 / 5
+  Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
+-------------------------------------------------------------------------
+Slack:                  6.741ns
+  Source:               Ethernet_MAC/Ethernet_MAC/IOFFS_GEN[3].TX_FF_I (FF)
+  Destination:          fpga_0_Ethernet_MAC_PHY_tx_data_pin<3> (PAD)
+  Data Path Delay:      3.259ns (Levels of Logic = 2)
+  Source Clock:         Ethernet_MAC/PHY_tx_clk rising at 0.000ns
+
+  Data Path: Ethernet_MAC/Ethernet_MAC/IOFFS_GEN[3].TX_FF_I (FF) to fpga_0_Ethernet_MAC_PHY_tx_data_pin<3> (PAD)
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.471   0.336  Ethernet_MAC/IOFFS_GEN[3].TX_FF_I (PHY_tx_data<3>)
+     end scope: 'Ethernet_MAC'
+     OBUF:I->O                 2.452          fpga_0_Ethernet_MAC_PHY_tx_data_pin_3_OBUF (fpga_0_Ethernet_MAC_PHY_tx_data_pin<3>)
+    ----------------------------------------
+    Total                      3.259ns (2.923ns logic, 0.336ns route)
+                                       (89.7% logic, 10.3% route)
+
+=========================================================================
+Timing constraint: OFFSET = IN 6 nS BEFORE "fpga_0_Ethernet_MAC_PHY_rx_clk_pin"
+  Total number of paths / destination ports: 6 / 6
+  Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
+-------------------------------------------------------------------------
+Slack:                  4.864ns
+  Source:               fpga_0_Ethernet_MAC_PHY_rx_er_pin (PAD)
+  Destination:          Ethernet_MAC/Ethernet_MAC/IOFFS_GEN2.RER_FF (FF)
+  Data Path Delay:      1.154ns (Levels of Logic = 2)
+  Destination Clock:    Ethernet_MAC/PHY_rx_clk rising at 6.000ns
+
+  Data Path: fpga_0_Ethernet_MAC_PHY_rx_er_pin (PAD) to Ethernet_MAC/Ethernet_MAC/IOFFS_GEN2.RER_FF (FF)
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.818   0.336  fpga_0_Ethernet_MAC_PHY_rx_er_pin_IBUF (fpga_0_Ethernet_MAC_PHY_rx_er_pin_IBUF)
+     begin scope: 'Ethernet_MAC'
+     FDRE:D                   -0.018          Ethernet_MAC/IOFFS_GEN2.RER_FF
+    ----------------------------------------
+    Total                      1.154ns (0.818ns logic, 0.336ns route)
+                                       (70.9% logic, 29.1% route)
+
+=========================================================================
+Timing constraint: TS_SPLB2MPLB_xps_tft_0 = FROM TIMEGRP "TNM_SLAVE_ONREG_xps_tft_0" TO TIMEGRP "TNM_MPLB_ONREG_xps_tft_0" TIG;
+  Clock period: 1.175ns (frequency: 851.064MHz)
+  Total number of paths / destination ports: 1 / 1
+  Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
+-------------------------------------------------------------------------
+Delay:                  1.175ns
+  Source:               xps_tft_0/xps_tft_0/TFT_CTRL_I/SLAVE_REG_U6/TFT_on_reg (FF)
+  Destination:          xps_tft_0/xps_tft_0/TFT_CTRL_I/Mshreg_tft_on_reg_bram_d2 (FF)
+  Data Path Delay:      1.175ns (Levels of Logic = 0)
+  Source Clock:         clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT0 rising at 0.000ns
+  Destination Clock:    clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT5 rising at 0.000ns
+
+  Data Path: xps_tft_0/xps_tft_0/TFT_CTRL_I/SLAVE_REG_U6/TFT_on_reg (FF) to xps_tft_0/xps_tft_0/TFT_CTRL_I/Mshreg_tft_on_reg_bram_d2 (FF)
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q             3   0.471   0.347  xps_tft_0/TFT_CTRL_I/SLAVE_REG_U6/TFT_on_reg (xps_tft_0/TFT_CTRL_I/SLAVE_REG_U6/TFT_on_reg)
+     SRLC16E:D                 0.357          xps_tft_0/TFT_CTRL_I/Mshreg_tft_on_reg_bram_d2
+    ----------------------------------------
+    Total                      1.175ns (0.828ns logic, 0.347ns route)
+                                       (70.5% logic, 29.5% route)
+
+=========================================================================
+Timing constraint: TS_MPLB2TFT_xps_tft_0 = FROM TIMEGRP "TNM_MPLB_RST_xps_tft_0" TO TIMEGRP "TNM_TFT_RST_xps_tft_0" TIG;
+  Clock period: 1.380ns (frequency: 724.638MHz)
+  Total number of paths / destination ports: 1 / 1
+  Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
+-------------------------------------------------------------------------
+Delay:                  1.380ns
+  Source:               xps_tft_0/xps_tft_0/TFT_CTRL_I/FD_PLB_RST6 (FF)
+  Destination:          xps_tft_0/xps_tft_0/TFT_CTRL_I/tft_rst_d1 (FF)
+  Data Path Delay:      1.380ns (Levels of Logic = 0)
+  Source Clock:         clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT0 rising at 0.000ns
+  Destination Clock:    clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT5 rising at 0.000ns
+
+  Data Path: xps_tft_0/xps_tft_0/TFT_CTRL_I/FD_PLB_RST6 (FF) to xps_tft_0/xps_tft_0/TFT_CTRL_I/tft_rst_d1 (FF)
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              1   0.471   0.336  xps_tft_0/TFT_CTRL_I/FD_PLB_RST6 (xps_tft_0/TFT_CTRL_I/plb_rst_d6)
+     FDS:S                     0.573          xps_tft_0/TFT_CTRL_I/tft_rst_d1
+    ----------------------------------------
+    Total                      1.380ns (1.044ns logic, 0.336ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+Timing constraint: TS_TFT_MPLB_CLOCK_xps_tft_0 = FROM TIMEGRP "TNM_TFT_CLOCK_xps_tft_0" TO TIMEGRP "TNM_MPLB_CLOCK_xps_tft_0" TIG;
+  Clock period: 0.823ns (frequency: 1215.067MHz)
+  Total number of paths / destination ports: 3 / 3
+  Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
+-------------------------------------------------------------------------
+Delay:                  0.805ns
+  Source:               xps_tft_0/xps_tft_0/TFT_CTRL_I/VSYNC_U3/V_bp_cnt_tc (FF)
+  Destination:          xps_tft_0/xps_tft_0/TFT_CTRL_I/v_bp_cnt_tc_d1 (FF)
+  Data Path Delay:      0.823ns (Levels of Logic = 0)
+  Source Clock:         clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT5 rising at 0.000ns
+  Destination Clock:    clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT0 rising at 0.000ns
+
+  Data Path: xps_tft_0/xps_tft_0/TFT_CTRL_I/VSYNC_U3/V_bp_cnt_tc (FF) to xps_tft_0/xps_tft_0/TFT_CTRL_I/v_bp_cnt_tc_d1 (FF)
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.471   0.352  xps_tft_0/TFT_CTRL_I/VSYNC_U3/V_bp_cnt_tc (xps_tft_0/TFT_CTRL_I/VSYNC_U3/V_bp_cnt_tc)
+     FDR:D                    -0.018          xps_tft_0/TFT_CTRL_I/v_bp_cnt_tc_d1
+    ----------------------------------------
+    Total                      0.823ns (0.471ns logic, 0.352ns route)
+                                       (57.2% logic, 42.8% route)
+
+=========================================================================
+Timing constraint: TS_MPLB2TFT1_xps_tft_0 = FROM TIMEGRP "TNM_I2C_DONE_xps_tft_0" TO TIMEGRP "TNM_TFT_RST_xps_tft_0" TIG;
+  Clock period: 1.381ns (frequency: 724.113MHz)
+  Total number of paths / destination ports: 1 / 1
+  Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
+-------------------------------------------------------------------------
+Delay:                  1.363ns
+  Source:               xps_tft_0/xps_tft_0/TFT_CTRL_I/TFT_IF_U5/gen_dvi_if.iic_init/Done (FF)
+  Destination:          xps_tft_0/xps_tft_0/TFT_CTRL_I/tft_rst_d1 (FF)
+  Data Path Delay:      1.381ns (Levels of Logic = 1)
+  Source Clock:         clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT0 rising at 0.000ns
+  Destination Clock:    clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT5 rising at 0.000ns
+
+  Data Path: xps_tft_0/xps_tft_0/TFT_CTRL_I/TFT_IF_U5/gen_dvi_if.iic_init/Done (FF) to xps_tft_0/xps_tft_0/TFT_CTRL_I/tft_rst_d1 (FF)
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.471   0.336  xps_tft_0/TFT_CTRL_I/TFT_IF_U5/gen_dvi_if.iic_init/Done (xps_tft_0/TFT_CTRL_I/TFT_IF_U5/gen_dvi_if.iic_init/Done)
+     INV:I->O              1   0.238   0.336  xps_tft_0/TFT_CTRL_I/tft_rst_d1_or000011_INV_0 (xps_tft_0/TFT_CTRL_I/tft_rst_d1_or00001)
+     FDS:D                    -0.018          xps_tft_0/TFT_CTRL_I/tft_rst_d1
+    ----------------------------------------
+    Total                      1.381ns (0.709ns logic, 0.672ns route)
+                                       (51.3% logic, 48.7% route)
+
+=========================================================================
+Timing constraint: NET Ethernet_MAC/PHY_rx_clk PERIOD = 40 nS HIGH 14 nS
+  Clock period: 2.242ns (frequency: 446.030MHz)
+  Total number of paths / destination ports: 124 / 77
+  Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
+-------------------------------------------------------------------------
+Slack:                  37.758ns
+  Source:               Ethernet_MAC/Ethernet_MAC/IOFFS_GEN[3].RX_FF_I (FF)
+  Destination:          Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/mem/gdm.dm/Mram_RAM6 (RAM)
+  Data Path Delay:      1.121ns (Levels of Logic = 1)
+  Source Clock:         Ethernet_MAC/PHY_rx_clk rising at 0.000ns
+  Destination Clock:    Ethernet_MAC/PHY_rx_clk falling at 20.000ns
+
+  Data Path: Ethernet_MAC/Ethernet_MAC/IOFFS_GEN[3].RX_FF_I (FF) to Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM/BU3/U0/grf.rf/mem/gdm.dm/Mram_RAM6 (RAM)
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.471   0.336  Ethernet_MAC/IOFFS_GEN[3].RX_FF_I (Ethernet_MAC/phy_rx_data_reg<3>)
+     begin scope: 'Ethernet_MAC/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/LEGACY_COREGEN_DEPTH.NO_S6_OR_V6.I_ASYNC_FIFO_BRAM'
+     begin scope: 'BU3'
+     RAM16X1D:D                0.314          U0/grf.rf/mem/gdm.dm/Mram_RAM6
+    ----------------------------------------
+    Total                      1.121ns (0.785ns logic, 0.336ns route)
+                                       (70.0% logic, 30.0% route)
+
+=========================================================================
+Timing constraint: NET Ethernet_MAC/PHY_tx_clk PERIOD = 40 nS HIGH 14 nS
+  Clock period: 2.336ns (frequency: 428.082MHz)
+  Total number of paths / destination ports: 139 / 52
+  Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
+-------------------------------------------------------------------------
+Slack:                  37.700ns
+  Source:               Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/phy_tx_en_i (FF)
+  Destination:          Ethernet_MAC/Ethernet_MAC/IOFFS_GEN2.TEN_FF (FF)
+  Data Path Delay:      1.168ns (Levels of Logic = 1)
+  Source Clock:         Ethernet_MAC/PHY_tx_clk falling at 20.000ns
+  Destination Clock:    Ethernet_MAC/PHY_tx_clk rising at 40.000ns
+
+  Data Path: Ethernet_MAC/Ethernet_MAC/XEMAC_I/EMAC_I/TX/phy_tx_en_i (FF) to Ethernet_MAC/Ethernet_MAC/IOFFS_GEN2.TEN_FF (FF)
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              6   0.471   0.603  Ethernet_MAC/XEMAC_I/EMAC_I/TX/phy_tx_en_i (Ethernet_MAC/XEMAC_I/EMAC_I/TX/phy_tx_en_i)
+     LUT2:I0->O            1   0.094   0.000  Ethernet_MAC/XEMAC_I/EMAC_I/TX/Phy_tx_en1 (Ethernet_MAC/phy_tx_en_i)
+     FDRE:D                   -0.018          Ethernet_MAC/IOFFS_GEN2.TEN_FF
+    ----------------------------------------
+    Total                      1.168ns (0.565ns logic, 0.603ns route)
+                                       (48.4% logic, 51.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 42.00 secs
+Total CPU time to Xst completion: 41.21 secs
+ 
+--> 
+
+
+Total memory usage is 600880 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  272 (   0 filtered)
+Number of infos    :  171 (   0 filtered)
+

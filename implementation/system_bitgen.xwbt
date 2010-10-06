@@ -1,0 +1,7 @@
+INFILE=/home/aalonso/workspace/xlnx/xilinx-ml507-updated/implementation/system.ncd
+OUTFILE=/home/aalonso/workspace/xlnx/xilinx-ml507-updated/implementation/system.bit
+FAMILY=Virtex5
+PART=xc5vfx70t-1ff1136
+WORKINGDIR=/home/aalonso/workspace/xlnx/xilinx-ml507-updated/implementation
+LICENSE=ISE
+USER_INFO=174870101_177823121_0_940
